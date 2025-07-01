@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.custom-py-8 {
+  padding-block: calc(var(--spacing) * 20);
+}
