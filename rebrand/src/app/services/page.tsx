@@ -14,7 +14,7 @@ export default function ServicesPage() {
       
       {/* Hero Section */}
       <section className="relative h-[570px] flex items-center justify-center">
-        {/* Background image: Place your background at public/images/background.jpg */}
+        {/* Background image */}
         <Image
           src="/images/background.jpg"
           alt="Hero Background"
@@ -38,7 +38,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* UI Design Intro Section */}
+      {/* Section 1 */}
       <section className="w-full bg-white py-12">
         <ScrollFadeSection>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">

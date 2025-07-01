@@ -15,7 +15,7 @@ const NavBar = () => {
   return (
     <header className="flex items-center justify-between px-8 py-4 border-b bg-white relative z-20">
       <div className="flex items-center">
-        {/* Logo image: Place your logo at public/images/logo.png */}
+        {/* Logo image */}
         <Image src="/images/logo.png" alt="Logo" width={98} height={48} />
         {/* <span className="ml-2 text-xl font-bold text-blue-900">Digisperts</span> */}
       </div>

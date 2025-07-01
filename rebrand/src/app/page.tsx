@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="relative h-[500px] flex items-center justify-center">
-        {/* Background image: Place your background at public/images/background.jpg */}
+        {/* Background image */}
         <Image
           src="/images/background.jpg"
           alt="Hero Background"
