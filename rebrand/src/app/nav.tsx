@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const NavBar = () => {
@@ -16,7 +17,9 @@ const NavBar = () => {
     <header className="flex items-center justify-between px-8 py-4 border-b bg-white relative z-20">
       <div className="flex items-center">
         {/* Logo image */}
-        <Image src="/images/logo.png" alt="Logo" width={98} height={48} />
+        <Link href="/">
+          <Image src="/images/logo.png" alt="Logo" width={98} height={48} className="cursor-pointer" />
+        </Link>
         {/* <span className="ml-2 text-xl font-bold text-blue-900">Digisperts</span> */}
       </div>
       {/* Desktop Nav */}
@@ -57,12 +60,12 @@ const NavBar = () => {
           )}
           <span className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-blue-500 transition-all duration-300 ease-in-out origin-left group-hover:w-full" />
         </a>
-        <button className={buttonClass + " flex items-center"}>
+        <Link href="/book-a-call" className={buttonClass + " flex items-center"}>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3.75 7.5h16.5M4.5 21h15a1.5 1.5 0 001.5-1.5V7.5a1.5 1.5 0 00-1.5-1.5h-15A1.5 1.5 0 003 7.5v12A1.5 1.5 0 004.5 21z" />
           </svg>
           Book a call
-        </button>
+        </Link>
       </nav>
       {/* Mobile Hamburger Icon */}
       <button
@@ -108,12 +111,12 @@ const NavBar = () => {
             )}
             <span className="absolute left-0 -bottom-0.5 h-0.5 w-0 bg-blue-500 transition-all duration-300 ease-in-out origin-left group-hover:w-full" />
           </a>
-          <button className={buttonClass + " mt-2 w-11/12 flex items-center"}>
+          <Link href="/book-a-call" className={buttonClass + " mt-2 w-11/12 flex items-center"}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3.75 7.5h16.5M4.5 21h15a1.5 1.5 0 001.5-1.5V7.5a1.5 1.5 0 00-1.5-1.5h-15A1.5 1.5 0 003 7.5v12A1.5 1.5 0 004.5 21z" />
             </svg>
             Book a call
-          </button>
+          </Link>
         </div>
       )}
     </header>

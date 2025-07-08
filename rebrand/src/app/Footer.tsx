@@ -4,14 +4,15 @@ export default function Footer() {
   return (
     <>
       {/* Book a Call */}
-      <section className="w-full bg-[#2046a7] py-3 flex justify-center items-center">
-        <div className="flex items-center space-x-4">
-          <span className="text-white text-base">
+      <section className="w-full bg-[#2046a7] py-3">
+        <div className="flex items-center justify-center gap-x-4 px-4">
+          <span className="text-white text-base mr-2">
             Book a free 3-days business consultation
           </span>
           <a
-            href="#"
+            href="/book-a-call"
             className="bg-[#b36a1c] text-white px-5 py-2 rounded font-semibold text-sm shadow hover:bg-[#8a4f13] transition-colors duration-200 flex items-center"
+            style={{ minWidth: "auto" }}
           >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 mr-2">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3.75 7.5h16.5M4.5 21h15a1.5 1.5 0 001.5-1.5V7.5a1.5 1.5 0 00-1.5-1.5h-15A1.5 1.5 0 003 7.5v12A1.5 1.5 0 004.5 21z" />

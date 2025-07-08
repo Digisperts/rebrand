@@ -48,7 +48,14 @@ export default function ServicesPage() {
               Transform your digital platforms with cutting-edge UI designs.
             </h2>
             <p className="text-gray-800 text-base text-left max-w-xl leading-relaxed">
-              In the digital landscape, exceptional user experiences are vital. With our expertise in UI/UX design, we create intuitive interfaces that engage and delight your target audience. Our process begins with a deep understanding of users, business goals, and best practices. Meticulously blending aesthetics with functionality, we ensure an immersive experience across platforms. From wireframing to usability testing, our holistic approach drives satisfaction and success. Collaborating closely with your team, we incorporate your vision and brand identity into every design aspect. Stand out with visually captivating and user-friendly experiences that leave a lasting impression.
+              n the digital landscape, exceptional user experiences are vital. With our expertise in UI/UX 
+              design, we create intuitive interfaces that engage and delight your target audience. Our 
+              process begins with a deep understanding of users, business goals, and best practices. 
+              Meticulously blending aesthetics with functionality, we ensure an immersive experience 
+              across platforms. From wireframing to usability testing, our holistic approach drives 
+              satisfaction and success. Collaborating closely with your team, we incorporate your vision 
+              and brand identity into every design aspect. Stand out with visually captivating and user-
+              friendly experiences that leave a lasting impression.
             </p>
           </div>
           
