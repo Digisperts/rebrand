@@ -46,9 +46,11 @@ export default function WhoWeArePage() {
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4">
           {/* SVG */}
           <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-auto">
-            <img
+            <Image
               src="/images/approach.svg"
               alt="Our Approach"
+              width={260}
+              height={100}
               className="w-[260px] h-auto"
             />
           </div>
@@ -82,9 +84,11 @@ export default function WhoWeArePage() {
         <div className="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
           {/* Project Manager and CSO */}
           <div className="flex flex-col items-center">
-            <img
+            <Image
               src="/images/harvey.png"
               alt="Stanley N"
+              width={128}
+              height={128}
               className="w-32 h-32 object-cover rounded-md mb-2"
             />
             <span className="font-semibold text-sm text-[#1E429F] text-center">Harvey, N</span>
@@ -92,9 +96,11 @@ export default function WhoWeArePage() {
           </div>
           {/* Creative Designer and Copywriter */}
           <div className="flex flex-col items-center">
-            <img
+            <Image
               src="/images/samuel-d.png"
               alt="Samuel D"
+              width={128}
+              height={128}
               className="w-32 h-32 object-cover rounded-md mb-2"
             />
             <span className="font-semibold text-sm text-[#1E429F] text-center">Samuel, D</span>
@@ -102,9 +108,11 @@ export default function WhoWeArePage() {
           </div>
           {/* CTO and Cloud Engineer */}
           <div className="flex flex-col items-center">
-            <img
+            <Image
               src="/images/richard.png"
               alt="Richard K"
+              width={128}
+              height={128}
               className="w-32 h-32 object-cover rounded-md mb-2"
             />
             <span className="font-semibold text-sm text-[#1E429F] text-center">Richard, K</span>
@@ -112,9 +120,11 @@ export default function WhoWeArePage() {
           </div>
           {/* Blockchain and Cyber Security */}
           <div className="flex flex-col items-center">
-            <img
+            <Image
               src="/images/samuel-o.png"
               alt="Samuel O"
+              width={128}
+              height={128}
               className="w-32 h-32 object-cover rounded-md mb-2"
             />
             <span className="font-semibold text-sm text-[#1E429F] text-center">Samuel, O</span>
@@ -147,9 +157,11 @@ export default function WhoWeArePage() {
           </div>
           {/* Officer Image */}
           <div className="flex-shrink-0 mt-6 md:mt-0 md:ml-8">
-            <img
+            <Image
               src="/images/customer-success-officer.png"
               alt="Customer Success Officer"
+              width={100}
+              height={100}
               className="w-24 md:w-40 h-40 object-cover object-top rounded-md"
             />
           </div>
