@@ -199,7 +199,8 @@ export default function ServicesPage() {
           </ScrollFadeSection>
           <ScrollFadeSection>
           <p className="text-white text-sm text-center">
-            "With our well tailored technological infrastructure, your brand voice gets heard and your sales skyrocket to that Mars."
+          &quot;With our well tailored technological infrastructure, 
+          your brand voice gets heard and your sales skyrocket to that Mars.&quot;
           </p>
           </ScrollFadeSection>
         </div>

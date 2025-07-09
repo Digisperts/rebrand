@@ -41,7 +41,7 @@ export default function HowWeWorkPage() {
           <div className="ml-0 md:ml-10 mt-4 md:mt-10 flex-1">
             <h2 className="text-[#2a3b8f] text-lg md:text-2xl font-light mb-1 leading-tight">
               Unveiling Your Vision -<br />
-              <span className="font-normal">Let's Dive Deep Into Your Idea!</span>
+              <span className="font-normal">Let&apos;s Dive Deep Into Your Idea!</span>
             </h2>
             <p className="text-gray-800 text-sm md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
               At digisperts LLC, we start by understanding your vision inside out. We gather comprehensive research, from market numbers to
@@ -183,7 +183,7 @@ export default function HowWeWorkPage() {
               Got a project?
             </p>
             <p className="text-[#233876] px-5 text-base text-left">
-              Let's discuss
+              Let&apos;s discuss
             </p>
           </div>
           {/* Right: SVG */}

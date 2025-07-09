@@ -28,9 +28,9 @@ export default function BookACallPage() {
               </div>
             </div>
             <ul className="text-black text-sm mt-6 mb-4 pl-5 list-disc">
-              <li>You'll be talking to our product and project manager</li>
+              <li>You&apos;ll be talking to our product and project manager</li>
               <li>We respond within 24 hours</li>
-              <li>We'll sign an NDA if required</li>
+              <li>We&apos;ll sign an NDA if required</li>
             </ul>
             <div className="text-sm text-blue-700 mb-2">
                 Together we will embark on a digital transformative journey.

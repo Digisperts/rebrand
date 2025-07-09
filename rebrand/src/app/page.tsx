@@ -263,7 +263,12 @@ export default function Home() {
           <ScrollFadeSection>
           <div className="max-w-3xl mx-auto border rounded-md p-8 bg-white border-[#f7eebc]">
             <p className="text-gray-600 text-base italic mb-6 text-left">
-              "Digisperts LLC has been instrumental in transforming our digital marketing efforts. Their strategic approach and deep understanding of our industry helped us reach our target audience effectively. From creating engaging content to running successful ad campaigns, they consistently delivered outstanding results. Our online visibility and lead generation have significantly improved, and we are thrilled to have digisperts as our trusted digital marketing partner."
+            &quot;Digisperts LLC has been instrumental in transforming our digital marketing efforts. 
+            Their strategic approach and deep understanding of our industry helped us reach our target 
+            audience effectively. From creating engaging content to running successful ad campaigns, 
+            they consistently delivered outstanding results. Our online visibility and lead generation 
+            have significantly improved, and we are thrilled to have digisperts as our trusted digital 
+            marketing partner. &quot;
             </p>
             <div className="text-right text-[#233876] text-base">
               + Alan, M CTO Social Cranes
@@ -405,7 +410,7 @@ export default function Home() {
       <section className="w-full bg-[#232b36] py-14">
         <div className="max-w-6xl mx-auto px-4">
           <ScrollFadeSection>
-          <h2 className="text-white text-2xl font-light text-center mb-10">We've got the Numbers</h2>
+          <h2 className="text-white text-2xl font-light text-center mb-10">We&apos;ve got the Numbers</h2>
           </ScrollFadeSection>
           <ScrollFadeSection>
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-10">
