@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import NavBar from "../nav";
 import Footer from "../Footer";
+import Image from "next/image";
 
 export default function ShortenLinkPage() {
   const [url, setUrl] = useState("");
@@ -38,11 +39,12 @@ export default function ShortenLinkPage() {
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center px-4">
             
             <div className="flex-1 flex justify-center md:justify-start mb-8 md:mb-0">
-              <img
+              <Image
                 src="/images/shorten.png"
                 alt="Shorten Link Illustration"
+                width={320}
+                height={220}
                 className="max-w-[320px] w-full h-auto"
-                style={{ minWidth: 220 }}
               />
             </div>
             

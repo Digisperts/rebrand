@@ -60,11 +60,12 @@ export default function ServicesPage() {
           </div>
           
           <div className="flex-1 flex justify-center md:justify-end">
-            <img
+            <Image
               src="/images/services.jpg"
               alt="UI Design Illustration"
+              width={220}
+              height={150}
               className="max-w-xs w-full h-auto rounded"
-              style={{ minWidth: 220 }}
             />
           </div>
         </div>

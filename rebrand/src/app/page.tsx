@@ -126,7 +126,7 @@ export default function Home() {
           {activeCard === "software" && (
             <div className="w-full max-w-[64rem] md:max-w-[40rem] sm:max-w-full text-left px-4 text-gray-500 transition-opacity duration-300 opacity-100 ml-0 md:mx-auto">
           <h3 className="font-semibold mb-2 flex items-center">
-                <img src="/images/software.svg" alt="Software Development Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" style={{ display: 'inline-block' }} />
+                <Image src="/images/software.svg" alt="Software Development Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" />
             Software Development
           </h3>
           <p className="mb-4 text-sm sm:text-base">
@@ -138,7 +138,7 @@ export default function Home() {
           {activeCard === "automation" && (
             <div className="w-full max-w-[64rem] md:max-w-[40rem] sm:max-w-full text-left px-4 text-gray-500 transition-opacity duration-300 opacity-100 ml-0 md:mx-auto">
               <h3 className="font-semibold mb-2 flex items-center">
-                <img src="/images/automation.svg" alt="Business Automations Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" style={{ display: 'inline-block' }} />
+                <Image src="/images/automation.svg" alt="Business Automations Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" />
                 Business Automations
               </h3>
               <p className="mb-4 text-sm sm:text-base">
@@ -150,7 +150,7 @@ export default function Home() {
           {activeCard === "project" && (
             <div className="w-full max-w-[64rem] md:max-w-[40rem] sm:max-w-full text-left px-4 text-gray-500 transition-opacity duration-300 opacity-100 ml-0 md:mx-auto">
               <h3 className="font-semibold mb-2 flex items-center">
-                <img src="/images/project.svg" alt="Project Management Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" style={{ display: 'inline-block' }} />
+                <Image src="/images/project.svg" alt="Project Management Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" />
                 Project Management
               </h3>
               <p className="mb-4 text-sm sm:text-base">
@@ -290,11 +290,13 @@ export default function Home() {
           </div>
           
           <div className="flex-1 flex justify-center md:justify-end items-end h-full">
-            <img
+            <Image
               src="/images/buss.png"
               alt="Business Chess"
               className="object-contain max-h-[400px] w-auto"
               style={{ maxWidth: "100%" }}
+              width={400}
+              height={300}
             />
           </div>
         </div>
