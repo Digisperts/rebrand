@@ -6,6 +6,7 @@ import ScrollFadeSection from "./components/ScrollFadeSection";
 import CountUpOnView from "./components/CountUpOnView";
 import HeroFadeIn from "./components/HeroFadeIn";
 import Footer from "./Footer";
+import { FaPhone, FaChevronDown, FaStar, FaRegStar, FaStarHalfAlt } from "react-icons/fa";
 
 export default function Home() {
   const [activeCard, setActiveCard] = useState("software");
@@ -32,7 +33,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white pt-16">
+    <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
       {/* Header/NavBar */}
       <div className="fixed top-0 left-0 w-full z-50">
       <NavBar />
@@ -40,29 +41,53 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section className="relative h-[500px] flex items-center justify-center">
-        {/* Background image */}
+      <section className="relative w-full min-h-[520px] flex items-stretch overflow-hidden">
+        <div className="flex w-full min-h-[520px] relative">
+          {/* Black background as a separate absolutely positioned div, always visible */}
+          <div className="hidden lg:block absolute left-0 top-0 h-full z-10" style={{width: '28%', minWidth: 120, maxWidth: 300, background: 'black'}} />
+          {/* Text box overlays black bg and hero image, always visible */}
+          <div className="absolute left-0 top-0 h-full items-center pointer-events-none z-20 w-full flex">
+            <div className="relative pl-4 sm:pl-6 md:pl-12 pr-2 sm:pr-4 md:pr-8 py-6 sm:py-8 md:py-12 max-w-[700px] w-full pointer-events-auto">
+              {/* Soft dark overlay under text */}
+              <div className="absolute inset-0 bg-black/46 rounded-xl blur-sm -z-10" />
+              <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2" style={{letterSpacing:0}}>
+                <span className="block text-2xl sm:text-4xl md:text-5xl">Building Your Vision.</span>
+                <span className="block text-2xl sm:text-4xl md:text-5xl">Engineering Your Success.</span>
+              </h1>
+              <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>As your dedicated technology partner, we build the powerful digital foundation your ambition deserves.</p>
+              <div className="flex flex-col gap-3">
+                <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
+                <FaPhone className="mr-2 transform -rotate-270" />
+                  Schedule a Consultation
+                </a>
+                <div className="flex flex-col gap-1 mt-1">
+                  <div className="flex items-center gap-1">
+                    <FaStar className="text-yellow-400 text-xl" />
+                    <FaStar className="text-yellow-400 text-xl" />
+                    <FaStar className="text-yellow-400 text-xl" />
+                    <FaStar className="text-yellow-400 text-xl" />
+                    <FaStarHalfAlt className="text-yellow-400 text-xl" />
+                  </div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-white font-semibold text-base">4.5 Rating on</span>
+                    <div className="w-[60px] h-[22px] overflow-hidden flex items-center">
+                      <Image src="/images/homepage/clutch.png" alt="Clutch" width={70} height={22} className="object-contain object-center" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Right: Hero image */}
+          <div className="flex-1 relative min-h-[520px] w-full">
         <Image
-          src="/images/background.jpg"
-          alt="Hero Background"
+              src="/images/homepage/hero.png" 
+              alt="Hero" 
           fill
-          className="z-0 object-cover"
+              className="object-cover object-right w-full h-full" 
           priority
-        />
-        <div className="absolute inset-0 flex items-start justify-start z-10">
-          <div className="bg-[#f3f4f6]/10 bg-opacity-10 w-[95%] ml-[2.5%] mt-[9%] custom-py-8 px-8 text-left">
-          <HeroFadeIn>
-            <h1 className="text-2xl sm:text-4xl text-white font-light mb-4">
-              Democratizing Projects with you all the way
-            </h1>
-          
-            <p className="text-white mb-6 text-base sm:text-lg">
-              Your Project Success comes with zero doubt. It is guaranteed
-            </p>
-            <a href="#" className="border border-gray-400 px-4 py-2 transition-colors duration-600 ease-in-out hover:bg-blue-900 hover:text-white inline-block">
-              EXPLORE
-            </a>
-            </HeroFadeIn>
+              style={{ border: 'none', boxShadow: 'none' }}
+            />
           </div>
         </div>
       </section>
@@ -70,137 +95,81 @@ export default function Home() {
 
       <ScrollFadeSection>
       {/* Professionals Section */}
-      <section className="py-10 sm:py-16 text-center bg-gray-100 flex-1">
-        <h2 className="text-xl sm:text-2xl text-blue-900 mb-8">We are Professionals in…</h2>
-        <ScrollFadeSection>
-        <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 mb-8">
-          <div className="text-black">
-            <div
-              className={`bg-white rounded-xl shadow-md w-full max-w-xs md:w-64 py-6 px-4 flex flex-col items-center transition-transform duration-300 hover:scale-95 cursor-pointer ${activeCard === "software" ? "ring-2 ring-gray-100" : ""}`}
-              onClick={() => setActiveCard("software")}
-            >
-              <Image
-                src="/images/software.png"
-                alt="Software Development Icon"
-                width={40}
-                height={40}
-                className="mb-4"
-              />
-              <div className="text-lg font-medium">Software Development</div>
+      <section className="w-full bg-[#F9F9F9] py-12 px-4 sm:px-6 md:px-12 flex flex-col items-start">
+        <h2 className="mb-10 text-left">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
+            We Are Professionals In
+          </span>
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
+          {/* Software Development Card */}
+          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+            <div className="px-6 pt-6 w-full">
+              <Image src="/images/homepage/software.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+            </div>
+            <div className="px-6 pt-6 pb-7 w-full">
+              <h3 className="font-bold text-lg mb-2 text-black">Software Development</h3>
+              <p className="text-gray-800 text-base mb-4 leading-snug">Gain a competitive edge with high-quality, custom technology. We build scalable software, web, and mobile applications engineered to solve your unique challenges and help your business exceed its goals.</p>
+              <a href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">DISCUSS YOUR PROJECT <span className="ml-1">→</span></a>
             </div>
           </div>
-          <div className="text-black">
-            <div
-              className={`bg-white rounded-xl w-full max-w-xs md:w-64 py-6 px-4 flex flex-col items-center transition ease-out duration-300 hover:shadow-md cursor-pointer ${activeCard === "automation" ? "ring-2 ring-gray-100" : ""}`}
-              onClick={() => setActiveCard("automation")}
-            >
-              <Image
-                src="/images/automation.png"
-                alt="Business Automations Icon"
-                width={40}
-                height={40}
-                className="mb-4"
-              />
-              <div className="text-lg font-medium">Business Automations</div>
+          {/* Business Automations Card */}
+          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+            <div className="px-6 pt-6 w-full">
+              <Image src="/images/homepage/business.jpg" alt="Business Automations" width={365} height={199} className="w-full h-[199px] object-cover" />
+            </div>
+            <div className="px-6 pt-6 pb-7 w-full">
+              <h3 className="font-bold text-lg mb-2 text-black">Business Automations</h3>
+              <p className="text-gray-800 text-base mb-4 leading-snug">Unlock new levels of efficiency and empower your team. We automate complex workflows and repetitive tasks, from financial controls to customer support, freeing you to focus on strategic growth and innovation.</p>
+              <a href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">AUTOMATE YOUR WORKFLOW <span className="ml-1">→</span></a>
             </div>
           </div>
-          <div className="text-black">
-            <div
-              className={`bg-white rounded-xl w-full max-w-xs md:w-64 py-6 px-4 flex flex-col items-center transition ease-out duration-300 hover:shadow-md cursor-pointer ${activeCard === "project" ? "ring-2 ring-gray-100" : ""}`}
-              onClick={() => setActiveCard("project")}
-            >
-              <Image
-                src="/images/project.png"
-                alt="Project Management Icon"
-                width={40}
-                height={40}
-                className="mb-4"
-              />
-              <div className="text-lg font-medium">Project Management</div>
+          {/* Digital Marketing Card (centered on tablet) */}
+          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto md:col-span-2 lg:col-span-1 md:mx-auto lg:mx-auto md:justify-self-center lg:justify-self-auto">
+            <div className="px-6 pt-6 w-full">
+              <Image src="/images/homepage/digital.jpg" alt="Digital Marketing" width={365} height={199} className="w-full h-[199px] object-cover" />
+            </div>
+            <div className="px-6 pt-6 pb-7 w-full">
+              <h3 className="font-bold text-lg mb-2 text-black">Digital Marketing</h3>
+              <p className="text-gray-800 text-base mb-4 leading-snug">Amplify your brand's voice and achieve measurable success. We develop and execute data-driven digital marketing strategies that connect you with your target audience and convert engagement into tangible results.</p>
+              <a href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">GET YOUR MARKETING PLAN <span className="ml-1">→</span></a>
             </div>
           </div>
         </div>
-        </ScrollFadeSection>
-        <ScrollFadeSection>
-        <div className="min-h-[140px] flex justify-start md:justify-center">
-          {activeCard === "software" && (
-            <div className="w-full max-w-[64rem] md:max-w-[40rem] sm:max-w-full text-left px-4 text-gray-500 transition-opacity duration-300 opacity-100 ml-0 md:mx-auto">
-          <h3 className="font-semibold mb-2 flex items-center">
-                <Image src="/images/software.svg" alt="Software Development Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" />
-            Software Development
-          </h3>
-          <p className="mb-4 text-sm sm:text-base">
-                {cardDetails.software.description}
-              </p>
-              <a href="#" className="border border-gray-400 px-4 py-2 transition-colors duration-600 ease-in-out hover:bg-blue-900 hover:text-white inline-block">KNOW MORE</a>
-            </div>
-          )}
-          {activeCard === "automation" && (
-            <div className="w-full max-w-[64rem] md:max-w-[40rem] sm:max-w-full text-left px-4 text-gray-500 transition-opacity duration-300 opacity-100 ml-0 md:mx-auto">
-              <h3 className="font-semibold mb-2 flex items-center">
-                <Image src="/images/automation.svg" alt="Business Automations Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" />
-                Business Automations
-              </h3>
-              <p className="mb-4 text-sm sm:text-base">
-                {cardDetails.automation.description}
-              </p>
-              <a href="#" className="border border-gray-400 px-4 py-2 transition-colors duration-600 ease-in-out hover:bg-blue-900 hover:text-white inline-block">KNOW MORE</a>
-            </div>
-          )}
-          {activeCard === "project" && (
-            <div className="w-full max-w-[64rem] md:max-w-[40rem] sm:max-w-full text-left px-4 text-gray-500 transition-opacity duration-300 opacity-100 ml-0 md:mx-auto">
-              <h3 className="font-semibold mb-2 flex items-center">
-                <Image src="/images/project.svg" alt="Project Management Icon" width={32} height={32} className="opacity-50 rounded-full mr-2" />
-                Project Management
-              </h3>
-              <p className="mb-4 text-sm sm:text-base">
-                {cardDetails.project.description}
-              </p>
-              <a href="#" className="border border-gray-400 px-4 py-2 transition-colors duration-600 ease-in-out hover:bg-blue-900 hover:text-white inline-block">KNOW MORE</a>
-            </div>
-          )}
-        </div>
-        </ScrollFadeSection>
       </section>
       </ScrollFadeSection>
 
       <ScrollFadeSection>
       {/* Features Section */}
-      <section className="w-full py-12 bg-white">
-        <h2 className="text-2xl sm:text-3xl text-blue-900 font-light text-center mb-10">
-          With Digisperts, you get
+      <section className="w-full py-12 px-4 sm:px-6 md:px-12 bg-[#FFFFFF]">
+        <h2 className="mb-10 text-left">
+          <span className="block text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
+            With Digisperts, You Get
+          </span>
         </h2>
         <ScrollFadeSection>
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 px-4">
-          {/* Left: Features */}
-          <div className="flex-1 flex flex-col justify-center">
-            <div className="mb-8">
-              <h3 className="font-semibold text-lg mb-1 text-gray-600">Flexibility</h3>
-              <p className="text-gray-800 text-sm">
-                With our Agile approach to project processes, we work effectively with the goals of giving you a Time bound, High quality and cost effective deliverables
-              </p>
+          {/* Features: Each in its own box */}
+          <div className="flex flex-col w-full md:w-1/2 lg:w-2/5 mx-auto">
+            <div className="bg-white shadow-md px-4 py-6 my-4 max-w-md w-full mx-auto">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Flexibility</h3>
+              <p className="text-gray-900 font-semibold text-sm">With our Agile approach to project processes, we work effectively with the goals of giving you a Time bound, High quality and cost effective deliverables</p>
             </div>
-            <div className="mb-8">
-              <h3 className="font-semibold text-lg mb-1 text-gray-600">Transparency</h3>
-              <p className="text-gray-700 text-sm">
-                We believe leaving you in the dark about your projects is very bad, because we care about you, you are always up to date with our progress and feel every bit of our growth.
-              </p>
+            <div className="bg-white shadow-md px-4 py-6 my-4 max-w-md w-full mx-auto">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Transparency</h3>
+              <p className="text-gray-900 font-semibold text-sm">We believe leaving you in the dark about your projects is very bad, because we care about you, you are always up to date with our progress and feel every bit of our growth.</p>
             </div>
-            <div className="mb-8">
-              <h3 className="font-semibold text-lg mb-1 text-gray-600">Security</h3>
-              <p className="text-gray-700 text-sm">
-                We ensure compliance with international IT standards like ISO 27000 Series and GDPR. Your passwords are safe, your project data are kept confidential
-              </p>
+            <div className="bg-white shadow-md px-4 py-6 my-4 max-w-md w-full mx-auto">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Security</h3>
+              <p className="text-gray-900 font-semibold text-sm">We ensure compliance with international IT standards like ISO 27000 Series and GDPR. Your passwords are safe, your project datas are kept confidential</p>
             </div>
-            <div>
-              <h3 className="font-semibold text-lg mb-1 text-gray-600">Professionalism</h3>
-              <p className="text-gray-700 text-sm">
-                Our intuitive project approach, our clear work process and the professional team of experts are where we draw our super powers.
-              </p>
+            <div className="bg-white shadow-md px-4 py-6 my-4 max-w-md w-full mx-auto">
+              <h3 className="font-bold text-lg mb-2 text-gray-900">Professionalism</h3>
+              <p className="text-gray-900 font-semibold text-sm">Our intuitive project approach, our clear work process and the professional team of experts are where we draw our super powers.</p>
             </div>
           </div>
           {/* Right: Image */}
-          <div className="flex-1 flex justify-center items-center">
+          <div className="flex-1 flex justify-center items-center mt-8 md:mt-0">
             <Image
               src="/images/Lovepik.png"
               alt="Feature Illustration"
@@ -210,11 +179,6 @@ export default function Home() {
               priority
             />
           </div>
-        </div>
-        </ScrollFadeSection>
-        <ScrollFadeSection>
-        <div className="text-center mt-12">
-          <h3 className="text-xl text-blue-900 font-light">We Feature</h3>
         </div>
         </ScrollFadeSection>
       </section>
