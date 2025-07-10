@@ -131,7 +131,7 @@ export default function Home() {
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-lg mb-2 text-black">Digital Marketing</h3>
-              <p className="text-gray-800 text-base mb-4 leading-snug">Amplify your brand's voice and achieve measurable success. We develop and execute data-driven digital marketing strategies that connect you with your target audience and convert engagement into tangible results.</p>
+              <p className="text-gray-800 text-base mb-4 leading-snug">Amplify your brand&apos;s voice and achieve measurable success. We develop and execute data-driven digital marketing strategies that connect you with your target audience and convert engagement into tangible results.</p>
               <a href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">GET YOUR MARKETING PLAN <span className="ml-1">→</span></a>
             </div>
           </div>
