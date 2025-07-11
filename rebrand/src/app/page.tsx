@@ -10,6 +10,60 @@ import { FaPhone, FaChevronDown, FaStar, FaRegStar, FaStarHalfAlt } from "react-
 
 export default function Home() {
 
+  const slides = [
+    {
+      image: "/images/homepage/agriculture-slide1.webp",
+      title: "Agriculture",
+      heading: "Your voice gets heard, the Green world thrives.",
+      desc: "Digisperts revolutionizes agriculture through technology. From precision farming to sustainable practices, we cultivate a future where technology meets the soil.",
+    },
+    {
+      image: "/images/homepage/technology-slide2.webp", 
+      title: "Technology",
+      heading: "Building a Better Digital Future, Together.",
+      desc: "We drive healthcare forward with digital solutions, AI-powered diagnostics, and telehealth platforms for accessible, personalized care.",
+    },
+    {
+      image: "/images/homepage/real-estate-slide3.webp", 
+      title: "Real Estate",
+      heading: "Building tomorrow, redefining real estate solutions.",
+      desc: "Our solutions elevate property management, streamline processes, and enhance the overall real estate experience.",
+    },
+    {
+      image: "/images/homepage/health-slide4.webp", 
+      title: "Health",
+      heading: "Improving Lives, One Innovation at a Time.",
+      desc: "We drive healthcare forward with digital solutions, AI-powered diagnostics, and telehealth platforms for accessible, personalized care.",
+    },
+    {
+      image: "/images/homepage/transportation-slide5.webp", 
+      title: "Transportation",
+      heading: "Efficiency in Motion, Revolutionizing Transportation.",
+      desc: "At Digisperts, we pave the way for smarter transportation solutions. From logistics optimization to real-time tracking, we redefine efficiency in motion.",
+    },
+    {
+      image: "/images/homepage/retail-slide6.webp", 
+      title: "Retail and Consumer Goods",
+      heading: "Empowering Retail Excellence, Driving Consumer Loyalty.",
+      desc: "Transforming retail brands with innovative strategies, data-driven engagement, and tailored solutions to boost sales, enhance loyalty, and ensure growth.",
+    },
+    {
+      image: "/images/homepage/finance-slide7.webp", 
+      title: "Finance",
+      heading: "Fintech Solutions for Growth and Insight.",
+      desc: "We streamline financial processes,  create finance tracking system and unlock growth potential for businesses of all sizes.",
+    },
+  ];
+  const [active, setActive] = useState(0);
+  const timeoutRef = useRef<number | null>(null);
+  useEffect(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    timeoutRef.current = window.setTimeout(() => setActive((a) => (a + 1) % slides.length), 5000);
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, [active, slides.length]);
+
 
   return (
     <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
@@ -234,106 +288,45 @@ export default function Home() {
         </h2>
         <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
           <div className="relative w-full h-[480px] md:h-[520px] flex items-center justify-center">
-            {/* Slider Logic */}
-            {(() => {
-              const slides = [
-                {
-                  image: "/images/homepage/agriculture-slide1.webp",
-                  title: "Agriculture",
-                  heading: "Your voice gets heard, the Green world thrives.",
-                  desc: "Digisperts revolutionizes agriculture through technology. From precision farming to sustainable practices, we cultivate a future where technology meets the soil.",
-                },
-                {
-                  image: "/images/homepage/technology-slide2.webp", 
-                  title: "Technology",
-                  heading: "Building a Better Digital Future, Together.",
-                  desc: "We drive healthcare forward with digital solutions, AI-powered diagnostics, and telehealth platforms for accessible, personalized care.",
-                },
-                {
-                  image: "/images/homepage/real-estate-slide3.webp", 
-                  title: "Real Estate",
-                  heading: "Building tomorrow, redefining real estate solutions.",
-                  desc: "Our solutions elevate property management, streamline processes, and enhance the overall real estate experience.",
-                },
-                {
-                  image: "/images/homepage/health-slide4.webp", 
-                  title: "Health",
-                  heading: "Improving Lives, One Innovation at a Time.",
-                  desc: "We drive healthcare forward with digital solutions, AI-powered diagnostics, and telehealth platforms for accessible, personalized care.",
-                },
-                {
-                  image: "/images/homepage/transportation-slide5.webp", 
-                  title: "Transportation",
-                  heading: "Efficiency in Motion, Revolutionizing Transportation.",
-                  desc: "At Digisperts, we pave the way for smarter transportation solutions. From logistics optimization to real-time tracking, we redefine efficiency in motion.",
-                },
-                {
-                  image: "/images/homepage/retail-slide6.webp", 
-                  title: "Retail and Consumer Goods",
-                  heading: "Empowering Retail Excellence, Driving Consumer Loyalty.",
-                  desc: "Transforming retail brands with innovative strategies, data-driven engagement, and tailored solutions to boost sales, enhance loyalty, and ensure growth.",
-                },
-                {
-                  image: "/images/homepage/finance-slide7.webp", 
-                  title: "Finance",
-                  heading: "Fintech Solutions for Growth and Insight.",
-                  desc: "We streamline financial processes,  create finance tracking system and unlock growth potential for businesses of all sizes.",
-                },
-              ];
-              const [active, setActive] = useState(0);
-              const timeoutRef = useRef<number | null>(null);
-              useEffect(() => {
-                if (timeoutRef.current) clearTimeout(timeoutRef.current);
-                timeoutRef.current = window.setTimeout(() => setActive((a) => (a + 1) % slides.length), 5000);
-                return () => {
-                  if (timeoutRef.current) clearTimeout(timeoutRef.current);
-                };
-              }, [active]);
-              const goTo = (idx) => setActive(idx);
-              return (
-                <>
-                  {slides.map((slide, idx) => (
-                    <div
-                      key={idx}
-                      className={`absolute left-0 top-0 w-full h-full transition-opacity duration-700 ease-in-out ${active === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
-                    >
-                      <Image
-                        src={slide.image}
-                        alt={slide.heading}
-                        fill
-                        className="object-cover"
-                        style={{zIndex: 1}}
-                        priority={idx === 0}
-                      />
-                      <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
-                        <div className="bg-black/60 p-6 md:p-8 max-w-[75%] md:max-w-[60%] text-white ml-8 mt-8 rounded-lg">
-                          <div className="font-semibold text-xl mb-2">{slide.title}</div>
-                          <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">{slide.heading.split(' ').slice(0, -1).join(' ')}</div>
-                          <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight flex flex-wrap">{slide.heading.split(' ').slice(-1)}</div>
-                          <div className="text-sm md:text-base font-normal mb-5">{slide.desc}</div>
-                          <div className="flex gap-3 flex-wrap">
-                            <button className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition">VIEW CASE STUDY</button>
-                            <button className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">VIEW USE CASES</button>
-                          </div>
-                        </div>
-                      </div>
+            {slides.map((slide, idx) => (
+              <div
+                key={idx}
+                className={`absolute left-0 top-0 w-full h-full transition-opacity duration-700 ease-in-out ${active === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
+              >
+                <Image
+                  src={slide.image}
+                  alt={slide.heading}
+                  fill
+                  className="object-cover"
+                  style={{zIndex: 1}}
+                  priority={idx === 0}
+                />
+                <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
+                  <div className="bg-black/60 p-6 md:p-8 max-w-[75%] md:max-w-[60%] text-white ml-8 mt-8 rounded-lg">
+                    <div className="font-semibold text-xl mb-2">{slide.title}</div>
+                    <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">{slide.heading.split(' ').slice(0, -1).join(' ')}</div>
+                    <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight flex flex-wrap">{slide.heading.split(' ').slice(-1)}</div>
+                    <div className="text-sm md:text-base font-normal mb-5">{slide.desc}</div>
+                    <div className="flex gap-3 flex-wrap">
+                      <button className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition">VIEW CASE STUDY</button>
+                      <button className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">VIEW USE CASES</button>
                     </div>
-                  ))}
-                  {/* Pagination Dots */}
-                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                    {slides.map((_, idx) => (
-                      <button
-                        key={idx}
-                        className={`w-3 h-3 rounded-full transition-all duration-300 ${active === idx ? 'bg-[#233876] scale-110 shadow-lg' : 'bg-gray-300'} inline-block`}
-                        onClick={() => goTo(idx)}
-                        aria-label={`Go to slide ${idx+1}`}
-                        style={{outline: 'none'}}
-                      />
-                    ))}
                   </div>
-                </>
-              );
-            })()}
+                </div>
+              </div>
+            ))}
+            {/* Pagination Dots */}
+            <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+              {slides.map((_, idx) => (
+                <button
+                  key={idx}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${active === idx ? 'bg-[#233876] scale-110 shadow-lg' : 'bg-gray-300'} inline-block`}
+                  onClick={() => setActive(idx)}
+                  aria-label={`Go to slide ${idx+1}`}
+                  style={{outline: 'none'}}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

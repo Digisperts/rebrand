@@ -188,7 +188,7 @@ export default function HowWeWorkPage() {
           </div>
           {/* Right: SVG */}
           <div className="flex-1 flex justify-center md:justify-end">
-            <img
+            <Image
               src="/images/got-a-project.svg"
               alt="Got a project"
               className="w-[280px] max-w-full h-auto"
