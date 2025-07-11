@@ -91,9 +91,10 @@ const NavBar = () => {
           </button>
           {resourcesOpen && (
             <div className="absolute left-0 top-full w-44 bg-white shadow-lg z-30 py-2">
-              <a href="/resources/sample" className={`block px-4 py-2 font-semibold text-sm transition-colors rounded ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Sample</a>
-              {/* <a href="/resources/sample" className={`block px-4 py-2 font-semibold text-sm transition-colors rounded ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Sample</a>
-              <a href="/resources/sample" className={`block px-4 py-2 font-semibold text-sm transition-colors rounded ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Sample</a> */}
+              <a href="/resources/case-studies" className={`block px-4 py-2 font-semibold text-sm transition-colors rounded ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Case Studies</a>
+              <a href="/resources/use-cases" className={`block px-4 py-2 font-semibold text-sm transition-colors rounded ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Use Cases</a>
+              <a href="/resources/blog" className={`block px-4 py-2 font-semibold text-sm transition-colors rounded ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Blog</a>
+              <a href="/resources/careers" className={`block px-4 py-2 font-semibold text-sm transition-colors rounded ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Careers</a>
             </div>
           )}
         </div>
@@ -164,9 +165,10 @@ const NavBar = () => {
           </button>
           {resourcesOpen && (
             <div className="w-full bg-white shadow-inner">
-              <a href="/resources/sample" className={`block px-6 py-2 custom-nav-dropdown transition-colors ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Sample</a>
-              {/* <a href="/resources/sample" className={`block px-6 py-2 custom-nav-dropdown transition-colors ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Sample</a>
-              <a href="/resources/sample" className={`block px-6 py-2 custom-nav-dropdown transition-colors ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Sample</a> */}
+              <a href="/resources/case-studies" className={`block px-6 py-2 custom-nav-dropdown transition-colors ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Case Studies</a>
+              <a href="/resources/use-cases" className={`block px-6 py-2 custom-nav-dropdown transition-colors ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Use Cases</a>
+              <a href="/resources/blog" className={`block px-6 py-2 custom-nav-dropdown transition-colors ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Blog</a>
+              <a href="/resources/careers" className={`block px-6 py-2 custom-nav-dropdown transition-colors ${pathname === "/resources/sample" ? "bg-blue-100 text-blue-900 underline" : "text-black hover:bg-blue-50 hover:text-blue-900 active:bg-blue-100 active:text-blue-900"}`}>Careers</a>
             </div>
           )}
 
