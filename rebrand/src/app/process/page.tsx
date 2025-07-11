@@ -188,30 +188,6 @@ export default function HowWeWorkPage() {
       </section>
       </ScrollFadeSection>
 
-      <section className="w-full bg-white py-12">
-        <ScrollFadeSection>
-        <div className="max-w-xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 px-4">
-          {/* Left: Text */}
-          <div className="flex-1 flex flex-col items-start md:items-start mt- max-w-sm">
-            <p className="text-[#233876] text-xl mb-1 text-left">
-              Got a project?
-            </p>
-            <p className="text-[#233876] px-5 text-base text-left">
-              Let&apos;s discuss
-            </p>
-          </div>
-          {/* Right: SVG */}
-          <div className="flex-1 flex justify-center md:justify-end">
-            <Image
-              src="/images/got-a-project.svg"
-              alt="Got a Project" 
-              className="w-[280px] max-w-full h-auto"
-              style={{ minWidth: 160 }}
-            />
-          </div>
-        </div>
-        </ScrollFadeSection>
-      </section>
 
       <Footer />
     </div>
