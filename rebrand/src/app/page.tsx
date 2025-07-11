@@ -84,32 +84,32 @@ export default function Home() {
               {/* Soft dark overlay under text */}
               <div className="absolute inset-0 bg-black/46 rounded-xl blur-sm -z-10" />
               <HeroFadeIn>
-                <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2" style={{letterSpacing:0}}>
-                  <span className="block text-2xl sm:text-4xl md:text-5xl">Building Your Vision.</span>
-                  <span className="block text-2xl sm:text-4xl md:text-5xl">Engineering Your Success.</span>
-                </h1>
-                <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>As your dedicated technology partner, we build the powerful digital foundation your ambition deserves.</p>
-                <div className="flex flex-col gap-3">
-                  <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
-                  <FaPhone className="mr-2 transform -rotate-270" />
-                    Schedule a Consultation
-                  </a>
-                  <div className="flex flex-col gap-1 mt-1">
-                    <div className="flex items-center gap-1">
-                      <FaStar className="text-yellow-400 text-xl" />
-                      <FaStar className="text-yellow-400 text-xl" />
-                      <FaStar className="text-yellow-400 text-xl" />
-                      <FaStar className="text-yellow-400 text-xl" />
-                      <FaStarHalfAlt className="text-yellow-400 text-xl" />
-                    </div>
-                    <div className="flex items-center gap-2 mt-1">
-                      <span className="text-white font-semibold text-base">4.5 Rating on</span>
-                      <div className="w-[60px] h-[22px] overflow-hidden flex items-center">
-                        <Image src="/images/homepage/clutch.png" alt="Clutch" width={70} height={22} className="object-contain object-center" />
-                      </div>
+              <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2" style={{letterSpacing:0}}>
+                <span className="block text-2xl sm:text-4xl md:text-5xl">Building Your Vision.</span>
+                <span className="block text-2xl sm:text-4xl md:text-5xl">Engineering Your Success.</span>
+              </h1>
+              <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>As your dedicated technology partner, we build the powerful digital foundation your ambition deserves.</p>
+              <div className="flex flex-col gap-3">
+                <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
+                <FaPhone className="mr-2 transform -rotate-270" />
+                  Schedule a Consultation
+                </a>
+                <div className="flex flex-col gap-1 mt-1">
+                  <div className="flex items-center gap-1">
+                    <FaStar className="text-yellow-400 text-xl" />
+                    <FaStar className="text-yellow-400 text-xl" />
+                    <FaStar className="text-yellow-400 text-xl" />
+                    <FaStar className="text-yellow-400 text-xl" />
+                    <FaStarHalfAlt className="text-yellow-400 text-xl" />
+                  </div>
+                  <div className="flex items-center gap-2 mt-1">
+                    <span className="text-white font-semibold text-base">4.5 Rating on</span>
+                    <div className="w-[60px] h-[22px] overflow-hidden flex items-center">
+                      <Image src="/images/homepage/clutch.png" alt="Clutch" width={70} height={22} className="object-contain object-center" />
                     </div>
                   </div>
                 </div>
+              </div>
               </HeroFadeIn>
             </div>
           </div>
@@ -293,7 +293,7 @@ export default function Home() {
                 key={idx}
                 className={`absolute left-0 top-0 w-full h-full transition-opacity duration-700 ease-in-out ${active === idx ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'}`}
               >
-                <Image
+        <Image
                   src={slide.image}
                   alt={slide.heading}
                   fill
@@ -359,11 +359,11 @@ export default function Home() {
           <ScrollFadeSection>
           <div className="max-w-6xl mt-10 mx-auto border p-8 bg-[#EAF1FF] shadow-xl">
             <p className="text-[#3C3C3CE5] text-base font-semibold italic mb-6 text-left">
-              &quot;Digisperts LLC has been instrumental in transforming our digital marketing efforts. 
-              Their strategic approach and deep understanding of our industry helped us reach our target 
-              audience effectively. From creating engaging content to running successful ad campaigns, 
-              they consistently delivered outstanding results. Our online visibility and lead generation 
-              have significantly improved, and we are thrilled to have digisperts as our trusted digital 
+            &quot;Digisperts LLC has been instrumental in transforming our digital marketing efforts. 
+            Their strategic approach and deep understanding of our industry helped us reach our target 
+            audience effectively. From creating engaging content to running successful ad campaigns, 
+            they consistently delivered outstanding results. Our online visibility and lead generation 
+            have significantly improved, and we are thrilled to have digisperts as our trusted digital 
               marketing partner.&quot;
             </p>
             <div className="text-left text-[#1E1E1E] font-bold">
@@ -376,7 +376,7 @@ export default function Home() {
 
       {/* Powered By Section */}
       <section className="w-full bg-[#F9F9F9] py-8 flex flex-col">
-        <ScrollFadeSection>
+      <ScrollFadeSection>
           <div className="max-w-7xl w-full flex flex-col items-start px-6 mx-auto">
             <h2 className="text-2xl ml-10 md:text-3xl font-bold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent mb-8 w-full text-left whitespace-nowrap" style={{letterSpacing: 0}}>
               Powered by Industry-Leading Technology
@@ -423,46 +423,46 @@ export default function Home() {
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/adobe.png" alt="Adobe" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222]">Adobe</span>
-                    </div>
+          </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/aws.png" alt="AWS" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222]">AWS</span>
-                    </div>
+          </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/figma.png" alt="Figma" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222]">Figma</span>
-                    </div>
+        </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/google-cloud.png" alt="Google Cloud" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222] whitespace-nowrap">Google Cloud</span>
-                    </div>
+        </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/microsoft.png" alt="Microsoft" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222]">Microsoft</span>
-                    </div>
+            </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/azure.png" alt="Azure" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222]">Azure</span>
-                    </div>
+            </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/salesforce.png" alt="Salesforce" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222]">Salesforce</span>
-                    </div>
+            </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/digital-ocean.png" alt="Digital Ocean" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222] whitespace-nowrap">Digital Ocean</span>
-                    </div>
+            </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/sap-ariba.png" alt="SAP Ariba" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222]">SAP Ariba</span>
-                    </div>
+            </div>
                     <div className="flex flex-row items-center gap-2">
                       <Image src="/images/homepage/platform/adobe.png" alt="Adobe" width={80} height={80} className="object-contain" />
                       <span className="text-lg font-medium text-[#222]">Adobe</span>
-                    </div>
-                  </div>
+            </div>
+            </div>
                 ))}
-              </div>
+            </div>
               <style jsx>{`
                   @keyframes platform-scroll {
                     0% { transform: translateX(0); }
@@ -470,8 +470,8 @@ export default function Home() {
                   }
                 `}
               </style>
-            </div>
           </div>
+        </div>
         </ScrollFadeSection>
       </section>
       
@@ -556,7 +556,7 @@ export default function Home() {
               priority
             />
             <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
-              <div className="p-6 md:p-27 max-w-[75%] md:max-w-[60%] text-white ml-8 mt-1 rounded-lg">
+              <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
                 <ScrollFadeSection>
                   <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
                   <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
