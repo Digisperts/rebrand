@@ -113,10 +113,11 @@ export default function BookACallPage() {
           />
         </div>
       </section>
+      
       {/* Pre-footer section and other content follows here */}
-      <section className="relative w-full flex flex-col items-center bg-white pb-0 mb-10 -mb-32 z-30">
+      <section className="relative w-full flex flex-col items-center bg-white pb-0 mb-10 md:mb-0 z-30">
         {/* Bullets Info */}
-        <div className="w-full flex items-center justify-center bg-white border-t border-gray-200 py-3 px-4 text-base -mb-80 font-semibold text-black" style={{minHeight: 40}}>
+        <div className="w-full flex items-center justify-center bg-white border-t border-gray-200 py-3 px-4 text-base font-semibold text-black mb-4 md:-mb-2" style={{minHeight: 40}}>
           <span className="flex items-center gap-2 flex-wrap w-full justify-center">
             <span className="flex items-center"><span className="text-[#003399] text-xl mr-2">●</span> You will be talking to our Product and Project manager.</span>
             <span className="text-[#003399] text-xl mx-2">●</span>

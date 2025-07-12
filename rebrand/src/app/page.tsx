@@ -378,10 +378,10 @@ export default function Home() {
       <section className="w-full bg-[#F9F9F9] py-8 flex flex-col">
       <ScrollFadeSection>
           <div className="max-w-7xl w-full flex flex-col items-start px-6 mx-auto">
-            <h2 className="text-2xl ml-10 md:text-3xl font-bold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent mb-8 w-full text-left whitespace-nowrap" style={{letterSpacing: 0}}>
+            <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent mb-8 w-full text-left ml-0 md:ml-10" style={{letterSpacing: 0}}>
               Powered by Industry-Leading Technology
             </h2>
-            <div className="relative ml-10 w-full max-w-6xl overflow-hidden">
+            <div className="relative w-full max-w-6xl overflow-x-auto md:overflow-hidden ml-0 md:ml-10">
               <div
                 className="flex gap-28 animate-platform-scroll items-center w-max"
                 style={{ animation: 'platform-scroll 50s linear infinite' }}
