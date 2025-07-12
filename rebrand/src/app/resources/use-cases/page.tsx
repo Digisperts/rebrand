@@ -183,7 +183,7 @@ export default function UseCasesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Real Estate</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Generate More Leads with a High-Performance Website</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">See how a lead-focused real estate website with advanced IDX integration became an agency's #1 lead source, tripling their qualified leads and cutting their website bounce rate in half.</p>
+              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">See how a lead-focused real estate website with advanced IDX integration became an agency&apos;s #1 lead source, tripling their qualified leads and cutting their website bounce rate in half.</p>
               <a
                   href="#"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -248,7 +248,7 @@ export default function UseCasesResource() {
             <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
               <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
                 <ScrollFadeSection>
-                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Have a Challenge You Don't See Here?</div>
+                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Have a Challenge You Don&apos;t See Here?</div>
                   <div className="text-sm md:text-base font-normal mb-5">Every project is a new journey. If you&apos;re facing a unique operational or technical challenge, we&apos;re ready to listen. Let&apos;s talk about how we can build your success story.</div>
                   <div className="flex gap-3 flex-wrap">
                     <a
