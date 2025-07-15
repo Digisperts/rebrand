@@ -111,7 +111,7 @@ export default function Home() {
       </div>
 
 
-      {/* Hero Section */}
+      {/* Hero Slider Section */}
       <section className="relative w-full min-h-[520px] flex items-stretch overflow-hidden">
         <div className="flex w-full min-h-[520px] relative">
           {/* Black background as a separate absolutely positioned div, always visible */}
