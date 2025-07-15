@@ -105,7 +105,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
-      {/* NavBar */}
+      {/* Header/NavBar */}
       <div className="fixed top-0 left-0 w-full z-50">
       <NavBar />
       </div>
