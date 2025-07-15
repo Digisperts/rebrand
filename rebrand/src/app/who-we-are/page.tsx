@@ -2,68 +2,73 @@
 import NavBar from "../nav";
 import Footer from "../Footer";
 import Image from "next/image";
+import { FaCheck, FaPhone } from 'react-icons/fa';
 import ScrollFadeSection from "../components/ScrollFadeSection";
 
 export default function WhoWeArePage() {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
+      {/* NavBar */}
       <div className="fixed top-0 left-0 w-full z-50">
-        <NavBar />
+      <NavBar />
       </div>
 
-      {/* Hero Section */}
-      <section className="relative w-full h-[320px] flex items-center justify-center">
-        <Image
-          src="/images/who-we-are.png"
-          alt="Hero"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 flex flex-col items-center w-full">
-          <h1 className="text-white text-2xl md:text-3xl font-light text-center mt-8">
-            The Best Hands needed for<br />
-            your project success
-          </h1>
-          <p className="text-white text-base md:text-lg font-light text-center mt-2">
-            Time bound, cost effective and quality oriented delivery
+        {/* Section 1: Hero */}
+        <section className="relative w-full min-h-[520px] flex items-left justify-center text-white text-center px-6 pt-50">
+          <Image
+            src="/images/who-we-are/who-we-are-hero.png" 
+            alt="Hero Background"
+            fill
+            className="object-cover object-center z-0"
+          />
+          <div className="absolute inset-0 bg-black/70 z-10" />
+          <div className="relative z-20 max-w-4xl">
+            <h1 className="text-4xl font-bold mb-4">The Best Hands needed for your project success</h1>
+            <p className="mb-6 text-xl">Time bound, cost effective and quality oriented delivery.</p>
+          </div>
+        </section>
+
+        {/* Who are we? Section */}
+        <section className="w-full py-12 bg-white">
+        <h2 className="mb-7 pl-10 text-left">
+            <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
+              Who We Are
+            </span>
+          </h2>
+          <p className="text-gray-900 pl-10 font-semibold text-left max-w-5xl w-full mb-12">
+            We are team of experts in various fields who came together for one common goal, to help your 
+            business achieve its desire success goals. Since the establishment, Digisperts LLC has been 
+            dedicated to helping businesses thrive in the digital age. We understand the challenges 
+            faced by organizations when it comes to managing complex operations and staying ahead of 
+            the competition. Our mission is to simplify these processes and create systems that enhance 
+            productivity, efficiency, and growth.
           </p>
-        </div>
-      </section>
+        </section>
 
-      {/* Who are we? Section */}
-      <section className="w-full py-12 bg-white">
-        <h2 className="text-2xl text-[#233876] font-regular text-center mb-4">Who are we?</h2>
-        <p className="text-gray-700 text-base max-w-4xl mx-auto text-left mb-10">
-        We are team of experts in various fields who came together for one common goal, to help your business achieve its desire success goals. Since the establishment, Digisperts LLC has been dedicated to helping businesses thrive in the digital age. We understand the challenges faced by organizations when it comes to managing complex operations and staying ahead of the competition. Our mission is to simplify these processes and create systems that enhance productivity, efficiency, and growth.
-        </p>
-      </section>
-
-      {/* Our Approach Section */}
-      <ScrollFadeSection>
-      <section className="w-full py-8 bg-white">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4">
-          {/* SVG */}
-          <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-auto">
-            <Image
-              src="/images/approach.svg"
-              alt="Our Approach"
-              width={260}
-              height={100}
-              className="w-[260px] h-auto"
-            />
+        {/* Mission, Vision, Our Approach Section */}
+        <ScrollFadeSection>
+        <section className="w-full py-8 bg-white">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8 px-4">
+            {/* SVG */}
+            <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-auto">
+              <Image
+                src="/images/approach.svg"
+                alt="Our Approach"
+                width={260}
+                height={100}
+                className="w-[260px] h-auto"
+              />
+            </div>
+            {/* Text */}
+            <div className="flex-1 flex flex-col items-start md:items-start max-w-2xl">
+              <h3 className="text-xl font-regular text-[#233876] mb-2 text-left">Our Approach</h3>
+              <p className="text-gray-700 text-base text-left">
+              At Digisperts, we believe in a customer-centric approach that puts your needs at the forefront. We take the time to understand your unique requirements, challenges, and goals, allowing us to craft tailored solutions that yield tangible results. With a deep understanding of consumer perspectives and industry trends, we deliver innovative technology solutions that drive your business forward.
+              </p>
+            </div>
           </div>
-          {/* Text */}
-          <div className="flex-1 flex flex-col items-start md:items-start max-w-2xl">
-            <h3 className="text-xl font-regular text-[#233876] mb-2 text-left">Our Approach</h3>
-            <p className="text-gray-700 text-base text-left">
-            At Digisperts, we believe in a customer-centric approach that puts your needs at the forefront. We take the time to understand your unique requirements, challenges, and goals, allowing us to craft tailored solutions that yield tangible results. With a deep understanding of consumer perspectives and industry trends, we deliver innovative technology solutions that drive your business forward.
-            </p>
-          </div>
-        </div>
-      </section>
-      </ScrollFadeSection>
+        </section>
+        </ScrollFadeSection>
 
       {/* Our Team Section */}
       <ScrollFadeSection>
@@ -134,39 +139,43 @@ export default function WhoWeArePage() {
       </section>
       </ScrollFadeSection>
 
-      {/* Customer Success Officer Section */}
-      <section className="relative w-full h-[320px] flex items-center justify-center mt-12">
-        <Image
-          src="/images/who-we-are-banner.png"
-          alt="Customer Success"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/20" />
-        <ScrollFadeSection>
-        <div className="relative z-10 flex flex-col md:flex-row items-center justify-between w-full max-w-2xl mx-auto px-4">
-          {/* Text */}
-          <div className="flex-1 flex flex-col items-start justify-center">
-            <h3 className="text-white text-base md:text-xl font-semibold mb-2">
-              Speak to the Customer Success Officer
-            </h3>
-            <p className="text-white text-xs md:text-sm font-light mb-0">
-              We are interested in your success story and dynamic goals. Our responsibility is to offer a hand in ensuring your business succeeds.
-            </p>
-          </div>
-          {/* Officer Image */}
-          <div className="flex-shrink-0 mt-6 md:mt-0 md:ml-8">
-            <Image
-              src="/images/customer-success-officer.png"
-              alt="Customer Success Officer"
-              width={100}
-              height={100}
-              className="w-24 md:w-40 h-40 object-cover object-top rounded-md"
-            />
+      {/* Pre Footer Section */}
+      <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
+          <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+            <div className="absolute right-0 top-0 h-full" style={{ width: '45%', zIndex: 2 }}>
+              <Image
+                src="/images/who-we-are/customer-success.jpg"
+                alt="Pre Footer Background"
+                fill={false}
+                width={0}
+                height={0}
+                sizes="100vw"
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'right' }}
+                className="rounded-none"
+                priority
+              />
+            </div>
+            <div className="absolute left-0 top-0 bg-[#D9DADF] h-full flex items-center" style={{ width: '55%', zIndex: 0}}>
+              <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
+                <ScrollFadeSection>
+                <div className="font-extrabold text-2xl text-black md:text-3xl mb-2 leading-tight">Speak to the Customer Success Officer</div>
+                <div className="text-sm md:text-base font-normal text-black mb-5">We are interested in your success story and dynamic goals. Our responsibility is to offer a hand in ensuring your business suceeds.</div>
+                <div className="flex gap-3 flex-wrap">
+                  <a
+                    href="#"
+                          className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                          style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                  >
+                          TALK TO AN EXPERT
+                  </a>
+                </div>
+                </ScrollFadeSection>
+              </div>
+            </div>
+            {/* <div className="absolute inset-0 bg-black/70" /> */}
           </div>
         </div>
-        </ScrollFadeSection>
       </section>
 
       <Footer />
