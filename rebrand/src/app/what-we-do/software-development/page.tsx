@@ -47,7 +47,7 @@ export default function SoftwareDevelopment() {
           className="object-cover object-center z-0"
         />
         <div className="absolute inset-0 bg-black/10 z-10" />
-        <div className="relative z-20 max-w-4xl">
+        <div className="relative z-20 max-w-4xl py-16 md:py-0">
           <h1 className="text-4xl font-bold mb-4">Custom Software that Powers Your Growth.</h1>
           <p className="mb-6">We build high-quality, scalable applications that solve your unique challenges,<br/> overcome scalability hurdles, and give you a distinct competitive edge.</p>
           <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
@@ -136,13 +136,13 @@ export default function SoftwareDevelopment() {
           </h2>
           <p className="text-left text-gray-900 mb-8">We provide end-to-end development to bring your vision to life.</p>
 
-  {/* First Row */}
+          {/* First Row */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch mb-8 bg-[#F8F8F8] p-4 rounded">
             <div className="flex-1 flex flex-col justify-center items-start">
               <h3 className="text-2xl font-bold text-black mb-3">Custom Web Applications</h3>
               <p className="text-gray-900 mb-4">
-        We build powerful, secure web apps with robust back-ends and intuitive, visually appealing user interfaces. From enterprise dashboards to customer portals, our solutions are designed to streamline your operations.
-      </p>
+                We build powerful, secure web apps with robust back-ends and intuitive, visually appealing user interfaces. From enterprise dashboards to customer portals, our solutions are designed to streamline your operations.
+              </p>
               <a
                 href="#"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -150,21 +150,21 @@ export default function SoftwareDevelopment() {
               >
                 KNOW MORE <span className="ml-1">→</span>
               </a>
-    </div>
+            </div>
             <div className="flex items-center justify-center w-full md:w-[45%] max-w-[260px] mx-auto">
-    <Image
+              <Image
                 src="/images/what-we-do/software-dev/SD-b.png" 
-      alt="Custom Web Applications"
+                alt="Custom Web Applications"
                 width={260}
                 height={180}
                 className="object-contain"
               />
             </div>
-  </div>
+          </div>
 
-  {/* Second Row */}
+          {/* Second Row */}
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
-    {/* Mobile App Development */}
+            {/* Mobile App Development */}
             <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
               <div className="flex-1 flex flex-col justify-center items-start">
                 <h3 className="text-xl font-bold text-black mb-2">Mobile App Development</h3>
@@ -180,26 +180,26 @@ export default function SoftwareDevelopment() {
                 >
                   KNOW MORE <span className="ml-1">→</span>
                 </a>
-      </div>
-              <div className="flex items-center justify-center w-[45%] max-w-[180px]">
-      <Image
-                  src="/images/what-we-do/software-dev/SD-c.png"
-        alt="Mobile App Development"
-                  width={180}
-        height={120}
-                  className="object-contain"
-      />
               </div>
-    </div>
+              <div className="flex items-center justify-center w-[45%] max-w-[180px]">
+                <Image
+                  src="/images/what-we-do/software-dev/SD-c.png"
+                  alt="Mobile App Development"
+                  width={180}
+                  height={120}
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-    {/* Enterprise Solutions */}
+            {/* Enterprise Solutions */}
             <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
               <div className="flex items-center justify-center w-[45%] max-w-[180px]">
-      <Image
+                <Image
                   src="/images/what-we-do/software-dev/SD-d.png" 
-        alt="Enterprise & OEM Solutions"
+                  alt="Enterprise & OEM Solutions"
                   width={180}
-        height={120}
+                  height={120}
                   className="object-contain"
                 />
               </div>
@@ -218,10 +218,10 @@ export default function SoftwareDevelopment() {
                   KNOW MORE <span className="ml-1">→</span>
                 </a>
               </div>
-      </div>
-    </div>
-  </div>
-</section>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Section 4: Case Studies */}

@@ -27,7 +27,7 @@ export default function BusinessAutomation() {
             className="object-cover object-center z-0"
           />
           <div className="absolute inset-0 bg-black/10 z-10" />
-          <div className="relative z-20 max-w-4xl">
+          <div className="relative z-20 max-w-4xl py-16 md:py-0">
             <h1 className="text-4xl font-bold mb-4">Automate the Routine. Amplify Your Impact.</h1>
             <p className="mb-6 text-xl">We design intelligent automation systems that eliminate repetitive tasks, streamline<br/> complex workflows, and empower your team to focus on strategic growth.</p>
             <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">

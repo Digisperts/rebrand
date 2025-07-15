@@ -114,21 +114,21 @@ export default function Home() {
       {/* Hero Slider Section */}
       <section className="relative w-full min-h-[520px] flex items-stretch overflow-hidden">
         <div className="flex w-full min-h-[520px] relative">
-          {/* Black background as a separate absolutely positioned div, always visible */}
+          {/* Black background as a separate absolutely positioned div, always visible on desktop, hidden on mobile/tablet */}
           {heroIndex === 0 && (
-          <div className="hidden lg:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
+            <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
           )}
           {heroIndex === 1 && (
-            <div className="hidden lg:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
+            <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
           )}
           {heroIndex === 2 && (
-            <div className="hidden lg:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
+            <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
           )}
           {/* Text box overlays black bg and hero image, always visible */}
-          <div className="absolute left-0 top-0 h-full items-center pointer-events-none z-20 w-full flex">
+          <div className="absolute left-0 top-0 h-full items-center pointer-events-none z-40 w-full flex">
             <div className="relative pl-4 sm:pl-6 md:pl-12 pr-2 sm:pr-4 md:pr-8 py-6 sm:py-8 md:py-12 max-w-[700px] w-full pointer-events-auto">
-              {/* Soft dark overlay under text */}
-              <div className="absolute inset-0 bg-black/46 rounded-xl blur-sm -z-10" />
+              {/* Soft dark overlay under text, only on desktop */}
+              <div className="hidden md:block absolute inset-0 bg-black/46 rounded-xl blur-sm -z-10" />
               <HeroFadeIn>
               <div className={`transition-opacity duration-[1500ms] ${fade ? 'opacity-100' : 'opacity-0'}`} key={heroIndex}>
               <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2" style={{letterSpacing:0}}>
@@ -161,23 +161,15 @@ export default function Home() {
               </HeroFadeIn>
             </div>
           </div>
-          {/* Right: Hero image */}
-          <div className={`flex-1 relative z-10 min-h-[520px] ${
-            heroIndex === 0 ? 'w-full' :
-            heroIndex === 1 ? 'max-w-2xl ml-auto w-full' :
-            'w-full ml-auto'
-          }`}>
-        <Image
+          {/* Right: Hero image, always on top for mobile/tablet, normal for desktop */}
+          <div className={`flex-1 relative z-10 min-h-[520px] w-full`}>
+            <Image
               src={heroSlides[heroIndex].image}
               alt="Hero" 
-          fill
-              className={`w-full h-full transition-opacity duration-[1500ms] ${
-                heroIndex === 0 ? 'object-cover object-right' :
-                heroIndex === 1 ? 'object-cover object-left' :
-                'object-contain object-right'
-              }`}
-              style={{ border: 'none', boxShadow: 'none', opacity: fade ? 1 : 0 }}
-          priority
+              fill
+              className={`w-full h-full object-cover object-center md:${heroIndex === 0 ? 'object-right' : heroIndex === 1 ? 'object-left' : 'object-contain object-right'}`}
+              style={{ border: 'none', boxShadow: 'none', opacity: fade ? 1 : 0, zIndex: 10 }}
+              priority
             />
           </div>
           {/* Pagination Dots */}

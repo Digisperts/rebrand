@@ -24,7 +24,7 @@ export default function DigitalMarketing() {
             className="object-cover object-center z-0"
           />
           <div className="absolute inset-0 bg-black/60 z-10" />
-          <div className="relative z-20 max-w-4xl">
+          <div className="relative z-20 max-w-4xl py-16 md:py-0">
             <h1 className="text-4xl font-bold mb-4">Connect with Purpose. Grow with Intent.</h1>
             <p className="mb-6 text-xl">We craft data-driven digital marketing strategies, powered by intelligent automation, to amplify your brand&apos;s voice and deliver the measurable success your business deserves.</p>
             <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
