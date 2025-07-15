@@ -50,7 +50,7 @@ export default function BusinessAutomation() {
             Are manual processes and repetitive tasks slowing your business down? helps you reclaim that 
             power. As your trusted digital transformation partner, we specialize in creating tailored 
             automation solutions that address your specific inefficiencies. We go beyond simple fixes to 
-            build systems that unlock your team's true potential and drive measurable success.
+            build systems that unlock your team&apos;s true potential and drive measurable success.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
