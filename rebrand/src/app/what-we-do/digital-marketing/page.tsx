@@ -1,16 +1,19 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import NavBar from '../../nav';
 import Footer from '../../Footer';
-import BannerCTA from '../../components/what-we-do-BannerCTA';
-import HeadlinesSection from '../../components/what-we-do-HeadlinesSection';
+import Headlines from '../../components/what-we-do-HeadlinesSection';
 
 export default function DigitalMarketing() {
   return (
     <>
-      <NavBar />
+      <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
+        {/* Header/NavBar */}
+        <div className="fixed top-0 left-0 w-full z-50">
+        <NavBar />
+        </div>
 
-      <main className="bg-white text-gray-800">
       {/* Hero Section */}
       <section className="relative h-[70vh] flex flex-col items-center justify-center text-center text-white bg-cover bg-center" style={{ backgroundImage: 'url(/images/digital-banner.png)' }}>
         <h1 className="text-3xl md:text-5xl font-bold mb-4">Connect with Purpose. Grow with Intent.</h1>
@@ -53,111 +56,328 @@ export default function DigitalMarketing() {
       </section>
 
 
-      {/* Services Section */}
-      <section className="bg-gray-50 py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-blue-900 text-left">Our Digital Marketing Services</h2>
-          <p className='font-medium text-black text-left mb-12'>We offer a full suite of services designed to build a powerful and cohesive brand presence.</p>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[
-              {
-                title: 'Marketing Automation & Lead Nurturing',
-                desc: 'Bridge the gap between marketing and sales...',
-                icon: '/images/marketing-automation.png',
-              },
-              {
-                title: 'Content Marketing & Strategy',
-                desc: 'Become a trusted voice in your industry...',
-                icon: '/images/content-marketing.png',
-              },
-              {
-                title: 'Paid Advertising (PPC & Social Ads)',
-                desc: 'Generate immediate, targeted traffic...',
-                icon: '/images/paid-ads.png',
-              },
-              {
-                title: 'Search Engine Optimization (SEO)',
-                desc: 'Achieve long-term, sustainable growth...',
-                icon: '/images/seo-icon.png',
-              },
-            ].map(({ title, desc, icon }, i) => (
-              <div key={i} className="bg-white p-6 rounded shadow-md flex flex-col justify-between">
-                <div>
-                  <h3 className="text-lg font-semibold text-blue-900 mb-2">{title}</h3>
-                  <p className="text-gray-700 mb-4">{desc}</p>
-                </div>
-                <div className="flex justify-between items-end">
-                  <button className="text-sm bg-blue-600 text-white px-4 py-2 rounded">Read More →</button>
-                  <Image src={icon} alt={title} width={60} height={60} />
-                </div>
+      {/* Section 3: Services  */}
+      <section className="py-14 px-2 md:px-8">
+        <div className="border-2 border-dashed border-[#D9D9D9] rounded-[8px] bg-white px-4 md:px-10 py-8">
+          <h2 className="mb-2 text-left">
+            <span
+              className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-clip-text text-transparent"
+              style={{
+                backgroundImage: 'linear-gradient(180deg, #001133 0%,  #003399 90%)'
+              }}
+            >
+              Our Software Development Services
+            </span>
+          </h2>
+          <p className="text-left text-gray-900 mb-8">We provide end-to-end development to bring your vision to life.</p>
+
+          {/* First Row */}
+          <div className="flex flex-col md:flex-row gap-8 mb-8">
+
+            {/* Left - AI-Powered Automation & Support + Image */}
+            <div className="md:w-7/12 flex flex-col md:flex-row bg-white p-6 shadow-lg rounded-md">
+              {/* Text Content */}
+              <div className="md:w-7/12">
+                <h3 className="text-2xl font-bold text-black mb-2">
+                  AI-Powered Automation & Support
+                </h3>
+                <p className="text-gray-900">
+                  We build and train custom AI models to power intelligent systems. This includes AI-enhanced 
+                  chatbots that learn your business to provide instant, human-like customer support. We also 
+                  develop smart internal knowledge bases, training them on your organization&apos;s Standard 
+                  Operating Procedures (SOPs) to empower your team with immediate and accurate information.
+                </p>
+                <a
+                  href="#"
+                  className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                >
+                  KNOW MORE <span className="ml-1">→</span>
+                </a>
               </div>
-            ))}
+              {/* Robot Image */}
+              <div className="md:w-5/12 flex items-center justify-center mt-6 md:mt-0">
+                <Image
+                  src="/images/what-we-do/business-auto/business-automation-a.png"
+                  alt="AI Robot"
+                  width={200}
+                  height={200}
+                  className="w-auto h-auto"
+                />
+              </div>
+            </div>
+
+            {/* Right - Financial & Accounting Automation */}
+            <div className="md:w-6/14 bg-white p-6 shadow-lg rounded-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-bold text-black mb-2">
+                  Financial & Accounting Automation
+                </h3>
+                <p className="text-gray-900">
+                  Enhance accuracy and gain control over your finances. We automate invoicing, data entry, 
+                  and reporting to reduce errors, ensure compliance, and provide you with real-time financial 
+                  insights.
+                </p>
+                <a
+                  href="#"
+                  className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                >
+                  KNOW MORE <span className="ml-1">→</span>
+                </a>
+              </div>
+              <Image
+                src="/images/what-we-do/business-auto/business-automation-b.png"
+                alt="Finance Icon"
+                width={150}
+                height={150}
+                className="self-end mt-4"
+              />
+            </div>
+          </div>
+
+          {/* Second Row */}
+          <div className="flex flex-col md:flex-row gap-8">
+
+            {/* Left - Workflow & Data Automation */}
+            <div className="md:w-6/14 bg-white p-6 shadow-lg rounded-md flex flex-col justify-between">
+              <div>
+                <h3 className="text-2xl font-bold text-black mb-2">
+                  Workflow & Data Automation
+                </h3>
+                <p className="text-gray-900">
+                  Connect disparate systems and automate the flow of data across your organization. 
+                  We reduce manual data handling to improve efficiency, minimize errors, and provide a 
+                  unified view of your operations.
+                </p>
+                <a
+                  href="#"
+                  className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                >
+                  KNOW MORE <span className="ml-1">→</span>
+                </a>
+              </div>
+              <Image
+                src="/images/what-we-do/business-auto/business-automation-c.png"
+                alt="Finance Icon"
+                width={150}
+                height={150}
+                className="self-end mt-4"
+              />
+            </div>
+
+            {/* Right - Customer Relationship Management (CRM) Automation */}
+            <div className="md:w-7/12 flex flex-col md:flex-row bg-white p-6 shadow-lg rounded-md">
+              {/* Text Content */}
+              <div className="md:w-7/12">
+                <h3 className="text-2xl font-bold text-black mb-2">
+                  Customer Relationship Management (CRM) Automation
+                </h3>
+                <p className="text-gray-900">
+                  Build stronger, more lasting customer relationships by automating communication, tracking 
+                  interactions, and personalizing the customer journey, improving retention and satisfaction.
+                </p>
+                <a
+                  href="#"
+                  className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                >
+                  KNOW MORE <span className="ml-1">→</span>
+                </a>
+              </div>
+              {/* Robot Image */}
+              <div className="md:w-5/12 flex items-center justify-center mt-6 md:mt-0">
+                <Image
+                  src="/images/what-we-do/business-auto/business-automation-d.png"
+                  alt="AI Robot"
+                  width={200}
+                  height={200}
+                  className="w-auto h-auto"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Case Studies */}
-      <section className="max-w-7xl mx-auto py-16 px-4">
-        <h2 className="text-xl md:text-2xl font-bold text-blue-900 mb-10 text-center">See Our Strategies in Action</h2>
+      {/* Strategies Section */}
+      <section className="py-20 px-6 md:px-20">
+        <h2 className="mb-8 text-left">
+          <span
+            className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-clip-text text-transparent"
+            style={{
+              backgroundImage: 'linear-gradient(180deg, #001133 0%,  #003399 90%)'
+            }}
+          >
+            See Our Strategies in Action
+          </span>
+        </h2>
+        
+        {/* <p className="text-left font-semibold font-poppins text-gray-600 mb-10">Don&apos;t just take our word for it. Explore our case studies to see how we have helped businesses like yours transform their operations and achieve measurable success.</p> */}
+
         <div className="grid md:grid-cols-3 gap-6">
           {[
             {
               title: 'FINANCE',
               desc: 'Fintech Solutions for Growth and Insight',
-              img: '/images/finance-case.png',
+              img: '/images/reuseable-SD-a.png',
             },
             {
               title: 'RETAIL AND CONSUMER GOODS',
               desc: 'Driving Consumer Loyalty',
-              img: '/images/retail-case.png',
+              img: '/images/reuseable-SD-b.png',
             },
             {
               title: 'HEALTHCARE',
               desc: 'Improving Lives, One Innovation at a Time',
-              img: '/images/healthcare-case.png',
+              img: '/images/reuseable-SD-c.png',
             },
           ].map(({ title, desc, img }, i) => (
             <div key={i}>
               <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
-              <h4 className="text-md font-bold mt-2">{title}</h4>
-              <p className="text-sm text-gray-600">{desc}</p>
-              <button className="text-blue-600 text-sm mt-2">Explore Case Study →</button>
+              <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
+              <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
+              <a
+                href="#"
+                className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+              >
+                Explore Case Study <span className="ml-1">→</span>
+              </a>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Partner Statement */}
-      <section className="bg-black text-white py-12 px-4 text-center">
-        <p className="max-w-3xl mx-auto">
-          <strong>Your Partner in Building a Powerful Brand</strong><br />
-          Consistent messaging is key to a strong brand. From a social media post to an automated email sequence, every action aligns with your identity.
-        </p>
+      {/* Partner Statement Section*/}
+      <section className="text-white py-0 px-0 text-center">
+        <div className="relative w-full h-64 flex items-center justify-center mb-8">
+          <Image
+            src="/images/what-we-do/business-auto/Business-automation-bottombanner.jpg"
+            alt="Hero 2 Background"
+            fill
+            className="object-cover object-center z-0 rounded"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/40 z-10" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 py-6 md:py-10">
+            <h2 className="text-lg md:text-2xl lg:text-4xl font-extrabold mb-4 text-center">Your Partner in Building a Powerful Brand</h2>
+            <p className="max-w-[950px] mx-auto text-left text-white text-sm md:text-lg font-normal">
+              Consistent messaging is key to a strong brand. We ensure that every marketing activity, from a 
+              social media post to an automated email sequence, perfectly aligns with your brand&apos;s core 
+              values and personality. As your unwavering partner, we are dedicated to building a brand 
+              identity that is not only visible but also trusted and respected.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Trusted Tools */}
-      <section className="bg-white py-12 px-4">
-        <h3 className="text-center text-lg font-bold text-blue-900 mb-6">Powered by Industry-Leading Technology</h3>
-        <div className="flex justify-center gap-8 flex-wrap">
-          {['zapier', 'hootsuite', 'google-analytics', 'hotjar'].map((tool, i) => (
-            <Image key={i} src={`/images/${tool}.png`} alt={tool} width={80} height={40} />
-          ))}
+      {/* Powered By Section */}
+      <section className="w-full bg-[#F9F9F9] py-8 flex flex-col">
+        <div className="max-w-7xl w-full flex flex-col items-start px-6 mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent mb-8 w-full text-left ml-0 md:ml-10" style={{letterSpacing: 0}}>
+            Powered by Industry-Leading Technology
+          </h2>
+          <div className="relative w-full max-w-full pr-6 md:pr-10 ml-0 md:ml-10 box-border">
+            <div
+              className="flex gap-28 animate-platform-scroll items-center w-max"
+              style={{ animation: 'platform-scroll 50s linear infinite' }}
+            >
+              {[1,2].map((repeat) => (
+                <div className="flex flex-row items-center gap-28" key={repeat}>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/zapier.png" alt="Zapier" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Zapier</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/hootsuite.png" alt="Hootsuite" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Hootsuite</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/analytics.png" alt="Google Analytics" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222] whitespace-nowrap">Google Analytics</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/hotjar.png" alt="Hotjar" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Hotjar</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/zoho.png" alt="ZOHO" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]"></span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/salesforce.png" alt="Salesforce" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Salesforce</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/mailchimp.png" alt="Mailchimp" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Mailchip</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/ubbersuggest.png" alt="UbberSuggest" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">UbberSuggest</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/hubspot.png" alt="Hubspot" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Hubspot</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/digital-marketing/meta.png" alt="Meta" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Meta</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <style jsx>{`
+                  @keyframes platform-scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                  }
+                `}
+              </style>
+          </div>
         </div>
       </section>
 
       {/* Headlines Section */}
-      <HeadlinesSection />
+      <Headlines />
 
 
-      {/* CTA */}
-      <BannerCTA
-        title="Ready to Amplify Your Brand’s Voice?"
-        description="Let’s create a marketing strategy that delivers real, measurable results and drives your business forward."
-        buttonText="Talk to a Marketing Expert"
-      />
-    </main>
+      {/* Pre Footer Section */}
+      <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
+          <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+            <Image
+              src="/images/footer.jpg"
+              alt="Footer Background"
+              fill
+              className="object-cover z-0"
+              style={{ objectPosition: 'center' }}
+              priority
+            />
+            <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
+              <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
+                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
+                  <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
+                  <div className="flex gap-3 flex-wrap">
+                    <a
+                      href="#"
+                      className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                      style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                    >
+                      TALK TO AN EXPERT
+                    </a>
+                  </div>
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-black/70" />
+          </div>
+        </div>
+      </section>
       
       <Footer />
+      </div>
     </>
   );
 } 

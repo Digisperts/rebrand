@@ -3,10 +3,9 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import NavBar from '../../nav';
 import Footer from '../../Footer';
-import HeadlinesSection from '../../components/what-we-do-HeadlinesSection';
-import BannerCTA from '../../components/what-we-do-BannerCTA';
-import { FaPhone, FaPhoneAlt } from 'react-icons/fa';
+import { FaPhone } from 'react-icons/fa';
 import { FaCheck } from 'react-icons/fa';
+import Headlines from '../../components/what-we-do-HeadlinesSection';
 
 
 const sections = [
@@ -66,7 +65,7 @@ export default function SoftwareDevelopment() {
           </span>
         </h2>
 
-        <p className="text-gray-600 pl-6 text-left max-w-3xl w-full mb-12">
+        <p className="text-gray-600 pl-6 text-left max-w-5xl w-full mb-12">
           In today&apos;s market, generic software leads to generic results. To truly exceed your 
           goals, you need technology solutions built specifically for you. At Digisperts, we move 
           beyond the limitations of outdated technology stacks to deliver robust, custom software. 
@@ -76,18 +75,21 @@ export default function SoftwareDevelopment() {
         </p>
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
-          <Image src="/images/SD-a.png" alt="Laptop" width={500} height={400} className="mx-auto" />
+          <Image 
+            src="/images/what-we-do/software-dev/SD-a.png" 
+            alt="Laptop" 
+            width={500} 
+            height={400} 
+            className="mx-auto" 
+          />
           <div className="space-y-6 text-left">
-            <h2
-  className="text-lg font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent"
-  
->Our Strategic Approach to Software Development
-</h2>
+            <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
+              Our Strategic Approach to Software Development
+            </h2>
 
-        <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
-          Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
-
-        </p>
+            <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
+              Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
+            </p>
             <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
               <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                 <FaCheck className="text-blue-900 text-sm" />
@@ -151,7 +153,7 @@ export default function SoftwareDevelopment() {
             </div>
             <div className="flex items-center justify-center w-full md:w-[45%] max-w-[260px] mx-auto">
               <Image
-                src="/images/SD-b.png" 
+                src="/images/what-we-do/software-dev/SD-b.png" 
                 alt="Custom Web Applications"
                 width={260}
                 height={180}
@@ -181,7 +183,7 @@ export default function SoftwareDevelopment() {
               </div>
               <div className="flex items-center justify-center w-[45%] max-w-[180px]">
                 <Image
-                  src="/images/SD-c.png"
+                  src="/images/what-we-do/software-dev/SD-c.png"
                   alt="Mobile App Development"
                   width={180}
                   height={120}
@@ -194,7 +196,7 @@ export default function SoftwareDevelopment() {
             <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
               <div className="flex items-center justify-center w-[45%] max-w-[180px]">
                 <Image
-                  src="/images/SD-d.png" 
+                  src="/images/what-we-do/software-dev/SD-d.png" 
                   alt="Enterprise & OEM Solutions"
                   width={180}
                   height={120}
@@ -284,7 +286,7 @@ export default function SoftwareDevelopment() {
           <div className="absolute inset-0 bg-black/70 z-10" />
           <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 py-6 md:py-10">
             <h2 className="text-lg md:text-2xl lg:text-4xl font-extrabold mb-4 text-center">Exploring Emerging Technologies (AI & Blockchain)</h2>
-            <p className="max-w-[950px] mx-auto text-center text-white text-sm md:text-lg font-normal">
+            <p className="max-w-[950px] mx-auto text-left text-white text-sm md:text-lg font-normal">
               Our commitment to innovation means we are always exploring the frontier of technology. For clients with specific needs, our expert engineers can build AI-powered features into custom applications or architect decentralized blockchain solutions. We approach these specialized projects with the same commitment to quality excellence and partnership that defines all our work.
             </p>
           </div>
@@ -359,67 +361,7 @@ export default function SoftwareDevelopment() {
       </section>
 
       {/* Section 7: Headlines */}
-      <section className="w-full bg-white py-10">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent mb-8 w-full text-left whitespace-nowrap" style={{letterSpacing: 0}}>
-            Making the Headlines
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
-            {/* Social Cranes Card */}
-          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="w-full">
-              <Image src="/images/homepage/headline.png" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
-            </div>
-            <div className="px-6 pt-6 pb-7 w-full">
-              <h3 className="font-bold text-lg mb-2 text-black">Social Cranes</h3>
-              <p className="text-gray-800 text-base mb-4 leading-snug">As a leading social media marketing (SMM) company, Social Cranes partnered with us to enhance their online presence. We designed and developed their website, implementing........</p>
-              <a
-                href="#"
-                className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
-                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
-              >
-                KNOW MORE <span className="ml-1">→</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Smaat Finance Card */}
-          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="w-full">
-              <Image src="/images/homepage/headline.png" alt="Business Automations" width={365} height={199} className="w-full h-[199px] object-cover" />
-            </div>
-            <div className="px-6 pt-6 pb-7 w-full">
-              <h3 className="font-bold text-lg mb-2 text-black">Smaat Finance</h3>
-              <p className="text-gray-800 text-base mb-4 leading-snug">At Digisperts LLC, our commitment to client confidentiality is unwavering. While we have worked on numerous projects and achieved remarkable results, we respect the anonymity of our clients and........</p>
-              <a
-                href="#"
-                className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
-                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
-              >
-                KNOW MORE <span className="ml-1">→</span>
-              </a>
-            </div>
-          </div>
-          {/* Social Cranes Card */}
-          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto md:col-span-2 lg:col-span-1 md:mx-auto lg:mx-auto md:justify-self-center lg:justify-self-auto">
-            <div className="w-full">
-              <Image src="/images/homepage/headline.png" alt="Digital Marketing" width={365} height={199} className="w-full h-[199px] object-cover" />
-            </div>
-            <div className="px-6 pt-6 pb-7 w-full">
-              <h3 className="font-bold text-lg mb-2 text-black">Social Cranes</h3>
-              <p className="text-gray-800 text-base mb-4 leading-snug">As a leading social media marketing (SMM) company, Social Cranes partnered with us to enhance their online presence. We designed and developed their website, implementing........</p>
-              <a
-                href="#"
-                className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
-                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
-              >
-                KNOW MORE <span className="ml-1">→</span>
-              </a>
-            </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Headlines />
 
       {/* Section 8: Call to Action */}
       {/* <BannerCTA
