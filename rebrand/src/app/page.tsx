@@ -10,7 +10,7 @@ import { FaPhone, FaChevronDown, FaStar, FaRegStar, FaStarHalfAlt } from "react-
 import Headlines from './components/what-we-do-HeadlinesSection';
 
 export default function Home() {
-
+  
   const slides = [
     {
       image: "/images/homepage/agriculture-slide1.webp",
@@ -65,6 +65,43 @@ export default function Home() {
     };
   }, [active, slides.length]);
 
+  // HERO SLIDES (3 slides, same content for now)
+  const heroSlides = [
+    {
+      image: "/images/homepage/hero.png",
+      heading1: "Building Your Vision.",
+      heading2: "Engineering Your Success.",
+      desc: "As your dedicated technology partner, we build the powerful digital foundation your ambition deserves.",
+    },
+    {
+      image: "/images/homepage/hero2.jpg",
+      heading1: "Break Free From Legacy",
+      heading2: "Systems Drawback.",
+      desc: "We replace inefficient systems with scalable, custom solutions built to power your growth.",
+    },
+    {
+      image: "/images/homepage/hero3.jpg",
+      heading1: "Visualize The",
+      heading2: "Outcome.",
+      desc: "Experience seamless operations, engaged customers, and a business fully prepared for tomorrow&apos;s opportunities.",
+    },
+  ];
+  const [heroIndex, setHeroIndex] = useState(0);
+  const [fade, setFade] = useState(true);
+  useEffect(() => {
+    setFade(false);
+    const fadeTimeout = setTimeout(() => setFade(true), 50); // trigger fade-in
+    const interval = setInterval(() => {
+      setHeroIndex((i) => (i + 1) % heroSlides.length);
+      setFade(false);
+      setTimeout(() => setFade(true), 50);
+    }, 5000);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(fadeTimeout);
+    };
+  }, []);
+
 
   return (
     <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
@@ -78,18 +115,27 @@ export default function Home() {
       <section className="relative w-full min-h-[520px] flex items-stretch overflow-hidden">
         <div className="flex w-full min-h-[520px] relative">
           {/* Black background as a separate absolutely positioned div, always visible */}
-          <div className="hidden lg:block absolute left-0 top-0 h-full z-10" style={{width: '28%', minWidth: 120, maxWidth: 300, background: 'black'}} />
+          {heroIndex === 0 && (
+          <div className="hidden lg:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
+          )}
+          {heroIndex === 1 && (
+            <div className="hidden lg:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
+          )}
+          {heroIndex === 2 && (
+            <div className="hidden lg:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
+          )}
           {/* Text box overlays black bg and hero image, always visible */}
           <div className="absolute left-0 top-0 h-full items-center pointer-events-none z-20 w-full flex">
             <div className="relative pl-4 sm:pl-6 md:pl-12 pr-2 sm:pr-4 md:pr-8 py-6 sm:py-8 md:py-12 max-w-[700px] w-full pointer-events-auto">
               {/* Soft dark overlay under text */}
               <div className="absolute inset-0 bg-black/46 rounded-xl blur-sm -z-10" />
               <HeroFadeIn>
+              <div className={`transition-opacity duration-[1500ms] ${fade ? 'opacity-100' : 'opacity-0'}`} key={heroIndex}>
               <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2" style={{letterSpacing:0}}>
-                <span className="block text-2xl sm:text-4xl md:text-5xl">Building Your Vision.</span>
-                <span className="block text-2xl sm:text-4xl md:text-5xl">Engineering Your Success.</span>
+                  <span className="block text-2xl sm:text-4xl md:text-5xl">{heroSlides[heroIndex].heading1}</span>
+                  <span className="block text-2xl sm:text-4xl md:text-5xl">{heroSlides[heroIndex].heading2}</span>
               </h1>
-              <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>As your dedicated technology partner, we build the powerful digital foundation your ambition deserves.</p>
+                <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>{heroSlides[heroIndex].desc}</p>
               <div className="flex flex-col gap-3">
                 <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
                 <FaPhone className="mr-2 transform -rotate-270" />
@@ -111,19 +157,40 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              </div>
               </HeroFadeIn>
             </div>
           </div>
           {/* Right: Hero image */}
-          <div className="flex-1 relative min-h-[520px] w-full">
+          <div className={`flex-1 relative z-10 min-h-[520px] ${
+            heroIndex === 0 ? 'w-full' :
+            heroIndex === 1 ? 'max-w-2xl ml-auto w-full' :
+            'w-full ml-auto'
+          }`}>
         <Image
-              src="/images/homepage/hero.png" 
+              src={heroSlides[heroIndex].image}
               alt="Hero" 
           fill
-              className="object-cover object-right w-full h-full" 
+              className={`w-full h-full transition-opacity duration-[1500ms] ${
+                heroIndex === 0 ? 'object-cover object-right' :
+                heroIndex === 1 ? 'object-cover object-left' :
+                'object-contain object-right'
+              }`}
+              style={{ border: 'none', boxShadow: 'none', opacity: fade ? 1 : 0 }}
           priority
-              style={{ border: 'none', boxShadow: 'none' }}
             />
+          </div>
+          {/* Pagination Dots */}
+          <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+            {heroSlides.map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${heroIndex === idx ? 'bg-[#233876] scale-110 shadow-lg' : 'bg-gray-300'} inline-block`}
+                onClick={() => { setHeroIndex(idx); setFade(false); setTimeout(() => setFade(true), 50); }}
+                aria-label={`Go to slide ${idx+1}`}
+                style={{outline: 'none'}}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -496,18 +563,18 @@ export default function Home() {
             />
             <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
               <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
-                <ScrollFadeSection>
+          <ScrollFadeSection>
                   <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
                   <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
                   <div className="flex gap-3 flex-wrap">
-                    <a
-                      href="#"
+              <a
+                href="#"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                       style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
-                    >
+              >
                       TALK TO AN EXPERT
-                    </a>
-                  </div>
+              </a>
+            </div>
                 </ScrollFadeSection>
               </div>
             </div>
