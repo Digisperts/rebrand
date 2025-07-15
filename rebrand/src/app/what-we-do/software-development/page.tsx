@@ -5,7 +5,8 @@ import NavBar from '../../nav';
 import Footer from '../../Footer';
 import HeadlinesSection from '../../components/what-we-do-HeadlinesSection';
 import BannerCTA from '../../components/what-we-do-BannerCTA';
-import { FaPhoneAlt } from 'react-icons/fa';
+import { FaPhone, FaPhoneAlt } from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa';
 
 
 const sections = [
@@ -32,9 +33,12 @@ export default function SoftwareDevelopment() {
 
   return (
     <>
+      <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
+      {/* Header/NavBar */}
+      <div className="fixed top-0 left-0 w-full z-50">
       <NavBar />
+      </div>
       
-      <main className="bg-white text-gray-900">
       {/* Section 1: Hero */}
       <section id="overview" className="relative w-full min-h-[520px] flex items-left justify-left text-white text-left px-6 pt-50">
         <Image
@@ -47,25 +51,27 @@ export default function SoftwareDevelopment() {
         <div className="relative z-20 max-w-4xl">
           <h1 className="text-4xl font-bold mb-4">Custom Software that Powers Your Growth.</h1>
           <p className="mb-6">We build high-quality, scalable applications that solve your unique challenges,<br/> overcome scalability hurdles, and give you a distinct competitive edge.</p>
-          <button className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 rounded"><FaPhoneAlt className="text-white" /> SCHEDULE A CONSULTATION</button>
+          <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
+            <FaPhone className="mr-2 transform -rotate-270" />
+            SCHEDULE A CONSULTATION
+          </a>
         </div>
       </section>
 
       {/* Section 2: Built for You */}
-      <section className="py-16 px-6  text-left" id="approach">
-        <h2
-  className="text-3xl font-bold mb-4"
-  style={{
-    background: 'conic-gradient(from 89.57deg at 0% 50.75%, #003399 0deg, #001133 360deg)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-  }}
->
-  Built for You. Built to Win.
-</h2>
+      <section className="py-16 px-6 text-left" id="approach">
+      <h2 className="mb-7 pl-6 text-left">
+          <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
+          Built for You. Built to Win.
+          </span>
+        </h2>
 
-        <p className="text-gray-600 text-left max-w-3xl mx-auto mb-12">
-          In today’s market, generic software leads to generic results. To truly exceed your goals, you need technology solutions built specifically for you. At Digisperts, we move beyond the limitations of outdated technology stacks to deliver robust, custom software. As your unwavering partner, we dive deep into your vision to build applications that not only solve today&apos;s problems but also create tomorrow&apos;s opportunities.
+        <p className="text-gray-600 pl-6 text-left max-w-3xl w-full mb-12">
+          In today&apos;s market, generic software leads to generic results. To truly exceed your 
+          goals, you need technology solutions built specifically for you. At Digisperts, we move 
+          beyond the limitations of outdated technology stacks to deliver robust, custom software. 
+          As your unwavering partner, we dive deep into your vision to build applications that not 
+          only solve today&apos;s problems but also create tomorrow&apos;s opportunities.
 
         </p>
 
@@ -73,100 +79,163 @@ export default function SoftwareDevelopment() {
           <Image src="/images/SD-a.png" alt="Laptop" width={500} height={400} className="mx-auto" />
           <div className="space-y-6 text-left">
             <h2
-  className="text-lg font-bold mb-0"
-  style={{
-    background: 'conic-gradient(from 89.57deg at 0% 50.75%, #003399 0deg, #001133 360deg)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-  }}
+  className="text-lg font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent"
+  
 >Our Strategic Approach to Software Development
 </h2>
 
-        <p className="text-black text-left max-w-3xl mx-auto mb-1 font-19px">
+        <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
           Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
 
         </p>
-            <div className="bg-gray-100 p-6 shadow-md rounded-md">
-              <h3 className="text-lg font-bold text-blue-900">Collaborative Discovery</h3>
-              <p>We begin by listening. Our client-centric approach means we work closely with you to understand your goals, workflows, and challenges, ensuring the final product is a perfect fit.</p>
+            <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+              <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
+                <FaCheck className="text-blue-900 text-sm" />
+              </span>
+              <div className="flex flex-col text-left">
+                <h3 className="text-lg font-bold text-blue-900 mb-1">Collaborative Discovery</h3>
+              <p className="text-[#000000]">We begin by listening. Our client-centric approach means we work closely with you to understand your goals, workflows, and challenges, ensuring the final product is a perfect fit.</p>
+              </div>
             </div>
-            <div className="bg-gray-100 p-6 shadow-md rounded-md">
-              <h3 className="text-lg font-bold text-blue-900">Innovative and Agile Build</h3>
-              <p>We leverage cutting-edge technologies and an agile development process. This allows us to remain adaptable , incorporate feedback, and deliver innovative solutions efficiently.</p>
+            <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+              <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
+                <FaCheck className="text-blue-900 text-sm" />
+              </span>
+              <div className="flex flex-col text-left">
+                <h3 className="text-lg font-bold text-blue-900 mb-1">Innovative and Agile Build</h3>
+              <p className="text-[#000000]">We leverage cutting-edge technologies and an agile development process. This allows us to remain adaptable , incorporate feedback, and deliver innovative solutions efficiently.</p>
+              </div>
             </div>
-            <div className="bg-gray-100 p-6 shadow-md rounded-md">
-              <h3 className="text-lg font-bold text-blue-900">Security and Scalability</h3>
-              <p>We bake in enterprise-grade security and build for scalability from day one, empowering your business with a secure and future-proof technological foundation.</p>
+            <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+              <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
+                <FaCheck className="text-blue-900 text-sm" />
+              </span>
+              <div className="flex flex-col text-left">
+                <h3 className="text-lg font-bold text-blue-900 mb-1">Security and Scalability</h3>
+              <p className="text-[#000000]">We bake in enterprise-grade security and build for scalability from day one, empowering your business with a secure and future-proof technological foundation.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 3: Services  */}
-<section id="services" className="py-20 bg-white-50 px-6 md:px-20">
-  <h2 className="text-2xl font-bold font-poppins text-blue-900 text-left">Our Software Development Services</h2>
-  <p className="text-left text-gray-600 mb-12">We provide end-to-end development to bring your vision to life.</p>
+      <section id="services" className="py-14 px-2 md:px-8">
+        <div className="border-2 border-dashed border-[#D9D9D9] rounded-[8px] bg-white px-4 md:px-10 py-8">
+          <h2 className="mb-2 text-left">
+            <span
+              className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-clip-text text-transparent"
+              style={{
+                backgroundImage: 'linear-gradient(180deg, #001133 0%,  #003399 90%)'
+              }}
+            >
+              Our Software Development Services
+            </span>
+          </h2>
+          <p className="text-left text-gray-900 mb-8">We provide end-to-end development to bring your vision to life.</p>
 
-  {/* First Row */}
-  <div className="grid md:grid-cols-2 gap-10 items-center mb-16 bg-gray-50">
-    <div>
-      <h3 className="text-2xl font-semibold text-blue-900 mb-3">Custom Web Applications</h3>
-      <p className="text-gray-500 mb-4">
-        We build powerful, secure web apps with robust back-ends and intuitive, visually appealing user interfaces. From enterprise dashboards to customer portals, our solutions are designed to streamline your operations.
-      </p>
-      <button className="text-sm bg-blue-800 text-white px-4 py-2 rounded">Read More →</button>
-    </div>
-    <Image
-      src="/images/SD-b.png" 
-      alt="Custom Web Applications"
-      width={500}
-      height={400}
-      // className="rounded shadow-md"
-    />
-  </div>
+          {/* First Row */}
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch mb-8 bg-[#F8F8F8] p-4 rounded">
+            <div className="flex-1 flex flex-col justify-center items-start">
+              <h3 className="text-2xl font-bold text-black mb-3">Custom Web Applications</h3>
+              <p className="text-gray-900 mb-4">
+                We build powerful, secure web apps with robust back-ends and intuitive, visually appealing user interfaces. From enterprise dashboards to customer portals, our solutions are designed to streamline your operations.
+              </p>
+              <a
+                href="#"
+                className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+              >
+                KNOW MORE <span className="ml-1">→</span>
+              </a>
+            </div>
+            <div className="flex items-center justify-center w-full md:w-[45%] max-w-[260px] mx-auto">
+              <Image
+                src="/images/SD-b.png" 
+                alt="Custom Web Applications"
+                width={260}
+                height={180}
+                className="object-contain"
+              />
+            </div>
+          </div>
 
-  {/* Second Row */}
-  <div className="grid md:grid-cols-2 gap-10 ">
-    {/* Mobile App Development */}
-    <div className="flex flex-col md:flex-row items-center gap-6 p-6 shadow-lg rounded-md bg-gray-50">
-      
-      <div>
-        <h3 className="text-xl font-semibold mb-2 text-blue-900">Mobile App Development</h3>
-        <p className="text-gray-600">We help you successfully design, build, and launch mobile apps for iOS and Android. We balance performance with possibility, creating scalable solutions that grow with you and delight your users.</p>
-        <button className="text-sm bg-blue-800 text-white px-4 py-2 rounded">Read More →</button>
-      </div>
-      <Image
-        src="/images/SD-c.png"
-        alt="Mobile App Development"
-        width={120}
-        height={120}
-        className="rounded-md"
-      />
-    </div>
+          {/* Second Row */}
+          <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
+            {/* Mobile App Development */}
+            <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
+              <div className="flex-1 flex flex-col justify-center items-start">
+                <h3 className="text-xl font-bold text-black mb-2">Mobile App Development</h3>
+                <p className="text-gray-900">
+                  We help you successfully design, build, and launch mobile apps for iOS and Android. 
+                  We balance performance with possibility, creating scalable solutions that grow with you 
+                  and delight your users.
+                </p>
+                <a
+                  href="#"
+                  className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                >
+                  KNOW MORE <span className="ml-1">→</span>
+                </a>
+              </div>
+              <div className="flex items-center justify-center w-[45%] max-w-[180px]">
+                <Image
+                  src="/images/SD-c.png"
+                  alt="Mobile App Development"
+                  width={180}
+                  height={120}
+                  className="object-contain"
+                />
+              </div>
+            </div>
 
-    {/* Enterprise Solutions */}
-    <div className="flex flex-col md:flex-row-reverse items-center gap-6 p-6 shadow-lg rounded-md bg-gray-50">
-      <Image
-        src="/images/SD-d.png" 
-        alt="Enterprise & OEM Solutions"
-        width={120}
-        height={120}
-        className="rounded-md"
-      />
-      <div>
-        <h3 className="text-xl font-semibold mb-2 text-blue-900 ">Enterprise & OEM Solutions</h3>
-        <p className="text-gray-600">We develop specialized software tailored for unique business environments, including custom integrations and OEM software. Our focus is on creating reliable, high-performance tools that enhance your core business functions.</p>
-        <button className="text-sm bg-blue-800 text-white px-4 py-2 rounded">Read More →</button>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* Enterprise Solutions */}
+            <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
+              <div className="flex items-center justify-center w-[45%] max-w-[180px]">
+                <Image
+                  src="/images/SD-d.png" 
+                  alt="Enterprise & OEM Solutions"
+                  width={180}
+                  height={120}
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex-1 flex flex-col justify-center items-start">
+                <h3 className="text-xl font-bold text-black mb-2">Enterprise & OEM Solutions</h3>
+                <p className="text-gray-900">
+                  We develop specialized software tailored for unique business environments, 
+                  including custom integrations and OEM software. Our focus is on creating reliable, 
+                  high-performance tools that enhance your core business functions.
+                </p>
+                <a
+                  href="#"
+                  className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                >
+                  KNOW MORE <span className="ml-1">→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
 
       {/* Section 4: Case Studies */}
       <section id="success" className="py-20 px-6 md:px-20">
-        <h2 className="text-2xl font-bold text-blue-900 mb-4 text-left">How We’ve Engineered Success</h2>
-        <p className="text-left font-poppins text-gray-600 mb-10">don&apos;t just take our word for it. Explore our case studies to see how we have helped businesses like yours transform their operations and achieve measurable success.</p>
+        <h2 className="mb-2 text-left">
+          <span
+            className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-clip-text text-transparent"
+            style={{
+              backgroundImage: 'linear-gradient(180deg, #001133 0%,  #003399 90%)'
+            }}
+          >
+            How We&apos;ve Engineered Success
+          </span>
+        </h2>
+        
+        <p className="text-left font-semibold font-poppins text-gray-600 mb-10">Don&apos;t just take our word for it. Explore our case studies to see how we have helped businesses like yours transform their operations and achieve measurable success.</p>
 
         <div className="grid md:grid-cols-3 gap-6">
                   {[
@@ -188,44 +257,213 @@ export default function SoftwareDevelopment() {
                   ].map(({ title, desc, img }, i) => (
                     <div key={i}>
                       <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
-                      <h4 className="text-md font-bold mt-2">{title}</h4>
-                      <p className="text-sm text-gray-600">{desc}</p>
-                      <button className="text-sm bg-blue-800 text-white px-4 py-2 rounded">Explore Case Study →</button>
+                      <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
+                      <p className="text-lg font-semibold text-[#001F5C]">{desc}</p>
+                      <a
+                        href="#"
+                        className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                        style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                      >
+                        Explore Case Study <span className="ml-1">→</span>
+                      </a>
                     </div>
                   ))}
                 </div>
       </section>
 
       {/* Section 5: Technology */}
-      <section id="technologies" className="bg-black text-white py-16 px-6 text-center">
-        <h2 className="text-xl font-bold mb-6">Exploring Emerging Technologies (AI & Blockchain)</h2>
-        <p className="max-w-3xl mx-auto text-gray-300">
-          Our expert engineers can build AI-powered features...
-        </p>
+      <section id="technologies" className="text-white py-0 px-0 text-center">
+        <div className="relative w-full h-64 flex items-center justify-center mb-8">
+          <Image
+            src="/images/what-we-do/software-dev/software-hero-2.jpg"
+            alt="Hero 2 Background"
+            fill
+            className="object-cover object-center z-0 rounded"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/70 z-10" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 py-6 md:py-10">
+            <h2 className="text-lg md:text-2xl lg:text-4xl font-extrabold mb-4 text-center">Exploring Emerging Technologies (AI & Blockchain)</h2>
+            <p className="max-w-[950px] mx-auto text-center text-white text-sm md:text-lg font-normal">
+              Our commitment to innovation means we are always exploring the frontier of technology. For clients with specific needs, our expert engineers can build AI-powered features into custom applications or architect decentralized blockchain solutions. We approach these specialized projects with the same commitment to quality excellence and partnership that defines all our work.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* Section 6: Logos */}
-      <section className="py-12 px-6 md:px-20 text-center">
-        <h2 className="text-xl font-bold text-blue-900 mb-6">Powered by Industry-Leading Technology</h2>
-        <div className="flex flex-wrap justify-center items-center gap-6">
-          {['react', 'nodejs', 'django', 'aws'].map((tech, idx) => (
-            <Image key={idx} src={`/images/${tech}.svg`} alt={tech} width={80} height={80} />
-          ))}
+      {/* Section 6: Powered By */}
+      <section className="w-full bg-[#F9F9F9] py-8 flex flex-col">
+        <div className="max-w-7xl w-full flex flex-col items-start px-6 mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent mb-8 w-full text-left ml-0 md:ml-10" style={{letterSpacing: 0}}>
+            Powered by Industry-Leading Technology
+          </h2>
+          <div className="relative w-full max-w-full pr-6 md:pr-10 ml-0 md:ml-10 box-border">
+            <div
+              className="flex gap-28 animate-platform-scroll items-center w-max"
+              style={{ animation: 'platform-scroll 50s linear infinite' }}
+            >
+              {[1,2].map((repeat) => (
+                <div className="flex flex-row items-center gap-28" key={repeat}>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/react.png" alt="React" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">React</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/nodejs.png" alt="Node.js" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Node.js</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/django.png" alt="Django" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222] whitespace-nowrap">Django</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/aws.png" alt="AWS" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">AWS</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/postgre.png" alt="PostgrSQL" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">PostgreSQL</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/react.png" alt="React" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">React</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/nodejs.png" alt="Node.js" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">Node.js</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/django.png" alt="Django" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222] whitespace-nowrap">Django</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/aws.png" alt="AWS" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">AWS</span>
+                  </div>
+                  <div className="flex flex-row items-center gap-2">
+                    <Image src="/images/what-we-do/software-dev/postgre.png" alt="PostgrSQL" width={80} height={80} className="object-contain" />
+                    <span className="text-lg font-medium text-[#222]">PostgreSQL</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <style jsx>{`
+                  @keyframes platform-scroll {
+                    0% { transform: translateX(0); }
+                    100% { transform: translateX(-50%); }
+                  }
+                `}
+              </style>
+          </div>
         </div>
       </section>
 
       {/* Section 7: Headlines */}
-      <HeadlinesSection />
+      <section className="w-full bg-white py-10">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-2xl md:text-3xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent mb-8 w-full text-left whitespace-nowrap" style={{letterSpacing: 0}}>
+            Making the Headlines
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
+            {/* Social Cranes Card */}
+          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+            <div className="w-full">
+              <Image src="/images/homepage/headline.png" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+            </div>
+            <div className="px-6 pt-6 pb-7 w-full">
+              <h3 className="font-bold text-lg mb-2 text-black">Social Cranes</h3>
+              <p className="text-gray-800 text-base mb-4 leading-snug">As a leading social media marketing (SMM) company, Social Cranes partnered with us to enhance their online presence. We designed and developed their website, implementing........</p>
+              <a
+                href="#"
+                className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+              >
+                KNOW MORE <span className="ml-1">→</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Smaat Finance Card */}
+          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+            <div className="w-full">
+              <Image src="/images/homepage/headline.png" alt="Business Automations" width={365} height={199} className="w-full h-[199px] object-cover" />
+            </div>
+            <div className="px-6 pt-6 pb-7 w-full">
+              <h3 className="font-bold text-lg mb-2 text-black">Smaat Finance</h3>
+              <p className="text-gray-800 text-base mb-4 leading-snug">At Digisperts LLC, our commitment to client confidentiality is unwavering. While we have worked on numerous projects and achieved remarkable results, we respect the anonymity of our clients and........</p>
+              <a
+                href="#"
+                className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+              >
+                KNOW MORE <span className="ml-1">→</span>
+              </a>
+            </div>
+          </div>
+          {/* Social Cranes Card */}
+          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto md:col-span-2 lg:col-span-1 md:mx-auto lg:mx-auto md:justify-self-center lg:justify-self-auto">
+            <div className="w-full">
+              <Image src="/images/homepage/headline.png" alt="Digital Marketing" width={365} height={199} className="w-full h-[199px] object-cover" />
+            </div>
+            <div className="px-6 pt-6 pb-7 w-full">
+              <h3 className="font-bold text-lg mb-2 text-black">Social Cranes</h3>
+              <p className="text-gray-800 text-base mb-4 leading-snug">As a leading social media marketing (SMM) company, Social Cranes partnered with us to enhance their online presence. We designed and developed their website, implementing........</p>
+              <a
+                href="#"
+                className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+              >
+                KNOW MORE <span className="ml-1">→</span>
+              </a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Section 8: Call to Action */}
-      <BannerCTA
+      {/* <BannerCTA
   title="Ready to Build Your Future?"
   description="Let's discuss how a custom software solution can help you overcome inefficiencies and drive your business forward."
   buttonText="Talk to an Expert"
   buttonLink="#contact"
   backgroundImage="/images/footer.jpg"
-/>
-    </main>
+      /> */}
+
+      {/* Pre Footer Section */}
+      <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
+          <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+            <Image
+              src="/images/footer.jpg"
+              alt="Footer Background"
+              fill
+              className="object-cover z-0"
+              style={{ objectPosition: 'center' }}
+              priority
+            />
+            <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
+              <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
+                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
+                  <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
+                  <div className="flex gap-3 flex-wrap">
+                    <a
+                      href="#"
+                      className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                      style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                    >
+                      TALK TO AN EXPERT
+                    </a>
+                  </div>
+              </div>
+            </div>
+            <div className="absolute inset-0 bg-black/70" />
+          </div>
+        </div>
+      </section>
+
       <Footer />
+      </div>
   </>
   
   );
