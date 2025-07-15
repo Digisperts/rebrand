@@ -65,7 +65,7 @@ export default function SoftwareDevelopment() {
 </h2>
 
         <p className="text-gray-600 text-left max-w-3xl mx-auto mb-12">
-          In today’s market, generic software leads to generic results. To truly exceed your goals, you need technology solutions built specifically for you. At Digisperts, we move beyond the limitations of outdated technology stacks to deliver robust, custom software. As your unwavering partner, we dive deep into your vision to build applications that not only solve today's problems but also create tomorrow's opportunities.
+          In today’s market, generic software leads to generic results. To truly exceed your goals, you need technology solutions built specifically for you. At Digisperts, we move beyond the limitations of outdated technology stacks to deliver robust, custom software. As your unwavering partner, we dive deep into your vision to build applications that not only solve today&apos;s problems but also create tomorrow&apos;s opportunities.
 
         </p>
 
@@ -166,7 +166,7 @@ export default function SoftwareDevelopment() {
       {/* Section 4: Case Studies */}
       <section id="success" className="py-20 px-6 md:px-20">
         <h2 className="text-2xl font-bold text-blue-900 mb-4 text-left">How We’ve Engineered Success</h2>
-        <p className="text-left font-poppins text-gray-600 mb-10">Don't just take our word for it. Explore our case studies to see how we've helped businesses like yours transform their operations and achieve measurable success.</p>
+        <p className="text-left font-poppins text-gray-600 mb-10">don&apos;t just take our word for it. Explore our case studies to see how we have helped businesses like yours transform their operations and achieve measurable success.</p>
 
         <div className="grid md:grid-cols-3 gap-6">
                   {[
