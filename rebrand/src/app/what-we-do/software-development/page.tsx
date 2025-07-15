@@ -38,7 +38,7 @@ export default function SoftwareDevelopment() {
       <div className="fixed top-0 left-0 w-full z-50">
       <NavBar />
       </div>
-      
+
       {/* Section 1: Hero */}
       <section id="overview" className="relative w-full min-h-[520px] flex items-left justify-left text-white text-left px-6 pt-50">
         <Image
@@ -258,7 +258,7 @@ export default function SoftwareDevelopment() {
                     <div key={i}>
                       <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
                       <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
-                      <p className="text-lg font-semibold text-[#001F5C]">{desc}</p>
+                      <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
                       <a
                         href="#"
                         className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
