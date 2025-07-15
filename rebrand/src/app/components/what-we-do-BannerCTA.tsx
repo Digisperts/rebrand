@@ -1,24 +1,52 @@
-// components/BannerCTA.tsx
-import React from 'react';
+'use client';
+import Image from 'next/image';
 
 interface BannerCTAProps {
   title: string;
   description: string;
   buttonText: string;
-  onClick?: () => void;
+  buttonLink?: string;
+  backgroundImage?: string;
 }
 
-const BannerCTA: React.FC<BannerCTAProps> = ({ title, description, buttonText, onClick }) => (
-  <section className="bg-black text-white py-16 px-4 text-center">
-    <h2 className="text-2xl md:text-3xl font-bold mb-4">{title}</h2>
-    <p className="mb-6 max-w-2xl mx-auto">{description}</p>
-    <button
-      onClick={onClick}
-      className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded"
-    >
-      {buttonText}
-    </button>
-  </section>
-);
+const BannerCTA = ({
+  title,
+  description,
+  buttonText,
+  buttonLink = '#',
+  backgroundImage = '/images/footer.jpg',
+}: BannerCTAProps) => {
+  return (
+    <section className="relative w-full h-[300px] flex justify-center -mb-[150px] z-30">
+      
+      <div className="relative w-[1280px] h-full rounded-lg overflow-hidden mx-[80px] shadow-lg">
+        {/* Background Image */}
+        <Image
+          src={backgroundImage}
+          alt="CTA Background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        
+        <div className="absolute inset-0 bg-black/80 z-10" />
+
+        
+        <div className="relative z-20 h-full flex items-center px-12">
+          <div className="max-w-lg">
+            <h2 className="text-white text-2xl md:text-3xl font-bold mb-3">{title}</h2>
+            <p className="text-gray-300 mb-4">{description}</p>
+            <a
+              href={buttonLink}
+              className="inline-block text-sm bg-blue-800 text-white px-5 py-2 rounded hover:bg-blue-700 transition"
+            >
+              {buttonText}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default BannerCTA;
