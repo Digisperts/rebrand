@@ -299,7 +299,7 @@ export default function BusinessAutomation() {
         <section className="text-white py-0 px-0 text-center">
           <div className="relative w-full h-64 flex items-center justify-center mb-8">
             <Image
-              src="/images/what-we-do/business-auto/Business-automation-bottombanner.jpg"
+              src="/images/what-we-do/business-auto/business-automation-bottombanner.jpg"
               alt="Hero 2 Background"
               fill
               className="object-cover object-center z-0 rounded"
