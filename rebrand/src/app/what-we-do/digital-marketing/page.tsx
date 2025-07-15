@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import NavBar from '../../nav';
 import Footer from '../../Footer';
+import { FaCheck,FaPhone } from 'react-icons/fa';
 import Headlines from '../../components/what-we-do-HeadlinesSection';
 
 export default function DigitalMarketing() {
@@ -14,46 +15,89 @@ export default function DigitalMarketing() {
         <NavBar />
         </div>
 
-      {/* Hero Section */}
-      <section className="relative h-[70vh] flex flex-col items-center justify-center text-center text-white bg-cover bg-center" style={{ backgroundImage: 'url(/images/digital-banner.png)' }}>
-        <h1 className="text-3xl md:text-5xl font-bold mb-4">Connect with Purpose. Grow with Intent.</h1>
-        <p className="max-w-xl text-lg">We craft data-driven digital marketing strategies powered by intelligent automation...</p>
-        <button className="bg-white text-blue-900 font-semibold px-6 py-3 rounded hover:bg-gray-100 transition">DISCUSS YOUR GROWTH STRATEGY</button>
-      </section>
-
-      {/* Overview */}
-      <section className="py-16 bg-white px-4">
-        <div className="max-w-7xl mx-auto space-y-12">
-          <div className="shadow-md p-6 rounded-md border-l-4 border-blue-600 relative">
-            <span className="absolute right-4 top-4 text-blue-600 text-2xl font-bold">✔</span>
-            <h2 className="text-2xl font-bold text-blue-900 mb-4">Marketing That Cuts Through the Noise.</h2>
-            <p>In a crowded digital world, a strong message is not enough...</p>
+        {/* Section 1: Hero */}
+        <section className="relative w-full min-h-[520px] flex items-left justify-left text-white text-left px-6 pt-50">
+          <Image
+            src="/images/what-we-do/digital-marketing/digital-marketing-banner.jpg" 
+            alt="Hero Background"
+            fill
+            className="object-cover object-center z-0"
+          />
+          <div className="absolute inset-0 bg-black/60 z-10" />
+          <div className="relative z-20 max-w-4xl">
+            <h1 className="text-4xl font-bold mb-4">Connect with Purpose. Grow with Intent.</h1>
+            <p className="mb-6 text-xl">We craft data-driven digital marketing strategies, powered by intelligent automation, to amplify your brand&apos;s voice and deliver the measurable success your business deserves.</p>
+            <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
+              <FaPhone className="mr-2 transform -rotate-270" />
+              DISCUSSS YOUR GROWTH STRATEGY
+            </a>
           </div>
+        </section>
 
-          <div className="flex flex-col md:flex-row gap-10 items-center">
-            <div className="md:w-1/2">
-              <Image src="/images/digital-marketing-strategy.png" alt="Digital Strategy" width={600} height={400} className="rounded shadow-lg" />
-            </div>
-            <div className="md:w-1/2 space-y-6">
-              <div className="shadow-md p-4 rounded-md border-l-4 border-blue-600 relative">
-                <span className="absolute right-4 top-4 text-blue-600 text-2xl font-bold">✔</span>
-                <h3 className="text-blue-900 font-semibold">Deep Dive & Strategy</h3>
-                <p>We take time to deeply understand your business...</p>
+        {/* Marketing Section */}
+        <section className="py-16 px-6 text-left">
+          <h2 className="mb-7 pl-6 text-left">
+            <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
+              Marketing That Cuts Through the Noise.
+            </span>
+          </h2>
+
+          <p className="text-gray-600 pl-6 text-left max-w-5xl w-full mb-12">
+            In a crowded digital world, a strong message is not enough. You need a strategic partner 
+            who can help you cut through the noise and connect with the right audience. At Digisperts, 
+            we see digital marketing as a core pillar of your business success. We move beyond generic 
+            tactics, leveraging our deep expertise in automation to make your marketing smarter. We build 
+            and execute comprehensive strategies that foster brand loyalty, drive meaningful engagement, 
+            and help you exceed your goals.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            <Image 
+              src="/images/what-we-do/digital-marketing/digital-marketing-h2.jpg" 
+              alt="Laptop" 
+              width={500} 
+              height={500} 
+              className="mx-auto mt-15 h-[500px] w-auto" 
+            />
+            <div className="space-y-6 text-left">
+              <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
+                Our Strategic Approach to Digital Marketing
+              </h2>
+
+              <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
+                Our approach is rooted in partnership and a commitment to delivering 
+                transparent, tangible results.
+              </p>
+              <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+                <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
+                  <FaCheck className="text-blue-900 text-sm" />
+                </span>
+                <div className="flex flex-col text-left">
+                  <h3 className="text-lg font-bold text-blue-900 mb-1">Deep Dive & Strategy.</h3>
+                  <p className="text-[#000000]">Our process begins with a deep understanding of your business, your audience, and your objectives. This client-centric approach ensures we develop a tailored strategy that aligns perfectly with your brand.</p>
+                </div>
               </div>
-              <div className="shadow-md p-4 rounded-md border-l-4 border-blue-600 relative">
-                <span className="absolute right-4 top-4 text-blue-600 text-2xl font-bold">✔</span>
-                <h3 className="text-blue-900 font-semibold">Execute & Engage</h3>
-                <p>From email automation to messaging, we execute timely campaigns...</p>
+              <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+                <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
+                  <FaCheck className="text-blue-900 text-sm" />
+                </span>
+                <div className="flex flex-col text-left">
+                  <h3 className="text-lg font-bold text-blue-900 mb-1">Execute & Engage</h3>
+                  <p className="text-[#000000]">We launch innovative, multi-channel campaigns designed to capture attention and convert interest into action. From compelling content to targeted ads, every element is crafted with quality excellence in mind.</p>
+                </div>
               </div>
-              <div className="shadow-md p-4 rounded-md border-l-4 border-blue-600 relative">
-                <span className="absolute right-4 top-4 text-blue-600 text-2xl font-bold">✔</span>
-                <h3 className="text-blue-900 font-semibold">Measure & Refine</h3>
-                <p>We track performance rigorously to maximize ROI.</p>
+              <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+                <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
+                  <FaCheck className="text-blue-900 text-sm" />
+                </span>
+                <div className="flex flex-col text-left">
+                  <h3 className="text-lg font-bold text-blue-900 mb-1">Measure & Refine</h3>
+                  <p className="text-[#000000]">We believe in transparency and continuous learning. We meticulously track performance, providing you with clear analytics and insights to constantly refine our approach and maximize your return on investment.</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Section  */}
       <section className="py-14 px-2 md:px-8">

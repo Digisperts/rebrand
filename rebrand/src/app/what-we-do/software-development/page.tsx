@@ -37,7 +37,7 @@ export default function SoftwareDevelopment() {
       <div className="fixed top-0 left-0 w-full z-50">
       <NavBar />
       </div>
-
+      
       {/* Section 1: Hero */}
       <section id="overview" className="relative w-full min-h-[520px] flex items-left justify-left text-white text-left px-6 pt-50">
         <Image
@@ -85,10 +85,10 @@ export default function SoftwareDevelopment() {
           <div className="space-y-6 text-left">
             <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
               Our Strategic Approach to Software Development
-            </h2>
+</h2>
 
             <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
-              Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
+          Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
             </p>
             <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
               <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
@@ -136,13 +136,13 @@ export default function SoftwareDevelopment() {
           </h2>
           <p className="text-left text-gray-900 mb-8">We provide end-to-end development to bring your vision to life.</p>
 
-          {/* First Row */}
+  {/* First Row */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch mb-8 bg-[#F8F8F8] p-4 rounded">
             <div className="flex-1 flex flex-col justify-center items-start">
               <h3 className="text-2xl font-bold text-black mb-3">Custom Web Applications</h3>
               <p className="text-gray-900 mb-4">
-                We build powerful, secure web apps with robust back-ends and intuitive, visually appealing user interfaces. From enterprise dashboards to customer portals, our solutions are designed to streamline your operations.
-              </p>
+        We build powerful, secure web apps with robust back-ends and intuitive, visually appealing user interfaces. From enterprise dashboards to customer portals, our solutions are designed to streamline your operations.
+      </p>
               <a
                 href="#"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -150,21 +150,21 @@ export default function SoftwareDevelopment() {
               >
                 KNOW MORE <span className="ml-1">→</span>
               </a>
-            </div>
+    </div>
             <div className="flex items-center justify-center w-full md:w-[45%] max-w-[260px] mx-auto">
-              <Image
+    <Image
                 src="/images/what-we-do/software-dev/SD-b.png" 
-                alt="Custom Web Applications"
+      alt="Custom Web Applications"
                 width={260}
                 height={180}
                 className="object-contain"
               />
             </div>
-          </div>
+  </div>
 
-          {/* Second Row */}
+  {/* Second Row */}
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
-            {/* Mobile App Development */}
+    {/* Mobile App Development */}
             <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
               <div className="flex-1 flex flex-col justify-center items-start">
                 <h3 className="text-xl font-bold text-black mb-2">Mobile App Development</h3>
@@ -180,26 +180,26 @@ export default function SoftwareDevelopment() {
                 >
                   KNOW MORE <span className="ml-1">→</span>
                 </a>
-              </div>
+      </div>
               <div className="flex items-center justify-center w-[45%] max-w-[180px]">
-                <Image
+      <Image
                   src="/images/what-we-do/software-dev/SD-c.png"
-                  alt="Mobile App Development"
+        alt="Mobile App Development"
                   width={180}
-                  height={120}
+        height={120}
                   className="object-contain"
-                />
+      />
               </div>
-            </div>
+    </div>
 
-            {/* Enterprise Solutions */}
+    {/* Enterprise Solutions */}
             <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
               <div className="flex items-center justify-center w-[45%] max-w-[180px]">
-                <Image
+      <Image
                   src="/images/what-we-do/software-dev/SD-d.png" 
-                  alt="Enterprise & OEM Solutions"
+        alt="Enterprise & OEM Solutions"
                   width={180}
-                  height={120}
+        height={120}
                   className="object-contain"
                 />
               </div>
@@ -218,10 +218,10 @@ export default function SoftwareDevelopment() {
                   KNOW MORE <span className="ml-1">→</span>
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
 
       {/* Section 4: Case Studies */}
