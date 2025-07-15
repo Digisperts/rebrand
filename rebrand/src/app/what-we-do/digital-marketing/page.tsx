@@ -55,8 +55,7 @@ export default function DigitalMarketing() {
         </div>
       </section>
 
-
-      {/* Section 3: Services  */}
+      {/* Services Section  */}
       <section className="py-14 px-2 md:px-8">
         <div className="border-2 border-dashed border-[#D9D9D9] rounded-[8px] bg-white px-4 md:px-10 py-8">
           <h2 className="mb-2 text-left">
@@ -66,16 +65,16 @@ export default function DigitalMarketing() {
                 backgroundImage: 'linear-gradient(180deg, #001133 0%,  #003399 90%)'
               }}
             >
-              Our Software Development Services
+              Our Digital Marketing Services
             </span>
           </h2>
-          <p className="text-left text-gray-900 mb-8">We provide end-to-end development to bring your vision to life.</p>
+          <p className="text-left text-lg font-semibold text-gray-900 mb-8">We offer a full suite of services designed to build a powerful and cohesive brand presence.</p>
 
           {/* First Row */}
           <div className="flex flex-col md:flex-row gap-8 mb-8">
 
-             {/* Right - Financial & Accounting Automation */}
-             <div className="md:w-7/12 bg-white p-6 shadow-lg rounded-md flex flex-col justify-between">
+            {/* Left - Marketing Automation & Lead Nurturing */}
+            <div className="md:w-7/12 bg-white p-6 shadow-lg rounded-md flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold text-black mb-2">
                   Marketing Automation & Lead Nurturing
@@ -96,8 +95,8 @@ export default function DigitalMarketing() {
               <Image
                 src="/images/what-we-do/digital-marketing/digital-marketing-a.png"
                 alt="Marketing"
-                width={150}
-                height={150}
+                width={220}
+                height={220}
                 className="self-end mt-4"
               />
             </div>
@@ -106,12 +105,11 @@ export default function DigitalMarketing() {
             <div className="md:w-6/14 bg-white p-6 shadow-lg rounded-md flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold text-black mb-2">
-                  Financial & Accounting Automation
+                  Content Marketing & Strategy
                 </h3>
                 <p className="text-gray-900">
-                  Enhance accuracy and gain control over your finances. We automate invoicing, data entry, 
-                  and reporting to reduce errors, ensure compliance, and provide you with real-time financial 
-                  insights.
+                  Become a trusted voice in your industry. We develop and distribute valuable content that 
+                  educates your audience, builds community, and nurtures leads through the sales funnel.
                 </p>
                 <a
                   href="#"
@@ -138,12 +136,12 @@ export default function DigitalMarketing() {
             <div className="md:w-6/14 bg-white p-6 shadow-lg rounded-md flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold text-black mb-2">
-                  Workflow & Data Automation
+                  Paid Advertising (PPC & Social Ads)
                 </h3>
                 <p className="text-gray-900">
-                  Connect disparate systems and automate the flow of data across your organization. 
-                  We reduce manual data handling to improve efficiency, minimize errors, and provide a 
-                  unified view of your operations.
+                  Generate immediate, targeted traffic and leads. We manage your paid advertising campaigns 
+                  across search and social platforms, focusing on optimizing for the highest possible return 
+                  on investment.
                 </p>
                 <a
                   href="#"
@@ -163,15 +161,15 @@ export default function DigitalMarketing() {
             </div>
 
             {/* Right - Customer Relationship Management (CRM) Automation */}
-            <div className="md:w-7/12 flex flex-col md:flex-row bg-white p-6 shadow-lg rounded-md">
-              {/* Text Content */}
-              <div className="md:w-7/12">
+            <div className="md:w-7/12 bg-white p-6 shadow-lg rounded-md flex flex-col justify-between">
+              <div>
                 <h3 className="text-2xl font-bold text-black mb-2">
-                  Customer Relationship Management (CRM) Automation
+                  Search Engine Optimization (SEO)
                 </h3>
                 <p className="text-gray-900">
-                  Build stronger, more lasting customer relationships by automating communication, tracking 
-                  interactions, and personalizing the customer journey, improving retention and satisfaction.
+                  Achieve long-term, sustainable growth by improving your visibility in search results. 
+                  We focus on foundational SEO to attract high-quality organic traffic and build your 
+                  brand&apos;s authority online.
                 </p>
                 <a
                   href="#"
@@ -181,16 +179,13 @@ export default function DigitalMarketing() {
                   KNOW MORE <span className="ml-1">→</span>
                 </a>
               </div>
-              {/* SEO */}
-              <div className="md:w-5/12 flex items-center justify-center mt-6 md:mt-0">
-                <Image
-                  src="/images/what-we-do/digital-marketing/digital-marketing-d.png"
-                  alt="SEO"
-                  width={200}
-                  height={200}
-                  className="w-auto h-auto"
-                />
-              </div>
+              <Image
+                src="/images/what-we-do/digital-marketing/digital-marketing-d.png"
+                alt="Marketing"
+                width={220}
+                height={220}
+                className="self-end mt-4"
+              />
             </div>
           </div>
         </div>
