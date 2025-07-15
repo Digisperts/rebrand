@@ -74,18 +74,16 @@ export default function DigitalMarketing() {
           {/* First Row */}
           <div className="flex flex-col md:flex-row gap-8 mb-8">
 
-            {/* Left - AI-Powered Automation & Support + Image */}
-            <div className="md:w-7/12 flex flex-col md:flex-row bg-white p-6 shadow-lg rounded-md">
-              {/* Text Content */}
-              <div className="md:w-7/12">
+             {/* Right - Financial & Accounting Automation */}
+             <div className="md:w-7/12 bg-white p-6 shadow-lg rounded-md flex flex-col justify-between">
+              <div>
                 <h3 className="text-2xl font-bold text-black mb-2">
-                  AI-Powered Automation & Support
+                  Marketing Automation & Lead Nurturing
                 </h3>
                 <p className="text-gray-900">
-                  We build and train custom AI models to power intelligent systems. This includes AI-enhanced 
-                  chatbots that learn your business to provide instant, human-like customer support. We also 
-                  develop smart internal knowledge bases, training them on your organization&apos;s Standard 
-                  Operating Procedures (SOPs) to empower your team with immediate and accurate information.
+                  Bridge the gap between marketing and sales with intelligent automation. We build automated 
+                  workflows for lead generation, scoring, and nurturing, ensuring no opportunity goes cold. 
+                  This increases lead efficiency and empowers your sales team with better-qualified prospects.
                 </p>
                 <a
                   href="#"
@@ -95,16 +93,13 @@ export default function DigitalMarketing() {
                   KNOW MORE <span className="ml-1">→</span>
                 </a>
               </div>
-              {/* Robot Image */}
-              <div className="md:w-5/12 flex items-center justify-center mt-6 md:mt-0">
-                <Image
-                  src="/images/what-we-do/business-auto/business-automation-a.png"
-                  alt="AI Robot"
-                  width={200}
-                  height={200}
-                  className="w-auto h-auto"
-                />
-              </div>
+              <Image
+                src="/images/what-we-do/digital-marketing/digital-marketing-a.png"
+                alt="Marketing"
+                width={150}
+                height={150}
+                className="self-end mt-4"
+              />
             </div>
 
             {/* Right - Financial & Accounting Automation */}
@@ -127,8 +122,8 @@ export default function DigitalMarketing() {
                 </a>
               </div>
               <Image
-                src="/images/what-we-do/business-auto/business-automation-b.png"
-                alt="Finance Icon"
+                src="/images/what-we-do/digital-marketing/digital-marketing-b.png"
+                alt="Financia"
                 width={150}
                 height={150}
                 className="self-end mt-4"
@@ -159,8 +154,8 @@ export default function DigitalMarketing() {
                 </a>
               </div>
               <Image
-                src="/images/what-we-do/business-auto/business-automation-c.png"
-                alt="Finance Icon"
+                src="/images/what-we-do/digital-marketing/digital-marketing-c.png"
+                alt="Workflow"
                 width={150}
                 height={150}
                 className="self-end mt-4"
@@ -186,11 +181,11 @@ export default function DigitalMarketing() {
                   KNOW MORE <span className="ml-1">→</span>
                 </a>
               </div>
-              {/* Robot Image */}
+              {/* SEO */}
               <div className="md:w-5/12 flex items-center justify-center mt-6 md:mt-0">
                 <Image
-                  src="/images/what-we-do/business-auto/business-automation-d.png"
-                  alt="AI Robot"
+                  src="/images/what-we-do/digital-marketing/digital-marketing-d.png"
+                  alt="SEO"
                   width={200}
                   height={200}
                   className="w-auto h-auto"
