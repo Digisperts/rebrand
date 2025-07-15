@@ -18,7 +18,7 @@ export default function DigitalMarketing() {
         {/* Section 1: Hero */}
         <section className="relative w-full min-h-[520px] flex items-left justify-left text-white text-left px-6 pt-50">
           <Image
-            src="/images/what-we-do/digital-marketing/digital-marketing-banner.jpg" 
+            src="/images/what-we-do/digital-marketing/marketing-banner.jpg" 
             alt="Hero Background"
             fill
             className="object-cover object-center z-0"
