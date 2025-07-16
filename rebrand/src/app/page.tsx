@@ -90,6 +90,57 @@ export default function Home() {
   const [heroIndex, setHeroIndex] = useState(0);
   const [prevHeroIndex, setPrevHeroIndex] = useState<number | null>(null);
   const [isFading, setIsFading] = useState(false);
+
+  // Touch state for swipe gestures
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const swipeThreshold = 50; // Minimum px to consider a swipe
+
+  // Touch state for Featured Industry swipe gestures
+  const featuredTouchStartX = useRef<number | null>(null);
+  const featuredTouchEndX = useRef<number | null>(null);
+  const featuredSwipeThreshold = 50;
+
+  // Handle touch start
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = null;
+  };
+
+  // Handle touch move
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  // Handle touch end
+  const handleTouchEnd = () => {
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const diff = touchStartX.current - touchEndX.current;
+      if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          // Swipe left (next slide)
+          setPrevHeroIndex(heroIndex);
+          setHeroIndex((i) => (i + 1) % heroSlides.length);
+          setIsFading(true);
+          setTimeout(() => {
+            setIsFading(false);
+            setPrevHeroIndex(null);
+          }, 900);
+        } else {
+          // Swipe right (previous slide)
+          setPrevHeroIndex(heroIndex);
+          setHeroIndex((i) => (i - 1 + heroSlides.length) % heroSlides.length);
+          setIsFading(true);
+          setTimeout(() => {
+            setIsFading(false);
+            setPrevHeroIndex(null);
+          }, 900);
+        }
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
   useEffect(() => {
     const interval = setInterval(() => {
       setPrevHeroIndex(heroIndex);
@@ -103,6 +154,30 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [heroIndex, heroSlides.length]);
 
+  const handleFeaturedTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    featuredTouchStartX.current = e.touches[0].clientX;
+    featuredTouchEndX.current = null;
+  };
+  const handleFeaturedTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    featuredTouchEndX.current = e.touches[0].clientX;
+  };
+  const handleFeaturedTouchEnd = () => {
+    if (featuredTouchStartX.current !== null && featuredTouchEndX.current !== null) {
+      const diff = featuredTouchStartX.current - featuredTouchEndX.current;
+      if (Math.abs(diff) > featuredSwipeThreshold) {
+        if (diff > 0) {
+          // Swipe left (next slide)
+          setActive((a) => (a + 1) % slides.length);
+        } else {
+          // Swipe right (previous slide)
+          setActive((a) => (a - 1 + slides.length) % slides.length);
+        }
+      }
+    }
+    featuredTouchStartX.current = null;
+    featuredTouchEndX.current = null;
+  };
+
 
   return (
     <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
@@ -113,7 +188,12 @@ export default function Home() {
 
 
       {/* Hero Slider Section */}
-      <section className="relative w-full min-h-[520px] flex items-stretch overflow-hidden">
+      <section 
+        className="relative w-full min-h-[520px] flex items-stretch overflow-hidden"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div className="flex w-full min-h-[520px] relative">
           {/* Black background as a separate absolutely positioned div, always visible on desktop, hidden on mobile/tablet */}
           <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
@@ -379,7 +459,12 @@ export default function Home() {
           Featured Industry
         </h2>
         <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-          <div className="relative w-full h-[480px] md:h-[520px] flex items-center justify-center">
+          <div
+            className="relative w-full h-[480px] md:h-[520px] flex items-center justify-center"
+            onTouchStart={handleFeaturedTouchStart}
+            onTouchMove={handleFeaturedTouchMove}
+            onTouchEnd={handleFeaturedTouchEnd}
+          >
             {slides.map((slide, idx) => (
               <div
                 key={idx}

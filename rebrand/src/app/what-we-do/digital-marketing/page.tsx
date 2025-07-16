@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState, useRef } from 'react';
 import React from 'react';
 import Image from 'next/image';
 import NavBar from '../../nav';
@@ -7,6 +8,86 @@ import { FaCheck,FaPhone } from 'react-icons/fa';
 import Headlines from '../../components/what-we-do-HeadlinesSection';
 
 export default function DigitalMarketing() {
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, []);
+
+  // HERO SLIDER LOGIC
+  const heroSlides = [
+    {
+      image: "/images/what-we-do/digital-marketing/marketing-banner.jpg",
+      heading: "Connect with Purpose. Grow with Intent.",
+      desc: "We craft data-driven digital marketing strategies, powered by intelligent automation, to \namplify your brand's voice and deliver the measurable success your business deserves.",
+      cta: "SCHEDULE A CONSULTATION"
+    },
+    {
+      image: "/images/what-we-do/digital-marketing/marketing-banner2.png",
+      heading: "Reach Out to the World to Get Your Brand Seen.",
+      desc: "If you run a Business, you should make Sales. We provide cross-platform marketing that drives in \npaying customers.",
+      cta: "SCHEDULE A CONSULTATION"
+    }
+  ];
+  const [heroIndex, setHeroIndex] = useState(0);
+  const [prevHeroIndex, setPrevHeroIndex] = useState<number | null>(null);
+  const [isFading, setIsFading] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const touchEndX = useRef<number | null>(null);
+  const swipeThreshold = 50;
+
+  // Helper to trigger fade transition
+  const triggerFade = (newIndex: number) => {
+    if (newIndex === heroIndex) return;
+    setPrevHeroIndex(heroIndex);
+    setHeroIndex(newIndex);
+    setIsFading(true);
+    setTimeout(() => {
+      setIsFading(false);
+      setPrevHeroIndex(null);
+    }, 500); // match duration-500
+  };
+
+  // Auto-slide effect
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      triggerFade((heroIndex + 1) % heroSlides.length);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, [heroIndex, heroSlides.length]);
+
+  // Touch handlers
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchEndX.current = null;
+  };
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+  const handleTouchEnd = () => {
+    if (touchStartX.current !== null && touchEndX.current !== null) {
+      const diff = touchStartX.current - touchEndX.current;
+      if (Math.abs(diff) > swipeThreshold) {
+        let newIndex;
+        if (diff > 0) {
+          // Swipe left (next)
+          newIndex = (heroIndex + 1) % heroSlides.length;
+        } else {
+          // Swipe right (prev)
+          newIndex = (heroIndex - 1 + heroSlides.length) % heroSlides.length;
+        }
+        triggerFade(newIndex);
+      }
+    }
+    touchStartX.current = null;
+    touchEndX.current = null;
+  };
+
   return (
     <>
       <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
@@ -16,21 +97,62 @@ export default function DigitalMarketing() {
         </div>
 
         {/* Section 1: Hero */}
-        <section className="relative w-full min-h-[520px] flex items-left justify-left text-white text-left px-6 pt-50">
-          <Image
-            src="/images/what-we-do/digital-marketing/marketing-banner.jpg" 
-            alt="Hero Background"
-            fill
-            className="object-cover object-center z-0"
-          />
-          <div className="absolute inset-0 bg-black/60 z-10" />
-          <div className="relative z-20 max-w-4xl py-16 md:py-0">
-            <h1 className="text-4xl font-bold mb-4">Connect with Purpose. Grow with Intent.</h1>
-            <p className="mb-6 text-xl">We craft data-driven digital marketing strategies, powered by intelligent automation, to amplify your brand&apos;s voice and deliver the measurable success your business deserves.</p>
+        <section
+          id="overview"
+          className="relative w-full min-h-[520px] flex items-center justify-left text-white text-left px-6 pt-20"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
+          {/* Fade transition: render current and previous slide if fading */}
+          {prevHeroIndex !== null && isFading && (
+            <div
+              className={`absolute inset-0 transition-opacity duration-500`}
+              style={{ opacity: 0, zIndex: 10 }}
+            >
+              <Image
+                src={heroSlides[prevHeroIndex].image}
+                alt="Hero Background"
+                fill
+                className="object-cover object-center z-0"
+                priority={prevHeroIndex === 0}
+              />
+              <div className="absolute inset-0 bg-black/10 z-10" />
+            </div>
+          )}
+          <div
+            className={`absolute inset-0 transition-opacity duration-500`}
+            style={{ opacity: isFading ? 1 : 1, zIndex: 20 }}
+          >
+            <Image
+              src={heroSlides[heroIndex].image}
+              alt="Hero Background"
+              fill
+              className="object-cover object-center z-0"
+              priority={heroIndex === 0}
+            />
+            <div className="absolute inset-0 bg-black/50 z-10" />
+          </div>
+          {/* Text content, always in normal flex flow, vertically centered */}
+          <div className="relative z-30 max-w-4xl">
+            <h1 className="text-4xl font-bold mb-4">{heroSlides[heroIndex].heading}</h1>
+            <p className="mb-6">{heroSlides[heroIndex].desc.split('\n').map((line, i) => <span key={i}>{line}{i < heroSlides[heroIndex].desc.split('\n').length - 1 && <br />}</span>)}</p>
             <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
               <FaPhone className="mr-2 transform -rotate-270" />
-              DISCUSSS YOUR GROWTH STRATEGY
+              {heroSlides[heroIndex].cta}
             </a>
+          </div>
+          {/* Pagination Dots */}
+          <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-2 z-30">
+            {heroSlides.map((_, idx) => (
+              <button
+                key={idx}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${heroIndex === idx ? 'bg-[#233876] scale-110 shadow-lg' : 'bg-gray-300'} inline-block`}
+                onClick={() => triggerFade(idx)}
+                aria-label={`Go to slide ${idx+1}`}
+                style={{outline: 'none'}}
+              />
+            ))}
           </div>
         </section>
 
