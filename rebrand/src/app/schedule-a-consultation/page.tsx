@@ -57,9 +57,13 @@ export default function BookACallPage() {
                 <label className="block font-bold text-gray-900 mb-1">Choose a Service</label>
                 <select className="border rounded px-2 py-2 w-full text-gray-700 bg-white">
                   <option>Web and App Development</option>
-                  <option>UI/UX Design</option>
-                  <option>Digital Marketing</option>
-                  <option>Consulting</option>
+                  <option>Software Development</option>
+                  <option>Project Management</option>
+                  <option>Marketing and Advertising Services</option>
+                  <option>Branding Services</option>
+                  <option>Automation Services</option>
+                  <option>Enterprise Solution</option>
+                  <option>Others</option>
                 </select>
               </div>
               {/* Budget */}
