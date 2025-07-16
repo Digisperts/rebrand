@@ -205,7 +205,7 @@ export default function CasesStudiesResource() {
         </div>
       </section>
 
-      {/* Pre Footer Section */}
+      {/* Pre-Footer Section */}
       <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
         <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
           <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
