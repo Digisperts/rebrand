@@ -86,21 +86,22 @@ export default function Home() {
       desc: "Experience seamless operations, engaged customers, and a business fully prepared for tomorrow&apos;s opportunities.",
     },
   ];
+  // Cross-fade state
   const [heroIndex, setHeroIndex] = useState(0);
-  const [fade, setFade] = useState(true);
+  const [prevHeroIndex, setPrevHeroIndex] = useState<number | null>(null);
+  const [isFading, setIsFading] = useState(false);
   useEffect(() => {
-    setFade(false);
-    const fadeTimeout = setTimeout(() => setFade(true), 50); // trigger fade-in
     const interval = setInterval(() => {
+      setPrevHeroIndex(heroIndex);
       setHeroIndex((i) => (i + 1) % heroSlides.length);
-      setFade(false);
-      setTimeout(() => setFade(true), 50);
+      setIsFading(true);
+      setTimeout(() => {
+        setIsFading(false);
+        setPrevHeroIndex(null);
+      }, 900); // match fade duration
     }, 5000);
-    return () => {
-      clearInterval(interval);
-      clearTimeout(fadeTimeout);
-    };
-  }, []);
+    return () => clearInterval(interval);
+  }, [heroIndex, heroSlides.length]);
 
 
   return (
@@ -115,60 +116,91 @@ export default function Home() {
       <section className="relative w-full min-h-[520px] flex items-stretch overflow-hidden">
         <div className="flex w-full min-h-[520px] relative">
           {/* Black background as a separate absolutely positioned div, always visible on desktop, hidden on mobile/tablet */}
-          {heroIndex === 0 && (
-            <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
-          )}
-          {heroIndex === 1 && (
-            <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
-          )}
-          {heroIndex === 2 && (
-            <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
-          )}
+          <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
           {/* Text box overlays black bg and hero image, always visible */}
-          <div className="absolute left-0 top-0 h-full items-center pointer-events-none z-40 w-full flex">
-            <div className="relative pl-4 sm:pl-6 md:pl-12 pr-2 sm:pr-4 md:pr-8 py-6 sm:py-8 md:py-12 max-w-[700px] w-full pointer-events-auto">
+          <div className="absolute top-1/2 left-4 top-30 w-full flex pointer-events-none z-40 md:-translate-y-[100%]">
+            <div className="relative pl-4 sm:pl-6 md:pl-12 pr-2 sm:pr-4 md:pr-8 py-2 sm:py-4 md:py-6 max-w-[700px] w-full pointer-events-auto">
               {/* Soft dark overlay under text, only on desktop */}
               <div className="hidden md:block absolute inset-0 bg-black/46 rounded-xl blur-sm -z-10" />
-              <HeroFadeIn>
-              <div className={`transition-opacity duration-[1500ms] ${fade ? 'opacity-100' : 'opacity-0'}`} key={heroIndex}>
-              <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2" style={{letterSpacing:0}}>
+              {/* Cross-fade text */}
+              {prevHeroIndex !== null && (
+                <div className={`absolute inset-0 transition-opacity duration-900`} style={{ opacity: isFading ? 0 : 1, zIndex: 10 }}>
+                  <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2" style={{letterSpacing:0}}>
+                    <span className="block text-2xl sm:text-4xl md:text-5xl">{heroSlides[prevHeroIndex].heading1}</span>
+                    <span className="block text-2xl sm:text-4xl md:text-5xl">{heroSlides[prevHeroIndex].heading2}</span>
+                  </h1>
+                  <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>{heroSlides[prevHeroIndex].desc}</p>
+                  <div className="flex flex-col gap-3">
+                    <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
+                      <FaPhone className="mr-2 transform -rotate-270" />
+                      Schedule a Consultation
+                    </a>
+                    <div className="flex flex-col gap-1 mt-1">
+                      <div className="flex items-center gap-1">
+                        <FaStar className="text-yellow-400 text-xl" />
+                        <FaStar className="text-yellow-400 text-xl" />
+                        <FaStar className="text-yellow-400 text-xl" />
+                        <FaStar className="text-yellow-400 text-xl" />
+                        <FaStarHalfAlt className="text-yellow-400 text-xl" />
+                      </div>
+                      <div className="flex items-center gap-2 mt-1">
+                        <span className="text-white font-semibold text-base">4.5 Rating on</span>
+                        <div className="w-[60px] h-[22px] overflow-hidden flex items-center">
+                          <Image src="/images/homepage/clutch.png" alt="Clutch" width={70} height={22} className="object-contain object-center" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
+              <div className={`absolute inset-0 transition-opacity duration-900`} style={{ opacity: isFading ? 1 : 1, zIndex: 20 }}>
+                <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2" style={{letterSpacing:0}}>
                   <span className="block text-2xl sm:text-4xl md:text-5xl">{heroSlides[heroIndex].heading1}</span>
                   <span className="block text-2xl sm:text-4xl md:text-5xl">{heroSlides[heroIndex].heading2}</span>
-              </h1>
+                </h1>
                 <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>{heroSlides[heroIndex].desc}</p>
-              <div className="flex flex-col gap-3">
-                <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
-                <FaPhone className="mr-2 transform -rotate-270" />
-                  Schedule a Consultation
-                </a>
-                <div className="flex flex-col gap-1 mt-1">
-                  <div className="flex items-center gap-1">
-                    <FaStar className="text-yellow-400 text-xl" />
-                    <FaStar className="text-yellow-400 text-xl" />
-                    <FaStar className="text-yellow-400 text-xl" />
-                    <FaStar className="text-yellow-400 text-xl" />
-                    <FaStarHalfAlt className="text-yellow-400 text-xl" />
-                  </div>
-                  <div className="flex items-center gap-2 mt-1">
-                    <span className="text-white font-semibold text-base">4.5 Rating on</span>
-                    <div className="w-[60px] h-[22px] overflow-hidden flex items-center">
-                      <Image src="/images/homepage/clutch.png" alt="Clutch" width={70} height={22} className="object-contain object-center" />
+                <div className="flex flex-col gap-3">
+                  <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
+                    <FaPhone className="mr-2 transform -rotate-270" />
+                    Schedule a Consultation
+                  </a>
+                  <div className="flex flex-col gap-1 mt-1">
+                    <div className="flex items-center gap-1">
+                      <FaStar className="text-yellow-400 text-xl" />
+                      <FaStar className="text-yellow-400 text-xl" />
+                      <FaStar className="text-yellow-400 text-xl" />
+                      <FaStar className="text-yellow-400 text-xl" />
+                      <FaStarHalfAlt className="text-yellow-400 text-xl" />
+                    </div>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="text-white font-semibold text-base">4.5 Rating on</span>
+                      <div className="w-[60px] h-[22px] overflow-hidden flex items-center">
+                        <Image src="/images/homepage/clutch.png" alt="Clutch" width={70} height={22} className="object-contain object-center" />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              </div>
-              </HeroFadeIn>
             </div>
           </div>
           {/* Right: Hero image, always on top for mobile/tablet, normal for desktop */}
           <div className={`flex-1 relative z-10 min-h-[520px] w-full`}>
+            {prevHeroIndex !== null && (
+              <Image
+                src={heroSlides[prevHeroIndex].image}
+                alt="Hero"
+                fill
+                className="w-full h-full object-cover object-center absolute transition-opacity duration-900"
+                style={{ opacity: isFading ? 0 : 1, zIndex: 10 }}
+                priority
+              />
+            )}
             <Image
               src={heroSlides[heroIndex].image}
-              alt="Hero" 
+              alt="Hero"
               fill
-              className={`w-full h-full object-cover object-center md:${heroIndex === 0 ? 'object-right' : heroIndex === 1 ? 'object-left' : 'object-contain object-right'}`}
-              style={{ border: 'none', boxShadow: 'none', opacity: fade ? 1 : 0, zIndex: 10 }}
+              className="w-full h-full object-cover object-center absolute transition-opacity duration-900"
+              style={{ opacity: isFading ? 1 : 1, zIndex: 20 }}
               priority
             />
           </div>
@@ -178,7 +210,7 @@ export default function Home() {
               <button
                 key={idx}
                 className={`w-3 h-3 rounded-full transition-all duration-300 ${heroIndex === idx ? 'bg-[#233876] scale-110 shadow-lg' : 'bg-gray-300'} inline-block`}
-                onClick={() => { setHeroIndex(idx); setFade(false); setTimeout(() => setFade(true), 50); }}
+                onClick={() => setHeroIndex(idx)}
                 aria-label={`Go to slide ${idx+1}`}
                 style={{outline: 'none'}}
               />
