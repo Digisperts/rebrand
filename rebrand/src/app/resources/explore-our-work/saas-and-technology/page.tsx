@@ -212,9 +212,9 @@ export default function SaasAndTechnologyExploreOurWork() {
           </div>
           {/* Desktop version: arrows and horizontal row */}
           <div className="hidden md:block">
-            <div className="relative mt-50 mb-50 w-full">
+            <div className="relative mt-60 mb-50 w-full">
               {/* Top Row: Text and Arrows for Steps 1 & 3 */}
-              <div className="absolute w-full left-0" style={{top: '-180px'}}>
+              <div className="absolute w-full left-0" style={{top: '-197px'}}>
                 <div className="flex flex-row justify-between w-full">
                   {/* Step 1 Text+Arrow */}
                   <div className="flex flex-col items-center w-1/4">
@@ -230,11 +230,11 @@ export default function SaasAndTechnologyExploreOurWork() {
                   <div className="w-1/4" />
                   {/* Step 3 Text+Arrow */}
                   <div className="flex flex-col items-center w-1/4">
-                    <div className="mb-2 ml-10 text-left">
+                    <div className="mb-2 text-left ml-10 w-[200px]">
                       <h3 className="font-bold text-gray-800 text-xl">Conversation Design</h3>
-                      <p className="text-gray-900 text-sm max-w-xs mx-auto">
+                      <p className="text-gray-900 text-sm">
                         We designed natural, helpful, and on-brand conversation flows for the chatbot.
-                      </p>
+                      </p> <br /> <br />
                     </div>
                     <svg width="2" height="40"><line x1="1" y1="0" x2="1" y2="40" stroke="#7A5A00" strokeWidth="2" markerEnd="url(#arrowhead3)" /><defs><marker id="arrowhead3" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><polygon points="0 0, 6 3, 0 6" fill="#7A5A00" /></marker></defs></svg>
                   </div>
