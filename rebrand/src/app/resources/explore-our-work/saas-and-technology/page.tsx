@@ -174,7 +174,7 @@ export default function SaasAndTechnologyExploreOurWork() {
             {/* Step 3 */}
             <div className="flex flex-col items-center mb-10">
               <div className="mb-2 text-center">
-                <h3 className="font-bold text-gray-800 text-xl">Conversation Design</h3>
+                <h3 className="font-bold text-gray-800 text-xl whitespace-nowrap">Conversation Design</h3>
                 <p className="text-gray-900 text-sm max-w-xs text-left mx-auto">
                   We designed natural, helpful, and on-brand conversation flows for the chatbot.
                 </p>
@@ -231,7 +231,7 @@ export default function SaasAndTechnologyExploreOurWork() {
                   {/* Step 3 Text+Arrow */}
                   <div className="flex flex-col items-center w-1/4">
                     <div className="mb-2 text-left ml-10 w-[200px]">
-                      <h3 className="font-bold text-gray-800 text-xl">Conversation Design</h3>
+                      <h3 className="font-bold text-gray-800 text-xl whitespace-nowrap">Conversation Design</h3>
                       <p className="text-gray-900 text-sm">
                         We designed natural, helpful, and on-brand conversation flows for the chatbot.
                       </p> <br /> <br />
