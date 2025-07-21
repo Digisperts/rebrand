@@ -21,7 +21,7 @@ const NavBar = () => {
       <div className="flex items-center">
         {/* Logo image */}
         <Link href="/">
-          <Image src="/images/logo.png" alt="Logo" width={158} height={48} className="cursor-pointer" />
+          <Image src="/images/digispert-logo.png" alt="Logo" width={158} height={48} className="cursor-pointer" />
         </Link>
         {/* <span className="ml-2 text-xl font-bold text-blue-900">Digisperts</span> */}
       </div>

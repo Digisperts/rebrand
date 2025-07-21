@@ -79,7 +79,7 @@ export default function CasesStudiesResource() {
           {/* Retail & Ecommerce Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
             <div className="px-6 pt-0 pl-0 pr-0 w-full">
-              <Image src="/images/use-cases/retail.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+              <Image src="/images/use-cases/retail.jpg" alt="Retail & Ecommerce" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Retail & Ecommerce</h3>
@@ -97,7 +97,7 @@ export default function CasesStudiesResource() {
           {/* Healthcare Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
             <div className="px-6 pt-0 pl-0 pr-0 w-full">
-              <Image src="/images/use-cases/healthcare.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+              <Image src="/images/use-cases/healthcare.jpg" alt="Healthcare" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Healthcare</h3>
@@ -115,7 +115,7 @@ export default function CasesStudiesResource() {
           {/* SaaS & Technology Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
             <div className="px-6 pt-0 pl-0 pr-0 w-full">
-              <Image src="/images/use-cases/saas.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+              <Image src="/images/use-cases/saas.png" alt="SaaS & Technology" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">SaaS & Technology</h3>
@@ -133,7 +133,7 @@ export default function CasesStudiesResource() {
           {/* Agriculture Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
             <div className="px-6 pt-0 pl-0 pr-0 w-full">
-              <Image src="/images/use-cases/agriculture.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+              <Image src="/images/use-cases/agriculture.jpg" alt="Agriculture" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Agriculture</h3>
@@ -151,7 +151,7 @@ export default function CasesStudiesResource() {
           {/* Real Estate Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
             <div className="px-6 pt-0 pl-0 pr-0 w-full">
-              <Image src="/images/use-cases/realestate.png" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+              <Image src="/images/use-cases/realestate.png" alt="Real Estate" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Real Estate</h3>
@@ -169,7 +169,7 @@ export default function CasesStudiesResource() {
           {/* Financial Services Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
             <div className="px-6 pt-0 pl-0 pr-0 w-full">
-              <Image src="/images/use-cases/financial.png" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+              <Image src="/images/use-cases/financial.png" alt="Financial Services" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Financial Services</h3>
@@ -194,7 +194,25 @@ export default function CasesStudiesResource() {
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Elevate Your Hardware with World-Class OEM Software</h5>
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Learn how our embedded software partnership enabled a hardware manufacturer to get to market 6 months faster and reduce support calls by 40%, turning their custom software into a key competitive advantage.</p>
               <a
-                  href="/resources/explore-our-work/hardware-and-manufacturing"
+                href="/resources/explore-our-work/hardware-and-manufacturing"
+                className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+              >
+                READ THE FULL STORY <span className="ml-1">→</span>
+              </a>
+            </div>
+          </div>
+          {/* Blockchain Card */}
+          <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
+              <Image src="/images/use-cases/blockchain.png" alt="Blockchain" width={365} height={199} className="w-full h-[199px] object-cover" />
+            </div>
+            <div className="px-6 pt-6 pb-7 w-full">
+              <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Hardware & Manufacturing</h3>
+              <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Elevate Your Hardware with World-Class OEM Software</h5>
+              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Learn how our embedded software partnership enabled a hardware manufacturer to get to market 6 months faster and reduce support calls by 40%, turning their custom software into a key competitive advantage.</p>
+              <a
+                  href="/resources/explore-our-work/blockchain"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >

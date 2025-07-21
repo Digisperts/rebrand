@@ -279,10 +279,10 @@ export default function WhoWeArePage() {
               <div className="w-full lg:max-w-4xl text-white lg:ml-8 mt-1 rounded-lg">
                   <ScrollFadeSection>
                   <div className="font-extrabold text-2xl text-black lg:text-3xl mb-2 leading-tight">
-                    Speak to the Customer Success Officer
+                    Empowering Growth Through Digital Excellence.
                   </div>
                   <div className="text-sm lg:text-base font-normal text-black mb-5">
-                    We are interested in your success story and dynamic goals. Our responsibility is to offer a hand in ensuring your business suceeds.
+                    Let's build your business success through better tech.
                   </div>
                   <div className="flex gap-3 flex-wrap">
                     <a

@@ -1,53 +1,148 @@
 "use client";
-import React from 'react';
-import NavBar from '../../../nav';
-import Footer from '../../../Footer';
+import ExploreLayout from '../ExploreLayout';
+import { FaCircleCheck } from 'react-icons/fa6';
 import Image from 'next/image';
-import ScrollFadeSection from '../../../components/ScrollFadeSection';
 
 export default function AgricultureExploreOurWork() {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
-      <div className="fixed top-0 left-0 w-full z-50">
-      <NavBar />
-      </div>
-      
-      
-
-      {/* Pre-Footer Section */}
-      <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
-        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-          <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
-            <Image
-              src="/images/footer.jpg"
-              alt="Footer Background"
-              fill
-              className="object-cover z-0"
-              style={{ objectPosition: 'center' }}
-              priority
-            />
-            <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
-              <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
-                <ScrollFadeSection>
-                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Have a Challenge You Don&apos;t See Here?</div>
-                  <div className="text-sm md:text-base font-normal mb-5">Every project is a new journey. If you&apos;re facing a unique operational or technical challenge, we&apos;re ready to listen. Let&apos;s talk about how we can build your success story.</div>
-                  <div className="flex gap-3 flex-wrap">
-                    <a
-                      href="#"
-                      className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
-                      style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
-                    >
-                      TALK TO AN EXPERT
-                    </a>
-                  </div>
-                </ScrollFadeSection>
-              </div>
-            </div>
-            <div className="absolute inset-0 bg-black/70" />
-          </div>
-        </div>
-      </section>
-      <Footer />
-    </div>
+    <ExploreLayout
+      heroTitle="Modernize Your Cooperative with a Custom Digital Platform"
+      heroSubtitle="Streamline operations from farm to market, improve member transparency, and make data-driven decisions with a comprehensive digital platform from Digisperts."
+      heroImage="/images/explore-our-work/agriculture/agriculture-hero.jpg"
+      challengeData={{
+        title: "The Challenge",
+        description: "An established agricultural cooperative was burdened by manual, paper-based processes that were inefficient, error-prone, and lacked the transparency its members deserved.",
+        challenges: [
+          {
+            title: 'Inefficient Operations',
+            text: <>Member registration, produce logging, <br />
+                    and payment calculations were all <br />
+                    done by hand, consuming vast <br />
+                    administrative resources.
+                  </>,
+            imageSrc: '/images/explore-our-work/agriculture/pin.png'
+          },
+          {
+            title: 'Lack of Traceability',
+            text: <>It was difficult to track produce <br />
+                    from individual farms through to <br />
+                    the final sale, leading to payment <br />
+                    disputes.
+                  </>,
+            imageSrc: '/images/explore-our-work/agriculture/pin.png'
+          },
+          {
+            title: 'Limited Data for Decision-Making',
+            text: <>Management lacked the real-time <br />
+                    data needed to analyze production <br />
+                    trends, market prices, and overall <br />
+                    cooperative performance.
+                  </>,
+            imageSrc: '/images/explore-our-work/agriculture/pin.png'
+          },
+        ]
+      }}
+      processData={{
+        title: "Our Process",
+        steps: [
+          {
+            title: 'Operational Deep Dive',
+            description: "We spent time on-site to understand every step of the cooperative's process, from the farm to the administrative office.",
+            color: '#AFC6F7',
+            numberColor: '#001133',
+            number: '1'
+          },
+          {
+            title: 'User-Centric Platform Design',
+            description: "We designed the platform with two key users in mind: the members (simple, mobile-friendly interface) and the administrators (powerful, data-rich dashboard).",
+            color: '#F5AFAF',
+            numberColor: '#3D0000',
+            number: '2'
+          },
+          {
+            title: 'Phased Development & Rollout',
+            description: 'We built and launched the platform in phases—starting with member management, then produce tracking, then payments—to ensure smooth adoption.',
+            color: '#FFE6B5',
+            numberColor: '#664503',
+            number: '3'
+          },
+          {
+            title: 'Training & Ongoing Support',
+            description: 'We provided extensive training for all users and offer continuous support to manage the platform.',
+            color: '#9BB5EB',
+            numberColor: '#00143D',
+            number: '4'
+          },
+        ]
+      }}
+      solutionData={{
+        title: "The Digisperts Solution",
+        description: "Digisperts developed a secure, all-in-one digital platform to manage every aspect of the cooperative's operations.",
+        solutions: [
+          {
+            icon: <FaCircleCheck className="text-blue-900 text-xl" />,
+            title: "Integrated Member & Produce Management",
+            text: "A central system handles member onboarding, and tracks all produce from farm log-in to final sale with complete traceability."
+          },
+          {
+            icon: <FaCircleCheck className="text-blue-900 text-xl" />,
+            title: "Automated Payment & Accounting System",
+            text: "The platform automatically calculates member payments based on verified produce data and integrates with accounting software, ensuring timely and accurate compensation."
+          },
+          {
+            icon: <FaCircleCheck className="text-blue-900 text-xl" />,
+            title: "Analytics & Market Data Portal",
+            text: "A dashboard provides management with key performance indicators and gives members access to real-time market pricing information to inform their planting and harvesting decisions."
+          },
+        ]
+      }}
+      chatbotData={{
+        image: "/images/explore-our-work/agriculture/chatbot.png",
+        alt: "Chatbot UI"
+      }}
+      outcomeData={{
+        title: "The Outcome",
+        description: "The digital platform modernized the cooperative, fostering trust with members and unlocking new levels of efficiency and strategic insight.",
+        outcomes: [
+          {
+            icon: <Image src="/images/explore-our-work/agriculture/outcome1.png" alt="" width={40} height={40} />,
+            title: "80% Reduction",
+            text: "In administrative time spent on manual record-keeping and payment processing.",
+            bgColor: "#D3E1FF"
+          },
+          {
+            icon: <Image src="/images/explore-our-work/agriculture/outcome2.png" alt="" width={40} height={40} />,
+            title: "100% Traceability",
+            text: "Of all produce, completely eliminating payment disputes and improving quality control.",
+            bgColor: "#FFD0D0"
+          },
+          {
+            icon: <Image src="/images/explore-our-work/agriculture/outcome3.png" alt="" width={40} height={40} />,
+            title: "10% Increase",
+            text: "In average member profitability due to access to real-time market data.",
+            bgColor: "#FFEBC4"
+          },
+        ]
+      }}
+      technologiesData={{
+        title: "Technologies Used",
+        // description: "We leveraged the following technologies to deliver the solution.",
+        technologies: [
+          { icon: <Image src="/images/explore-our-work/agriculture/ruby.png" alt="Ruby on Rails" width={64} height={64} />, name: "Ruby on Rails" },
+          { icon: <Image src="/images/explore-our-work/agriculture/reactjs.png" alt="React.js" width={64} height={64} />, name: "React.js" },
+          { icon: <Image src="/images/explore-our-work/agriculture/postgre.png" alt="PostgreSQL" width={64} height={64} />, name: "PostgreSQL" },
+          { icon: <Image src="/images/explore-our-work/agriculture/twilio.png" alt="Twilio" width={64} height={64} />, name: "Twilio" },
+          { icon: <Image src="/images/explore-our-work/agriculture/heroku.png" alt="Heroku" width={64} height={64} />, name: "Heroku" },
+        ]
+      }}
+      preFooterData={{
+        backgroundImage: "/images/footer.jpg",
+        heading: "Ready to Bring Your Cooperative into the Digital Age?",
+        subheading: "Empower your members and future-proof your operations. Let's build a platform for shared success.",
+        buttonText: "TALK TO AN EXPERT",
+        buttonHref: "#"
+      }}
+      children={null}
+    />
   );
 }

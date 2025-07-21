@@ -207,26 +207,26 @@ export default function HowWeWorkPage() {
         </div>
           </div>
           {/* Right Image for desktop */}
-          {/* <div className="hidden md:flex ml-10 mt-30 flex-shrink-0 items-stretch">
+          <div className="hidden md:flex ml-10 mt-30 flex-shrink-0 items-stretch">
             <Image
-              src="/images/process/unveil.jpg"
+              src="/images/process/development.jpg"
               alt="Unveiling Your Vision"
               width={420}
               height={520}
               className="shadow-xl object-cover h-full"
               style={{ minWidth: 320, maxWidth: 420, height: '100%' }}
             />
-          </div> */}
+          </div>
           {/* Mobile Image below content */}
-          {/* <div className="md:hidden w-full mt-6 flex justify-center">
+          <div className="md:hidden w-full mt-6 flex justify-center">
             <Image
-              src="/images/process/unveil.jpg"
+              src="/images/process/development.jpg"
               alt="Unveiling Your Vision"
               width={320}
               height={200}
               className="rounded-xl shadow-xl object-cover w-full max-w-[320px]"
             />
-          </div> */}
+          </div>
       </section>
       </ScrollFadeSection>
 
@@ -236,22 +236,22 @@ export default function HowWeWorkPage() {
           {/* Left Image for desktop */}
           <div className="hidden md:flex ml-10 mt-30 flex-shrink-0 items-stretch">
             <Image
-              src="/images/process/maintenance.jpg"
+              src="/images/process/maintenance-2.jpg"
               alt="Unveiling Your Vision"
               width={420}
               height={520}
-              className="shadow-xl object-cover h-full"
+              className="shadow-xl object-cover object-right h-full"
               style={{ minWidth: 320, maxWidth: 420, height: '150%' }}
             />
           </div>
           {/* Mobile Image below content */}
           <div className="md:hidden w-full mt-6 flex justify-center">
             <Image
-              src="/images/process/maintenance.jpg"
+              src="/images/process/maintenance-2.jpg"
               alt="Unveiling Your Vision"
               width={320}
               height={200}
-              className="rounded-xl shadow-xl object-cover w-full max-w-[320px]"
+              className="rounded-xl shadow-xl object-cover object-right w-full max-w-[320px]"
             />
           </div>
           {/* Right Content */}
@@ -305,15 +305,20 @@ export default function HowWeWorkPage() {
             <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
               <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
                 <ScrollFadeSection>
-                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
-                  <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
+                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Work with our Agile-Driven Team</div>
+                  <div className="text-sm md:text-base font-normal mb-5">
+                    Ready to build something incredible? Our transparent, step-by-step 
+                    process ensures your vision transforms into a high-quality digital solution. With an 
+                    agile approach at our core, we collaborate closely, adapt swiftly, and deliver results that 
+                    drive your business forward. Let's make your next project a success, together.
+                  </div>
                   <div className="flex gap-3 flex-wrap">
                     <a
                       href="#"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                       style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                     >
-                      TALK TO AN EXPERT
+                      BEGIN YOUR PROJECT JOURNEY
                     </a>
                   </div>
                 </ScrollFadeSection>
