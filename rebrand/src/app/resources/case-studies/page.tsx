@@ -78,7 +78,7 @@ export default function CasesStudiesResource() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
           {/* Retail & Ecommerce Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/use-cases/retail.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
@@ -96,7 +96,7 @@ export default function CasesStudiesResource() {
           </div>
           {/* Healthcare Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/use-cases/healthcare.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
@@ -114,7 +114,7 @@ export default function CasesStudiesResource() {
           </div>
           {/* SaaS & Technology Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/use-cases/saas.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
@@ -132,7 +132,7 @@ export default function CasesStudiesResource() {
           </div>
           {/* Agriculture Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/use-cases/agriculture.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
@@ -150,7 +150,7 @@ export default function CasesStudiesResource() {
           </div>
           {/* Real Estate Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/use-cases/realestate.png" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
@@ -168,7 +168,7 @@ export default function CasesStudiesResource() {
           </div>
           {/* Financial Services Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/use-cases/financial.png" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
@@ -186,7 +186,7 @@ export default function CasesStudiesResource() {
           </div>
           {/* Hardware & Manufacturing Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/use-cases/hardware.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">

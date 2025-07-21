@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import NavBar from "./nav";
 import { useState, useEffect, useRef } from "react";
 import ScrollFadeSection from "./components/ScrollFadeSection";
@@ -197,6 +198,8 @@ export default function Home() {
         <div className="flex w-full min-h-[520px] relative">
           {/* Black background as a separate absolutely positioned div, always visible on desktop, hidden on mobile/tablet */}
           <div className="hidden md:block absolute left-0 top-0 h-full z-0" style={{width: 'calc(100%)', background: 'black'}} />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/60 z-15" />
           {/* Text box overlays black bg and hero image, always visible */}
           <div className="absolute top-1/2 left-4 top-30 w-full flex pointer-events-none z-40 md:-translate-y-[100%]">
             <div className="relative pl-4 sm:pl-6 md:pl-12 pr-2 sm:pr-4 md:pr-8 py-2 sm:py-4 md:py-6 max-w-[700px] w-full pointer-events-auto">
@@ -211,10 +214,10 @@ export default function Home() {
                   </h1>
                   <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>{heroSlides[prevHeroIndex].desc}</p>
                   <div className="flex flex-col gap-3">
-                    <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
+                    <Link href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
                       <FaPhone className="mr-2 transform -rotate-270" />
                       Schedule a Consultation
-                    </a>
+                    </Link>
                     <div className="flex flex-col gap-1 mt-1">
                       <div className="flex items-center gap-1">
                         <FaStar className="text-yellow-400 text-xl" />
@@ -240,10 +243,10 @@ export default function Home() {
                 </h1>
                 <p className="text-white text-lg md:text-xl font-normal mb-8 max-w-[95%]" style={{lineHeight:'1.4'}}>{heroSlides[heroIndex].desc}</p>
                 <div className="flex flex-col gap-3">
-                  <a href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
+                  <Link href="/schedule-a-consultation" className="flex items-center font-semibold text-white text-lg md:text-[18px] px-6 py-3 border-2 border-white rounded transition hover:bg-white hover:text-black w-fit mb-2">
                     <FaPhone className="mr-2 transform -rotate-270" />
                     Schedule a Consultation
-                  </a>
+                  </Link>
                   <div className="flex flex-col gap-1 mt-1">
                     <div className="flex items-center gap-1">
                       <FaStar className="text-yellow-400 text-xl" />
@@ -311,35 +314,35 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
           {/* Software Development Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/homepage/software.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-lg mb-2 text-black">Software Development</h3>
               <p className="text-gray-800 text-base mb-4 leading-snug">Gain a competitive edge with high-quality, custom technology. We build scalable software, web, and mobile applications engineered to solve your unique challenges and help your business exceed its goals.</p>
-              <a href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">DISCUSS YOUR PROJECT <span className="ml-1">→</span></a>
+              <Link href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">DISCUSS YOUR PROJECT <span className="ml-1">→</span></Link>
             </div>
           </div>
           {/* Business Automations Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/homepage/business.jpg" alt="Business Automations" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-lg mb-2 text-black">Business Automations</h3>
               <p className="text-gray-800 text-base mb-4 leading-snug">Unlock new levels of efficiency and empower your team. We automate complex workflows and repetitive tasks, from financial controls to customer support, freeing you to focus on strategic growth and innovation.</p>
-              <a href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">AUTOMATE YOUR WORKFLOW <span className="ml-1">→</span></a>
+              <Link href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">AUTOMATE YOUR WORKFLOW <span className="ml-1">→</span></Link>
             </div>
           </div>
           {/* Digital Marketing Card (centered on tablet) */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto md:col-span-2 lg:col-span-1 md:mx-auto lg:mx-auto md:justify-self-center lg:justify-self-auto">
-            <div className="px-6 pt-6 w-full">
+            <div className="px-6 pt-0 pl-0 pr-0 w-full">
               <Image src="/images/homepage/digital.jpg" alt="Digital Marketing" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-lg mb-2 text-black">Digital Marketing</h3>
               <p className="text-gray-800 text-base mb-4 leading-snug">Amplify your brand&apos;s voice and achieve measurable success. We develop and execute data-driven digital marketing strategies that connect you with your target audience and convert engagement into tangible results.</p>
-              <a href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">GET YOUR MARKETING PLAN <span className="ml-1">→</span></a>
+              <Link href="#" className="text-blue-900 font-bold text-base hover:underline flex items-center gap-1">GET YOUR MARKETING PLAN <span className="ml-1">→</span></Link>
             </div>
           </div>
         </div>
@@ -672,18 +675,18 @@ export default function Home() {
             />
             <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
               <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
-          <ScrollFadeSection>
+                <ScrollFadeSection>
                   <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
                   <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
                   <div className="flex gap-3 flex-wrap">
-              <a
-                href="#"
-                      className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
-                      style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
-              >
-                      TALK TO AN EXPERT
-              </a>
-            </div>
+                    <Link
+                      href="#"
+                            className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                            style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                    >
+                            TALK TO AN EXPERT
+                    </Link>
+                  </div>
                 </ScrollFadeSection>
               </div>
             </div>
