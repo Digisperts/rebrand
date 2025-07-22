@@ -70,7 +70,7 @@ export default function SoftwareDevelopment() {
       triggerFade((heroIndex + 1) % heroSlides.length);
     }, 5000);
     return () => clearTimeout(timer);
-  }, [heroIndex, heroSlides.length]);
+  }, [heroIndex, heroSlides.length, triggerFade]);
 
   // Touch handlers
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {

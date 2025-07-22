@@ -282,7 +282,7 @@ export default function WhoWeArePage() {
                     Empowering Growth Through Digital Excellence.
                   </div>
                   <div className="text-sm lg:text-base font-normal text-black mb-5">
-                    Let's build your business success through better tech.
+                    Let&apos;s build your business success through better tech.
                   </div>
                   <div className="flex gap-3 flex-wrap">
                     <a

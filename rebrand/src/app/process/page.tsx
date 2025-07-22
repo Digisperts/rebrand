@@ -310,7 +310,7 @@ export default function HowWeWorkPage() {
                     Ready to build something incredible? Our transparent, step-by-step 
                     process ensures your vision transforms into a high-quality digital solution. With an 
                     agile approach at our core, we collaborate closely, adapt swiftly, and deliver results that 
-                    drive your business forward. Let's make your next project a success, together.
+                    drive your business forward. Let&apos;s make your next project a success, together.
                   </div>
                   <div className="flex gap-3 flex-wrap">
                     <a

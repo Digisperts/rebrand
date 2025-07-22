@@ -141,7 +141,10 @@ export default function FinancialServicesExploreOurWork() {
         buttonText: "TALK TO AN EXPERT",
         buttonHref: "#"
       }}
-      children={null}
-    />
+      
+    >
+      {/* No children, so provide an empty fragment to satisfy the required prop */}
+      <></>
+    </ExploreLayout>
   );
 }
