@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from "next/image";
-import { useEffect, useState, useRef } from 'react';
+import { useCallback, useEffect, useState, useRef } from 'react';
 import Link from "next/link";
 import NavBar from '../../nav';
 import Footer from '../../Footer';
@@ -45,7 +45,7 @@ export default function BusinessAutomation() {
   const swipeThreshold = 50;
 
   // Helper to trigger fade transition
-  const triggerFade = (newIndex: number) => {
+  const triggerFade = useCallback((newIndex: number) => {
     if (newIndex === heroIndex) return;
     setPrevHeroIndex(heroIndex);
     setHeroIndex(newIndex);
@@ -54,7 +54,7 @@ export default function BusinessAutomation() {
       setIsFading(false);
       setPrevHeroIndex(null);
     }, 500); // match duration-500
-  };
+  }, [heroIndex]);
 
   // Auto-slide effect
   useEffect(() => {

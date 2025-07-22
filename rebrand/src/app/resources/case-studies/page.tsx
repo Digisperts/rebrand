@@ -23,9 +23,9 @@ export default function CasesStudiesResource() {
         </h1>
         {/* Image */}
         <div className="flex justify-center w-full">
-          <div className="relative" style={{ width: '760px', maxWidth: '95vw', minWidth: '320px', height: 'auto' }}>
+          <div className="relative" style={{ width: '100%', maxWidth: '95vw', minWidth: '320px', height: 'auto' }}>
             <Image
-              src="/images/case-studies/case-studies-hero.png"
+              src="/images/case-studies/case-studies.jpg"
               alt="Case Studies Hero"
               width={760}
               height={500}
@@ -208,9 +208,9 @@ export default function CasesStudiesResource() {
               <Image src="/images/use-cases/blockchain.png" alt="Blockchain" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
-              <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Hardware & Manufacturing</h3>
-              <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Elevate Your Hardware with World-Class OEM Software</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Learn how our embedded software partnership enabled a hardware manufacturer to get to market 6 months faster and reduce support calls by 40%, turning their custom software into a key competitive advantage.</p>
+              <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Blockchain</h3>
+              <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Engineering Trust, Securing the Future.</h5>
+              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..</p>
               <a
                   href="/resources/explore-our-work/blockchain"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"

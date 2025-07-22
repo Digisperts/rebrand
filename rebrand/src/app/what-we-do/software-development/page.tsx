@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState, useRef } from 'react';
+import { useCallback, useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
 import NavBar from '../../nav';
 import Footer from '../../Footer';
@@ -53,7 +53,7 @@ export default function SoftwareDevelopment() {
   const swipeThreshold = 50;
 
   // Helper to trigger fade transition
-  const triggerFade = (newIndex: number) => {
+  const triggerFade = useCallback((newIndex: number) => {
     if (newIndex === heroIndex) return;
     setPrevHeroIndex(heroIndex);
     setHeroIndex(newIndex);
@@ -62,7 +62,7 @@ export default function SoftwareDevelopment() {
       setIsFading(false);
       setPrevHeroIndex(null);
     }, 500); // match duration-500
-  };
+  }, [heroIndex]);
 
   // Auto-slide effect
   useEffect(() => {

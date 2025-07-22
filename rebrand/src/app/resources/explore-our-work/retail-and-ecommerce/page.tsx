@@ -16,7 +16,7 @@ export default function RetailAndEcommerceExploreOurWork() {
           {
             title: 'Error-Prone Manual Work',
             text: <>Manually updating inventory between <br />
-                    their physical store's POS and their <br />
+                    their physical store&apos;s POS and their <br />
                     e-commerce platform was slow and <br />
                     resulted in constant inaccuracies.
                   </>,
@@ -27,7 +27,7 @@ export default function RetailAndEcommerceExploreOurWork() {
             text: <>Frequent overselling of products <br />
                     led to canceled orders, frustrated <br />
                     customers, and damage to the <br />
-                    brand's reputation.
+                    brand&apos;s reputation.
                   </>,
             imageSrc: '/images/explore-our-work/retail-and-ecommerce/pin.png'
           },

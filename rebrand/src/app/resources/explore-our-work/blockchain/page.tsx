@@ -15,7 +15,7 @@ export default function BlockchainExploreOurWork() {
           challenges: [
             {
               title: 'Lack of In-House Software Talent',
-              text: <>The company's core competency was <br />
+              text: <>The company&apos;s core competency was <br />
                       hardware engineering, not software <br />
                       UI/UX design or application <br />
                       development.
