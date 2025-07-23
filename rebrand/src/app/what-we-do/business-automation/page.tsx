@@ -140,10 +140,10 @@ export default function BusinessAutomation() {
           <div className="relative z-30 max-w-4xl">
             <h1 className="text-4xl font-bold mb-4">{heroSlides[heroIndex].heading}</h1>
             <p className="mb-6">{heroSlides[heroIndex].desc.split('\n').map((line, i) => <span key={i}>{line}{i < heroSlides[heroIndex].desc.split('\n').length - 1 && <br />}</span>)}</p>
-            <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
+            <Link href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
               <FaPhone className="mr-2 transform -rotate-270" />
               {heroSlides[heroIndex].cta}
-            </a>
+            </Link>
           </div>
           {/* Pagination Dots */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-2 z-30">
@@ -253,13 +253,13 @@ export default function BusinessAutomation() {
                     develop smart internal knowledge bases, training them on your organization&apos;s Standard 
                     Operating Procedures (SOPs) to empower your team with immediate and accurate information.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 {/* Robot Image */}
                 <div className="md:w-5/12 flex items-center justify-center mt-6 md:mt-0">
@@ -284,13 +284,13 @@ export default function BusinessAutomation() {
                     and reporting to reduce errors, ensure compliance, and provide you with real-time financial 
                     insights.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/business-auto/business-automation-b.png"
@@ -316,13 +316,13 @@ export default function BusinessAutomation() {
                     We reduce manual data handling to improve efficiency, minimize errors, and provide a 
                     unified view of your operations.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/business-auto/business-automation-c.png"
@@ -344,13 +344,13 @@ export default function BusinessAutomation() {
                     Build stronger, more lasting customer relationships by automating communication, tracking 
                     interactions, and personalizing the customer journey, improving retention and satisfaction.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 {/* Robot Image */}
                 <div className="md:w-5/12 flex items-center justify-center mt-6 md:mt-0">
@@ -405,13 +405,13 @@ export default function BusinessAutomation() {
                 <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
                 <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
                 <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
-                <a
+                <Link
                   href="#"
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
                   Explore Case Study <span className="ml-1">→</span>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -516,13 +516,13 @@ export default function BusinessAutomation() {
                     <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
                     <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
                     <div className="flex gap-3 flex-wrap">
-                      <a
+                      <Link
                         href="#"
                         className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                         style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                       >
                         TALK TO AN EXPERT
-                      </a>
+                      </Link>
                     </div>
                 </div>
               </div>

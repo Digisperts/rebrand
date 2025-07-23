@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useState, useRef } from 'react';
 import React from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 import NavBar from '../../nav';
 import Footer from '../../Footer';
 import { FaCheck,FaPhone } from 'react-icons/fa';
@@ -137,10 +138,10 @@ export default function DigitalMarketing() {
           <div className="relative z-30 max-w-4xl">
             <h1 className="text-4xl font-bold mb-4">{heroSlides[heroIndex].heading}</h1>
             <p className="mb-6">{heroSlides[heroIndex].desc.split('\n').map((line, i) => <span key={i}>{line}{i < heroSlides[heroIndex].desc.split('\n').length - 1 && <br />}</span>)}</p>
-            <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
+            <Link href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
               <FaPhone className="mr-2 transform -rotate-270" />
               {heroSlides[heroIndex].cta}
-            </a>
+            </Link>
           </div>
           {/* Pagination Dots */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-2 z-30">
@@ -250,13 +251,13 @@ export default function DigitalMarketing() {
                     workflows for lead generation, scoring, and nurturing, ensuring no opportunity goes cold. 
                     This increases lead efficiency and empowers your sales team with better-qualified prospects.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/digital-marketing/digital-marketing-a.png"
@@ -277,13 +278,13 @@ export default function DigitalMarketing() {
                     Become a trusted voice in your industry. We develop and distribute valuable content that 
                     educates your audience, builds community, and nurtures leads through the sales funnel.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/digital-marketing/digital-marketing-b.png"
@@ -309,13 +310,13 @@ export default function DigitalMarketing() {
                     across search and social platforms, focusing on optimizing for the highest possible return 
                     on investment.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/digital-marketing/digital-marketing-c.png"
@@ -337,13 +338,13 @@ export default function DigitalMarketing() {
                     We focus on foundational SEO to attract high-quality organic traffic and build your 
                     brand&apos;s authority online.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/digital-marketing/digital-marketing-d.png"
@@ -394,13 +395,13 @@ export default function DigitalMarketing() {
                 <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
                 <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
                 <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
-                <a
+                <Link
                   href="#"
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
                   Explore Case Study <span className="ml-1">→</span>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -517,13 +518,13 @@ export default function DigitalMarketing() {
                     <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
                     <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
                     <div className="flex gap-3 flex-wrap">
-                      <a
+                      <Link
                         href="#"
                         className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                         style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                       >
                         TALK TO AN EXPERT
-                      </a>
+                      </Link>
                     </div>
                 </div>
               </div>

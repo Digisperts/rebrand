@@ -2,6 +2,7 @@
 import NavBar from "../nav";
 import Footer from "../Footer";
 import Image from "next/image";
+import Link from "next/link";
 import { FaCheck, FaPhone } from 'react-icons/fa';
 import ScrollFadeSection from "../components/ScrollFadeSection";
 import { useState } from "react";
@@ -193,7 +194,7 @@ export default function WhoWeArePage() {
                 height={224}
                 className="w-56 h-56 object-cover rounded-md mb-2"
               />
-              <span className="font-extrabold text-sm text-[#1E429F] text-left">Harvey, N</span>
+              <span className="font-extrabold text-sm text-[#1E429F] text-left">Harvey, A</span>
               <span className="text-xs font-semibold text-gray-600 text-left">Senior Project Manager / Business Development Manager</span>
             </div>
             {/* Blockchain and Cyber Security */}
@@ -285,13 +286,13 @@ export default function WhoWeArePage() {
                     Let&apos;s build your business success through better tech.
                   </div>
                   <div className="flex gap-3 flex-wrap">
-                    <a
+                    <Link
                       href="#"
                             className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                             style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                     >
                             TALK TO AN EXPERT
-                    </a>
+                    </Link>
                   </div>
                   </ScrollFadeSection>
                 </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from "next/link";
 
 
 export default function Headlines() {
@@ -20,13 +21,13 @@ export default function Headlines() {
           <div className="px-6 pt-6 pb-7 w-full">
             <h3 className="font-bold text-lg mb-2 text-black">Social Cranes</h3>
             <p className="text-gray-800 text-base mb-4 leading-snug">As a leading social media marketing (SMM) company, Social Cranes partnered with us to enhance their online presence. We designed and developed their website, implementing........</p>
-            <a
+            <Link
               href="#"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
               style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
             >
               KNOW MORE <span className="ml-1">→</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -38,13 +39,13 @@ export default function Headlines() {
           <div className="px-6 pt-6 pb-7 w-full">
             <h3 className="font-bold text-lg mb-2 text-black">Smaat Finance</h3>
             <p className="text-gray-800 text-base mb-4 leading-snug">At Digisperts LLC, our commitment to client confidentiality is unwavering. While we have worked on numerous projects and achieved remarkable results, we respect the anonymity of our clients and........</p>
-            <a
+            <Link
               href="#"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
               style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
             >
               KNOW MORE <span className="ml-1">→</span>
-            </a>
+            </Link>
           </div>
         </div>
         {/* Social Cranes Card */}
@@ -55,13 +56,13 @@ export default function Headlines() {
           <div className="px-6 pt-6 pb-7 w-full">
             <h3 className="font-bold text-lg mb-2 text-black">Social Cranes</h3>
             <p className="text-gray-800 text-base mb-4 leading-snug">As a leading social media marketing (SMM) company, Social Cranes partnered with us to enhance their online presence. We designed and developed their website, implementing........</p>
-            <a
+            <Link
               href="#"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
               style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
             >
               KNOW MORE <span className="ml-1">→</span>
-            </a>
+            </Link>
           </div>
           </div>
         </div>

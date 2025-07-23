@@ -2,6 +2,7 @@
 import NavBar from "../nav";
 import Footer from "../Footer";
 import Image from "next/image";
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
@@ -93,13 +94,13 @@ export default function BookACallPage() {
               </div>
               {/* Submit Button */}
               <div className="flex justify-end">
-                <a
+                <Link
                   href="#"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
                   Submit
-                </a>
+                </Link>
               </div>
             </form>
           </div>

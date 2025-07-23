@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from "next/link";
 
 interface BannerCTAProps {
   title: string;
@@ -36,12 +37,12 @@ const BannerCTA = ({
           <div className="max-w-lg">
             <h2 className="text-white text-2xl md:text-3xl font-bold mb-3">{title}</h2>
             <p className="text-gray-300 mb-4">{description}</p>
-            <a
+            <Link
               href={buttonLink}
               className="inline-block text-sm bg-blue-800 text-white px-5 py-2 rounded hover:bg-blue-700 transition"
             >
               {buttonText}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
