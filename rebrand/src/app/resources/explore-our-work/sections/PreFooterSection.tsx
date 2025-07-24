@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Link from 'next/link';
+import Link from "next/link";
 import ScrollFadeSection from '../../../components/ScrollFadeSection';
 import React from 'react';
 

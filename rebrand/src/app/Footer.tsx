@@ -19,6 +19,9 @@ export default function Footer() {
               priority
             />
             <div className="flex space-x-3 mt-2">
+              <Link href="#" aria-label="Instagram" className="bg-[#e8bebe] rounded-full p-1 shadow">
+                <Image src="/images/instagram.png" alt="Instagram" width={24} height={24} />
+              </Link>
               <Link href="#" aria-label="LinkedIn" className="bg-[#3F83F8] rounded-full p-1 shadow">
                 <Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} />
               </Link>
@@ -77,26 +80,25 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          {/* Who We Are Links */}
+          {/* Company Links */}
           <div className="flex flex-col items-start w-full md:w-1/4 mb-8 md:mb-0">
-            <h4 className="text-white font-extrabold mb-2">Who We Are</h4>
+            <h4 className="text-white font-extrabold mb-2">Company</h4>
             <ul className="p-6 w-full max-w-xs text-white flex flex-col gap-4">
               <li className="group">
+                <Link href="#" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
+                  Who We Are
+                </Link>
+              </li>
+              <li>
                 <Link href="#" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
                   Our Team
                 </Link>
               </li>
-            </ul>
-          </div>
-          {/* Our Process Links */}
-          <div className="flex flex-col items-start w-full md:w-1/4 mb-8 md:mb-0">
-            <h4 className="text-white font-extrabold mb-2">Our Process</h4>
-            <ul className="p-6 w-full max-w-xs text-white flex flex-col gap-4">
-              {/* <li className="group">
+              <li>
                 <Link href="#" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
-                  About Us
+                  Our Process
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </div>
           {/* Contact Us Card */}

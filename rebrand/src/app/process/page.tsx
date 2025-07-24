@@ -2,6 +2,7 @@
 import NavBar from "../nav";
 import Footer from "../Footer";
 import Image from "next/image";
+import Link from "next/link";
 import HeroFadeIn from "../components/HeroFadeIn";
 import ScrollFadeSection from "../components/ScrollFadeSection";
 
@@ -46,37 +47,39 @@ export default function HowWeWorkPage() {
           {/* Left Content */}
           <div className="flex-1 flex flex-col justify-start">
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start gap-4 md:gap-0">
-          {/* Circle */}
-          <div className="flex-shrink-0">
+              {/* Circle */}
+              <div className="flex-shrink-0">
                 <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-8 border-[#003399] flex items-center justify-center shadow-lg">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#000F2E] flex items-center justify-center">
-                <span className="text-white text-2xl md:text-4xl font-bold">1</span>
+                    <span className="text-white text-2xl md:text-4xl font-bold">1</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          {/* Content */}
+              {/* Content */}
               <div className="ml-0 md:ml-10 mt-4 md:mt-0 flex-1">
                 <h2 className="text-lg md:text-3xl font-extrabold mb-1 leading-tight">
                   <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Unveiling Your Vision –<br /></span>
                   <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Let&apos;s Dive Deep Into Your Ideal!</span>
-            </h2>
+                </h2>
                 <p className="text-gray-800 text-sm font-semibold md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
-              At digisperts LLC, we start by understanding your vision inside out. We gather comprehensive research, from market numbers to
-              competitor benchmarks, to create a detailed project brief. This ensures we have all the necessary information to avoid any obstacles
-              during our immersive sessions together. With a clear roadmap in hand, we can fully focus on bringing your vision to life and crafting
-              tailored solutions for your success. Join us on this extraordinary journey!
-            </p>
-            <div>
+                  At Digisperts Technology Company Limited, we start by understanding your vision inside out. 
+                  We gather comprehensive research, from market numbers to competitor benchmarks, to create a 
+                  detailed project brief. This ensures we have all the necessary information to avoid any 
+                  obstacles during our immersive sessions together. With a clear roadmap in hand, we can 
+                  fully focus on bringing your vision to life and crafting tailored solutions for your success. 
+                  Join us on this extraordinary journey!
+                </p>
+                <div>
                   <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">What we do</span>
                   <ul className="list-disc font-semibold pl-6 mt-1 text-gray-800 text-sm md:text-base">
-                <li>Discovery Workshop</li>
-                <li>Product Strategy</li>
-                <li>Pitch Deck</li>
-                <li>US Audit</li>
-                <li>Analytics Audit</li>
-              </ul>
-            </div>
-          </div>
+                    <li>Discovery Workshop</li>
+                    <li>Product Strategy</li>
+                    <li>Pitch Deck</li>
+                    <li>US Audit</li>
+                    <li>Analytics Audit</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           {/* Right Image for desktop */}
@@ -99,8 +102,8 @@ export default function HowWeWorkPage() {
               height={200}
               className="rounded-xl shadow-xl object-cover w-full max-w-[320px]"
             />
-        </div>
-      </section>
+          </div>
+        </section>
       </ScrollFadeSection>
 
       {/* Product Design Section */}
@@ -130,43 +133,43 @@ export default function HowWeWorkPage() {
           {/* Right Content */}
           <div className="flex-1 flex flex-col justify-start">
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start gap-4 md:gap-0">
-          {/* Circle */}
-          <div className="flex-shrink-0">
+              {/* Circle */}
+              <div className="flex-shrink-0">
                 <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-8 border-[#003399] flex items-center justify-center shadow-lg">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#000F2E] flex items-center justify-center">
-                <span className="text-white text-2xl md:text-4xl font-bold">2</span>
+                    <span className="text-white text-2xl md:text-4xl font-bold">2</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          {/* Content */}
+              {/* Content */}
               <div className="ml-0 md:ml-10 mt-4 md:mt-0 flex-1">
                 <h2 className="text-lg md:text-3xl font-extrabold mb-1 leading-tight">
                   <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Product Design<br /></span>
-            </h2>
+                </h2>
                 <p className="text-gray-800 text-sm font-semibold md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
-                  At Digisperts LLC, we leverage our deep understanding of your business, 
-                  story, goals, and motivations to develop a dynamic prototype that aligns perfectly with 
-                  the project scope. Our expertise in translating your vision into a tangible representation 
-                  ensures resonance and sets the stage for a successful collaboration.
-            </p>
-            <div>
+                  At Digisperts Technology Company Limited, we leverage our deep understanding of your 
+                  business, story, goals, and motivations to develop a dynamic prototype that aligns perfectly 
+                  with the project scope. Our expertise in translating your vision into a tangible 
+                  representation ensures resonance and sets the stage for a successful collaboration.
+                </p>
+                <div>
                   <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">What we do</span>
                   <ul className="list-disc font-semibold pl-6 mt-1 text-gray-800 text-sm md:text-base">
-                <li>UX Research</li>
-                <li>UX Design</li>
-                <li>UI Design</li>
-                <li>Budgeting</li>
+                    <li>UX Research</li>
+                    <li>UX Design</li>
+                    <li>UI Design</li>
+                    <li>Budgeting</li>
                     <li>Risk and Compliance Analysis</li>
-                <li>Branding</li>
-                <li>Usability Testing</li>
-                <li>Design Sprint</li>
-              </ul>
+                    <li>Branding</li>
+                    <li>Usability Testing</li>
+                    <li>Design Sprint</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-          </div>
           
-      </section>
+        </section>
       </ScrollFadeSection>
 
       {/* Development and Testing Section */}
@@ -175,36 +178,36 @@ export default function HowWeWorkPage() {
           {/* Left Content */}
           <div className="flex-1 flex flex-col justify-start">
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start gap-4 md:gap-0">
-          {/* Circle */}
-          <div className="flex-shrink-0">
+              {/* Circle */}
+              <div className="flex-shrink-0">
                 <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-8 border-[#003399] flex items-center justify-center shadow-lg">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#000F2E] flex items-center justify-center">
-                <span className="text-white text-2xl md:text-4xl font-bold">3</span>
+                    <span className="text-white text-2xl md:text-4xl font-bold">3</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          {/* Content */}
+              {/* Content */}
               <div className="ml-0 md:ml-10 mt-4 md:mt-0 flex-1">
                 <h2 className="text-lg md:text-3xl font-extrabold mb-1 leading-tight">
                   <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Development and Testing<br /></span>
-            </h2>
+                </h2>
                 <p className="text-gray-800 text-sm font-semibold md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
-                  At Digisperts LLC, we meticulously adhere to project scopes, ensuring timely and 
-                  cost-effective delivery that aligns with your exacting standards of quality. 
-                  Our commitment to precision and efficiency enables us to surpass your expectations, 
-                  delivering solutions that meet your unique business requirements.
-            </p>
-            <div>
+                  At Digisperts Technology Company Limited, we meticulously adhere to project scopes, ensuring 
+                  timely and cost-effective delivery that aligns with your exacting standards of quality. 
+                  Our commitment to precision and efficiency enables us to surpass your expectations, delivering 
+                  solutions that meet your unique business requirements.
+                </p>
+                <div>
                   <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">What we do</span>
                   <ul className="list-disc font-semibold pl-6 mt-1 text-gray-800 text-sm md:text-base">
-                <li>Mobile Development</li>
-                <li>Web Development</li>
-                <li>Backend Development</li>
-                <li>Quality Assurance</li>
-              </ul>
+                    <li>Mobile Development</li>
+                    <li>Web Development</li>
+                    <li>Backend Development</li>
+                    <li>Quality Assurance</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
           </div>
           {/* Right Image for desktop */}
           <div className="hidden md:flex ml-10 mt-30 flex-shrink-0 items-stretch">
@@ -227,7 +230,7 @@ export default function HowWeWorkPage() {
               className="rounded-xl shadow-xl object-cover w-full max-w-[320px]"
             />
           </div>
-      </section>
+        </section>
       </ScrollFadeSection>
 
       {/* Maintenance Section */}
@@ -257,37 +260,37 @@ export default function HowWeWorkPage() {
           {/* Right Content */}
           <div className="flex-1 flex flex-col justify-start">
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start gap-4 md:gap-0">
-          {/* Circle */}
-          <div className="flex-shrink-0">
+              {/* Circle */}
+              <div className="flex-shrink-0">
                 <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-8 border-[#003399] flex items-center justify-center shadow-lg">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#000F2E] flex items-center justify-center">
-                <span className="text-white text-2xl md:text-4xl font-bold">4</span>
+                    <span className="text-white text-2xl md:text-4xl font-bold">4</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          {/* Content */}
+              {/* Content */}
               <div className="ml-0 md:ml-10 mt-4 md:mt-0 flex-1">
                 <h2 className="text-lg md:text-3xl font-extrabold mb-1 leading-tight">
                   <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Maintenance<br /></span>
-            </h2>
+                </h2>
                 <p className="text-gray-800 text-sm font-semibold md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
                   Every infrastructure needs good maintenance, thinking of product upgrade? New implementations 
                   or security check, worry not, we are here to help you keep your system running.
-            </p>
-            <div>
+                </p>
+                <div>
                   <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">What we do</span>
                   <ul className="list-disc font-semibold pl-6 mt-1 text-gray-800 text-sm md:text-base">
                     <li>Uptime and Downtime Report</li>
-                <li>System Administration</li>
-                <li>Product Upgrade</li>
-                <li>Product Performance Assessment</li>
-              </ul>
+                    <li>System Administration</li>
+                    <li>Product Upgrade</li>
+                    <li>Product Performance Assessment</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-          </div>
           
-      </section>
+        </section>
       </ScrollFadeSection>
 
       {/* Pre Footer Section */}
@@ -313,13 +316,13 @@ export default function HowWeWorkPage() {
                     drive your business forward. Let&apos;s make your next project a success, together.
                   </div>
                   <div className="flex gap-3 flex-wrap">
-                    <a
+                    <Link
                       href="#"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                       style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                     >
                       BEGIN YOUR PROJECT JOURNEY
-                    </a>
+                    </Link>
                   </div>
                 </ScrollFadeSection>
               </div>

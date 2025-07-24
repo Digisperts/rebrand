@@ -1,6 +1,7 @@
 'use client';
 import { useCallback, useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 import NavBar from '../../nav';
 import Footer from '../../Footer';
 import { FaPhone } from 'react-icons/fa';
@@ -145,13 +146,13 @@ export default function SoftwareDevelopment() {
           <div className="absolute inset-0 bg-black/50 z-10" />
         </div>
         {/* Text content, always in normal flex flow, vertically centered */}
-        <div className="relative z-30 max-w-4xl">
+        <div className="relative left-4 sm:left-6 md:left-12 z-30 max-w-4xl">
           <h1 className="text-4xl font-bold mb-4">{heroSlides[heroIndex].heading}</h1>
           <p className="mb-6">{heroSlides[heroIndex].desc.split('\n').map((line, i) => <span key={i}>{line}{i < heroSlides[heroIndex].desc.split('\n').length - 1 && <br />}</span>)}</p>
-          <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
+          <Link href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
             <FaPhone className="mr-2 transform -rotate-270" />
             {heroSlides[heroIndex].cta}
-          </a>
+          </Link>
         </div>
         {/* Pagination Dots */}
         <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-2 z-30">
@@ -169,13 +170,13 @@ export default function SoftwareDevelopment() {
 
       {/* Section 2: Built for You */}
       <section className="py-16 px-6 text-left" id="approach">
-      <h2 className="mb-7 pl-6 text-left">
-          <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
+        <h2 className="mb-7 pl-6 text-left">
+          <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#001133] to-[#003399] bg-clip-text text-transparent">
           Built for You. Built to Win.
           </span>
         </h2>
 
-        <p className="text-gray-600 pl-6 text-center max-w-5xl w-full mb-12">
+        <p className="text-[#3C3C3C] font-semibold pl-6 text-left max-w-7xl w-full mb-12">
           In today&apos;s market, generic software leads to generic results. To truly exceed your 
           goals, you need technology solutions built specifically for you. At Digisperts, we move 
           beyond the limitations of outdated technology stacks to deliver robust, custom software. 
@@ -186,20 +187,22 @@ export default function SoftwareDevelopment() {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image 
-            src="/images/what-we-do/software-dev/SD-a.png" 
+            src="/images/what-we-do/software-dev/SD-a.jpg" 
             alt="Laptop" 
             width={500} 
             height={400} 
-            className="mx-auto" 
+            className="mx-auto rounded-xl sm:h-full md:h-[60%] lg:h-full w-full" 
           />
           <div className="space-y-6 text-left">
             <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
               Our Strategic Approach to Software Development
             </h2>
+            </h2>
 
-            <p className="text-black text-left justify-center max-w-2xl mx-auto mb-1 font-19px">
-          Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
+            <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
+              Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
             </p>
+            {/* Collaborative Discovery */}
             <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
               <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                 <FaCheck className="text-blue-900 text-sm" />
@@ -209,7 +212,8 @@ export default function SoftwareDevelopment() {
               <p className="text-[#000000]">We begin by listening. Our client-centric approach means we work closely with you to understand your goals, workflows, and challenges, ensuring the final product is a perfect fit.</p>
               </div>
             </div>
-            <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+            {/* Innovative and Agile Build */}
+            <div className="bg-gray-100 p-6 shadow-md rounded-md flex w-full md:w-full lg:w-[80%] sm:w-full flex-row items-center gap-3">
               <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                 <FaCheck className="text-blue-900 text-sm" />
               </span>
@@ -218,7 +222,8 @@ export default function SoftwareDevelopment() {
               <p className="text-[#000000]">We leverage cutting-edge technologies and an agile <br/> development process. This allows us to remain <br/> adaptable , incorporate feedback, and deliver <br/> innovative solutions efficiently.</p>
               </div>
             </div>
-            <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+            {/* Security and Scalability */}
+            <div className="bg-gray-100 p-6 shadow-md rounded-md flex w-full md:w-full lg:w-[60%] sm:w-full flex-row items-center gap-3">
               <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                 <FaCheck className="text-blue-900 text-sm" />
               </span>
@@ -244,7 +249,7 @@ export default function SoftwareDevelopment() {
               Our Software Development Services
             </span>
           </h2>
-          <p className="text-left text-gray-900 mb-8">We provide end-to-end development to bring your vision to life.</p>
+          <p className="text-left text-[#3C3C3C] font-semibold mb-8">We provide end-to-end development to bring your vision to life.</p>
 
           {/* First Row */}
           <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch mb-8 bg-[#F8F8F8] p-4 rounded">
@@ -253,13 +258,13 @@ export default function SoftwareDevelopment() {
               <p className="text-gray-900 mb-4">
                 We build powerful, secure web apps with robust back-ends and intuitive, visually appealing user interfaces. From enterprise dashboards to customer portals, our solutions are designed to streamline your operations.
               </p>
-              <a
+              <Link
                 href="#"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
               >
                 KNOW MORE <span className="ml-1">→</span>
-              </a>
+              </Link>
             </div>
             <div className="flex items-center justify-center w-full md:w-[45%] max-w-[260px] mx-auto">
               <Image
@@ -275,23 +280,23 @@ export default function SoftwareDevelopment() {
           {/* Second Row */}
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
             {/* Mobile App Development */}
-            <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
+            <div className="md:relative flex flex-1 md:flex-row flex-col items-center gap-4 bg-[#F8F8F8] p-4 rounded">
               <div className="flex-1 flex flex-col justify-center items-start">
                 <h3 className="text-xl font-bold text-black mb-2">Mobile App Development</h3>
-                <p className="text-gray-900">
+                <p className="md:w-120 text-gray-900">
                   We help you successfully design, build, and launch mobile apps for iOS and Android. 
                   We balance performance with possibility, creating scalable solutions that grow with you 
                   and delight your users.
                 </p>
-                <a
+                <Link
                   href="#"
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
                   KNOW MORE <span className="ml-1">→</span>
-                </a>
+                </Link>
               </div>
-              <div className="flex items-center justify-center w-[45%] max-w-[180px]">
+              <div className="md:absolute md:right-4 md:bottom-4 flex items-center justify-center w-[45%] max-w-[180px]">
                 <Image
                   src="/images/what-we-do/software-dev/SD-c.png"
                   alt="Mobile App Development"
@@ -303,30 +308,30 @@ export default function SoftwareDevelopment() {
             </div>
 
             {/* Enterprise Solutions */}
-            <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
-              <div className="flex items-center justify-center w-[45%] max-w-[180px]">
+            <div className="md:items-start md:flex-col flex flex-col items-center gap-4 bg-[#F8F8F8] p-4 rounded">
+              <div className="w-[120px] h-auto mb-4">
                 <Image
                   src="/images/what-we-do/software-dev/SD-d.png" 
                   alt="Enterprise & OEM Solutions"
-                  width={180}
-                  height={120}
-                  className="object-contain"
+                  width={120}
+                  height={72}
+                  className="object-contain w-full h-auto"
                 />
               </div>
-              <div className="flex-1 flex flex-col justify-center items-start">
+              <div className="flex flex-col justify-center items-start w-full">
                 <h3 className="text-xl font-bold text-black mb-2">Enterprise & OEM Solutions</h3>
                 <p className="text-gray-900">
                   We develop specialized software tailored for unique business environments, 
                   including custom integrations and OEM software. Our focus is on creating reliable, 
                   high-performance tools that enhance your core business functions.
                 </p>
-                <a
+                <Link
                   href="#"
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
                   KNOW MORE <span className="ml-1">→</span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -371,13 +376,13 @@ export default function SoftwareDevelopment() {
                       <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
                       <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
                       <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
-                      <a
+                      <Link
                         href="#"
                         className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                         style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                       >
                         Explore Case Study <span className="ml-1">→</span>
-                      </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -499,13 +504,13 @@ export default function SoftwareDevelopment() {
                   <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
                   <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
                   <div className="flex gap-3 flex-wrap">
-                    <a
+                    <Link
                       href="#"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                       style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                     >
                       TALK TO AN EXPERT
-                    </a>
+                    </Link>
                   </div>
               </div>
             </div>

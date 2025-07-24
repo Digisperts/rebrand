@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useState, useRef } from 'react';
 import React from 'react';
 import Image from 'next/image';
+import Link from "next/link";
 import NavBar from '../../nav';
 import Footer from '../../Footer';
 import { FaCheck,FaPhone } from 'react-icons/fa';
@@ -134,13 +135,13 @@ export default function DigitalMarketing() {
             <div className="absolute inset-0 bg-black/50 z-10" />
           </div>
           {/* Text content, always in normal flex flow, vertically centered */}
-          <div className="relative z-30 max-w-4xl">
+          <div className="relative left-4 sm:left-6 md:left-12 z-30 max-w-4xl">
             <h1 className="text-4xl font-bold mb-4">{heroSlides[heroIndex].heading}</h1>
             <p className="mb-6">{heroSlides[heroIndex].desc.split('\n').map((line, i) => <span key={i}>{line}{i < heroSlides[heroIndex].desc.split('\n').length - 1 && <br />}</span>)}</p>
-            <a href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
+            <Link href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
               <FaPhone className="mr-2 transform -rotate-270" />
               {heroSlides[heroIndex].cta}
-            </a>
+            </Link>
           </div>
           {/* Pagination Dots */}
           <div className="absolute left-1/2 -translate-x-1/2 bottom-8 flex gap-2 z-30">
@@ -164,7 +165,7 @@ export default function DigitalMarketing() {
             </span>
           </h2>
 
-          <p className="text-gray-600 pl-6 text-left max-w-5xl w-full mb-12">
+          <p className="text-gray-600 font-semibold pl-6 text-left max-w-7xl w-full mb-12">
             In a crowded digital world, a strong message is not enough. You need a strategic partner 
             who can help you cut through the noise and connect with the right audience. At Digisperts, 
             we see digital marketing as a core pillar of your business success. We move beyond generic 
@@ -173,13 +174,13 @@ export default function DigitalMarketing() {
             and help you exceed your goals.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image 
-              src="/images/what-we-do/digital-marketing/digital-marketing-h2.jpg" 
+              src="/images/what-we-do/digital-marketing/digital-marketing-h3.jpg" 
               alt="Laptop" 
               width={500} 
               height={500} 
-              className="mx-auto mt-15 h-[500px] w-auto" 
+              className="mx-auto rounded-xl sm:h-full md:h-[60%] lg:h-full w-full" 
             />
             <div className="space-y-6 text-left">
               <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
@@ -190,6 +191,7 @@ export default function DigitalMarketing() {
                 Our approach is rooted in partnership and a commitment to delivering 
                 transparent, tangible results.
               </p>
+              {/* Deep Dive & Strategy */}
               <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
                 <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                   <FaCheck className="text-blue-900 text-sm" />
@@ -199,7 +201,8 @@ export default function DigitalMarketing() {
                   <p className="text-[#000000]">Our process begins with a deep understanding of your business, your audience, and your objectives. This client-centric approach ensures we develop a tailored strategy that aligns perfectly with your brand.</p>
                 </div>
               </div>
-              <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+              {/* Execute & Engage */}
+              <div className="bg-gray-100 p-6 shadow-md rounded-md flex w-full md:w-full lg:w-[80%] sm:w-full flex-row items-center gap-3">
                 <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                   <FaCheck className="text-blue-900 text-sm" />
                 </span>
@@ -208,7 +211,8 @@ export default function DigitalMarketing() {
                   <p className="text-[#000000]">We launch innovative, multi-channel campaigns designed to capture attention and convert interest into action. From compelling content to targeted ads, every element is crafted with quality excellence in mind.</p>
                 </div>
               </div>
-              <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+              {/* Measure & Refine */}
+              <div className="bg-gray-100 p-6 shadow-md rounded-md flex w-full md:w-full lg:w-[60%] sm:w-full flex-row items-center gap-3">
                 <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                   <FaCheck className="text-blue-900 text-sm" />
                 </span>
@@ -250,13 +254,13 @@ export default function DigitalMarketing() {
                     workflows for lead generation, scoring, and nurturing, ensuring no opportunity goes cold. 
                     This increases lead efficiency and empowers your sales team with better-qualified prospects.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/digital-marketing/digital-marketing-a.png"
@@ -277,13 +281,13 @@ export default function DigitalMarketing() {
                     Become a trusted voice in your industry. We develop and distribute valuable content that 
                     educates your audience, builds community, and nurtures leads through the sales funnel.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/digital-marketing/digital-marketing-b.png"
@@ -309,13 +313,13 @@ export default function DigitalMarketing() {
                     across search and social platforms, focusing on optimizing for the highest possible return 
                     on investment.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/digital-marketing/digital-marketing-c.png"
@@ -337,13 +341,13 @@ export default function DigitalMarketing() {
                     We focus on foundational SEO to attract high-quality organic traffic and build your 
                     brand&apos;s authority online.
                   </p>
-                  <a
+                  <Link
                     href="#"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
                     KNOW MORE <span className="ml-1">→</span>
-                  </a>
+                  </Link>
                 </div>
                 <Image
                   src="/images/what-we-do/digital-marketing/digital-marketing-d.png"
@@ -394,13 +398,13 @@ export default function DigitalMarketing() {
                 <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
                 <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
                 <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
-                <a
+                <Link
                   href="#"
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
                   Explore Case Study <span className="ml-1">→</span>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -514,16 +518,16 @@ export default function DigitalMarketing() {
               />
               <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
                 <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
-                    <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
-                    <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
+                    <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Amplify Your Brand&apos;s Voice?</div>
+                    <div className="text-sm md:text-base font-normal mb-5">Let&apos;s create a marketing strategy that delivers real, measurable results and drives your business forward.</div>
                     <div className="flex gap-3 flex-wrap">
-                      <a
+                      <Link
                         href="#"
                         className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                         style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                       >
-                        TALK TO AN EXPERT
-                      </a>
+                        TALK TO A MARKETING EXPERT
+                      </Link>
                     </div>
                 </div>
               </div>
