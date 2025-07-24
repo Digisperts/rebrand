@@ -33,6 +33,7 @@ export default function CasesStudiesResource() {
             src="/images/case-studies/left-hero-image.jpg"
             alt="Hex background"
             fill
+            objectFit="contain"
             className="object-cover opacity-60"
           />
         </div>
