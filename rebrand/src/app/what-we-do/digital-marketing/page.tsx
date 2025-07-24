@@ -176,7 +176,7 @@ export default function DigitalMarketing() {
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image 
-              src="/images/what-we-do/digital-marketing/digital-marketing-h2.jpg" 
+              src="/images/what-we-do/digital-marketing/digital-marketing-h3.jpg" 
               alt="Laptop" 
               width={500} 
               height={500} 
