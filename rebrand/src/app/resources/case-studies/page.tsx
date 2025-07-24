@@ -14,14 +14,7 @@ export default function CasesStudiesResource() {
       </div>
       
       {/* Hero Section */}
-      <section className="relative w-full bg-white pt-24 pb-10 flex flex-col items-center">
-        {/* Heading */}
-        <h1
-          className="text-4xl md:text-5xl font-extrabold text-center mb-8"
-          style={{ color: '#1A237E', letterSpacing: '-1px' }}
-        >
-          Case Studies
-        </h1>
+      <section className="relative w-full bg-white pb-10 flex flex-col items-center">
         {/* Image */}
         <div className="flex justify-center w-full">
           <div className="relative" style={{ width: '100%', maxWidth: '95vw', minWidth: '320px', height: 'auto' }}>
@@ -31,7 +24,7 @@ export default function CasesStudiesResource() {
               width={760}
               height={500}
               style={{ width: '100%', height: 'auto', display: 'block' }}
-              className="rounded-xl shadow-none"
+              className="shadow-none"
               priority
             />
           </div>
@@ -85,7 +78,7 @@ export default function CasesStudiesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Retail & Ecommerce</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Scale Your Business with Unified Commerce</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">See how we eliminated stockouts and manual work for a growing retailer by integrating their e-commerce and POS systems. This custom software solution resulted in a 95% reduction in order cancellations and a 40% boost in operational efficiency.</p>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">See how we eliminated stockouts and manual work for a growing retailer by integrating their e-commerce and POS systems. This custom software solution resulted in a 95% reduction in order cancellations and a 40% boost in operational efficiency.</p>
               <Link
                   href="/resources/explore-our-work/retail-and-ecommerce"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -103,7 +96,7 @@ export default function CasesStudiesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Healthcare</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Modernize Patient Care with a Custom Mobile App</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Discover how a HIPAA-compliant mobile app streamlined clinic operations, reduced patient no-shows by 35%, and cut administrative phone calls by 60%. Our solution enhanced both patient engagement and the overall quality of care.</p>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">Discover how a HIPAA-compliant mobile app streamlined clinic operations, reduced patient no-shows by 35%, and cut administrative phone calls by 60%. Our solution enhanced both patient engagement and the overall quality of care.</p>
               <Link
                   href="/resources/explore-our-work/healthcare"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -121,7 +114,7 @@ export default function CasesStudiesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">SaaS & Technology</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Scale Your Support with an Intelligent AI Chatbot</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">See how an AI-powered chatbot resolved 70% of repetitive support tickets for a SaaS company. This automation provided instant 24/7 answers and increased agent capacity for high-value tasks by 45%.</p>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">See how an AI-powered chatbot resolved 70% of repetitive support tickets for a SaaS company. This automation provided instant 24/7 answers and increased agent capacity for high-value tasks by 45%.</p>
               <Link
                   href="/resources/explore-our-work/saas-and-technology"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -139,7 +132,7 @@ export default function CasesStudiesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Agriculture</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Modernize Your Cooperative with a Digital AgriTech Platform</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Learn how a custom digital platform brought an agricultural co-op into the modern age, providing 100% produce traceability, automating payments, and reducing administrative time by 80%.</p>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">Learn how a custom digital platform brought an agricultural co-op into the modern age, providing 100% produce traceability, automating payments, and reducing administrative time by 80%.</p>
               <Link
                   href="/resources/explore-our-work/agriculture"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -157,7 +150,7 @@ export default function CasesStudiesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Real Estate</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Generate More Leads with a High-Performance Website</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">See how a lead-focused real estate website with advanced IDX integration became an agency&apos;s #1 lead source, tripling their qualified leads and cutting their website bounce rate in half.</p>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">See how a lead-focused real estate website with advanced IDX integration became an agency&apos;s #1 lead source, tripling their qualified leads and cutting their website bounce rate in half.</p>
               <Link
                   href="/resources/explore-our-work/real-estate"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -175,7 +168,7 @@ export default function CasesStudiesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Financial Services</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Increase Efficiency and Reduce Risk with Process Automation</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Discover how we automated critical back-office operations for a financial services firm, achieving 99.9% accuracy in data processing and reducing time spent on manual tasks by 90%.</p>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">Discover how we automated critical back-office operations for a financial services firm, achieving 99.9% accuracy in data processing and reducing time spent on manual tasks by 90%.</p>
               <Link
                   href="/resources/explore-our-work/financial-services"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -193,7 +186,7 @@ export default function CasesStudiesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Hardware & Manufacturing</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Elevate Your Hardware with World-Class OEM Software</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Learn how our embedded software partnership enabled a hardware manufacturer to get to market 6 months faster and reduce support calls by 40%, turning their custom software into a key competitive advantage.</p>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">Learn how our embedded software partnership enabled a hardware manufacturer to get to market 6 months faster and reduce support calls by 40%, turning their custom software into a key competitive advantage.</p>
               <Link
                 href="/resources/explore-our-work/hardware-and-manufacturing"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -211,7 +204,7 @@ export default function CasesStudiesResource() {
             <div className="px-6 pt-6 pb-7 w-full">
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Blockchain</h3>
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Engineering Trust, Securing the Future.</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..</p>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..</p>
               <Link
                   href="/resources/explore-our-work/blockchain"
                   onClick={(e) => e.preventDefault()}
