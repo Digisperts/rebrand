@@ -137,7 +137,7 @@ export default function BusinessAutomation() {
             <div className="absolute inset-0 bg-black/70 z-10" />
           </div>
           {/* Text content, always in normal flex flow, vertically centered */}
-          <div className="relative z-30 max-w-4xl">
+          <div className="relative left-4 sm:left-6 md:left-12 z-30 max-w-4xl">
             <h1 className="text-4xl font-bold mb-4">{heroSlides[heroIndex].heading}</h1>
             <p className="mb-6">{heroSlides[heroIndex].desc.split('\n').map((line, i) => <span key={i}>{line}{i < heroSlides[heroIndex].desc.split('\n').length - 1 && <br />}</span>)}</p>
             <Link href='/schedule-a-consultation' className="flex items-center gap-2 border border-white text-white font-semibold px-5 py-2 w-fit mb-2 hover:bg-white hover:text-black rounded">
@@ -167,7 +167,7 @@ export default function BusinessAutomation() {
             </span>
           </h2>
 
-          <p className="text-gray-600 pl-6 text-left max-w-5xl w-full mb-12">
+          <p className="text-gray-600 font-semibold pl-6 text-left max-w-7xl w-full mb-12">
             Are manual processes and repetitive tasks slowing your business down? helps you reclaim that 
             power. As your trusted digital transformation partner, we specialize in creating tailored 
             automation solutions that address your specific inefficiencies. We go beyond simple fixes to 
@@ -176,11 +176,11 @@ export default function BusinessAutomation() {
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image 
-              src="/images/what-we-do/business-auto/robot-left.png" 
+              src="/images/what-we-do/business-auto/robot-left.jpg" 
               alt="Laptop" 
               width={500} 
               height={400} 
-              className="mx-auto" 
+              className="mx-auto rounded-xl sm:h-full md:h-[60%] lg:h-full w-full" 
             />
             <div className="space-y-6 text-left">
               <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
@@ -191,6 +191,7 @@ export default function BusinessAutomation() {
                 Our commitment to Quality Excellence is reflected in our meticulous, <br/>
                 client-centric process.
               </p>
+              {/* Analyze & Identify */}
               <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
                 <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                   <FaCheck className="text-blue-900 text-sm" />
@@ -200,7 +201,8 @@ export default function BusinessAutomation() {
                   <p className="text-[#000000]">We begin by thoroughly analyzing your existing workflows to identify the key areas where automation can deliver the most significant impact on cost, time, and accuracy.</p>
                 </div>
               </div>
-              <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+              {/* Design & Implement */}
+              <div className="bg-gray-100 p-6 shadow-md rounded-md flex w-full md:w-full lg:w-[80%] sm:w-full flex-row items-center gap-3">
                 <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                   <FaCheck className="text-blue-900 text-sm" />
                 </span>
@@ -209,7 +211,8 @@ export default function BusinessAutomation() {
                   <p className="text-[#000000]">We leverage innovative, cutting-edge technology to design and implement custom automation solutions, from intelligent chatbots to financial controls, that integrate seamlessly with your existing systems.</p>
                 </div>
               </div>
-              <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
+              {/* Empower & Optimize */}
+              <div className="bg-gray-100 p-6 shadow-md rounded-md flex w-full md:w-full lg:w-[60%] sm:w-full flex-row items-center gap-3">
                 <span className="flex items-center justify-center border-2 border-blue-900 bg-transparent rounded-full w-6 h-6 mr-3 self-center shrink-0">
                   <FaCheck className="text-blue-900 text-sm" />
                 </span>
@@ -232,10 +235,10 @@ export default function BusinessAutomation() {
                   backgroundImage: 'linear-gradient(180deg, #001133 0%,  #003399 90%)'
                 }}
               >
-                Our Software Development Services
+                Our Business Automation Services
               </span>
             </h2>
-            <p className="text-left text-gray-900 mb-8">We provide end-to-end development to bring your vision to life.</p>
+            <p className="text-left text-gray-900 mb-8">We create tailored solutions to address your most pressing operational challenges.</p>
 
             {/* First Row */}
             <div className="flex flex-col md:flex-row gap-8 mb-8">
@@ -268,7 +271,7 @@ export default function BusinessAutomation() {
                     alt="AI Robot"
                     width={200}
                     height={200}
-                    className="w-auto h-auto"
+                    className="w-auto h-full"
                   />
                 </div>
               </div>
@@ -513,8 +516,8 @@ export default function BusinessAutomation() {
               />
               <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
                 <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
-                    <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Build Your Future?</div>
-                    <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
+                    <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Ready to Unlock Your Team&apos;s Potential?</div>
+                    <div className="text-sm md:text-base font-normal mb-5">Stop losing time to repetitive tasks. Let&apos;s build a more efficient, productive, and powerful future for your business.</div>
                     <div className="flex gap-3 flex-wrap">
                       <Link
                         href="#"

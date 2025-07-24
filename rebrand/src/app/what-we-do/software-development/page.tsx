@@ -170,13 +170,13 @@ export default function SoftwareDevelopment() {
 
       {/* Section 2: Built for You */}
       <section className="py-16 px-6 text-left" id="approach">
-      <h2 className="mb-7 pl-6 text-left">
+        <h2 className="mb-7 pl-6 text-left">
           <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#001133] to-[#003399] bg-clip-text text-transparent">
           Built for You. Built to Win.
           </span>
         </h2>
 
-        <p className="text-[#3C3C3C] font-semibold pl-6 text-left max-w-5xl w-full mb-12">
+        <p className="text-[#3C3C3C] font-semibold pl-6 text-left max-w-7xl w-full mb-12">
           In today&apos;s market, generic software leads to generic results. To truly exceed your 
           goals, you need technology solutions built specifically for you. At Digisperts, we move 
           beyond the limitations of outdated technology stacks to deliver robust, custom software. 
@@ -187,11 +187,11 @@ export default function SoftwareDevelopment() {
 
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <Image 
-            src="/images/what-we-do/software-dev/SD-a.png" 
+            src="/images/what-we-do/software-dev/SD-a.jpg" 
             alt="Laptop" 
             width={500} 
             height={400} 
-            className="mx-auto h-full w-full" 
+            className="mx-auto rounded-xl sm:h-full md:h-[60%] lg:h-full w-full" 
           />
           <div className="space-y-6 text-left">
             <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
@@ -279,10 +279,10 @@ export default function SoftwareDevelopment() {
           {/* Second Row */}
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
             {/* Mobile App Development */}
-            <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
+            <div className="md:relative flex flex-1 md:flex-row flex-col items-center gap-4 bg-[#F8F8F8] p-4 rounded">
               <div className="flex-1 flex flex-col justify-center items-start">
                 <h3 className="text-xl font-bold text-black mb-2">Mobile App Development</h3>
-                <p className="text-gray-900">
+                <p className="md:w-120 text-gray-900">
                   We help you successfully design, build, and launch mobile apps for iOS and Android. 
                   We balance performance with possibility, creating scalable solutions that grow with you 
                   and delight your users.
@@ -295,7 +295,7 @@ export default function SoftwareDevelopment() {
                   KNOW MORE <span className="ml-1">→</span>
                 </Link>
               </div>
-              <div className="flex items-center justify-center w-[45%] max-w-[180px]">
+              <div className="md:absolute md:right-4 md:bottom-4 flex items-center justify-center w-[45%] max-w-[180px]">
                 <Image
                   src="/images/what-we-do/software-dev/SD-c.png"
                   alt="Mobile App Development"
@@ -307,17 +307,17 @@ export default function SoftwareDevelopment() {
             </div>
 
             {/* Enterprise Solutions */}
-            <div className="flex flex-1 flex-row items-center gap-4 bg-[#F8F8F8] p-4 rounded">
-              <div className="flex items-center justify-center w-[45%] max-w-[180px]">
+            <div className="md:items-start md:flex-col flex flex-col items-center gap-4 bg-[#F8F8F8] p-4 rounded">
+              <div className="w-[120px] h-auto mb-4">
                 <Image
                   src="/images/what-we-do/software-dev/SD-d.png" 
                   alt="Enterprise & OEM Solutions"
-                  width={180}
-                  height={120}
-                  className="object-contain"
+                  width={120}
+                  height={72}
+                  className="object-contain w-full h-auto"
                 />
               </div>
-              <div className="flex-1 flex flex-col justify-center items-start">
+              <div className="flex flex-col justify-center items-start w-full">
                 <h3 className="text-xl font-bold text-black mb-2">Enterprise & OEM Solutions</h3>
                 <p className="text-gray-900">
                   We develop specialized software tailored for unique business environments, 
