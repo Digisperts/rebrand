@@ -13,56 +13,42 @@ export default function CasesStudiesResource() {
       </div>
       
       {/* Hero Section */}
-      <section className="relative w-full bg-white pt-24 pb-10 flex flex-col items-center">
-        {/* Heading */}
-        <h1
-          className="text-4xl md:text-5xl font-extrabold text-center mb-8"
-          style={{ color: '#1A237E', letterSpacing: '-1px' }}
-        >
-          Case Studies
-        </h1>
-        {/* Image */}
-        <div className="flex justify-center w-full">
-          <div className="relative" style={{ width: '100%', maxWidth: '95vw', minWidth: '320px', height: 'auto' }}>
-            <Image
-              src="/images/case-studies/case-studies.jpg"
-              alt="Case Studies Hero"
-              width={760}
-              height={500}
-              style={{ width: '100%', height: 'auto', display: 'block' }}
-              className="rounded-xl shadow-none"
-              priority
-            />
-          </div>
+      <section className="w-full min-h-[80vh] grid md:grid-cols-2">
+       {/* Right Text with Background */} 
+      <div className="relative w-full h-[80vh]">
+        <Image
+          src="/images/case-studies/right-text-background-banner.jpg"
+          alt="Hero left"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+
+      {/* Left Image */}
+      <div className="relative bg-[#0a0a0a] text-white flex items-center px-6 py-12 md:px-12">
+        {/* Background Image Overlay */}
+        <div className="absolute inset-0 z-0 mt-10 mb-6">
+          <Image
+            src="/images/case-studies/left-hero-image.jpg"
+            alt="Hex background"
+            fill
+            className="object-cover opacity-60"
+          />
         </div>
-        {/* Text Box */}
-        <div
-          className="mx-auto mt-8 mb-2"
-          style={{
-            maxWidth: '1000px',
-            width: '100%',
-            background: 'white',
-            borderRadius: '12px',
-            boxShadow: '0 4px 24px 0 rgba(0,0,0,0.13)',
-            padding: '28px 32px',
-            textAlign: 'left',
-            position: 'relative',
-            zIndex: 2
-          }}
-        >
-          <p className="text-[#3C3C3C] text-base font-medium mb-0 leading-relaxed">
-            Your challenges are unique, but the principles of success are universal: a deep 
-            understanding of your business, a transparent process, and a perfectly executed 
-            technical solution. While our commitment to client confidentiality is absolute, 
-            these use cases illustrate the real-world problems we solve and the tangible results 
-            we deliver every day.<br />
-            Explore the stories below to see how we apply our expertise in custom software 
-            development, AI implementation, and business process automation to drive growth, 
-            efficiency, and innovation across industries. Find a challenge that mirrors your 
-            own and discover how we can engineer your success.
+
+        {/* Text Content */}
+        <div className="relative z-10 max-w-xl ">
+          <h2 className="text-3xl md:text-5xl font-bold mt-6 mb-6">CASE STUDIES</h2>
+          <p className="mb-4 leading-relaxed text-gray-100">
+            Your challenges are unique, but the principles of success are universal: a deep understanding of your business, a transparent process, and a perfectly executed technical solution. While our commitment to client confidentiality is absolute, these use cases illustrate the real-world problems we solve and the tangible results we deliver every day.
+          </p>
+          <p className="text-gray-300 ">
+            Explore the stories below to see how we apply our expertise in custom software development, AI implementation, and business process automation to drive growth, efficiency, and innovation across industries. Find a challenge that mirrors your own and discover how we can engineer your success.
           </p>
         </div>
-      </section>
+      </div>
+    </section>
 
       
       {/* Professionals Section */}

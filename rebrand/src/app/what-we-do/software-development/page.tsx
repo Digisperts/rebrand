@@ -175,7 +175,7 @@ export default function SoftwareDevelopment() {
           </span>
         </h2>
 
-        <p className="text-gray-600 pl-6 text-left max-w-5xl w-full mb-12">
+        <p className="text-gray-600 pl-6 text-center max-w-5xl w-full mb-12">
           In today&apos;s market, generic software leads to generic results. To truly exceed your 
           goals, you need technology solutions built specifically for you. At Digisperts, we move 
           beyond the limitations of outdated technology stacks to deliver robust, custom software. 
@@ -195,9 +195,9 @@ export default function SoftwareDevelopment() {
           <div className="space-y-6 text-left">
             <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
               Our Strategic Approach to Software Development
-</h2>
+            </h2>
 
-            <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
+            <p className="text-black text-left justify-center max-w-2xl mx-auto mb-1 font-19px">
           Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
             </p>
             <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
@@ -215,7 +215,7 @@ export default function SoftwareDevelopment() {
               </span>
               <div className="flex flex-col text-left">
                 <h3 className="text-lg font-bold text-blue-900 mb-1">Innovative and Agile Build</h3>
-              <p className="text-[#000000]">We leverage cutting-edge technologies and an agile development process. This allows us to remain adaptable , incorporate feedback, and deliver innovative solutions efficiently.</p>
+              <p className="text-[#000000]">We leverage cutting-edge technologies and an agile <br/> development process. This allows us to remain <br/> adaptable , incorporate feedback, and deliver <br/> innovative solutions efficiently.</p>
               </div>
             </div>
             <div className="bg-gray-100 p-6 shadow-md rounded-md flex flex-row items-center gap-3">
