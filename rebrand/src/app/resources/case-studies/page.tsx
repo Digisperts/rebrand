@@ -13,9 +13,9 @@ export default function CasesStudiesResource() {
       </div>
       
       {/* Hero Section */}
-      <section className="w-full min-h-[80vh] grid md:grid-cols-2">
+      <section className="w-full min-h-[580px] grid md:grid-cols-2">
        {/* Right Text with Background */} 
-      <div className="relative w-full h-[80vh]">
+      <div className="relative w-full h-full">
         <Image
           src="/images/case-studies/right-text-background-banner.jpg"
           alt="Hero left"
@@ -28,19 +28,18 @@ export default function CasesStudiesResource() {
       {/* Left Image */}
       <div className="relative bg-[#0a0a0a] text-white flex items-center px-6 py-12 md:px-12">
         {/* Background Image Overlay */}
-        <div className="absolute inset-0 z-0 mt-10 mb-6">
+        <div className="absolute inset-0 w-full h-full z-0">
           <Image
             src="/images/case-studies/left-hero-image.jpg"
             alt="Hex background"
             fill
-            objectFit="contain"
-            className="object-cover opacity-60"
+            className="object-cover w-full h-full opacity-60"
           />
         </div>
 
         {/* Text Content */}
         <div className="relative z-10 max-w-xl ">
-          <h2 className="text-3xl md:text-5xl font-bold mt-6 mb-6">CASE STUDIES</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mt-12 md:mt-15 mb-6">CASE STUDIES</h2>
           <p className="mb-4 leading-relaxed text-gray-100">
             Your challenges are unique, but the principles of success are universal: a deep understanding of your business, a transparent process, and a perfectly executed technical solution. While our commitment to client confidentiality is absolute, these use cases illustrate the real-world problems we solve and the tangible results we deliver every day.
           </p>
@@ -99,15 +98,15 @@ export default function CasesStudiesResource() {
                 </a>
             </div>
           </div>
-          {/* SaaS & Technology Card */}
+          {/* Technology Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
             <div className="px-6 pt-0 pl-0 pr-0 w-full">
-              <Image src="/images/use-cases/saas.png" alt="SaaS & Technology" width={365} height={199} className="w-full h-[199px] object-cover" />
+              <Image src="/images/use-cases/saas2.jpg" alt="SaaS & Technology" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
-              <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">SaaS & Technology</h3>
-              <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Scale Your Support with an Intelligent AI Chatbot</h5>
-              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">See how an AI-powered chatbot resolved 70% of repetitive support tickets for a SaaS company. This automation provided instant 24/7 answers and increased agent capacity for high-value tasks by 45%.</p>
+              <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Technology</h3>
+              <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Building a Better Digital Future, Together.</h5>
+              <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">We harness the power of technology to streamline workflows, automate tasks, and unlock new possibilities for businesses and individuals.</p>
               <a
                   href="/resources/explore-our-work/saas-and-technology"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"

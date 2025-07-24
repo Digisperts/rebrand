@@ -197,7 +197,6 @@ export default function SoftwareDevelopment() {
             <h2 className="text-2xl font-bold mb-0 bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
               Our Strategic Approach to Software Development
             </h2>
-            </h2>
 
             <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
               Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.

@@ -146,9 +146,9 @@ export default function UseCasesResource() {
               <Image src="/images/use-cases/saas.png" alt="SaaS & Technology" width={365} height={199} className="w-full h-[199px] object-cover" />
             </div>
             <div className="px-6 pt-6 pb-7 w-full">
-              <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">SaaS & Technology</h3>
-              <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Scale Your Support with an Intelligent AI Chatbot</h5>
-              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">See how an AI-powered chatbot resolved 70% of repetitive support tickets for a SaaS company. This automation provided instant 24/7 answers and increased agent capacity for high-value tasks by 45%.</p>
+              <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">Technology</h3>
+              <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Building a Better Digital Future, Together.</h5>
+              <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">We harness the power of technology to streamline workflows, automate tasks, and unlock new possibilities for businesses and individuals.</p>
               <Link
                   href="/resources/explore-our-work/saas-and-technology"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
