@@ -13,7 +13,7 @@ export default function CasesStudiesResource() {
       </div>
       
       {/* Hero Section */}
-      <section className="w-full min-h-[580px] grid md:grid-cols-2">
+      <section className="w-full bg-black/96 min-h-[580px] grid md:grid-cols-2">
        {/* Right Text with Background */} 
       <div className="relative w-full h-full">
         <Image
@@ -36,7 +36,7 @@ export default function CasesStudiesResource() {
             className="object-cover w-full h-full opacity-60"
           />
         </div>
-
+        
         {/* Text Content */}
         <div className="relative z-10 max-w-xl ">
           <h2 className="text-3xl md:text-4xl font-bold mt-12 md:mt-15 mb-6">CASE STUDIES</h2>
