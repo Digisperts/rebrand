@@ -222,7 +222,7 @@ export default function UseCasesResource() {
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Elevate Your Hardware with World-Class OEM Software</h5>
               <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">Learn how our embedded software partnership enabled a hardware manufacturer to get to market 6 months faster and reduce support calls by 40%, turning their custom software into a key competitive advantage.</p>
               <Link
-                  href="/resources/explore-our-work/blockchain"
+                  href="/resources/explore-our-work/hardware-and-manufacturing"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
@@ -240,7 +240,7 @@ export default function UseCasesResource() {
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Engineering Trust, Securing the Future.</h5>
               <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..</p>
               <Link
-                href="/resources/explore-our-work/hardware-and-manufacturing"
+                href="/resources/explore-our-work/blockchain"
                 onClick={(e) => e.preventDefault()}
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: '4px 4px 4px 0px #00000040' }}

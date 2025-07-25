@@ -29,7 +29,7 @@ export default function WhoWeArePage() {
     <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
       {/* NavBar */}
       <div className="fixed top-0 left-0 w-full z-50">
-      <NavBar />
+        <NavBar />
       </div>
 
         {/* Section 1: Hero */}

@@ -9,47 +9,46 @@ export default function CasesStudiesResource() {
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <div className="fixed top-0 left-0 w-full z-50">
-      <NavBar />
+        <NavBar />
       </div>
       
       {/* Hero Section */}
       <section className="w-full bg-black/96 min-h-[580px] grid md:grid-cols-2">
-       {/* Right Text with Background */} 
-      <div className="relative w-full h-full">
-        <Image
-          src="/images/case-studies/right-text-background-banner.jpg"
-          alt="Hero left"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
-      {/* Left Image */}
-      <div className="relative bg-[#0a0a0a] text-white flex items-center px-6 py-12 md:px-12">
-        {/* Background Image Overlay */}
-        <div className="absolute inset-0 w-full h-full z-0">
+        {/* Right Text with Background */} 
+        <div className="relative w-full h-full">
           <Image
-            src="/images/case-studies/left-hero-image.jpg"
-            alt="Hex background"
+            src="/images/case-studies/right-text-background-banner.jpg"
+            alt="Hero left"
             fill
-            className="object-cover w-full h-full opacity-60"
+            className="object-cover"
+            priority
           />
         </div>
-        
-        {/* Text Content */}
-        <div className="relative z-10 max-w-xl ">
-          <h2 className="text-3xl md:text-4xl font-bold mt-12 md:mt-15 mb-6">CASE STUDIES</h2>
-          <p className="mb-4 leading-relaxed text-gray-100">
-            Your challenges are unique, but the principles of success are universal: a deep understanding of your business, a transparent process, and a perfectly executed technical solution. While our commitment to client confidentiality is absolute, these use cases illustrate the real-world problems we solve and the tangible results we deliver every day.
-          </p>
-          <p className="text-gray-300">
-            Explore the stories below to see how we apply our expertise in custom software development, AI implementation, and business process automation to drive growth, efficiency, and innovation across industries. Find a challenge that mirrors your own and discover how we can engineer your success.
-          </p>
-        </div>
-      </div>
-    </section>
 
+        {/* Left Image */}
+        <div className="relative bg-[#0a0a0a] text-white flex items-center px-6 py-12 md:px-12">
+          {/* Background Image Overlay */}
+          <div className="absolute inset-0 w-full h-full z-0">
+            <Image
+              src="/images/case-studies/left-hero-image.jpg"
+              alt="Hex background"
+              fill
+              className="object-cover w-full h-full opacity-60"
+            />
+          </div>
+          
+          {/* Text Content */}
+          <div className="relative z-10 max-w-xl ">
+            <h2 className="text-3xl md:text-4xl font-bold mt-12 md:mt-15 mb-6">CASE STUDIES</h2>
+            <p className="mb-4 leading-relaxed text-gray-100">
+              Your challenges are unique, but the principles of success are universal: a deep understanding of your business, a transparent process, and a perfectly executed technical solution. While our commitment to client confidentiality is absolute, these use cases illustrate the real-world problems we solve and the tangible results we deliver every day.
+            </p>
+            <p className="text-gray-300">
+              Explore the stories below to see how we apply our expertise in custom software development, AI implementation, and business process automation to drive growth, efficiency, and innovation across industries. Find a challenge that mirrors your own and discover how we can engineer your success.
+            </p>
+          </div>
+        </div>
+      </section>
       
       {/* Professionals Section */}
       <section className="w-full py-12 px-4 sm:px-6 md:px-12 flex flex-col items-start">
