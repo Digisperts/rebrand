@@ -69,7 +69,10 @@ export default function Footer() {
                 </Link>
               </li>
               <li className="group">
-                <Link href="/resources/blog" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
+                <Link 
+                // href="/resources/blog" 
+                href="/work-in-progress"
+                className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
                   Blog
                 </Link>
               </li>
@@ -85,17 +88,17 @@ export default function Footer() {
             <h4 className="text-white font-extrabold mb-2">Company</h4>
             <ul className="p-6 w-full max-w-xs text-white flex flex-col gap-4">
               <li className="group">
-                <Link href="#" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
+                <Link href="/who-we-are" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
                   Who We Are
                 </Link>
               </li>
               <li>
-                <Link href="#" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
+                <Link href="/work-in-progress" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
                   Our Team
                 </Link>
               </li>
               <li>
-                <Link href="#" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
+                <Link href="/process" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
                   Our Process
                 </Link>
               </li>

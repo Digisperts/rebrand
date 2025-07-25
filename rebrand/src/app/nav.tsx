@@ -147,7 +147,8 @@ const NavBar = () => {
                 Use Cases
               </Link>
               <Link
-                href="/resources/blog"
+                // href="/resources/blog"
+                href="/work-in-progress"
                 className={`block px-4 py-2 font-medium text-sm transition-colors rounded ${
                   pathname === "/resources/blog"
                     ? "bg-blue-100 text-blue-900 font-semibold"
@@ -320,7 +321,8 @@ const NavBar = () => {
                 Use Cases
               </Link>
               <Link
-                href="/resources/blog"
+                // href="/resources/blog"
+                href="/work-in-progress"
                 className={`block px-6 py-2 custom-nav-dropdown transition-colors ${
                   pathname === "/resources/blog"
                     ? "bg-blue-100 text-blue-900 font-semibold"
