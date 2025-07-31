@@ -54,7 +54,7 @@ export default function WhoWeArePage() {
               We are Digital Experts
             </span>
           </h2>
-          <p className="text-gray-900 pl-10 pr-10 font-semibold text-left max-w-7xl w-full mb-2">
+          <p className="text-gray-900 pl-10 pr-10 font-semibold text-left max-w-auto w-full md:w-full lg:w-full mb-2">
             At Digisperts, we are more than just a technology company; we are your dedicated partners 
             in digital transformation. We empower businesses, from agile startups to large enterprises, 
             to not just meet, but consistently exceed their goals. Our foundation is built on a 
@@ -171,7 +171,7 @@ export default function WhoWeArePage() {
               Meet Our Digital Transformation Experts
             </span>
           </h2>
-          <p className="text-gray-900 pl-10 pr-10 font-semibold text-left max-w-7xl w-full mb-12">
+          <p className="text-gray-900 pl-10 pr-10 font-semibold text-left max-w-auto w-full md:w-full lg:w-full mb-12">
             At Digisperts, our strength lies in our people. We are a collective of trusted experts 
             and dedicated professionals, passionate about technology and committed to your success. 
             Each member of our team brings a wealth of experience, a collaborative spirit, and a drive 

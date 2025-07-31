@@ -100,6 +100,31 @@ export default function SoftwareDevelopment() {
     touchEndX.current = null;
   };
 
+  // --- HERO SLIDER CLICK LOGIC ---
+  const handleHeroAreaClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    if (x < rect.width / 2) {
+      // Left area: previous slide
+      setPrevHeroIndex(heroIndex);
+      setHeroIndex((i) => (i - 1 + heroSlides.length) % heroSlides.length);
+      setIsFading(true);
+      setTimeout(() => {
+        setIsFading(false);
+        setPrevHeroIndex(null);
+      }, 900);
+    } else {
+      // Right area: next slide
+      setPrevHeroIndex(heroIndex);
+      setHeroIndex((i) => (i + 1) % heroSlides.length);
+      setIsFading(true);
+      setTimeout(() => {
+        setIsFading(false);
+        setPrevHeroIndex(null);
+      }, 900);
+    }
+  };
+
   return (
     <>
       <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
@@ -116,6 +141,19 @@ export default function SoftwareDevelopment() {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
+        <div
+          onClick={handleHeroAreaClick}
+          style={{ cursor: "pointer" }}
+        >
+          {/* Overlay left/right click areas */}
+          <div
+            className="absolute left-0 top-0 h-full w-1/2 z-30"
+            style={{ cursor: "pointer" }}
+          />
+          <div
+            className="absolute right-0 top-0 h-full w-1/2 z-30"
+            style={{ cursor: "pointer" }}
+          />
         {/* Fade transition: render current and previous slide if fading */}
         {prevHeroIndex !== null && isFading && (
           <div
@@ -166,17 +204,18 @@ export default function SoftwareDevelopment() {
             />
           ))}
         </div>
+        </div>
       </section>
 
       {/* Section 2: Built for You */}
       <section className="py-16 px-6 text-left" id="approach">
-        <h2 className="mb-7 pl-6 text-left">
+        <h2 className="mb-7 text-left">
           <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#001133] to-[#003399] bg-clip-text text-transparent">
           Built for You. Built to Win.
           </span>
         </h2>
 
-        <p className="text-[#3C3C3C] font-semibold pl-6 text-left max-w-7xl w-full mb-12">
+        <p className="text-[#3C3C3C] font-semibold text-left max-w-auto w-full md:w-full lg:w-full mb-12">
           In today&apos;s market, generic software leads to generic results. To truly exceed your 
           goals, you need technology solutions built specifically for you. At Digisperts, we move 
           beyond the limitations of outdated technology stacks to deliver robust, custom software. 
@@ -251,7 +290,7 @@ export default function SoftwareDevelopment() {
           <p className="text-left text-[#3C3C3C] font-semibold mb-8">We provide end-to-end development to bring your vision to life.</p>
 
           {/* First Row */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch mb-8 bg-[#F8F8F8] p-4 rounded">
+          <div className="flex flex-col-reverse md:flex-row gap-6 md:gap-8 items-stretch mb-8 bg-[#F8F8F8] p-4 rounded">
             <div className="flex-1 flex flex-col justify-center items-start">
               <h3 className="text-2xl font-bold text-black mb-3">Custom Web Applications</h3>
               <p className="text-gray-900 mb-4">
@@ -259,6 +298,7 @@ export default function SoftwareDevelopment() {
               </p>
               <Link
                 href="#"
+                onClick={(e) => e.preventDefault()}
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
               >
@@ -279,7 +319,7 @@ export default function SoftwareDevelopment() {
           {/* Second Row */}
           <div className="flex flex-col lg:flex-row gap-6 md:gap-8">
             {/* Mobile App Development */}
-            <div className="md:relative flex flex-1 md:flex-row flex-col items-center gap-4 bg-[#F8F8F8] p-4 rounded">
+            <div className="md:relative flex flex-1 md:flex-row flex-col-reverse items-center gap-4 bg-[#F8F8F8] p-4 rounded">
               <div className="flex-1 flex flex-col justify-center items-start">
                 <h3 className="text-xl font-bold text-black mb-2">Mobile App Development</h3>
                 <p className="md:w-120 text-gray-900">
@@ -289,6 +329,7 @@ export default function SoftwareDevelopment() {
                 </p>
                 <Link
                   href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
@@ -326,6 +367,7 @@ export default function SoftwareDevelopment() {
                 </p>
                 <Link
                   href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
@@ -377,6 +419,7 @@ export default function SoftwareDevelopment() {
                       <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
                       <Link
                         href="#"
+                        onClick={(e) => e.preventDefault()}
                         className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                         style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                       >
@@ -400,7 +443,7 @@ export default function SoftwareDevelopment() {
           <div className="absolute inset-0 bg-black/70 z-10" />
           <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 py-6 md:py-10">
             <h2 className="text-lg md:text-2xl lg:text-4xl font-extrabold mb-4 text-center">Exploring Emerging Technologies (AI & Blockchain)</h2>
-            <p className="max-w-[950px] mx-auto text-left text-white text-sm md:text-lg font-normal">
+            <p className="max-w-auto mx-auto text-center text-white text-sm md:text-lg font-normal">
               Our commitment to innovation means we are always exploring the frontier of technology. For clients with specific needs, our expert engineers can build AI-powered features into custom applications or architect decentralized blockchain solutions. We approach these specialized projects with the same commitment to quality excellence and partnership that defines all our work.
             </p>
           </div>
@@ -489,7 +532,7 @@ export default function SoftwareDevelopment() {
       {/* Pre Footer Section */}
       <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
         <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-          <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+          <div className="relative w-full h-[280px] md:h-[370px] flex items-center justify-center">
             <Image
               src="/images/footer.jpg"
               alt="Footer Background"
@@ -504,7 +547,7 @@ export default function SoftwareDevelopment() {
                   <div className="text-sm md:text-base font-normal mb-5">Let&apos;s discuss how a custom software solution can help you overcome inefficiencies and drive your business forward.</div>
                   <div className="flex gap-3 flex-wrap">
                     <Link
-                      href="#"
+                      href="/schedule-a-consultation"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                       style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                     >

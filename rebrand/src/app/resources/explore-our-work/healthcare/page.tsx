@@ -141,7 +141,7 @@ export default function HealthcareExploreOurWork() {
         heading: "Ready to Enhance Your Patient Experience?",
         subheading: "Empower your patients and free up your staff. Let's build a healthcare app that makes a difference.",
         buttonText: "TALK TO AN EXPERT",
-        buttonHref: "#"
+        buttonHref: "/schedule-a-consultation"
       }}
       
     >

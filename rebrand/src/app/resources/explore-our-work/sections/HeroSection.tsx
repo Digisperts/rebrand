@@ -26,7 +26,7 @@ export default function HeroSection({
           <h1 className="text-2xl md:text-4xl lg:text-5xl ml-20 font-bold mb-4">
             {title}
           </h1>
-          <p className="text-base text-left md:text-lg ml-20 max-w-2xl">
+          <p className="text-base text-left md:text-lg ml-20 max-w-auto mr-20">
             {subtitle}
           </p>
         </div>

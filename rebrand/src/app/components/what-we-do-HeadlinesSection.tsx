@@ -38,7 +38,7 @@ export default function Headlines() {
           </div>
           <div className="px-6 pt-6 pb-7 w-full">
             <h3 className="font-bold text-lg mb-2 text-black">Smaat Finance</h3>
-            <p className="text-gray-800 text-base mb-4 leading-snug">At Digisperts LLC, our commitment to client confidentiality is unwavering. While we have worked on numerous projects and achieved remarkable results, we respect the anonymity of our clients and........</p>
+            <p className="text-gray-800 text-base mb-4 leading-snug">At Digisperts Technology Company Limited, our commitment to client confidentiality is unwavering. While we have worked on numerous projects and achieved remarkable results, we respect the anonymity of our clients and........</p>
             <Link
               href="#"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"

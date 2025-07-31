@@ -51,7 +51,7 @@ export default function CasesStudiesResource() {
       </section>
       
       {/* Professionals Section */}
-      <section className="w-full py-12 px-4 sm:px-6 md:px-12 flex flex-col items-start">
+      <section className="w-full py-12 px-4 max-w-7xl mx-auto sm:px-6 md:px-12 flex flex-col items-start">
         <h1 
           className="text-2xl md:text-4xl ml-4 font-bold mb-2 tracking-tight drop-shadow-md text-left md:text-left w-full bg-clip-text text-transparent"
           style={{
@@ -72,10 +72,11 @@ export default function CasesStudiesResource() {
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">See how we eliminated stockouts and manual work for a growing retailer by integrating their e-commerce and POS systems. This custom software solution resulted in a 95% reduction in order cancellations and a 40% boost in operational efficiency.</p>
               <a
                   href="/resources/explore-our-work/retail-and-ecommerce"
+                  onClick={(e) => e.preventDefault()}
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
-                  READ THE FULL STORY <span className="ml-1">→</span>
+                  READ CASE STUDY <span className="ml-1">→</span>
                 </a>
             </div>
           </div>
@@ -90,10 +91,11 @@ export default function CasesStudiesResource() {
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Discover how a HIPAA-compliant mobile app streamlined clinic operations, reduced patient no-shows by 35%, and cut administrative phone calls by 60%. Our solution enhanced both patient engagement and the overall quality of care.</p>
               <a
                   href="/resources/explore-our-work/healthcare"
+                  onClick={(e) => e.preventDefault()}
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
-                  READ THE FULL STORY <span className="ml-1">→</span>
+                  READ CASE STUDY <span className="ml-1">→</span>
                 </a>
             </div>
           </div>
@@ -108,10 +110,11 @@ export default function CasesStudiesResource() {
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">We harness the power of technology to streamline workflows, automate tasks, and unlock new possibilities for businesses and individuals.</p>
               <a
                   href="/resources/explore-our-work/saas-and-technology"
+                  onClick={(e) => e.preventDefault()}
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
-                  READ THE FULL STORY <span className="ml-1">→</span>
+                  READ CASE STUDY <span className="ml-1">→</span>
                 </a>
             </div>
           </div>
@@ -126,10 +129,11 @@ export default function CasesStudiesResource() {
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Learn how a custom digital platform brought an agricultural co-op into the modern age, providing 100% produce traceability, automating payments, and reducing administrative time by 80%.</p>
               <a
                   href="/resources/explore-our-work/agriculture"
+                  onClick={(e) => e.preventDefault()}
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
-                  READ THE FULL STORY <span className="ml-1">→</span>
+                  READ CASE STUDY <span className="ml-1">→</span>
                 </a>
             </div>
           </div>
@@ -144,10 +148,11 @@ export default function CasesStudiesResource() {
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">See how a lead-focused real estate website with advanced IDX integration became an agency&apos;s #1 lead source, tripling their qualified leads and cutting their website bounce rate in half.</p>
               <a
                   href="/resources/explore-our-work/real-estate"
+                  onClick={(e) => e.preventDefault()}
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
-                  READ THE FULL STORY <span className="ml-1">→</span>
+                  READ CASE STUDY <span className="ml-1">→</span>
                 </a>
             </div>
           </div>
@@ -162,10 +167,11 @@ export default function CasesStudiesResource() {
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Discover how we automated critical back-office operations for a financial services firm, achieving 99.9% accuracy in data processing and reducing time spent on manual tasks by 90%.</p>
               <a
                   href="/resources/explore-our-work/financial-services"
+                  onClick={(e) => e.preventDefault()}
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
-                  READ THE FULL STORY <span className="ml-1">→</span>
+                  READ CASE STUDY <span className="ml-1">→</span>
                 </a>
             </div>
           </div>
@@ -180,10 +186,11 @@ export default function CasesStudiesResource() {
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Learn how our embedded software partnership enabled a hardware manufacturer to get to market 6 months faster and reduce support calls by 40%, turning their custom software into a key competitive advantage.</p>
               <a
                 href="/resources/explore-our-work/hardware-and-manufacturing"
+                onClick={(e) => e.preventDefault()}
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
               >
-                READ THE FULL STORY <span className="ml-1">→</span>
+                READ CASE STUDY <span className="ml-1">→</span>
               </a>
             </div>
           </div>
@@ -202,7 +209,7 @@ export default function CasesStudiesResource() {
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
-                  READ THE FULL STORY <span className="ml-1">→</span>
+                  READ CASE STUDY <span className="ml-1">→</span>
                 </a>
             </div>
           </div>
@@ -228,7 +235,7 @@ export default function CasesStudiesResource() {
                   <div className="text-sm md:text-base font-normal mb-5">Every project is a new journey. If you&apos;re facing a unique operational or technical challenge, we&apos;re ready to listen. Let&apos;s talk about how we can build your success story.</div>
                   <div className="flex gap-3 flex-wrap">
                     <a
-                      href="#"
+                      href="/schedule-a-consultation"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                       style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                     >

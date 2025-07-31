@@ -92,18 +92,18 @@ export default function UseCasesResource() {
         </div>
       </section>
 
-      <ScrollFadeSection>
+      
       {/* Professionals Section */}
-      <section className="w-full py-12 px-4 sm:px-6 md:px-12 flex flex-col items-start">
+      <section className="w-full py-12 px-4 max-w-7xl mx-auto sm:px-6 md:px-12 flex flex-col items-start">
         <h1 
-          className="text-2xl md:text-4xl ml-4 font-bold mb-2 tracking-tight drop-shadow-md text-left md:text-left w-full bg-clip-text text-transparent"
+          className="text-2xl md:text-4xl ml-1 lg:mb-4 font-bold mb-2 tracking-tight drop-shadow-md text-left md:text-left w-full bg-clip-text text-transparent"
           style={{
             backgroundImage: 'linear-gradient(to top, #003399 0%, #003399 45%, #001133 55%, #001133 100%)'
           }}
         >
           Explore Our Work: Proven Results Across Industries
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full lg:w-full max-w-auto mx-auto">
           {/* Retail & Ecommerce Card */}
           <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
             <div className="px-6 pt-0 pl-0 pr-0 w-full">
@@ -252,7 +252,6 @@ export default function UseCasesResource() {
           
         </div>
       </section>
-      </ScrollFadeSection>
 
       {/* Pre Footer Section */}
       <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
@@ -273,7 +272,7 @@ export default function UseCasesResource() {
                   <div className="text-sm md:text-base font-normal mb-5">Every project is a new journey. If you&apos;re facing a unique operational or technical challenge, we&apos;re ready to listen. Let&apos;s talk about how we can build your success story.</div>
                   <div className="flex gap-3 flex-wrap">
                     <Link
-                      href="#"
+                      href="/schedule-a-consultation"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                       style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                     >

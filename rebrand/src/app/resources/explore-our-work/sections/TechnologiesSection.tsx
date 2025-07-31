@@ -22,7 +22,7 @@ export default function TechnologiesSection({
         {title}
       </h2>
       <p className="text-lg text-gray-800 mb-10 max-w-3xl mx-auto text-center">{description}</p>
-      <div className="flex flex-wrap justify-center gap-x-16 gap-y-10">
+      <div className="flex flex-wrap justify-center gap-x-10 gap-y-10">
         {technologies.map((tech, idx) => (
           <div key={idx} className="flex flex-col items-center w-40">
             {typeof tech.icon === 'string' ? (

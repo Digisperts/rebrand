@@ -141,7 +141,7 @@ export default function RealEstateExploreOurWork() {
         heading: "Ready to Dominate Your Real Estate Market?",
         subheading: "Stop losing leads to your competition. Let's build a website that works as hard as you do.",
         buttonText: "TALK TO AN EXPERT",
-        buttonHref: "#"
+        buttonHref: "/schedule-a-consultation"
       }}
       
     >

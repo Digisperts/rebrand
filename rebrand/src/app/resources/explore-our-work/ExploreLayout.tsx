@@ -7,6 +7,7 @@ import SolutionSection from './sections/SolutionSection';
 import ChatbotSection from './sections/ChatbotSection';
 import OutcomeSection from './sections/OutcomeSection';
 import TechnologiesSection from './sections/TechnologiesSection';
+import ProfessionalsSection from './sections/ProfessionalsSection';
 import PreFooterSection from './sections/PreFooterSection';
 
 export default function ExploreLayout({
@@ -34,6 +35,7 @@ export default function ExploreLayout({
       <ChatbotSection {...chatbotData} />
       <OutcomeSection {...outcomeData} />
       <TechnologiesSection {...technologiesData} />
+      <ProfessionalsSection />
       <PreFooterSection {...preFooterData} />
       {children}
       <Footer />

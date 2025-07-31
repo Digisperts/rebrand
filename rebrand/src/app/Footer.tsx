@@ -34,9 +34,9 @@ export default function Footer() {
             </div>
           </div>
           {/* What We Do Links */}
-          <div className="flex flex-col items-start w-full md:w-1/4 mb-8 md:mb-0">
+          <div className="flex flex-col items-start w-full md:w-1/3 mb-8 md:mb-0">
             <h4 className="text-white font-extrabold mb-2">What We Do</h4>
-            <ul className="p-6 w-full max-w-xs text-white flex flex-col gap-4">
+            <ul className="pt-6 w-full max-w-xs text-white flex flex-col gap-4">
               <li className="group">
                 <Link href="/what-we-do/software-development" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
                   Software Development
@@ -57,7 +57,7 @@ export default function Footer() {
           {/* Resources Links */}
           <div className="flex flex-col items-start w-full md:w-1/4 mb-8 md:mb-0">
             <h4 className="text-white font-extrabold mb-2">Resources</h4>
-            <ul className="p-6 w-full max-w-xs text-white flex flex-col gap-4">
+            <ul className="pt-6 w-full max-w-xs text-white flex flex-col gap-4">
               <li className="group">
                 <Link href="/resources/case-studies" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
                   Case Studies
@@ -86,7 +86,7 @@ export default function Footer() {
           {/* Company Links */}
           <div className="flex flex-col items-start w-full md:w-1/4 mb-8 md:mb-0">
             <h4 className="text-white font-extrabold mb-2">Company</h4>
-            <ul className="p-6 w-full max-w-xs text-white flex flex-col gap-4">
+            <ul className="pt-6 w-full max-w-xs text-white flex flex-col gap-4">
               <li className="group">
                 <Link href="/who-we-are" className="relative text-white hover:text-blue-500 transition-colors duration-300 ease-in-out">
                   Who We Are
@@ -107,7 +107,7 @@ export default function Footer() {
           {/* Contact Us Card */}
           <div className="flex flex-col items-start w-full md:w-1/4">
             <h4 className="text-white font-extrabold mb-2">Contact Us</h4>
-            <ul className="p-6 w-full max-w-xs text-white flex flex-col gap-4">
+            <ul className="pt-6 w-full max-w-xs text-white flex flex-col gap-4">
               <li className="flex items-start gap-3">
                 <FaEnvelope className="text-xl mt-1" />
                 <div>

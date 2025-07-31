@@ -91,6 +91,31 @@ export default function BusinessAutomation() {
     touchEndX.current = null;
   };
 
+  // --- HERO SLIDER CLICK LOGIC ---
+  const handleHeroAreaClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    if (x < rect.width / 2) {
+      // Left area: previous slide
+      setPrevHeroIndex(heroIndex);
+      setHeroIndex((i) => (i - 1 + heroSlides.length) % heroSlides.length);
+      setIsFading(true);
+      setTimeout(() => {
+        setIsFading(false);
+        setPrevHeroIndex(null);
+      }, 900);
+    } else {
+      // Right area: next slide
+      setPrevHeroIndex(heroIndex);
+      setHeroIndex((i) => (i + 1) % heroSlides.length);
+      setIsFading(true);
+      setTimeout(() => {
+        setIsFading(false);
+        setPrevHeroIndex(null);
+      }, 900);
+    }
+  };
+
   return (
     <>
       <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
@@ -107,6 +132,19 @@ export default function BusinessAutomation() {
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
+          <div
+          onClick={handleHeroAreaClick}
+          style={{ cursor: "pointer" }}
+        >
+          {/* Overlay left/right click areas */}
+          <div
+            className="absolute left-0 top-0 h-full w-1/2 z-30"
+            style={{ cursor: "pointer" }}
+          />
+          <div
+            className="absolute right-0 top-0 h-full w-1/2 z-30"
+            style={{ cursor: "pointer" }}
+          />
           {/* Fade transition: render current and previous slide if fading */}
           {prevHeroIndex !== null && isFading && (
             <div
@@ -157,17 +195,18 @@ export default function BusinessAutomation() {
               />
             ))}
           </div>
+          </div>
         </section>
 
         {/* Section 2: Built for You */}
         <section className="py-16 px-6 text-left">
-          <h2 className="mb-7 pl-6 text-left">
+          <h2 className="mb-7 text-left">
             <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-black to-blue-900 bg-clip-text text-transparent">
               Optimize What Slows You Down.
             </span>
           </h2>
 
-          <p className="text-gray-600 font-semibold pl-6 text-left max-w-7xl w-full mb-12">
+          <p className="text-gray-600 font-semibold text-left max-w-auto w-full md:w-full lg:w-full mb-12">
             Are manual processes and repetitive tasks slowing your business down? helps you reclaim that 
             power. As your trusted digital transformation partner, we specialize in creating tailored 
             automation solutions that address your specific inefficiencies. We go beyond simple fixes to 
@@ -258,6 +297,7 @@ export default function BusinessAutomation() {
                   </p>
                   <Link
                     href="#"
+                    onClick={(e) => e.preventDefault()}
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
@@ -289,6 +329,7 @@ export default function BusinessAutomation() {
                   </p>
                   <Link
                     href="#"
+                    onClick={(e) => e.preventDefault()}
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
@@ -321,6 +362,7 @@ export default function BusinessAutomation() {
                   </p>
                   <Link
                     href="#"
+                    onClick={(e) => e.preventDefault()}
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
@@ -349,6 +391,7 @@ export default function BusinessAutomation() {
                   </p>
                   <Link
                     href="#"
+                    onClick={(e) => e.preventDefault()}
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
@@ -410,6 +453,7 @@ export default function BusinessAutomation() {
                 <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
                 <Link
                   href="#"
+                  onClick={(e) => e.preventDefault()}
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
@@ -433,7 +477,7 @@ export default function BusinessAutomation() {
             <div className="absolute inset-0 bg-black/40 z-10" />
             <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 py-6 md:py-10">
               <h2 className="text-lg md:text-2xl lg:text-4xl font-extrabold mb-4 text-center">The Proof is in the Productivity</h2>
-              <p className="max-w-[950px] mx-auto text-left text-white text-sm md:text-lg font-normal">
+              <p className="max-w-auto mx-auto text-center text-white text-sm md:text-lg font-normal">
                 Our automation solutions have a proven track record of helping our clients achieve remarkable results, including significant increases in productivity, higher customer retention, and substantial cost savings in administrative overhead.
               </p>
             </div>
@@ -520,7 +564,7 @@ export default function BusinessAutomation() {
                     <div className="text-sm md:text-base font-normal mb-5">Stop losing time to repetitive tasks. Let&apos;s build a more efficient, productive, and powerful future for your business.</div>
                     <div className="flex gap-3 flex-wrap">
                       <Link
-                        href="#"
+                        href="/schedule-a-consultation"
                         className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                         style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                       >

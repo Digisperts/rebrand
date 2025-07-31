@@ -90,9 +90,9 @@ export default function Home() {
     },
     {
       image: "/images/homepage/hero3.jpg",
-      heading1: "Visualize The",
-      heading2: "Outcome.",
-      desc: "Experience seamless operations, engaged customers, and a business fully prepared for tomorrow&apos;s opportunities.",
+      heading1: "Visualize The Outcome",
+      // heading2: "Outcome.",
+      desc: "Experience seamless operations, engaged customers, and a business fully prepared for tomorrow's opportunities.",
     },
   ];
   // Cross-fade state
@@ -709,11 +709,11 @@ export default function Home() {
           >
             {/* Overlay left/right click areas */}
             <div
-              className="absolute left-0 top-0 h-full w-1/2 z-50"
+              className="absolute left-0 top-0 h-full w-1/2 z-0"
               style={{ cursor: "pointer" }}
             />
             <div
-              className="absolute right-0 top-0 h-full w-1/2 z-50"
+              className="absolute right-0 top-0 h-full w-1/2 z-0"
               style={{ cursor: "pointer" }}
             />
             {slides.map((slide, idx) => (
@@ -751,12 +751,12 @@ export default function Home() {
                       {slide.desc}
                     </div>
                     <div className="flex gap-3 flex-wrap">
-                      <button className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition">
+                      <Link href="#" className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition">
                         VIEW CASE STUDY
-                      </button>
-                      <button className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">
+                      </Link>
+                      <Link href="#" className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">
                         VIEW USE CASES
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -1095,7 +1095,7 @@ export default function Home() {
       {/* Pre Footer Section */}
       <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
         <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-          <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+          <div className="relative w-full h-[280px] md:h-[370px] flex items-center justify-center">
             <Image
               src="/images/footer.jpg"
               alt="Footer Background"
@@ -1119,7 +1119,7 @@ export default function Home() {
                   </div>
                   <div className="flex gap-3 flex-wrap">
                     <Link
-                      href="#"
+                      href="/schedule-a-consultation"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                       style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
                     >

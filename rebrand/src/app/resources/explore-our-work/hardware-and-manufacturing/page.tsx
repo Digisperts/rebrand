@@ -142,7 +142,7 @@ export default function HardwareAndManufacturingExploreOurWork() {
         heading: "Need a Software Partner for Your Hardware?",
         subheading: "Focus on what you do best. Let us build the software that makes your hardware shine.",
         buttonText: "TALK TO AN EXPERT",
-        buttonHref: "#"
+        buttonHref: "/schedule-a-consultation"
       }}
       
     >

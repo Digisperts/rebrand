@@ -141,7 +141,7 @@ export default function SaasAndTechnologyExploreOurWork() {
         heading: "Ready to Automate Your Customer Support?",
         subheading: "Stop answering the same questions over and over. Let's build an AI chatbot that works for you 24/7.",
         buttonText: "TALK TO AN EXPERT",
-        buttonHref: "#"
+        buttonHref: "/schedule-a-consultation"
       }}
       
     >
