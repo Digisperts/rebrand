@@ -66,9 +66,11 @@ export default function CareerResource() {
                         transform: `rotate(${angle}deg) translate(180px) rotate(-${angle}deg) translate(-50%, -50%)`,
                       }}
                     >
-                      <img
+                      <Image
                         src={`/images/careers/outer/${n}-outer.jpg`}
                         alt=""
+                        width={80}
+                        height={80}
                         className="w-12 h-12 rounded-full border-4 border-white shadow-lg object-cover"
                       />
                     </div>
@@ -90,9 +92,11 @@ export default function CareerResource() {
                         transform: `rotate(${angle}deg) translate(120px) rotate(-${angle}deg) translate(-50%, -50%)`,
                       }}
                     >
-                      <img
+                      <Image
                         src={`/images/careers/middle/${n}-middle.jpg`}
                         alt=""
+                        width={80}
+                        height={80}
                         className="w-10 h-10 rounded-full border-4 border-white shadow-lg object-cover"
                       />
                     </div>
@@ -114,9 +118,11 @@ export default function CareerResource() {
                         transform: `rotate(${angle}deg) translate(70px) rotate(-${angle}deg) translate(-50%, -50%)`,
                       }}
                     >
-                      <img
+                      <Image
                         src={`/images/careers/inner/${n}-inner.jpg`}
                         alt=""
+                        width={80}
+                        height={80}
                         className="w-7 h-7 rounded-full border-2 border-white shadow-lg object-cover"
                       />
                     </div>
@@ -126,9 +132,11 @@ export default function CareerResource() {
 
               {/* CENTER LOGO */}
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40">
-                <img
+                <Image
                   src="/images/careers/favicon.png"
                   alt="Digisperts Logo"
+                  width={80}
+                  height={80}
                   className="w-12 h-12 rounded-xl shadow-xl object-cover"
                 />
               </div>
