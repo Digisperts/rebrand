@@ -237,7 +237,7 @@ export default function SoftwareDevelopment() {
               Our Strategic Approach to Software Development
             </h2>
 
-            <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
+            <p className="text-black font-semibold text-sm  text-left max-w-2xl mx-auto mb-1 font-19px">
               Our process is built on a foundation of partnership and a commitment to <br/> quality excellence.
             </p>
             {/* Collaborative Discovery */}
@@ -247,7 +247,7 @@ export default function SoftwareDevelopment() {
               </span>
               <div className="flex flex-col text-left">
                 <h3 className="text-lg font-bold text-blue-900 mb-1">Collaborative Discovery</h3>
-              <p className="text-[#000000]">We begin by listening. Our client-centric approach means we work closely with you to understand your goals, workflows, and challenges, ensuring the final product is a perfect fit.</p>
+              <p className="text-sm text-[#000000]">We begin by listening. Our client-centric approach means we work closely with you to understand your goals, workflows, and challenges, ensuring the final product is a perfect fit.</p>
               </div>
             </div>
             {/* Innovative and Agile Build */}
@@ -257,7 +257,7 @@ export default function SoftwareDevelopment() {
               </span>
               <div className="flex flex-col text-left">
                 <h3 className="text-lg font-bold text-blue-900 mb-1">Innovative and Agile Build</h3>
-              <p className="text-[#000000]">We leverage cutting-edge technologies and an agile <br/> development process. This allows us to remain <br/> adaptable , incorporate feedback, and deliver <br/> innovative solutions efficiently.</p>
+              <p className="text-sm text-[#000000]">We leverage cutting-edge technologies and an agile <br/> development process. This allows us to remain <br/> adaptable , incorporate feedback, and deliver <br/> innovative solutions efficiently.</p>
               </div>
             </div>
             {/* Security and Scalability */}
@@ -267,7 +267,7 @@ export default function SoftwareDevelopment() {
               </span>
               <div className="flex flex-col text-left">
                 <h3 className="text-lg font-bold text-blue-900 mb-1">Security and Scalability</h3>
-              <p className="text-[#000000]">We bake in enterprise-grade security and build for scalability from day one, empowering your business with a secure and future-proof technological foundation.</p>
+              <p className="text-sm text-[#000000]">We bake in enterprise-grade security and build for scalability from day one, empowering your business with a secure and future-proof technological foundation.</p>
               </div>
             </div>
           </div>

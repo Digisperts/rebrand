@@ -215,7 +215,7 @@ export default function DigitalMarketing() {
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image 
-              src="/images/what-we-do/digital-marketing/digital-marketing-h3.jpg" 
+              src="/images/what-we-do/digital-marketing/digital-marketing-h2.jpg" 
               alt="Laptop" 
               width={500} 
               height={500} 
@@ -226,7 +226,7 @@ export default function DigitalMarketing() {
                 Our Strategic Approach to Digital Marketing
               </h2>
 
-              <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
+              <p className="text-black font-semibold text-sm text-left max-w-2xl mx-auto mb-1 font-19px">
                 Our approach is rooted in partnership and a commitment to delivering 
                 transparent, tangible results.
               </p>
@@ -237,7 +237,7 @@ export default function DigitalMarketing() {
                 </span>
                 <div className="flex flex-col text-left">
                   <h3 className="text-lg font-bold text-blue-900 mb-1">Deep Dive & Strategy.</h3>
-                  <p className="text-[#000000]">Our process begins with a deep understanding of your business, your audience, and your objectives. This client-centric approach ensures we develop a tailored strategy that aligns perfectly with your brand.</p>
+                  <p className="text-sm text-[#000000]">Our process begins with a deep understanding of your business, your audience, and your objectives. This client-centric approach ensures we develop a tailored strategy that aligns perfectly with your brand.</p>
                 </div>
               </div>
               {/* Execute & Engage */}
@@ -247,7 +247,7 @@ export default function DigitalMarketing() {
                 </span>
                 <div className="flex flex-col text-left">
                   <h3 className="text-lg font-bold text-blue-900 mb-1">Execute & Engage</h3>
-                  <p className="text-[#000000]">We launch innovative, multi-channel campaigns designed to capture attention and convert interest into action. From compelling content to targeted ads, every element is crafted with quality excellence in mind.</p>
+                  <p className="text-sm text-[#000000]">We launch innovative, multi-channel campaigns designed to capture attention and convert interest into action. From compelling content to targeted ads, every element is crafted with quality excellence in mind.</p>
                 </div>
               </div>
               {/* Measure & Refine */}
@@ -257,7 +257,7 @@ export default function DigitalMarketing() {
                 </span>
                 <div className="flex flex-col text-left">
                   <h3 className="text-lg font-bold text-blue-900 mb-1">Measure & Refine</h3>
-                  <p className="text-[#000000]">We believe in transparency and continuous learning. We meticulously track performance, providing you with clear analytics and insights to constantly refine our approach and maximize your return on investment.</p>
+                  <p className="text-sm text-[#000000]">We believe in transparency and continuous learning. We meticulously track performance, providing you with clear analytics and insights to constantly refine our approach and maximize your return on investment.</p>
                 </div>
               </div>
             </div>

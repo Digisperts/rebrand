@@ -215,7 +215,7 @@ export default function BusinessAutomation() {
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <Image 
-              src="/images/what-we-do/business-auto/robot-left.jpg" 
+              src="/images/what-we-do/business-auto/business-auto-h2.jpg" 
               alt="Laptop" 
               width={500} 
               height={400} 
@@ -226,7 +226,7 @@ export default function BusinessAutomation() {
                 Our Strategic Approach to Business Automation
               </h2>
 
-              <p className="text-black text-left max-w-2xl mx-auto mb-1 font-19px">
+              <p className="text-black text-sm font-semibold text-left max-w-2xl mx-auto mb-1 font-19px">
                 Our commitment to Quality Excellence is reflected in our meticulous, <br/>
                 client-centric process.
               </p>
@@ -237,7 +237,7 @@ export default function BusinessAutomation() {
                 </span>
                 <div className="flex flex-col text-left">
                   <h3 className="text-lg font-bold text-blue-900 mb-1">Analyze & Identify</h3>
-                  <p className="text-[#000000]">We begin by thoroughly analyzing your existing workflows to identify the key areas where automation can deliver the most significant impact on cost, time, and accuracy.</p>
+                  <p className="text-sm text-[#000000]">We begin by thoroughly analyzing your existing workflows to identify the key areas where automation can deliver the most significant impact on cost, time, and accuracy.</p>
                 </div>
               </div>
               {/* Design & Implement */}
@@ -247,7 +247,7 @@ export default function BusinessAutomation() {
                 </span>
                 <div className="flex flex-col text-left">
                   <h3 className="text-lg font-bold text-blue-900 mb-1">Design & Implement</h3>
-                  <p className="text-[#000000]">We leverage innovative, cutting-edge technology to design and implement custom automation solutions, from intelligent chatbots to financial controls, that integrate seamlessly with your existing systems.</p>
+                  <p className="text-sm text-[#000000]">We leverage innovative, cutting-edge technology to design and implement custom automation solutions, from intelligent chatbots to financial controls, that integrate seamlessly with your existing systems.</p>
                 </div>
               </div>
               {/* Empower & Optimize */}
@@ -257,7 +257,7 @@ export default function BusinessAutomation() {
                 </span>
                 <div className="flex flex-col text-left">
                   <h3 className="text-lg font-bold text-blue-900 mb-1">Empower & Optimize</h3>
-                <p className="text-[#000000]">Our goal is to empower your business. We ensure your team is equipped to use the new tools effectively and we continuously monitor performance to optimize for peak efficiency.</p>
+                <p className="text-sm text-[#000000]">Our goal is to empower your business. We ensure your team is equipped to use the new tools effectively and we continuously monitor performance to optimize for peak efficiency.</p>
                 </div>
               </div>
             </div>
