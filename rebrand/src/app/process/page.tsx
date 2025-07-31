@@ -16,7 +16,7 @@ export default function HowWeWorkPage() {
       {/* Hero Section */}
       <section className="relative w-full min-h-[520px] flex items-stretch overflow-hidden">
         <div className="flex w-full min-h-[520px] relative">
-          {/* Text box overlays black bg and hero image, always visible */}
+          {/* Text box overlays black bg and hero image and always visible */}
           <div className="absolute left-0 top-0 h-full w-full flex items-center justify-center pointer-events-none z-20">
             <div className="relative py-6 sm:py-8 md:py-12 max-w-[700px] w-full pointer-events-auto text-center">
               <HeroFadeIn>
