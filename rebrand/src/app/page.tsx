@@ -787,22 +787,22 @@ export default function Home() {
                     </div>
                     <div className="flex gap-3 flex-wrap">
                       {slide.linkstudy?.endsWith(".pdf") ? (
-  <a
-    href={slide.linkstudy}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition"
-  >
-    VIEW CASE STUDY
-  </a>
-) : (
-  <Link
-    href={slide.linkstudy ?? "#"}
-    className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition"
-  >
-    VIEW CASE STUDY
-  </Link>
-)}
+                        <a
+                          href={slide.linkstudy}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition"
+                        >
+                          VIEW CASE STUDY
+                        </a>
+                      ) : (
+                        <Link
+                          href={slide.linkstudy ?? "#"}
+                          className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition"
+                        >
+                          VIEW CASE STUDY
+                        </Link>
+                      )}
 
                       <Link href={slide.linkcase ?? "#"} className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">
                         VIEW USE CASE
@@ -846,7 +846,7 @@ export default function Home() {
           <ScrollFadeSection>
             <div className="max-w-6xl mx-auto border p-8 bg-[#EAF1FF] shadow-xl">
               <p className="text-[#3C3C3CE5] text-base font-medium mb-6 text-left">
-                The impact of Digisperts on our hospital's operations has been profound. Managing patient records and appointment schedules was cumbersome and prone to error. Their team designed and implemented a custom patient management platform that is both secure and incredibly intuitive for our staff. This has not only streamlined our administrative workflow but, most importantly, has reduced patient wait times and allowed our doctors to focus more on providing quality care.
+                The impact of Digisperts on our hospital&apos;s operations has been profound. Managing patient records and appointment schedules was cumbersome and prone to error. Their team designed and implemented a custom patient management platform that is both secure and incredibly intuitive for our staff. This has not only streamlined our administrative workflow but, most importantly, has reduced patient wait times and allowed our doctors to focus more on providing quality care.
               </p>
               <div className="text-left text-[#1E1E1E] font-bold">
                 Dr. Naboth, Medical Director
@@ -857,7 +857,7 @@ export default function Home() {
           <ScrollFadeSection>
             <div className="max-w-6xl mt-10 mx-auto border p-8 bg-[#EAF1FF] shadow-xl">
               <p className="text-[#3C3C3CE5] text-base font-medium mb-6 text-left">
-                with Digisperts was a pivotal moment for our growth. Before them, our manual reconciliation process was a significant bottleneck. Their team didn't just offer an off-the-shelf solution; they took the time to understand our unique challenges and built a streamlined fintech system that automated everything. We've slashed our processing time by 40% and gained real-time financial insights that are crucial for decision-making. I can't recommend them enougPartneringh.
+                with Digisperts was a pivotal moment for our growth. Before them, our manual reconciliation process was a significant bottleneck. Their team didn&apos;t just offer an off-the-shelf solution; they took the time to understand our unique challenges and built a streamlined fintech system that automated everything. We&apos;ve slashed our processing time by 40% and gained real-time financial insights that are crucial for decision-making. I can&apos;t recommend them enough.
               </p>
               <div className="text-left text-[#1E1E1E] font-bold">
                 Mr. Rajj, Operations, Fintech Solution.
