@@ -128,8 +128,8 @@ export default function CasesStudiesResource() {
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Modernize Your Cooperative with a Digital AgriTech Platform</h5>
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">Learn how a custom digital platform brought an agricultural co-op into the modern age, providing 100% produce traceability, automating payments, and reducing administrative time by 80%.</p>
               <a
-                  href="/resources/explore-our-work/agriculture"
-                  onClick={(e) => e.preventDefault()}
+                  href="/images/case-studies/agriculturecard.pdf"
+                  target="_blank" rel='noopener noreferrer'
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
