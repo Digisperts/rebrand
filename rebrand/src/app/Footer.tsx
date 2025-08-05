@@ -19,18 +19,30 @@ export default function Footer() {
               priority
             />
             <div className="flex space-x-3 mt-2">
-              <Link href="#" aria-label="Instagram" className="bg-[#e8bebe] rounded-full p-1 shadow">
+              <a href="https://www.instagram.com/digisperts?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram" className="bg-[#e8bebe] rounded-full p-1 shadow">
                 <Image src="/images/instagram.png" alt="Instagram" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="LinkedIn" className="bg-[#3F83F8] rounded-full p-1 shadow">
+              </a>
+              <a href="https://www.linkedin.com/company/digisperts-tech/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn" className="bg-[#3F83F8] rounded-full p-1 shadow">
                 <Image src="/images/linkedin.png" alt="LinkedIn" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="X" className="bg-[#4B5563] rounded-full p-1 shadow">
+              </a>
+              <a href="https://x.com/digisperts?s=21" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X" className="bg-[#4B5563] rounded-full p-1 shadow">
                 <Image src="/images/x.png" alt="X" width={24} height={24} />
-              </Link>
-              <Link href="#" aria-label="Facebook" className="bg-[#A4CAFE] rounded-full p-1 shadow">
+              </a>
+              <a href="https://web.facebook.com/digisperts/?viewas=100000686899395" 
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook" className="bg-[#A4CAFE] rounded-full p-1 shadow">
                 <Image src="/images/facebook.png" alt="Facebook" width={24} height={24} />
-              </Link>
+              </a>
             </div>
           </div>
           {/* What We Do Links */}
