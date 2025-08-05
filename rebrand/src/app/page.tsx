@@ -58,7 +58,8 @@ export default function Home() {
       image: "/images/homepage/finance-slide7.webp",
       title: "Finance",
       heading: "Fintech Solutions for Growth and Insight.",
-      desc: "We streamline financial processes,  create finance tracking system and unlock growth potential for businesses of all sizes.",
+      link: "/schedule-a-consultation",
+      desc: "We streamline financial processes, create finance tracking system and unlock growth potential for businesses of all sizes.",
     },
   ];
   const [active, setActive] = useState(0);
@@ -751,7 +752,7 @@ export default function Home() {
                       {slide.desc}
                     </div>
                     <div className="flex gap-3 flex-wrap">
-                      <Link href="#" className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition">
+                      <Link href={slide.link ?? "#"} className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition">
                         VIEW CASE STUDY
                       </Link>
                       <Link href="#" className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">
