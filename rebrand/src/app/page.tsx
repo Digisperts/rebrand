@@ -18,48 +18,83 @@ import Headlines from "./components/what-we-do-HeadlinesSection";
 
 export default function Home() {
   const slides = [
-    {
-      image: "/images/homepage/agriculture-slide1.webp",
-      title: "Agriculture",
-      heading: "Your voice gets heard, the Green world thrives.",
-      desc: "Digisperts revolutionizes agriculture through technology. From precision farming to sustainable practices, we cultivate a future where technology meets the soil.",
-    },
-    {
-      image: "/images/homepage/technology-slide2.webp",
-      title: "Technology",
-      heading: "Building a Better Digital Future, Together.",
-      desc: "We drive healthcare forward with digital solutions, AI-powered diagnostics, and telehealth platforms for accessible, personalized care.",
-    },
-    {
-      image: "/images/homepage/real-estate-slide3.webp",
-      title: "Real Estate",
-      heading: "Building tomorrow, redefining real estate solutions.",
-      desc: "Our solutions elevate property management, streamline processes, and enhance the overall real estate experience.",
-    },
-    {
-      image: "/images/homepage/health-slide4.webp",
-      title: "Health",
-      heading: "Improving Lives, One Innovation at a Time.",
-      desc: "We drive healthcare forward with digital solutions, AI-powered diagnostics, and telehealth platforms for accessible, personalized care.",
-    },
-    {
-      image: "/images/homepage/transportation-slide5.webp",
-      title: "Transportation",
-      heading: "Efficiency in Motion, Revolutionizing Transportation.",
-      desc: "At Digisperts, we pave the way for smarter transportation solutions. From logistics optimization to real-time tracking, we redefine efficiency in motion.",
-    },
+
     {
       image: "/images/homepage/retail-slide6.webp",
       title: "Retail and Consumer Goods",
       heading: "Empowering Retail Excellence, Driving Consumer Loyalty.",
-      desc: "Transforming retail brands with innovative strategies, data-driven engagement, and tailored solutions to boost sales, enhance loyalty, and ensure growth.",
+      desc: "Transforming retail brands with innovative strategies, data-driven engagement, and tailored solutions to boost sales, enhance loyalty, and ensure growth. ",
+      linkcase: "resources/explore-our-work/retail-and-ecommerce",
+      linkstudy: "/images/case-studies/retailcard.pdf",
+    },
+    {
+      image: "/images/homepage/Blockchain-slide2.jpg",
+      title: "Blockchain",
+      heading: "Engineering Trust, Securing the Future.",
+      desc: "We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..",
+      linkcase: "resources/explore-our-work/blockchain",
+      linkstudy: "",
     },
     {
       image: "/images/homepage/finance-slide7.webp",
       title: "Finance",
       heading: "Fintech Solutions for Growth and Insight.",
       desc: "We streamline financial processes,  create finance tracking system and unlock growth potential for businesses of all sizes.",
+      linkcase: "resources/explore-our-work/financial-services",
+      linkstudy: "",
     },
+    {
+      image: "/images/homepage/agriculture-slide1.webp",
+      title: "Agriculture",
+      heading: "Your voice gets heard, the Green world thrives.",
+      desc: "Digisperts revolutionizes agriculture through technology. From precision farming to sustainable practices, we cultivate a future where technology meets the soil.",
+      linkcase: "resources/explore-our-work/agriculture",
+      linkstudy: "/images/case-studies/agriculturecard.pdf",
+      
+    },
+    {
+      image: "/images/homepage/education-slide5.jpg",
+      title: "Education",
+      heading: "Powering the Future of Learning.",
+      desc: "We empower educational institutions with transformative technology. From immersive e-learning platforms to streamlined administrative workflows, we build intelligent solutions that personalize learning, boost student engagement, and create accessible knowledge for all.",
+      linkcase: "#",
+      linkstudy: "",
+    },
+    
+    {
+      image: "/images/homepage/technology-slide2.webp",
+      title: "Technology",
+      heading: "Building a Better Digital Future, Together.",
+      desc: "We drive healthcare forward with digital solutions, AI-powered diagnostics, and telehealth platforms for accessible, personalized care.",
+      linkcase: "resources/explore-our-work/saas-and-technology",
+      linkstudy: "/images/case-studies/technology.pdf",
+    },
+    {
+      image: "/images/homepage/real-estate-slide3.webp",
+      title: "Real Estate",
+      heading: "Building tomorrow, redefining real estate solutions.",
+      desc: "Our solutions elevate property management, streamline processes, and enhance the overall real estate experience.",
+      linkcase: "resources/explore-our-work/real-estate",
+      linkstudy: "",
+    },
+    {
+      image: "/images/homepage/health-slide4.webp",
+      title: "Health",
+      heading: "Improving Lives, One Innovation at a Time.",
+      desc: "We drive healthcare forward with digital solutions, AI-powered diagnostics, and telehealth platforms for accessible, personalized care.",
+      linkcase: "resources/explore-our-work/healthcare",
+      linkstudy: "",
+    },
+    {
+      image: "/images/homepage/transportation-slide5.webp",
+      title: "Transportation",
+      heading: "Efficiency in Motion, Revolutionizing Transportation.",
+      desc: "At Digisperts, we pave the way for smarter transportation solutions. From logistics optimization to real-time tracking, we redefine efficiency in motion.",
+      linkcase: "#",
+      linkstudy: "",
+    }
+    
+    
   ];
   const [active, setActive] = useState(0);
   const timeoutRef = useRef<number | null>(null);
@@ -455,7 +490,7 @@ export default function Home() {
                   href="/what-we-do/software-development"
                   className="text-blue-900 font-bold text-base flex items-center gap-1"
                 >
-                  DISCUSS YOUR PROJECT <span className="ml-1">→</span>
+                  SEE HOW WE WORK <span className="ml-1">→</span>
                 </Link>
               </div>
             </div>
@@ -513,7 +548,7 @@ export default function Home() {
                   href="/what-we-do/digital-marketing"
                   className="text-blue-900 font-bold text-base flex items-center gap-1"
                 >
-                  GET YOUR MARKETING PLAN <span className="ml-1">→</span>
+                  GET MORE INSIGHT <span className="ml-1">→</span>
                 </Link>
               </div>
             </div>
@@ -751,11 +786,26 @@ export default function Home() {
                       {slide.desc}
                     </div>
                     <div className="flex gap-3 flex-wrap">
-                      <Link href="#" className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition">
-                        VIEW CASE STUDY
-                      </Link>
-                      <Link href="#" className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">
-                        VIEW USE CASES
+                      {slide.linkstudy?.endsWith(".pdf") ? (
+  <a
+    href={slide.linkstudy}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition"
+  >
+    VIEW CASE STUDY
+  </a>
+) : (
+  <Link
+    href={slide.linkstudy ?? "#"}
+    className="bg-transparent border border-white text-white font-bold px-4 py-2 hover:bg-white hover:text-[#233876] transition"
+  >
+    VIEW CASE STUDY
+  </Link>
+)}
+
+                      <Link href={slide.linkcase ?? "#"} className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">
+                        VIEW USE CASE
                       </Link>
                     </div>
                   </div>
@@ -790,23 +840,16 @@ export default function Home() {
               className="text-2xl md:text-3xl font-extrabold bg-gradient-to-b from-[#001133] to-[#003399] bg-clip-text text-transparent mb-10 w-full max-w-6xl px-10 text-left"
               style={{ letterSpacing: 0 }}
             >
-              Reviews
+              What Our Clients Says
             </h2>
           </ScrollFadeSection>
           <ScrollFadeSection>
             <div className="max-w-6xl mx-auto border p-8 bg-[#EAF1FF] shadow-xl">
               <p className="text-[#3C3C3CE5] text-base font-medium mb-6 text-left">
-                Digisperts LLC has been instrumental in transforming our
-                digital marketing efforts. Their strategic approach and deep
-                understanding of our industry helped us reach our target
-                audience effectively. From creating engaging content to running
-                successful ad campaigns, they consistently delivered outstanding
-                results. Our online visibility and lead generation have
-                significantly improved, and we are thrilled to have digisperts
-                as our trusted digital marketing partner.
+                The impact of Digisperts on our hospital's operations has been profound. Managing patient records and appointment schedules was cumbersome and prone to error. Their team designed and implemented a custom patient management platform that is both secure and incredibly intuitive for our staff. This has not only streamlined our administrative workflow but, most importantly, has reduced patient wait times and allowed our doctors to focus more on providing quality care.
               </p>
               <div className="text-left text-[#1E1E1E] font-bold">
-                Alan, M CTO Social Cranes
+                Dr. Naboth, Medical Director
               </div>
             </div>
           </ScrollFadeSection>
@@ -814,17 +857,10 @@ export default function Home() {
           <ScrollFadeSection>
             <div className="max-w-6xl mt-10 mx-auto border p-8 bg-[#EAF1FF] shadow-xl">
               <p className="text-[#3C3C3CE5] text-base font-medium mb-6 text-left">
-                Digisperts LLC has been instrumental in transforming our
-                digital marketing efforts. Their strategic approach and deep
-                understanding of our industry helped us reach our target
-                audience effectively. From creating engaging content to running
-                successful ad campaigns, they consistently delivered outstanding
-                results. Our online visibility and lead generation have
-                significantly improved, and we are thrilled to have digisperts
-                as our trusted digital marketing partner.
+                with Digisperts was a pivotal moment for our growth. Before them, our manual reconciliation process was a significant bottleneck. Their team didn't just offer an off-the-shelf solution; they took the time to understand our unique challenges and built a streamlined fintech system that automated everything. We've slashed our processing time by 40% and gained real-time financial insights that are crucial for decision-making. I can't recommend them enougPartneringh.
               </p>
               <div className="text-left text-[#1E1E1E] font-bold">
-                Alan, M CTO Social Cranes
+                Mr. Rajj, Operations, Fintech Solution.
               </div>
             </div>
           </ScrollFadeSection>
