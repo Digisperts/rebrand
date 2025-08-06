@@ -857,7 +857,7 @@ export default function Home() {
           <ScrollFadeSection>
             <div className="max-w-6xl mt-10 mx-auto border p-8 bg-[#EAF1FF] shadow-xl">
               <p className="text-[#3C3C3CE5] text-base font-medium mb-6 text-left">
-                With Digisperts was a pivotal moment for our growth. Before them, our manual reconciliation process was a significant bottleneck. Their team didn&apos;t just offer an off-the-shelf solution; they took the time to understand our unique challenges and built a streamlined fintech system that automated everything. We&apos;ve slashed our processing time by 40% and gained real-time financial insights that are crucial for decision-making. I can&apos;t recommend them enough Partner.
+                With Digisperts was a pivotal moment for our growth. Before them, our manual reconciliation process was a significant bottleneck. Their team didn&apos;t just offer an off-the-shelf solution; they took the time to understand our unique challenges and built a streamlined fintech system that automated everything. We&apos;ve slashed our processing time by 40% and gained real-time financial insights that are crucial for decision-making. I can&apos;t recommend them enough Partnering.
               </p>
               <div className="text-left text-[#1E1E1E] font-bold">
                 Mr. Rajj, Operations, Fintech Solution.
