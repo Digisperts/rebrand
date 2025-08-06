@@ -33,7 +33,7 @@ export default function Home() {
       heading: "Engineering Trust, Securing the Future.",
       desc: "We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..",
       linkcase: "resources/explore-our-work/blockchain",
-      linkstudy: "",
+      linkstudy: "/images/case-studies/blockchaincard.pdf",
     },
     {
       image: "/images/homepage/finance-slide7.webp",

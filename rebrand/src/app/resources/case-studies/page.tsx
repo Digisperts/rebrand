@@ -204,8 +204,8 @@ export default function CasesStudiesResource() {
               <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">Engineering Trust, Securing the Future.</h5>
               <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..</p>
               <a
-                  href="/resources/explore-our-work/blockchain"
-                  onClick={(e) => e.preventDefault()}
+                  href="/images/case-studies/blockchaincard.pdf"
+                  target="_blank" rel='noopener noreferrer'
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
