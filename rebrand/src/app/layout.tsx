@@ -16,11 +16,11 @@ export const metadata = {
   openGraph: {
     title: "Digispert",
     description: "Empowering businesses with innovative digital solutions.",
-    url: "https://digisperts.com",
+    url: "https://www.digisperts.com",
     siteName: "Digispert",
     images: [
       {
-        url: "https://digisperts.com/preview.png",
+        url: "https://www.digisperts.com/preview.png",
         width: 1200,
         height: 630,
         alt: "Digispert Website Preview",
@@ -32,7 +32,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Digispert",
     description: "Empowering businesses with innovative digital solutions.",
-    images: ["https://digisperts.com/preview.png"],
+    images: ["https://www.digisperts.com/preview.png"],
   },
 };
 
