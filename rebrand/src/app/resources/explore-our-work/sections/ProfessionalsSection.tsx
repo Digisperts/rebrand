@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Slider from "react-slick";
-import { useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const industries = [
   {
@@ -100,13 +100,12 @@ function Arrow({
   return (
     <button
       onClick={onClick}
-      className={`absolute top-1/2 z-10 -translate-y-1/2 bg-white shadow-lg rounded-full w-14 h-14 flex items-center justify-center ${
-        direction === "left" ? "-left-8" : "-right-8"
-      }`}
+      className={`absolute top-1/2 z-10 -translate-y-1/2 bg-white shadow-lg rounded-full w-10 h-10 sm:w-14 sm:h-14 flex items-center justify-center
+        ${direction === "left" ? "left-1 sm:-left-8" : "right-1 sm:-right-8"}`}
       aria-label={direction === "left" ? "Previous" : "Next"}
       style={{ outline: "none", border: "none" }}
     >
-      <span className="text-3xl text-[#001F5C]">
+      <span className="text-2xl sm:text-3xl text-[#001F5C]">
         {direction === "left" ? "←" : "→"}
       </span>
     </button>
@@ -115,11 +114,16 @@ function Arrow({
 
 export default function ProfessionalsSection() {
   const pathname = usePathname();
-
   const currentSlug = pathname.split("/").pop();
   const filtered = industries.filter((item) => item.key !== currentSlug);
 
   const sliderRef = useRef<Slider>(null);
+  const [centerIndex, setCenterIndex] = useState(0);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const settings = {
     dots: true,
@@ -127,18 +131,21 @@ export default function ProfessionalsSection() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "0px",
     arrows: false,
     swipe: true,
     swipeToSlide: true,
     draggable: true,
+    beforeChange: (_old: number, next: number) => setCenterIndex(next),
     responsive: [
       {
-        breakpoint: 1024,
-        settings: { slidesToShow: 2 },
+        breakpoint: 1280,
+        settings: { slidesToShow: 2, centerMode: false },
       },
       {
-        breakpoint: 640,
-        settings: { slidesToShow: 1 },
+        breakpoint: 768,
+        settings: { slidesToShow: 1, centerMode: false },
       },
     ],
     appendDots: (dots: React.ReactNode) => (
@@ -147,14 +154,21 @@ export default function ProfessionalsSection() {
       </div>
     ),
     customPaging: () => (
-      <div className="w-3 h-3 rounded-full bg-[#003399] opacity-40 slick-dot [li.slick-active_&]:opacity-100" />
+      <div className="w-3 h-3 rounded-full bg-[#003399] opacity-40 slick-dot" />
     ),
   };
 
   return (
-    <section className="w-full py-12 max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex flex-col items-center relative">
+    <section className="w-full py-8 md:py-12 max-w-7xl mx-auto px-2 sm:px-4 md:px-8 flex flex-col items-center relative">
+      <style>
+        {`
+          .slick-dots li.slick-active .slick-dot {
+            opacity: 1 !important;
+          }
+        `}
+      </style>
       <h1
-        className="text-2xl md:text-3xl font-bold mb-8 tracking-tight drop-shadow-md text-left w-full bg-clip-text text-transparent"
+        className="text-xl sm:text-2xl md:text-3xl font-bold mb-6 md:mb-8 tracking-tight drop-shadow-md text-left w-full bg-clip-text text-transparent"
         style={{
           backgroundImage:
             "linear-gradient(to top, #003399 0%, #003399 45%, #001133 55%, #001133 100%)",
@@ -173,57 +187,73 @@ export default function ProfessionalsSection() {
           direction="right"
           onClick={() => sliderRef.current?.slickNext()}
         />
-        <Slider ref={sliderRef} {...settings}>
-          {filtered.map((industry) => (
-            <div key={industry.key} className="px-3">
-              <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto rounded-lg overflow-hidden h-[480px]">
-                {" "}
-                {/* Fixed card height */}
-                <div className="w-full">
-                  <Image
-                    src={industry.image}
-                    alt={industry.title}
-                    width={365}
-                    height={199}
-                    className="w-full h-[199px] object-cover"
-                  />
-                </div>
-                <div className="flex flex-col flex-1 px-6 pt-6 pb-7 w-full">
-                  <h3 className="font-bold text-xl mb-2 text-[#001F5C]">
-                    {industry.title}
-                  </h3>
-                  <h5 className="font-bold text-base mb-2 text-[#232323]">
-                    {industry.desc}
-                  </h5>
-                  <p
-                    className="text-[#3C3C3C] text-base font-medium mb-4 leading-snug overflow-hidden text-ellipsis"
+        {mounted && (
+          <Slider ref={sliderRef} {...settings}>
+            {filtered.map((industry, idx) => {
+              const isCenter =
+                idx === centerIndex % filtered.length ||
+                (centerIndex >= filtered.length &&
+                  idx === centerIndex % filtered.length);
+
+              return (
+                <div key={industry.key} className="px-1 sm:px-2 md:px-3">
+                  <div
+                    className={`bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[220px] sm:min-w-[260px] md:min-w-[280px] mx-auto rounded-lg overflow-hidden h-[420px] sm:h-[440px] md:h-[480px] transition-all duration-300 ${
+                      isCenter ? "scale-105 z-20 shadow-2xl" : "scale-95 z-10"
+                    }`}
                     style={{
-                      display: "-webkit-box",
-                      WebkitLineClamp: 3, // Show up to 3 lines
-                      WebkitBoxOrient: "vertical",
-                      minHeight: "66px", // Reserve space for 3 lines
-                      maxHeight: "66px",
+                      boxShadow: isCenter
+                        ? "0 12px 32px 0 rgba(0,51,153,0.18)"
+                        : "0 4px 16px 0 rgba(0,0,0,0.08)",
                     }}
                   >
-                    {industry.desc2}
-                  </p>
-                  <div className="mt-auto">
-                    <Link
-                      href={industry.href}
-                      className="border bg-[#003399] border-[#003399] px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
-                      style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
-                    >
-                      {industry.key === "saas-and-technology"
-                        ? "READ CASE STUDY"
-                        : "READ THE FULL STORY"}{" "}
-                      <span className="ml-1">→</span>
-                    </Link>
+                    <div className="w-full">
+                      <Image
+                        src={industry.image}
+                        alt={industry.title}
+                        width={365}
+                        height={199}
+                        className="w-full h-[140px] sm:h-[170px] md:h-[199px] object-cover"
+                      />
+                    </div>
+                    <div className="flex flex-col flex-1 px-3 sm:px-4 md:px-6 pt-4 sm:pt-5 md:pt-6 pb-3 sm:pb-6 md:pb-7 w-full">
+                      <h3 className="font-bold text-base sm:text-lg md:text-xl mb-1 sm:mb-2 text-[#001F5C]">
+                        {industry.title}
+                      </h3>
+                      <h5 className="font-bold text-xs sm:text-sm md:text-base mb-1 sm:mb-2 text-[#232323]">
+                        {industry.desc}
+                      </h5>
+                      <p
+                        className="text-[#3C3C3C] text-xs sm:text-sm md:text-base font-medium mb-2 sm:mb-4 leading-snug overflow-hidden text-ellipsis"
+                        style={{
+                          display: "-webkit-box",
+                          WebkitLineClamp: 3,
+                          WebkitBoxOrient: "vertical",
+                          minHeight: "48px",
+                          maxHeight: "66px",
+                        }}
+                      >
+                        {industry.desc2}
+                      </p>
+                      <div className="mt-auto">
+                        <Link
+                          href={industry.href}
+                          className="border bg-[#003399] border-[#003399] px-3 py-2 sm:px-4 text-white font-bold text-xs sm:text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                          style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
+                        >
+                          {industry.key === "saas-and-technology"
+                            ? "READ CASE STUDY"
+                            : "READ THE FULL STORY"}{" "}
+                          <span className="ml-1">→</span>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
+              );
+            })}
+          </Slider>
+        )}
       </div>
     </section>
   );
