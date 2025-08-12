@@ -27,7 +27,7 @@ export default function Home() {
       linkstudy: "/images/case-studies/retailcard.pdf",
     },
     {
-      image: "/images/homepage/Blockchain-slide2.jpg",
+      image: "/images/homepage/blockchain-slide-2.jpg",
       title: "Blockchain",
       heading: "Engineering Trust, Securing the Future.",
       desc: "We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..",
