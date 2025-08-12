@@ -18,7 +18,6 @@ import Headlines from "./components/what-we-do-HeadlinesSection";
 
 export default function Home() {
   const slides = [
-
     {
       image: "/images/homepage/retail-slide6.webp",
       title: "Retail and Consumer Goods",
@@ -39,7 +38,7 @@ export default function Home() {
       image: "/images/homepage/finance-slide7.webp",
       title: "Finance",
       heading: "Fintech Solutions for Growth and Insight.",
-      desc: "We streamline financial processes,  create finance tracking system and unlock growth potential for businesses of all sizes.",
+      desc: "We streamline financial processes, create finance tracking system and unlock growth potential for businesses of all sizes.",
       linkcase: "resources/explore-our-work/financial-services",
       linkstudy: "",
     },
@@ -50,17 +49,16 @@ export default function Home() {
       desc: "Digisperts revolutionizes agriculture through technology. From precision farming to sustainable practices, we cultivate a future where technology meets the soil.",
       linkcase: "resources/explore-our-work/agriculture",
       linkstudy: "/images/case-studies/agriculturecard.pdf",
-      
     },
     {
-      image: "/images/homepage/education-slide5.jpg",
+      image: "/images/homepage/education-slide-5.jpg",
       title: "Education",
       heading: "Powering the Future of Learning.",
       desc: "We empower educational institutions with transformative technology. From immersive e-learning platforms to streamlined administrative workflows, we build intelligent solutions that personalize learning, boost student engagement, and create accessible knowledge for all.",
       linkcase: "#",
       linkstudy: "",
     },
-    
+
     {
       image: "/images/homepage/technology-slide2.webp",
       title: "Technology",
@@ -92,9 +90,7 @@ export default function Home() {
       desc: "At Digisperts, we pave the way for smarter transportation solutions. From logistics optimization to real-time tracking, we redefine efficiency in motion.",
       linkcase: "#",
       linkstudy: "",
-    }
-    
-    
+    },
   ];
   const [active, setActive] = useState(0);
   const timeoutRef = useRef<number | null>(null);
@@ -660,7 +656,9 @@ export default function Home() {
                 <span className="text-[#00297A] text-2xl font-semibold mb-1 mt-2">
                   <CountUpOnView end={100} duration={900} suffix="+" />
                 </span>
-                <span className="text-[#3C3C3C] font-medium text-sm">Clients</span>
+                <span className="text-[#3C3C3C] font-medium text-sm">
+                  Clients
+                </span>
               </div>
               {/* Completed Projects Card */}
               <div className="bg-[#FFFFFF] w-[200px] py-8 px-6 flex flex-col items-start">
@@ -690,7 +688,9 @@ export default function Home() {
                 <span className="text-[#00297A] text-2xl font-semibold mb-1 mt-2">
                   <CountUpOnView end={30000} duration={900} suffix="+" format />
                 </span>
-                <span className="text-[#3C3C3C] font-medium text-sm">Hours</span>
+                <span className="text-[#3C3C3C] font-medium text-sm">
+                  Hours
+                </span>
               </div>
               {/* Revenue Generated Card */}
               <div className="bg-[#FFFFFF] w-[200px] py-8 px-6 flex flex-col items-start">
@@ -804,7 +804,10 @@ export default function Home() {
                         </Link>
                       )}
 
-                      <Link href={slide.linkcase ?? "#"} className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition">
+                      <Link
+                        href={slide.linkcase ?? "#"}
+                        className="bg-transparent px-4 py-2 font-bold text-white underline underline-offset-2 decoration-white hover:bg-blue-50 hover:text-[#233876] hover:decoration-[#233876] hover:decoration-2 transition"
+                      >
                         VIEW USE CASE
                       </Link>
                     </div>
@@ -846,7 +849,14 @@ export default function Home() {
           <ScrollFadeSection>
             <div className="max-w-6xl mx-auto border p-8 bg-[#EAF1FF] shadow-xl">
               <p className="text-[#3C3C3CE5] text-base font-medium mb-6 text-left">
-                The impact of Digisperts on our hospital&apos;s operations has been profound. Managing patient records and appointment schedules was cumbersome and prone to error. Their team designed and implemented a custom patient management platform that is both secure and incredibly intuitive for our staff. This has not only streamlined our administrative workflow but, most importantly, has reduced patient wait times and allowed our doctors to focus more on providing quality care.
+                The impact of Digisperts on our hospital&apos;s operations has
+                been profound. Managing patient records and appointment
+                schedules was cumbersome and prone to error. Their team designed
+                and implemented a custom patient management platform that is
+                both secure and incredibly intuitive for our staff. This has not
+                only streamlined our administrative workflow but, most
+                importantly, has reduced patient wait times and allowed our
+                doctors to focus more on providing quality care.
               </p>
               <div className="text-left text-[#1E1E1E] font-bold">
                 Dr. Naboth, Medical Director
@@ -857,7 +867,14 @@ export default function Home() {
           <ScrollFadeSection>
             <div className="max-w-6xl mt-10 mx-auto border p-8 bg-[#EAF1FF] shadow-xl">
               <p className="text-[#3C3C3CE5] text-base font-medium mb-6 text-left">
-                With Digisperts was a pivotal moment for our growth. Before them, our manual reconciliation process was a significant bottleneck. Their team didn&apos;t just offer an off-the-shelf solution; they took the time to understand our unique challenges and built a streamlined fintech system that automated everything. We&apos;ve slashed our processing time by 40% and gained real-time financial insights that are crucial for decision-making. I can&apos;t recommend them enough Partnering.
+                With Digisperts was a pivotal moment for our growth. Before
+                them, our manual reconciliation process was a significant
+                bottleneck. Their team didn&apos;t just offer an off-the-shelf
+                solution; they took the time to understand our unique challenges
+                and built a streamlined fintech system that automated
+                everything. We&apos;ve slashed our processing time by 40% and
+                gained real-time financial insights that are crucial for
+                decision-making. I can&apos;t recommend them enough Partnering.
               </p>
               <div className="text-left text-[#1E1E1E] font-bold">
                 Mr. Rajj, Operations, Fintech Solution.
