@@ -1,12 +1,51 @@
 "use client";
+import { useState } from "react";
 import NavBar from "../nav";
 import Footer from "../Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { ChevronDownIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
 
 export default function BookACallPage() {
+
+   const [openService, setOpenService] = useState<number | null>(null);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const services = [
+    {
+      name: "Software Development",
+      activities: ["Custom Software", "API Development", "System Integration"]
+    },
+    {
+      name: "Website and App Development Services",
+      activities: ["UI/UX Design", "Frontend Development", "Backend Development"]
+    },
+    {
+      name: "Business Automations",
+      activities: ["Workflow Automation", "CRM Integration", "ERP Systems"]
+    },
+    {
+      name: "Marketing and Advertising Services",
+      activities: ["SEO", "Social Media Marketing", "Email Campaigns"]
+    },
+    {
+      name: "Enterprise Solutions",
+      activities: ["ERP Implementation", "Enterprise Security", "Data Management"]
+    },
+    {
+      name: "Block chain development Services",
+      activities: ["Smart Contracts", "DApp Development", "Blockchain Integration"]
+    },
+    {
+      name: "Others",
+      activities: ["Consulting", "Training"]
+    }
+  ];
+
+
+
   return (
     <div className="min-h-screen bg-white flex flex-col">
       <div className="fixed top-0 left-0 w-full z-50">
@@ -17,13 +56,15 @@ export default function BookACallPage() {
         {/* Form Card */}
         <div className="flex-1 flex flex-col justify-center items-center px-4 md:px-12 py-10">
           <div className="w-full max-w-md bg-white rounded-xl shadow-xl p-8">
-            <h2 className="text-lg md:text-3xl font-extrabold mb-6 -ml-5 leading-tight">
-              <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Book a Meet With Us<br /></span>
+            <h2 className="text-lg md:text-3xl font-extrabold mb-6 -ml-7 mt-5 leading-tight">
+              <span className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-gradient-to-b from-[#001133] to-[#003399] bg-clip-text text-transparent">Book a Meet With Us<br /></span>
             </h2>
             <form className="font-semibold space-y-5">
+
+              <h4 className="text-gray-500 "><span className="text-red-500">* </span> indicates required input</h4>
               {/* Name Row */}
               <div>
-                <label className="block font-bold text-gray-900 mb-1">Name</label>
+                <label className="block font-bold text-sm text-gray-900 mb-1">Name <span className="text-red-500">*</span></label>
                 <div className="flex gap-2">
                   <select className="border rounded px-2 py-2 w-1/4 text-gray-700 bg-white">
                     <option>Title</option>
@@ -38,12 +79,12 @@ export default function BookACallPage() {
               </div>
               {/* Email */}
               <div>
-                <label className="block font-bold text-gray-900 mb-1">Email</label>
+                <label className="block text-sm font-bold text-gray-900 mb-1">Email <span className="text-red-500">*</span></label>
                 <input type="email" placeholder="Companyemail23@gmail.com" className="border rounded px-2 py-2 w-full text-gray-700" />
               </div>
               {/* Phone */}
               <div>
-                <label className="block font-bold text-gray-900 mb-1">Phone number</label>
+                <label className="block font-bold text-sm text-gray-900 mb-1">Phone number <span className="text-red-500">*</span></label>
                 <div className="flex gap-2">
                   <select className="border rounded px-2 py-2 w-1/3 text-gray-700 bg-white">
                     <option>+234</option>
@@ -53,21 +94,101 @@ export default function BookACallPage() {
                   <input type="text" placeholder="1234567890" className="border rounded px-2 py-2 w-2/3 text-gray-700" />
                 </div>
               </div>
-              {/* Service */}
+              {/* Company */}
               <div>
-                <label className="block font-bold text-gray-900 mb-1">Choose a Service</label>
+                <label className="block font-bold text-sm text-gray-900 mb-1">Company <span className="text-red-500">*</span> </label>
+                <input type="text" placeholder="Company name" className="border rounded px-2 py-2 w-full text-gray-700" />
+              </div>
+
+              {/* Company Url */}
+              <div>
+                <label className="block font-bold text-sm text-gray-900 mb-1">Company Url <span className="text-red-500">*</span></label>
+                <input type="text" placeholder="E.g Digisperts.com" className="border rounded px-2 py-2 w-full text-gray-700" />
+              </div>
+
+              {/* Service */}
+              <div className="relative w-full">
+      {/* Label */}
+      <label className="block font-bold text-gray-900 mb-1">
+        Choose a Service <span className="text-red-500">*</span>
+      </label>
+
+      {/* Main Field */}
+      <div
+        onClick={() => setDropdownOpen(!dropdownOpen)}
+        className="border border-gray-500 rounded px-3 py-2 w-full bg-white cursor-pointer flex justify-between items-center hover:border-gray-600 focus-within:border-gray-600 focus-within:ring-1 focus-within:ring-gray-500 transition"
+      >
+        <span className="text-gray-500">Software Development</span>
+        <ChevronDownIcon
+          className={`h-5 w-5 text-gray-600 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+        />
+      </div>
+
+      {/* Dropdown */}
+      {dropdownOpen && (
+        <div className="absolute mt-1 w-full border rounded-lg bg-white shadow-lg z-50 max-h-80 overflow-auto">
+          {services.map((service, index) => (
+            <div key={index} className="border-b last:border-0">
+              {/* Service Row */}
+              <div
+                onClick={() => setOpenService(openService === index ? null : index)}
+                className="flex items-center justify-between px-3 py-2 hover:bg-gray-100 cursor-pointer"
+              >
+                <div className="flex items-center gap-2">
+                  <div className="w-6 h-6 border border-gray-300 flex items-center justify-center rounded-sm">
+                  <ChevronRightIcon
+                    className={`h-4 w-4 text-gray-700 transition-transform ${openService === index ? "rotate-90" : ""}`}
+                  />
+                  </div>
+                  <span className="text-gray-900 font-medium">{service.name}</span>
+                </div>
+              </div>
+
+              {/* Activities */}
+              {openService === index && (
+                <div className="bg-gray-50 pl-9 pr-3 py-2 space-y-1">
+                  {service.activities.map((activity, idx) => (
+                    <div
+                      key={idx}
+                      className="hover:bg-gray-200 px-2 py-1 rounded cursor-pointer text-gray-800 text-sm"
+                    >
+                      {activity}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+
+              {/* <div>
+                <label className="block font-bold text-gray-900 mb-1">Choose a Service <span className="text-red-500">*</span></label>
                 <select className="border rounded px-2 py-2 w-full text-gray-700 bg-white">
                   <option>Web and App Development</option>
                   <option>Software Development</option>
-                  <option>Project Management</option>
                   <option>Marketing and Advertising Services</option>
                   <option>Branding Services</option>
                   <option>Automation Services</option>
                   <option>Enterprise Solution</option>
                   <option>Others</option>
                 </select>
+              </div> */}
+              {/* What are you looking to build */}
+              <div>
+                <label className="inline-flex items-center text-sm font-bold text-gray-900 mb-1">
+                  <span>What are you looking to build with Digisperts?</span>
+                  <span className="text-red-500 ml-1 text-sm">*</span>
+                </label>
+                <textarea
+                placeholder="Share your vision with us here..."
+                className="border rounded px-2 py-2 w-full text-gray-700"
+                rows={4}
+                required/>
               </div>
-              {/* Budget */}
+
+              {/* Budget
               <div>
                 <label className="block font-bold text-gray-900 mb-1">Budget</label>
                 <select className="border rounded px-2 py-2 w-full text-gray-700 bg-white">
@@ -76,14 +197,10 @@ export default function BookACallPage() {
                   <option>$5000 - $10,000</option>
                   <option>Above $10,000</option>
                 </select>
-              </div>
-              {/* Company Url */}
-              <div>
-                <label className="block font-bold text-gray-900 mb-1">Company Url</label>
-                <input type="text" placeholder="E.g Digisperts.com" className="border rounded px-2 py-2 w-full text-gray-700" />
-              </div>
+              </div> */}
+              
               {/* Schedule a Consultation */}
-              <div>
+              {/* <div>
                 <label className="block font-bold text-gray-900 mb-1">Schedule a Consultation</label>
                 <select className="border rounded px-2 py-2 w-full text-gray-700 bg-white">
                   <option>Choose a Date and Time</option>
@@ -91,7 +208,20 @@ export default function BookACallPage() {
                   <option>Tomorrow 2:00 PM</option>
                   <option>Next Monday 11:00 AM</option>
                 </select>
+              </div> */}
+              {/* NDA Checkbox */}
+              <div className="flex items-center gap-2">
+                <input
+                type="checkbox"
+                id="nda"
+                className="border-gray-300 rounded"/>
+                <label htmlFor="nda" className="text-gray-900 text-sm">
+                  This Project requires an NDA.
+                </label>
+                
               </div>
+
+
               {/* Submit Button */}
               <div className="flex justify-end">
                 <Link
