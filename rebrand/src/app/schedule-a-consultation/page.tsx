@@ -113,7 +113,7 @@ export default function BookACallPage() {
 
               {/* Company Url */}
               <div>
-                <label className="block font-bold text-sm text-gray-900 mb-1">Company Url <span className="text-red-500">*</span></label>
+                <label className="block font-bold text-sm text-gray-900 mb-1">Company Url</label>
                 <input type="text" placeholder="E.g Digisperts.com" className="border rounded px-2 py-2 w-full text-gray-700" />
               </div>
 
