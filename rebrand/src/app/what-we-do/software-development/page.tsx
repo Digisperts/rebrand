@@ -297,8 +297,7 @@ export default function SoftwareDevelopment() {
                 We build powerful, secure web apps with robust back-ends and intuitive, visually appealing user interfaces. From enterprise dashboards to customer portals, our solutions are designed to streamline your operations.
               </p>
               <Link
-                href="#"
-                onClick={(e) => e.preventDefault()}
+                href="/schedule-a-consultation"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
               >
@@ -328,8 +327,7 @@ export default function SoftwareDevelopment() {
                   and delight your users.
                 </p>
                 <Link
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
+                  href="/schedule-a-consultation"
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
@@ -366,8 +364,7 @@ export default function SoftwareDevelopment() {
                   high-performance tools that enhance your core business functions.
                 </p>
                 <Link
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
+                  href="/schedule-a-consultation"
                   className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                 >
@@ -531,7 +528,7 @@ export default function SoftwareDevelopment() {
 
       {/* Pre Footer Section */}
       <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
-        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 lg:px-0">
           <div className="relative w-full h-[280px] md:h-[370px] flex items-center justify-center">
             <Image
               src="/images/footer.jpg"

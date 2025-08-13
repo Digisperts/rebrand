@@ -296,8 +296,7 @@ export default function BusinessAutomation() {
                     Operating Procedures (SOPs) to empower your team with immediate and accurate information.
                   </p>
                   <Link
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
+                    href="/schedule-a-consultation"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
@@ -328,8 +327,7 @@ export default function BusinessAutomation() {
                     insights.
                   </p>
                   <Link
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
+                    href="/schedule-a-consultation"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
@@ -361,8 +359,7 @@ export default function BusinessAutomation() {
                     unified view of your operations.
                   </p>
                   <Link
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
+                    href="/schedule-a-consultation"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
@@ -390,8 +387,7 @@ export default function BusinessAutomation() {
                     interactions, and personalizing the customer journey, improving retention and satisfaction.
                   </p>
                   <Link
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
+                    href="/schedule-a-consultation"
                     className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                     style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
                   >
@@ -548,8 +544,8 @@ export default function BusinessAutomation() {
 
         {/* Pre Footer Section */}
         <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
-          <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-            <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+          <div className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 lg:px-0">
+            <div className="relative w-full h-[280px] lg:h-[480px] md:h-[370px] flex items-center justify-center">
               <Image
                 src="/images/footer.jpg"
                 alt="Footer Background"

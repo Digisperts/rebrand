@@ -1,10 +1,10 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ChatbotSection({
   image,
-  alt
+  alt,
 }: {
   image: string;
   alt: string;
