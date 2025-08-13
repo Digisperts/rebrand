@@ -21,7 +21,7 @@ export default function HeroSection({
           height={600}
           className="w-full h-full object-cover"
         />
-        {/* Overlayed Content */}
+        {/* Overlay Content */}
         <div className="absolute inset-0 flex flex-col items-start justify-center px-4 text-left bg-black/80">
           <h1 className="text-xl md:text-4xl lg:text-5xl ml-20 font-bold mb-4">
             {title}
