@@ -85,13 +85,13 @@ export default function BookACallPage() {
                     <option>Dr</option>
                   </select>
                   <input type="text" placeholder="First name" className="border rounded px-2 py-2 w-1/2 text-gray-700" />
-                  <input type="text" placeholder="Last name" className="border rounded px-2 py-2 w-1/2 text-gray-700" />
+                  <input type="text" placeholder="Last name" className="border text-sm rounded px-2 py-2 w-1/2 text-gray-700" />
                 </div>
               </div>
               {/* Email */}
               <div>
                 <label className="block text-sm font-bold text-gray-900 mb-1">Email <span className="text-red-500">*</span></label>
-                <input type="email" placeholder="Companyemail23@gmail.com" className="border rounded px-2 py-2 w-full text-gray-700" />
+                <input type="email" placeholder="Companyemail23@gmail.com"  className="border text-sm rounded px-2 py-2 w-full text-gray-700" />
               </div>
               {/* Phone */}
               <div>
@@ -102,19 +102,19 @@ export default function BookACallPage() {
                     <option>+1</option>
                     <option>+44</option>
                   </select>
-                  <input type="text" placeholder="1234567890" className="border rounded px-2 py-2 w-2/3 text-gray-700" />
+                  <input type="text" placeholder="1234567890" className="border text-sm rounded px-2 py-2 w-2/3 text-gray-700" />
                 </div>
               </div>
               {/* Company */}
               <div>
                 <label className="block font-bold text-sm text-gray-900 mb-1">Company <span className="text-red-500">*</span> </label>
-                <input type="text" placeholder="Company name" className="border rounded px-2 py-2 w-full text-gray-700" />
+                <input type="text" placeholder="Company name" className="border text-sm rounded px-2 py-2 w-full text-gray-700" />
               </div>
 
               {/* Company Url */}
               <div>
                 <label className="block font-bold text-sm text-gray-900 mb-1">Company Url</label>
-                <input type="text" placeholder="E.g Digisperts.com" className="border rounded px-2 py-2 w-full text-gray-700" />
+                <input type="text" placeholder="E.g Digisperts.com" className="border rounded px-2 py-2 w-full text-sm text-gray-700" />
               </div>
 
               {/* Service */}
@@ -127,11 +127,11 @@ export default function BookACallPage() {
       {/* Main Field */}
       <div
         onClick={() => setDropdownOpen(!dropdownOpen)}
-        className="border border-gray-500 rounded px-3 py-2 w-full bg-white cursor-pointer flex justify-between items-center hover:border-gray-600 focus-within:border-gray-600 focus-within:ring-1 focus-within:ring-gray-500 transition"
+        className="border text-sm border-gray-500 rounded px-3 py-2 w-full bg-white cursor-pointer flex justify-between items-center hover:border-gray-600 focus-within:border-gray-600 focus-within:ring-1 focus-within:ring-gray-500 transition"
       >
         <span className="text-gray-500">Software Development</span>
         <ChevronDownIcon
-          className={`h-5 w-5 text-gray-600 transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
+          className={`h-5 w-5 text-gray-600 text-sm transition-transform ${dropdownOpen ? "rotate-180" : ""}`}
         />
       </div>
 
@@ -194,7 +194,7 @@ export default function BookACallPage() {
                 </label>
                 <textarea
                 placeholder="Share your vision with us here..."
-                className="border rounded px-2 py-2 w-full text-gray-700"
+                className="border text-sm rounded px-2 py-2 w-full text-gray-700"
                 rows={4}
                 required/>
               </div>
