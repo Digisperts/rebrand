@@ -23,10 +23,10 @@ export default function HeroSection({
         />
         {/* Overlayed Content */}
         <div className="absolute inset-0 flex flex-col items-start justify-center px-4 text-left bg-black/80">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl ml-20 font-bold mb-4">
+          <h1 className="text-xl md:text-4xl lg:text-5xl ml-20 font-bold mb-4">
             {title}
           </h1>
-          <p className="text-base text-left md:text-lg ml-20 max-w-auto mr-20">
+          <p className="text-sm text-left md:text-lg ml-20 max-w-auto mr-20">
             {subtitle}
           </p>
         </div>

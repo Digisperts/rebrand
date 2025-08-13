@@ -18,8 +18,8 @@ export default function PreFooterSection({
 }) {
   return (
     <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
-      <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-        <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+      <div className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 lg:px-0">
+        <div className="relative w-full h-[280px] lg:h-[480px] md:h-[370px] flex items-center justify-center">
           <Image
             src={backgroundImage}
             alt="Footer Background"

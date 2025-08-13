@@ -15,112 +15,143 @@ export default function UseCasesResource() {
 
       {/* Hero/Intro Section */}
       <section className="relative w-full bg-white pb-10">
-        <div className="max-w-8xl mx-auto px-4 w-full relative">
-          {/* Centered background image, not full width */}
-          <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
-            <div className="w-full max-w-8xl h-full relative">
-              <Image
-                src="/images/use-cases/use-case-bg.jpg"
-                alt="Background"
-                fill
-                className="object-cover object-center rounded-2xl"
-                style={{ opacity: 5.18 }}
-                priority
-              />
-            </div>
-          </div>
-          {/* Top Capsule And Headings */}
-          <div className="relative z-10 -ml-4 flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-10 w-full">
-            {/* Image At The Left */}
-            <div className="flex-shrink-0 flex items-center justify-center w-full md:w-auto">
-              <div className="relative w-[540px] h-[710px]">
-                <div
-                  className="absolute left-0 top-0 w-full h-full bg-white rounded-r-full rounded-l-[60px] shadow-xl"
-                  style={{
-                    borderTopLeftRadius: "60px",
-                    borderBottomLeftRadius: "60px",
-                  }}
-                />
-                <Image
-                  src="/images/use-cases/use-cases.jpg"
-                  alt="Use Cases"
-                  fill
-                  className="object-cover rounded-r-full rounded-l-[60px]"
-                  style={{
-                    borderTopLeftRadius: "60px",
-                    borderBottomLeftRadius: "60px",
-                  }}
-                  priority
-                />
-              </div>
-            </div>
-            {/* Headings To The Right */}
-            <div className="flex-1 flex flex-col justify-center items-start pl-0 md:pl-4 h-[710px]">
-              <ScrollFadeSection>
-                <h1
-                  className="text-2xl md:text-5xl font-extrabold mb-2 tracking-tight drop-shadow-md text-left md:text-center w-full bg-clip-text text-transparent"
-                  style={{
-                    backgroundImage:
-                      "linear-gradient(to top, #003399 0%, #003399 45%, #001133 55%, #001133 100%)",
-                  }}
-                >
-                  USE CASES
-                </h1>
-                <h2 className="text-[#3C3C3C] text-base md:text-lg font-extrabold mb-0 text-left md:text-center w-full">
-                  Solutions in Action: How we Engineer Business Success
-                </h2>
-              </ScrollFadeSection>
-            </div>
-          </div>
+  <div className="max-w-8xl mx-auto px-4 w-full relative">
+    {/* Background */}
+    <div className="absolute inset-0 flex justify-center items-center pointer-events-none z-0">
+      <div className="w-full max-w-8xl h-full relative">
+        <Image
+          src="/images/use-cases/use-case-bg.jpg"
+          alt="Background"
+          fill
+          className="object-cover object-center rounded-2xl"
+          style={{ opacity: 5.18 }}
+          priority
+        />
+      </div>
+    </div>
 
-          {/* Bottom Paragraphs And Capsule */}
-          <ScrollFadeSection>
-            <div className="relative z-10 flex flex-col-reverse md:flex-row items-center md:items-stretch gap-6 md:gap-10 w-full mt-8">
-              {/* Bottom Paragraphs To The Left */}
-              <div className="flex-1 flex flex-col ml-10 justify-center items-start">
-                <p className="text-[#3C3C3C] text-sm md:text-base font-semibold mb-2 leading-relaxed">
-                  Your challenges are unique, but the principles of success are
-                  universal: a deep understanding of your business, a
-                  transparent process, and a perfectly executed technical
-                  solution. While our commitment to client confidentiality is
-                  absolute, these use cases illustrate the real-world problems
-                  we solve and the tangible results we deliver every day.
-                </p>
-                <p className="text-[#3C3C3C] text-sm md:text-base font-semibold mb-2 leading-relaxed">
-                  Explore the stories below to see how we apply our expertise in
-                  custom software development, AI implementation, and business
-                  process automation to drive growth, efficiency, and innovation
-                  across industries. Find a challenge that mirrors your own and
-                  discover how we can engineer your success.
-                </p>
-              </div>
-              {/* Bottom Image Right */}
-              <div className="flex-shrink-0 flex items-center justify-center w-full md:w-auto">
-                <div className="relative w-[380px] h-[320px]">
-                  <div
-                    className="absolute left-0 top-0 w-full h-full bg-white rounded-l-full rounded-r-[60px] shadow-xl"
-                    style={{
-                      borderTopRightRadius: "60px",
-                      borderBottomRightRadius: "60px",
-                    }}
-                  />
-                  <Image
-                    src="/images/use-cases/use-case1.jpg"
-                    alt="Use Case 1"
-                    fill
-                    className="object-cover rounded-l-full rounded-r-[60px]"
-                    style={{
-                      borderTopRightRadius: "60px",
-                      borderBottomRightRadius: "60px",
-                    }}
-                    priority
-                  />
-                </div>
-              </div>
-            </div>
-          </ScrollFadeSection>
+    {/* Hero top */}
+    <div className="relative z-10 -ml-4 flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-10 w-full">
+      {/* Mobile stacked hero image */}
+      <div className="flex flex-col items-center md:hidden -mx-8">
+        <div className="relative w-full h-[400px]">
+          <Image
+            src="/images/use-cases/use-cases.jpg"
+            alt="Use Cases"
+            fill
+            className="object-cover rounded-none"
+            priority
+          />
         </div>
-      </section>
+        <h1
+          className="text-2xl font-extrabold mx-8 mt-4 tracking-tight drop-shadow-md text-center w-full bg-clip-text text-transparent"
+          style={{
+            backgroundImage:
+              "linear-gradient(to top, #003399 0%, #003399 45%, #001133 55%, #001133 100%)",
+          }}
+        >
+          USE CASES
+        </h1>
+        <h2 className="text-[#3C3C3C] mx-8 ml-15 text-base font-extrabold mb-0 text-center w-full">
+          Solutions in Action: How we Engineer Business Success
+        </h2>
+      </div>
+
+      {/* Desktop hero image */}
+      <div className="hidden md:flex flex-shrink-0 items-center justify-center w-full md:w-auto">
+        <div className="relative w-[540px] h-[710px]">
+          <div
+            className="absolute left-0 top-0 w-full h-full bg-white rounded-r-full rounded-l-[60px] shadow-xl"
+            style={{
+              borderTopLeftRadius: "60px",
+              borderBottomLeftRadius: "60px",
+            }}
+          />
+          <Image
+            src="/images/use-cases/use-cases.jpg"
+            alt="Use Cases"
+            fill
+            className="object-cover rounded-r-full rounded-l-[60px]"
+            style={{
+              borderTopLeftRadius: "60px",
+              borderBottomLeftRadius: "60px",
+            }}
+            priority
+          />
+        </div>
+      </div>
+
+      {/* Desktop headings */}
+      <div className="hidden md:flex flex-1 flex-col justify-center items-start pl-0 md:pl-4 h-[710px]">
+        <ScrollFadeSection>
+          <h1
+            className="text-2xl md:text-5xl font-extrabold mb-2 tracking-tight drop-shadow-md text-left md:text-center w-full bg-clip-text text-transparent"
+            style={{
+              backgroundImage:
+                "linear-gradient(to top, #003399 0%, #003399 45%, #001133 55%, #001133 100%)",
+            }}
+          >
+            USE CASES
+          </h1>
+          <h2 className="text-[#3C3C3C] text-base md:text-lg font-extrabold mb-0 text-left md:text-center w-full">
+            Solutions in Action: How we Engineer Business Success
+          </h2>
+        </ScrollFadeSection>
+      </div>
+    </div>
+
+    {/* Bottom section */}
+    <ScrollFadeSection>
+      <div className="relative z-10 flex flex-col md:flex-row items-center md:items-stretch gap-6 md:gap-10 w-full mt-8">
+        {/* Paragraphs left */}
+        <div className="flex-1 flex flex-col md:ml-10 justify-center items-start text-center md:text-left">
+          <p className="text-[#3C3C3C] text-sm md:text-base font-semibold mb-2 leading-relaxed">
+            Your challenges are unique, but the principles of success are
+            universal: a deep understanding of your business, a transparent
+            process, and a perfectly executed technical solution. While our
+            commitment to client confidentiality is absolute, these use cases
+            illustrate the real-world problems we solve and the tangible
+            results we deliver every day.
+          </p>
+          <p className="text-[#3C3C3C] text-sm md:text-base font-semibold mb-2 leading-relaxed">
+            Explore the stories below to see how we apply our expertise in
+            custom software development, AI implementation, and business
+            process automation to drive growth, efficiency, and innovation
+            across industries. Find a challenge that mirrors your own and
+            discover how we can engineer your success.
+          </p>
+        </div>
+
+        
+        {/* Image to the right and only visible on larger screens */}
+        <div className="hidden md:flex flex-shrink-0 items-center justify-center w-full md:w-auto">
+          <div className="relative w-[380px] h-[320px]">
+            <div
+              className="absolute left-0 top-0 w-full h-full bg-white rounded-l-full rounded-r-[60px] shadow-xl"
+              style={{
+                borderTopRightRadius: "60px",
+                borderBottomRightRadius: "60px",
+              }}
+            />
+            <Image
+              src="/images/use-cases/use-case1.jpg"
+              alt="Use Case 1"
+              fill
+              className="object-cover rounded-l-full rounded-r-[60px]"
+              style={{
+                borderTopRightRadius: "60px",
+                borderBottomRightRadius: "60px",
+              }}
+              priority
+            />
+          </div>
+        </div>
+
+      </div>
+    </ScrollFadeSection>
+  </div>
+</section>
+
 
       {/* Professionals Section */}
       <section className="w-full py-12 px-4 max-w-7xl mx-auto sm:px-6 md:px-12 flex flex-col items-start">
@@ -437,8 +468,8 @@ export default function UseCasesResource() {
 
       {/* Pre Footer Section */}
       <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
-        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-          <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 lg:px-0">
+          <div className="relative w-full h-[280px] lg:[480px] md:h-[370px] flex items-center justify-center">
             <Image
               src="/images/footer.jpg"
               alt="Footer Background"

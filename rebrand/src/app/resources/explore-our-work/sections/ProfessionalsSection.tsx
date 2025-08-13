@@ -75,7 +75,7 @@ const industries = [
     title: "Blockchain",
     desc: "Engineering Trust, Securing the Future.",
     desc2:
-      "We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology..",
+      "We build decentralized solutions that enhance transparency, automate trust, and secure digital assets. From immutable ledgers to smart contracts, we empower your business with the unbreakable integrity of blockchain technology.",
     image: "/images/use-cases/blockchain.png",
     href: "#",
   },
@@ -127,27 +127,27 @@ export default function ProfessionalsSection() {
 
   const settings = {
     dots: true,
-    infinite: filtered.length > 3,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    centerMode: true,
-    centerPadding: "0px",
-    arrows: false,
-    swipe: true,
-    swipeToSlide: true,
-    draggable: true,
-    beforeChange: (_old: number, next: number) => setCenterIndex(next),
-    responsive: [
-      {
-        breakpoint: 1280,
-        settings: { slidesToShow: 2, centerMode: false },
-      },
-      {
-        breakpoint: 768,
-        settings: { slidesToShow: 1, centerMode: false },
-      },
-    ],
+  infinite: filtered.length > 1,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  centerMode: true,
+  centerPadding: "0px",
+  arrows: false,
+  swipe: true,
+  swipeToSlide: true,
+  draggable: true,
+  beforeChange: (_old: number, next: number) => setCenterIndex(next),
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: { slidesToShow: 2, centerMode: false, variableWidth: false },
+    },
+    {
+      breakpoint: 768,
+      settings: { slidesToShow: 1, centerMode: false, variableWidth: false },
+    },
+  ],
     appendDots: (dots: React.ReactNode) => (
       <div>
         <ul className="flex justify-center gap-2 mt-6">{dots}</ul>
@@ -177,16 +177,8 @@ export default function ProfessionalsSection() {
         Explore Our Work: Proven Results Across Industries
       </h1>
       <div className="relative w-full max-w-6xl mx-auto">
-        {/* Left Arrow */}
-        <Arrow
-          direction="left"
-          onClick={() => sliderRef.current?.slickPrev()}
-        />
-        {/* Right Arrow */}
-        <Arrow
-          direction="right"
-          onClick={() => sliderRef.current?.slickNext()}
-        />
+        <Arrow direction="left" onClick={() => sliderRef.current?.slickPrev()} />
+        <Arrow direction="right" onClick={() => sliderRef.current?.slickNext()} />
         {mounted && (
           <Slider ref={sliderRef} {...settings}>
             {filtered.map((industry, idx) => {
@@ -198,13 +190,13 @@ export default function ProfessionalsSection() {
               return (
                 <div key={industry.key} className="px-1 sm:px-2 md:px-3">
                   <div
-                    className={`bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[220px] sm:min-w-[260px] md:min-w-[280px] mx-auto rounded-lg overflow-hidden h-[420px] sm:h-[440px] md:h-[480px] transition-all duration-300 ${
-                      isCenter ? "scale-105 z-20 shadow-2xl" : "scale-95 z-10"
-                    }`}
+                    className={`bg-white shadow-lg flex flex-col items-start w-full mx-auto rounded-lg overflow-hidden h-[420px] sm:h-[440px] md:h-[480px] transition-all duration-300
+                      ${isCenter ? "scale-105 z-20 shadow-2xl" : "scale-95 z-10"}`}
                     style={{
                       boxShadow: isCenter
                         ? "0 12px 32px 0 rgba(0,51,153,0.18)"
                         : "0 4px 16px 0 rgba(0,0,0,0.08)",
+                      
                     }}
                   >
                     <div className="w-full">

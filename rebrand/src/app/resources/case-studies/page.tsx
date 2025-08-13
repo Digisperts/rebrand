@@ -15,11 +15,55 @@ export default function CasesStudiesResource() {
 
       {/* Hero Section */}
       <section className="w-full bg-black/96 min-h-[580px] grid md:grid-cols-2">
+        {/* For Mobile Hero image on top */}
+        <div className="md:hidden -mx-4">
+          <div className="relative w-full h-[400px]">
+            <Image
+              src="/images/case-studies/right-text-background-banner.jpg"
+              alt="Hero mobile"
+              fill
+              className="object-cover rounded-none"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* For Mobile Text on right background */}
+        <div className="relative md:hidden px-4 py-10">
+          <div className="absolute inset-0">
+            <Image
+              src="/images/case-studies/left-hero-image.jpg"
+              alt="Text background"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div className="relative z-10 text-white max-w-xl">
+            <h2 className="text-3xl font-bold mb-6">CASE STUDIES</h2>
+            <p className="mb-4 leading-relaxed text-gray-100">
+              Your challenges are unique, but the principles of success are
+              universal: a deep understanding of your business, a transparent
+              process, and a perfectly executed technical solution. While our
+              commitment to client confidentiality is absolute, these use cases
+              illustrate the real-world problems we solve and the tangible results
+              we deliver every day.
+            </p>
+            <p className="text-gray-300">
+              Explore the stories below to see how we apply our expertise in
+              custom software development, AI implementation, and business process
+              automation to drive growth, efficiency, and innovation across
+              industries. Find a challenge that mirrors your own and discover how
+              we can engineer your success.
+            </p>
+          </div>
+        </div>
+
         {/* Right Text with Background */}
-        <div className="relative w-full h-full">
+        <div className="hidden md:block relative w-full h-full">
           <Image
             src="/images/case-studies/right-text-background-banner.jpg"
-            alt="Hero left"
+            alt="Hero right background"
             fill
             className="object-cover"
             priority
@@ -27,7 +71,7 @@ export default function CasesStudiesResource() {
         </div>
 
         {/* Left Image */}
-        <div className="relative bg-[#0a0a0a] text-white flex items-center px-6 py-12 md:px-12">
+        <div className="hidden md:flex relative bg-[#0a0a0a] text-white items-center px-6 py-12 md:px-12">
           {/* Background Image Overlay */}
           <div className="absolute inset-0 w-full h-full z-0">
             <Image
@@ -39,7 +83,7 @@ export default function CasesStudiesResource() {
           </div>
 
           {/* Text Content */}
-          <div className="relative z-10 max-w-xl ">
+          <div className="relative z-10 max-w-xl">
             <h2 className="text-3xl md:text-4xl font-bold mt-12 md:mt-15 mb-6">
               CASE STUDIES
             </h2>
@@ -48,19 +92,20 @@ export default function CasesStudiesResource() {
               universal: a deep understanding of your business, a transparent
               process, and a perfectly executed technical solution. While our
               commitment to client confidentiality is absolute, these use cases
-              illustrate the real-world problems we solve and the tangible
-              results we deliver every day.
+              illustrate the real-world problems we solve and the tangible results
+              we deliver every day.
             </p>
             <p className="text-gray-300">
               Explore the stories below to see how we apply our expertise in
-              custom software development, AI implementation, and business
-              process automation to drive growth, efficiency, and innovation
-              across industries. Find a challenge that mirrors your own and
-              discover how we can engineer your success.
+              custom software development, AI implementation, and business process
+              automation to drive growth, efficiency, and innovation across
+              industries. Find a challenge that mirrors your own and discover how
+              we can engineer your success.
             </p>
           </div>
         </div>
       </section>
+
 
       {/* Professionals Section */}
       <section className="w-full py-12 px-4 max-w-7xl mx-auto sm:px-6 md:px-12 flex flex-col items-start">
@@ -387,8 +432,8 @@ export default function CasesStudiesResource() {
 
       {/* Pre-Footer Section */}
       <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
-        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
-          <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 lg:px-0">
+          <div className="relative w-full h-[280px] lg:[480px] md:h-[370px] flex items-center justify-center">
             <Image
               src="/images/footer.jpg"
               alt="Footer Background"

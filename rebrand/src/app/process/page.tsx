@@ -120,16 +120,7 @@ export default function HowWeWorkPage() {
               style={{ minWidth: 320, maxWidth: 420, height: '100%' }}
             />
           </div>
-          {/* Mobile Image below content */}
-          <div className="md:hidden w-full mt-6 flex justify-center">
-            <Image
-              src="/images/process/product.jpg"
-              alt="Unveiling Your Vision"
-              width={320}
-              height={200}
-              className="rounded-xl shadow-xl object-cover w-full max-w-[320px]"
-            />
-          </div>
+          
           {/* Right Content */}
           <div className="flex-1 flex flex-col justify-start">
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start gap-4 md:gap-0">
@@ -167,6 +158,16 @@ export default function HowWeWorkPage() {
                 </div>
               </div>
             </div>
+          </div>
+          {/* Mobile Image below content */}
+          <div className="md:hidden w-full mt-6 flex justify-center">
+            <Image
+              src="/images/process/product.jpg"
+              alt="Unveiling Your Vision"
+              width={320}
+              height={200}
+              className="rounded-xl shadow-xl object-cover w-full max-w-[320px]"
+            />
           </div>
           
         </section>
@@ -247,16 +248,7 @@ export default function HowWeWorkPage() {
               style={{ minWidth: 320, maxWidth: 420, height: '150%' }}
             />
           </div>
-          {/* Mobile Image below content */}
-          <div className="md:hidden w-full mt-6 flex justify-center">
-            <Image
-              src="/images/process/maintenance-2.jpg"
-              alt="Unveiling Your Vision"
-              width={320}
-              height={200}
-              className="rounded-xl shadow-xl object-cover object-right w-full max-w-[320px]"
-            />
-          </div>
+          
           {/* Right Content */}
           <div className="flex-1 flex flex-col justify-start">
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start gap-4 md:gap-0">
@@ -289,13 +281,24 @@ export default function HowWeWorkPage() {
               </div>
             </div>
           </div>
+
+          {/* Mobile Image below content */}
+          <div className="md:hidden w-full mt-6 flex justify-center">
+            <Image
+              src="/images/process/maintenance-2.jpg"
+              alt="Unveiling Your Vision"
+              width={320}
+              height={200}
+              className="rounded-xl shadow-xl object-cover object-right w-full max-w-[320px]"
+            />
+          </div>
           
         </section>
       </ScrollFadeSection>
 
       {/* Pre Footer Section */}
       <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
-        <div className="w-full max-w-6xl mx-auto flex flex-col items-center">
+        <div className="w-full max-w-6xl mx-auto flex flex-col items-center px-4 lg:px-0">
           <div className="relative w-full h-[480px] md:h-[370px] flex items-center justify-center">
             <Image
               src="/images/footer.jpg"

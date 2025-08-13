@@ -26,7 +26,7 @@ export default function ExploreLayout({
   children,
 }) {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col overflow-hidden">
       <div className="fixed top-0 left-0 w-full z-50">
         <NavBar />
       </div>

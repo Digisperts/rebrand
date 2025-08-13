@@ -12,6 +12,17 @@ export default function BookACallPage() {
       <div className="fixed top-0 left-0 w-full z-50">
         <NavBar />
       </div>
+      {/* Mobile image */}
+<div className="flex md:hidden w-full relative min-h-[250px] px-0">
+  <Image
+    src="/images/book2.png"
+    alt="Book a Call"
+    className="object-cover w-full h-full rounded-none"
+    width={800}
+    height={800}
+    priority
+  />
+</div>
       {/* Booking Form and Image - first content after NavBar */}
       <section className="relative w-full flex flex-col items-center bg-white pb-0 mb-0 -mb-32 z-30 flex flex-row items-stretch w-full mb-8 md:mb-0" style={{ minHeight: "calc(100vh - 64px - 64px)" }}>
         {/* Form Card */}
@@ -106,7 +117,7 @@ export default function BookACallPage() {
           </div>
         </div>
         {/* Right Image */}
-        <div className="hidden md:flex flex-1 relative items-center justify-center min-h-full">
+        <div className="hidden md:flex flex-1 relative items-center justify-center min-h-full px-0">
           <Image
             src="/images/book2.png"
             alt="Book a Call"
@@ -123,13 +134,21 @@ export default function BookACallPage() {
       <section className="relative w-full flex flex-col items-center bg-white pb-0 mb-10 md:mb-0 z-30">
         {/* Bullets Info */}
         <div className="w-full flex items-center justify-center bg-white border-t border-gray-200 py-3 px-4 text-base font-semibold text-black mb-4 md:-mb-2" style={{minHeight: 40}}>
-          <span className="flex items-center gap-2 flex-wrap w-full justify-center">
-            <span className="flex items-center"><span className="text-[#003399] text-xl mr-2">●</span> You will be talking to our Product and Project manager.</span>
-            <span className="text-[#003399] text-xl mx-2">●</span>
-            <span className="flex items-center">We respond within 24 hours.</span>
-            <span className="text-[#003399] text-xl mx-2">●</span>
-            <span className="flex items-center">We will sign an NDA if required.</span>
+        <span className="flex flex-col md:flex-row items-start gap-2 w-full justify-center text-center md:text-left">
+          <span className="flex items-center text-[12px] lg:text-base justify-center md:justify-start">
+            <span className="text-[#003399] text-xl mr-2">●</span>
+            You will be talking to our Product and Project manager.
           </span>
+          <span className="flex items-center text-[12px] lg:text-base justify-center md:justify-start">
+            <span className="text-[#003399] text-xl mr-2">●</span>
+            We respond within 24 hours.
+          </span>
+          <span className="flex items-center text-[12px] lg:text-base justify-center md:justify-start">
+            <span className="text-[#003399] text-xl mr-2">●</span>
+            We will sign an NDA if required.
+          </span>
+        </span>
+
         </div>
       </section>
       <Footer />

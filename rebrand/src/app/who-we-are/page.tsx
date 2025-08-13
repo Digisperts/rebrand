@@ -130,7 +130,7 @@ export default function WhoWeArePage() {
               />
             </div>
             {/* On mobile, show image in flow */}
-            <div className="lg:hidden flex flex-shrink-0 items-end z-10 w-[130px] h-[130px] bg-white rounded-full mx-auto my-4 shadow-lg border-4 border-white">
+            <div className="hidden flex flex-shrink-0 items-end z-10 w-[130px] h-[130px] bg-white rounded-full mx-auto my-4 shadow-lg border-4 border-white">
               <Image
                 src="/images/who-we-are/favicon.png"
                 alt="Digisperts Logo"
@@ -184,9 +184,9 @@ export default function WhoWeArePage() {
         {/* Meet the Team Section */}
         <ScrollFadeSection>
         <section className="w-full py-8 bg-white">
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-4">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
             {/* Project Manager and CSO */}
-            <div className="flex flex-col items-left">
+            <div className="flex flex-col items-center sm:items-start">
               <Image
                 src="/images/harvey.png"
                 alt="Stanley N"
@@ -198,7 +198,7 @@ export default function WhoWeArePage() {
               <span className="text-xs font-semibold text-gray-600 text-left">Senior Project Manager / Business Development Manager</span>
             </div>
             {/* Blockchain and Cyber Security */}
-            <div className="flex flex-col items-left">
+            <div className="flex flex-col items-center sm:items-start">
               <Image
                 src="/images/who-we-are/samuel-o.jpg"
                 alt="Samuel O"
@@ -210,7 +210,7 @@ export default function WhoWeArePage() {
               <span className="text-xs font-semibold text-gray-600 text-left">Blockchain and Cyber Security</span>
             </div>
             {/* Creative Designer and Copywriter */}
-            <div className="flex flex-col items-left">
+            <div className="flex flex-col items-center sm:items-start">
               <Image
                 src="/images/who-we-are/samuel-d.png"
                 alt="Samuel D"
@@ -222,7 +222,7 @@ export default function WhoWeArePage() {
               <span className="text-xs font-semibold text-gray-600 text-left">Team Lead, Creatives</span>
             </div>
             {/* CTO and Cloud Engineer */}
-            <div className="flex flex-col items-left">
+            <div className="flex flex-col items-center sm:items-start">
               <Image
                 src="/images/richard.png"
                 alt="Richard K"
@@ -239,11 +239,12 @@ export default function WhoWeArePage() {
 
         {/* Pre Footer Section */}
         <section className="relative w-full flex flex-col items-center bg-transparent pb-0 mb-0 -mb-32 z-30">
-          <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-stretch">
+          <div className="w-full max-w-6xl mx-auto flex flex-col lg:flex-row items-stretch px-4 lg:px-0">
             {/* Image */}
             <div
               className="
                 relative
+                hidden lg:block
                 w-full h-[200px] lg:w-[45%] lg:h-auto
                 order-1 lg:order-2
                 flex-shrink-0
