@@ -416,10 +416,10 @@ export default function CasesStudiesResource() {
                 accessible knowledge for all.
               </p>
               <Link
-                href="/images/case-studies/educationcard.pdf"
+                href="/images/case-studies/LMS-case-study.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={(e) => e.preventDefault()}
+                // onClick={(e) => e.preventDefault()}
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
