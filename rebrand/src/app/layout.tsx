@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Digispert",
+  title: "Digispert Technology Company Limited",
   description: "Digispert Company",
   icons: {
     icon: "/favicon.png",
