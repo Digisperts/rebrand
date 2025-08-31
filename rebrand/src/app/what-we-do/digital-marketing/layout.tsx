@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Digisperts — Digital Marketing & Growth",
     description: "Digisperts Technology Company Limited provides integrated digital marketing—SEO, social, content and paid ads—to boost visibility",
-    url: "https://www.digisperts.com",
+    url: "https://www.digisperts.com/what-we-do/digital-marketing",
     siteName: "Digisperts",
     images: [
       {

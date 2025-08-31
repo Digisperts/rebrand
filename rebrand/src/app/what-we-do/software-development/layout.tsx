@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Digisperts — Software Development Services",
     description: "Digisperts Technology Company Limited builds custom web, mobile and enterprise software solutions designed to scale, secure and accelerate your business.",
-    url: "https://www.digisperts.com",
+    url: "https://www.digisperts.com/what-we-do/software-development",
     siteName: "Digisperts",
     images: [
       {

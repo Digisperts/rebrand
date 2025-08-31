@@ -8,7 +8,7 @@ export const metadata = {
   openGraph: {
     title: "Digisperts — Business Automation & Workflow",
     description: "Digisperts Technology Company Limited creates business automation and workflow solutions that streamline processes, reduce costs and improve efficiency.",
-    url: "https://www.digisperts.com",
+    url: "https://www.digisperts.com/what-we-do/business-automation",
     siteName: "Digisperts",
     images: [
       {
