@@ -16,11 +16,11 @@ export default function Headlines() {
           {/* Social Cranes Card */}
         <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
           <div className="w-full">
-            <Image src="/images/homepage/headline.png" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
+            <Image src="/images/homepage/headline-a.jpg" alt="Software Development" width={365} height={199} className="w-full h-[199px] object-cover" />
           </div>
           <div className="px-6 pt-6 pb-7 w-full">
-            <h3 className="font-bold text-lg mb-2 text-black">Social Cranes</h3>
-            <p className="text-gray-800 text-base mb-4 leading-snug">As a leading social media marketing (SMM) company, Social Cranes partnered with us to enhance their online presence. We designed and developed their website, implementing........</p>
+            <h3 className="font-bold text-lg mb-2 text-black">5 Social Media Hacks That Drive Engagement for B2B SaaS   </h3>
+            <p className="text-gray-800 text-base mb-4 leading-snug"> In today&apos;s competitive social media landscape, the conventional strategy of publishing generic corporate updates is not effective. The stakes are higher than ever for SaaS companies trying to...... </p>
             <Link
               href="#"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -34,11 +34,11 @@ export default function Headlines() {
         {/* Smaat Finance Card */}
         <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
           <div className="w-full">
-            <Image src="/images/homepage/headline.png" alt="Business Automations" width={365} height={199} className="w-full h-[199px] object-cover" />
+            <Image src="/images/homepage/headline-b.png" alt="Business Automations" width={365} height={199} className="w-full h-[199px] object-cover" />
           </div>
           <div className="px-6 pt-6 pb-7 w-full">
-            <h3 className="font-bold text-lg mb-2 text-black">Smaat Finance</h3>
-            <p className="text-gray-800 text-base mb-4 leading-snug">At Digisperts Technology Company Limited, our commitment to client confidentiality is unwavering. While we have worked on numerous projects and achieved remarkable results, we respect the anonymity of our clients and........</p>
+            <h3 className="font-bold text-lg mb-2 text-black">10 High-Impact SEO Strategies for Tech Startups</h3>
+            <p className="text-gray-800 text-base mb-4 leading-snug">Organic search remains one of the most cost-effective, long-term customer-acquisition channels for tech startups. These ten practical, data-driven SEO strategies will help your startup turn search into...... </p>
             <Link
               href="#"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -51,11 +51,11 @@ export default function Headlines() {
         {/* Social Cranes Card */}
         <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto md:col-span-2 lg:col-span-1 md:mx-auto lg:mx-auto md:justify-self-center lg:justify-self-auto">
           <div className="w-full">
-            <Image src="/images/homepage/headline.png" alt="Digital Marketing" width={365} height={199} className="w-full h-[199px] object-cover" />
+            <Image src="/images/homepage/headline-c.jpg" alt="Digital Marketing" width={365} height={199} className="w-full h-[199px] object-cover" />
           </div>
           <div className="px-6 pt-6 pb-7 w-full">
-            <h3 className="font-bold text-lg mb-2 text-black">Social Cranes</h3>
-            <p className="text-gray-800 text-base mb-4 leading-snug">As a leading social media marketing (SMM) company, Social Cranes partnered with us to enhance their online presence. We designed and developed their website, implementing........</p>
+            <h3 className="font-bold text-lg mb-2 text-black">Top Business Automation Tools Every Growing Company Needs</h3>
+            <p className="text-gray-800 text-base mb-4 leading-snug">Growing a business without automation is like trying to sail fast with anchor chains tied to the hull. The good news? Today’s automation tools......</p>
             <Link
               href="#"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
