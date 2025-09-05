@@ -22,7 +22,7 @@ export default function Headlines() {
             <h3 className="font-bold text-lg mb-2 text-black">5 Social Media Hacks That Drive Engagement for B2B SaaS   </h3>
             <p className="text-gray-800 text-base mb-4 leading-snug"> In today&apos;s competitive social media landscape, the conventional strategy of publishing generic corporate updates is not effective. The stakes are higher than ever for SaaS companies trying to...... </p>
             <Link
-              href="#"
+              href="/work-in-progress"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
               style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
             >
@@ -40,7 +40,7 @@ export default function Headlines() {
             <h3 className="font-bold text-lg mb-2 text-black">10 High-Impact SEO Strategies for Tech Startups</h3>
             <p className="text-gray-800 text-base mb-4 leading-snug">Organic search remains one of the most cost-effective, long-term customer-acquisition channels for tech startups. These ten practical, data-driven SEO strategies will help your startup turn search into...... </p>
             <Link
-              href="#"
+              href="/work-in-progress"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
               style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
             >
@@ -57,7 +57,7 @@ export default function Headlines() {
             <h3 className="font-bold text-lg mb-2 text-black">Top Business Automation Tools Every Growing Company Needs</h3>
             <p className="text-gray-800 text-base mb-4 leading-snug">Growing a business without automation is like trying to sail fast with anchor chains tied to the hull. The good news? Today’s automation tools......</p>
             <Link
-              href="#"
+              href="/work-in-progress"
               className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
               style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
             >

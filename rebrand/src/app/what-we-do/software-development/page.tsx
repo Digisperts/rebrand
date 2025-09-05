@@ -396,22 +396,22 @@ export default function SoftwareDevelopment() {
                   {[
                     {
                       title: 'FINANCE',
-                      desc: 'Fintech Solutions for Growth and Insight',
+                      desc: 'Engineering a Secure Token Ecosystem on Binance Smart Chain for a Financial Services Innovator.',
                       img: '/images/reuseable-SD-a.png',
                     },
                     {
-                      title: 'RETAIL AND CONSUMER GOODS',
-                      desc: 'Driving Consumer Loyalty',
-                      img: '/images/reuseable-SD-b.png',
+                      title: 'EDUCATION',
+                      desc: 'Developing a Scalable Learning Management System (LMS) to Power a Global Online Academy.',
+                      img: '/images/reuseable-education.jpg',
                     },
                     {
-                      title: 'HEALTHCARE',
-                      desc: 'Improving Lives, One Innovation at a Time',
-                      img: '/images/reuseable-SD-c.png',
+                      title: 'AGRICULTURE',
+                      desc: 'Building Custom Agri-Tech Software to Streamline Operations for a Leading Agricultural Processing Company.',
+                      img: '/images/reuseable-agriculture.jpg',
                     },
                   ].map(({ title, desc, img }, i) => (
                     <div key={i}>
-                      <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
+                      <Image src={img} alt={title} width={400} height={250} className="w-full h-[250px] object-cover" />
                       <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
                       <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
                       <Link

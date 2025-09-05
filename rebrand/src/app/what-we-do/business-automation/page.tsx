@@ -428,23 +428,23 @@ export default function BusinessAutomation() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: 'FINANCE',
-                desc: 'Fintech Solutions for Growth and Insight',
-                img: '/images/reuseable-SD-a.png',
-              },
-              {
-                title: 'RETAIL AND CONSUMER GOODS',
-                desc: 'Driving Consumer Loyalty',
-                img: '/images/reuseable-SD-b.png',
-              },
-              {
-                title: 'HEALTHCARE',
-                desc: 'Improving Lives, One Innovation at a Time',
-                img: '/images/reuseable-SD-c.png',
-              },
+                      title: 'B2B SERVICES',
+                      desc: 'Automating High-Quality Lead Capture and Nurturing to Drive Growth for a Consulting Firm.',
+                      img: '/images/reuseable-b2b.jpg',
+                    },
+                    {
+                      title: 'REAL ESTATE',
+                      desc: 'Implementing a Custom CRM to Streamline the Sales Pipeline and Enhance Client Management.',
+                      img: '/images/reuseable-realestate.jpg',
+                    },
+                    {
+                      title: 'E-COMMERCE',
+                      desc: 'Deploying an AI-Powered Chatbot to Improve Customer Support Efficiency by 70% and Boost Conversions.',
+                      img: '/images/reuseable-ecommerce.jpg',
+                    },
             ].map(({ title, desc, img }, i) => (
               <div key={i}>
-                <Image src={img} alt={title} width={400} height={250} className="rounded shadow-md" />
+                <Image src={img} alt={title} width={400} height={250} className="w-full h-[250px] object-cover" />
                 <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
                 <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
                 <Link
