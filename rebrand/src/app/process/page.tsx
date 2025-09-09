@@ -8,34 +8,44 @@ import ScrollFadeSection from "../components/ScrollFadeSection";
 
 export default function HowWeWorkPage() {
   return (
-    <div className="min-h-screen bg-white flex overflow-hidden pt-16 flex-col">
+    <div className="min-h-screen bg-white flex overflow-hidden flex-col">
       <div className="fixed top-0 left-0 w-full z-50">
         <NavBar />
       </div>
 
       {/* Hero Section */}
-      <section className="relative w-full min-h-[520px] flex items-stretch overflow-hidden">
+      <section className="relative w-full min-h-[580px] flex items-stretch overflow-hidden">
         <div className="flex w-full min-h-[520px] relative">
           {/* Text box overlays black bg and hero image and always visible */}
           <div className="absolute left-0 top-0 h-full w-full flex items-center justify-center pointer-events-none z-20">
             <div className="relative py-6 sm:py-8 md:py-12 max-w-[700px] w-full pointer-events-auto text-center">
               <HeroFadeIn>
-                <h1 className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2 text-center" style={{letterSpacing:0}}>
-                  <span className="block text-2xl sm:text-4xl md:text-5xl">Our Process</span>
+                <h1
+                  className="text-white font-extrabold text-4xl md:text-5xl leading-tight md:leading-[1.1] mb-2 text-center"
+                  style={{ letterSpacing: 0 }}
+                >
+                  <span className="block text-2xl sm:text-4xl md:text-5xl">
+                    Our Process
+                  </span>
                 </h1>
-                <p className="text-white text-lg md:text-xl font-semibold mb-8 max-w-[95%] mx-auto text-center" style={{lineHeight:'1.4'}}>How we craft your projects into processes</p>
+                <p
+                  className="text-white text-lg md:text-xl font-semibold mb-8 max-w-[95%] mx-auto text-center"
+                  style={{ lineHeight: "1.4" }}
+                >
+                  How we craft your projects into processes
+                </p>
               </HeroFadeIn>
             </div>
           </div>
           {/* Hero image */}
           <div className="flex-1 relative min-h-[520px] w-full">
             <Image
-              src="/images/process/process.jpg" 
-              alt="Hero" 
+              src="/images/process/process.jpg"
+              alt="Hero"
               fill
-              className="object-cover object-center w-full h-full" 
+              className="object-cover object-center w-full h-full"
               priority
-              style={{ border: 'none', boxShadow: 'none' }}
+              style={{ border: "none", boxShadow: "none" }}
             />
           </div>
         </div>
@@ -51,26 +61,37 @@ export default function HowWeWorkPage() {
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-8 border-[#003399] flex items-center justify-center shadow-lg">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#000F2E] flex items-center justify-center">
-                    <span className="text-white text-2xl md:text-4xl font-bold">1</span>
+                    <span className="text-white text-2xl md:text-4xl font-bold">
+                      1
+                    </span>
                   </div>
                 </div>
               </div>
               {/* Content */}
               <div className="ml-0 md:ml-10 mt-4 md:mt-0 flex-1">
                 <h2 className="text-lg md:text-3xl font-extrabold mb-1 leading-tight">
-                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Unveiling Your Vision –<br /></span>
-                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Let&apos;s Dive Deep Into Your Ideal!</span>
+                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">
+                    Unveiling Your Vision –<br />
+                  </span>
+                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">
+                    Let&apos;s Dive Deep Into Your Ideal!
+                  </span>
                 </h2>
                 <p className="text-gray-800 text-sm font-semibold md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
-                  At Digisperts Technology Company Limited, we start by understanding your vision inside out. 
-                  We gather comprehensive research, from market numbers to competitor benchmarks, to create a 
-                  detailed project brief. This ensures we have all the necessary information to avoid any 
-                  obstacles during our immersive sessions together. With a clear roadmap in hand, we can 
-                  fully focus on bringing your vision to life and crafting tailored solutions for your success. 
-                  Join us on this extraordinary journey!
+                  At Digisperts Technology Company Limited, we start by
+                  understanding your vision inside out. We gather comprehensive
+                  research, from market numbers to competitor benchmarks, to
+                  create a detailed project brief. This ensures we have all the
+                  necessary information to avoid any obstacles during our
+                  immersive sessions together. With a clear roadmap in hand, we
+                  can fully focus on bringing your vision to life and crafting
+                  tailored solutions for your success. Join us on this
+                  extraordinary journey!
                 </p>
                 <div>
-                  <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">What we do</span>
+                  <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">
+                    What we do
+                  </span>
                   <ul className="list-disc font-semibold pl-6 mt-1 text-gray-800 text-sm md:text-base">
                     <li>Discovery Workshop</li>
                     <li>Product Strategy</li>
@@ -90,7 +111,7 @@ export default function HowWeWorkPage() {
               width={420}
               height={520}
               className="shadow-xl object-cover h-full"
-              style={{ minWidth: 320, maxWidth: 420, height: '100%' }}
+              style={{ minWidth: 320, maxWidth: 420, height: "100%" }}
             />
           </div>
           {/* Mobile Image below content */}
@@ -117,10 +138,10 @@ export default function HowWeWorkPage() {
               width={420}
               height={520}
               className="shadow-xl object-cover h-full"
-              style={{ minWidth: 320, maxWidth: 420, height: '100%' }}
+              style={{ minWidth: 320, maxWidth: 420, height: "100%" }}
             />
           </div>
-          
+
           {/* Right Content */}
           <div className="flex-1 flex flex-col justify-start">
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start gap-4 md:gap-0">
@@ -128,23 +149,32 @@ export default function HowWeWorkPage() {
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-8 border-[#003399] flex items-center justify-center shadow-lg">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#000F2E] flex items-center justify-center">
-                    <span className="text-white text-2xl md:text-4xl font-bold">2</span>
+                    <span className="text-white text-2xl md:text-4xl font-bold">
+                      2
+                    </span>
                   </div>
                 </div>
               </div>
               {/* Content */}
               <div className="ml-0 md:ml-10 mt-4 md:mt-0 flex-1">
                 <h2 className="text-lg md:text-3xl font-extrabold mb-1 leading-tight">
-                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Product Design<br /></span>
+                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">
+                    Product Design
+                    <br />
+                  </span>
                 </h2>
                 <p className="text-gray-800 text-sm font-semibold md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
-                  At Digisperts Technology Company Limited, we leverage our deep understanding of your 
-                  business, story, goals, and motivations to develop a dynamic prototype that aligns perfectly 
-                  with the project scope. Our expertise in translating your vision into a tangible 
-                  representation ensures resonance and sets the stage for a successful collaboration.
+                  At Digisperts Technology Company Limited, we leverage our deep
+                  understanding of your business, story, goals, and motivations
+                  to develop a dynamic prototype that aligns perfectly with the
+                  project scope. Our expertise in translating your vision into a
+                  tangible representation ensures resonance and sets the stage
+                  for a successful collaboration.
                 </p>
                 <div>
-                  <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">What we do</span>
+                  <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">
+                    What we do
+                  </span>
                   <ul className="list-disc font-semibold pl-6 mt-1 text-gray-800 text-sm md:text-base">
                     <li>UX Research</li>
                     <li>UX Design</li>
@@ -169,7 +199,6 @@ export default function HowWeWorkPage() {
               className="rounded-xl shadow-xl object-cover w-full max-w-[320px]"
             />
           </div>
-          
         </section>
       </ScrollFadeSection>
 
@@ -183,23 +212,32 @@ export default function HowWeWorkPage() {
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-8 border-[#003399] flex items-center justify-center shadow-lg">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#000F2E] flex items-center justify-center">
-                    <span className="text-white text-2xl md:text-4xl font-bold">3</span>
+                    <span className="text-white text-2xl md:text-4xl font-bold">
+                      3
+                    </span>
                   </div>
                 </div>
               </div>
               {/* Content */}
               <div className="ml-0 md:ml-10 mt-4 md:mt-0 flex-1">
                 <h2 className="text-lg md:text-3xl font-extrabold mb-1 leading-tight">
-                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Development and Testing<br /></span>
+                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">
+                    Development and Testing
+                    <br />
+                  </span>
                 </h2>
                 <p className="text-gray-800 text-sm font-semibold md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
-                  At Digisperts Technology Company Limited, we meticulously adhere to project scopes, ensuring 
-                  timely and cost-effective delivery that aligns with your exacting standards of quality. 
-                  Our commitment to precision and efficiency enables us to surpass your expectations, delivering 
-                  solutions that meet your unique business requirements.
+                  At Digisperts Technology Company Limited, we meticulously
+                  adhere to project scopes, ensuring timely and cost-effective
+                  delivery that aligns with your exacting standards of quality.
+                  Our commitment to precision and efficiency enables us to
+                  surpass your expectations, delivering solutions that meet your
+                  unique business requirements.
                 </p>
                 <div>
-                  <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">What we do</span>
+                  <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">
+                    What we do
+                  </span>
                   <ul className="list-disc font-semibold pl-6 mt-1 text-gray-800 text-sm md:text-base">
                     <li>Mobile Development</li>
                     <li>Web Development</li>
@@ -218,7 +256,7 @@ export default function HowWeWorkPage() {
               width={420}
               height={520}
               className="shadow-xl object-cover h-full"
-              style={{ minWidth: 320, maxWidth: 420, height: '100%' }}
+              style={{ minWidth: 320, maxWidth: 420, height: "100%" }}
             />
           </div>
           {/* Mobile Image below content */}
@@ -245,10 +283,10 @@ export default function HowWeWorkPage() {
               width={420}
               height={520}
               className="shadow-xl object-cover object-right h-full"
-              style={{ minWidth: 320, maxWidth: 420, height: '150%' }}
+              style={{ minWidth: 320, maxWidth: 420, height: "150%" }}
             />
           </div>
-          
+
           {/* Right Content */}
           <div className="flex-1 flex flex-col justify-start">
             <div className="mt-8 md:mt-12 flex flex-col md:flex-row items-start gap-4 md:gap-0">
@@ -256,21 +294,29 @@ export default function HowWeWorkPage() {
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 md:w-24 md:h-24 rounded-full border-8 border-[#003399] flex items-center justify-center shadow-lg">
                   <div className="w-12 h-12 md:w-20 md:h-20 rounded-full bg-[#000F2E] flex items-center justify-center">
-                    <span className="text-white text-2xl md:text-4xl font-bold">4</span>
+                    <span className="text-white text-2xl md:text-4xl font-bold">
+                      4
+                    </span>
                   </div>
                 </div>
               </div>
               {/* Content */}
               <div className="ml-0 md:ml-10 mt-4 md:mt-0 flex-1">
                 <h2 className="text-lg md:text-3xl font-extrabold mb-1 leading-tight">
-                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">Maintenance<br /></span>
+                  <span className="bg-gradient-to-r from-[#003399] to-[#001133] bg-clip-text text-transparent">
+                    Maintenance
+                    <br />
+                  </span>
                 </h2>
                 <p className="text-gray-800 text-sm font-semibold md:text-base mt-4 mb-4 max-w-2xl leading-relaxed">
-                  Every infrastructure needs good maintenance, thinking of product upgrade? New implementations 
-                  or security check, worry not, we are here to help you keep your system running.
+                  Every infrastructure needs good maintenance, thinking of
+                  product upgrade? New implementations or security check, worry
+                  not, we are here to help you keep your system running.
                 </p>
                 <div>
-                  <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">What we do</span>
+                  <span className="text-[#2a3b8f] text-lg md:text-2xl font-extrabold">
+                    What we do
+                  </span>
                   <ul className="list-disc font-semibold pl-6 mt-1 text-gray-800 text-sm md:text-base">
                     <li>Uptime and Downtime Report</li>
                     <li>System Administration</li>
@@ -292,7 +338,6 @@ export default function HowWeWorkPage() {
               className="rounded-xl shadow-xl object-cover object-right w-full max-w-[320px]"
             />
           </div>
-          
         </section>
       </ScrollFadeSection>
 
@@ -305,24 +350,31 @@ export default function HowWeWorkPage() {
               alt="Footer Background"
               fill
               className="object-cover z-0"
-              style={{ objectPosition: 'center' }}
+              style={{ objectPosition: "center" }}
               priority
             />
-            <div className="absolute left-0 top-0 w-full h-full flex items-center" style={{zIndex: 2}}>
+            <div
+              className="absolute left-0 top-0 w-full h-full flex items-center"
+              style={{ zIndex: 2 }}
+            >
               <div className="p-6 md:p-27 max-w-full md:max-w-4xl text-white ml-8 mt-1 rounded-lg">
                 <ScrollFadeSection>
-                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">Work with our Agile-Driven Team</div>
+                  <div className="font-extrabold text-2xl md:text-3xl mb-2 leading-tight">
+                    Work with our Agile-Driven Team
+                  </div>
                   <div className="text-sm md:text-base font-normal mb-5">
-                    Ready to build something incredible? Our transparent, step-by-step 
-                    process ensures your vision transforms into a high-quality digital solution. With an 
-                    agile approach at our core, we collaborate closely, adapt swiftly, and deliver results that 
-                    drive your business forward. Let&apos;s make your next project a success, together.
+                    Ready to build something incredible? Our transparent,
+                    step-by-step process ensures your vision transforms into a
+                    high-quality digital solution. With an agile approach at our
+                    core, we collaborate closely, adapt swiftly, and deliver
+                    results that drive your business forward. Let&apos;s make
+                    your next project a success, together.
                   </div>
                   <div className="flex gap-3 flex-wrap">
                     <Link
                       href="/schedule-a-consultation"
                       className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
-                      style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                      style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
                     >
                       BEGIN YOUR PROJECT JOURNEY
                     </Link>
@@ -335,8 +387,7 @@ export default function HowWeWorkPage() {
         </div>
       </section>
 
-
       <Footer />
     </div>
   );
-} 
+}

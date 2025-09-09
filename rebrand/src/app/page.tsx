@@ -260,7 +260,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen flex overflow-hidden flex-col bg-white pt-16">
+    <div className="min-h-screen flex overflow-hidden flex-col bg-white">
       {/* NavBar */}
       <div className="fixed top-0 left-0 w-full z-50">
         <NavBar />
@@ -268,7 +268,7 @@ export default function Home() {
 
       {/* Hero Slider Section */}
       <section
-        className="relative w-full min-h-[520px] flex items-stretch overflow-hidden"
+        className="relative w-full min-h-[580px] flex items-stretch overflow-hidden"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -357,7 +357,7 @@ export default function Home() {
                 </div>
               )}
               <div
-                className={`absolute inset-0 transition-opacity duration-900`}
+                className={`absolute top-20 inset-0 transition-opacity duration-900`}
                 style={{ opacity: isFading ? 1 : 1, zIndex: 20 }}
               >
                 <h1
