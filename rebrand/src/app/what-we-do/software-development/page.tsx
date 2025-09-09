@@ -518,6 +518,96 @@ export default function SoftwareDevelopment() {
           </div>
         </section>
 
+        {/* Section 4: Case Studies */}
+        <section id="success" className="py-20 px-6 md:px-20">
+          <h2 className="mb-2 text-left">
+            <span
+              className="block text-2xl sm:text-3xl md:text-3xl lg:text-3xl font-extrabold bg-clip-text text-transparent"
+              style={{
+                backgroundImage:
+                  "linear-gradient(180deg, #001133 0%,  #003399 90%)",
+              }}
+            >
+              How We&apos;ve Engineered Success
+            </span>
+          </h2>
+
+          <p className="text-left font-semibold font-poppins text-gray-600 mb-10">
+            Don&apos;t just take our word for it. Explore our case studies to
+            see how we have helped businesses like yours transform their
+            operations and achieve measurable success.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                title: "FINANCE",
+                desc: "Engineering a Secure Token Ecosystem on Binance Smart Chain for a Financial Services Innovator.",
+                img: "/images/reuseable-SD-a.png",
+              },
+              {
+                title: "EDUCATION",
+                desc: "Developing a Scalable Learning Management System (LMS) to Power a Global Online Academy.",
+                img: "/images/reuseable-education.jpg",
+              },
+              {
+                title: "AGRICULTURE",
+                desc: "Building Custom Agri-Tech Software to Streamline Operations for a Leading Agricultural Processing Company.",
+                img: "/images/reuseable-agriculture.jpg",
+              },
+            ].map(({ title, desc, img }, i) => (
+              <div key={i}>
+                <Image
+                  src={img}
+                  alt={title}
+                  width={400}
+                  height={250}
+                  className="w-full h-[250px] object-cover"
+                />
+                <h4 className="text-md text-[#000000] font-extrabold mt-2">
+                  {title}
+                </h4>
+                <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
+                <Link
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
+                >
+                  Explore Case Study <span className="ml-1">→</span>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Section 5: Technology */}
+        <section id="technologies" className="text-white py-0 px-0 text-center">
+          <div className="relative w-full h-64 flex items-center justify-center mb-8">
+            <Image
+              src="/images/what-we-do/software-dev/software-hero-2.jpg"
+              alt="Hero 2 Background"
+              fill
+              className="object-cover object-center z-0 rounded"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/70 z-10" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center z-20 px-4 py-6 md:py-10">
+              <h2 className="text-lg md:text-2xl lg:text-4xl font-extrabold mb-4 text-center">
+                Exploring Emerging Technologies (AI & Blockchain)
+              </h2>
+              <p className="max-w-auto mx-auto text-center text-white text-sm md:text-lg font-normal">
+                Our commitment to innovation means we are always exploring the
+                frontier of technology. For clients with specific needs, our
+                expert engineers can build AI-powered features into custom
+                applications or architect decentralized blockchain solutions. We
+                approach these specialized projects with the same commitment to
+                quality excellence and partnership that defines all our work.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Section 6: Powered By */}
         <section className="w-full bg-[#F9F9F9] py-8 flex flex-col">
           <div className="max-w-7xl w-full flex flex-col items-start px-6 mx-auto">
@@ -528,150 +618,155 @@ export default function SoftwareDevelopment() {
               Powered by Industry-Leading Technology
             </h2>
             <div className="relative w-full max-w-full pr-6 md:pr-10 ml-0 md:ml-10 box-border">
-              <div
-                className="flex gap-28 animate-platform-scroll items-center w-max"
-                style={{ animation: "platform-scroll 50s linear infinite" }}
-              >
-                {[1, 2].map((repeat) => (
-                  <div
-                    className="flex flex-row items-center gap-28"
-                    key={repeat}
-                  >
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/react.png"
-                        alt="React"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222]">
-                        React
-                      </span>
+              <h2 className="text-black flex gap-28 items-center w-max">
+                Powered by Industry-Leading Technology
+              </h2>
+              <div className="relative w-full max-w-full pr-6 md:pr-10 ml-0 md:ml-10 box-border">
+                <div
+                  className="flex gap-28 animate-platform-scroll items-center w-max"
+                  style={{ animation: "platform-scroll 50s linear infinite" }}
+                >
+                  {[1, 2].map((repeat) => (
+                    <div
+                      className="flex flex-row items-center gap-28"
+                      key={repeat}
+                    >
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/react.png"
+                          alt="React"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222]">
+                          React
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/nodejs.png"
+                          alt="Node.js"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222]">
+                          Node.js
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/django.png"
+                          alt="Django"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222] whitespace-nowrap">
+                          Django
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/aws.png"
+                          alt="AWS"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222]">
+                          AWS
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/postgre.png"
+                          alt="PostgrSQL"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222]">
+                          PostgreSQL
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/react.png"
+                          alt="React"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222]">
+                          React
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/nodejs.png"
+                          alt="Node.js"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222]">
+                          Node.js
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/django.png"
+                          alt="Django"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222] whitespace-nowrap">
+                          Django
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/aws.png"
+                          alt="AWS"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222]">
+                          AWS
+                        </span>
+                      </div>
+                      <div className="flex flex-row items-center gap-2">
+                        <Image
+                          src="/images/what-we-do/software-dev/postgre.png"
+                          alt="PostgrSQL"
+                          width={80}
+                          height={80}
+                          className="object-contain"
+                        />
+                        <span className="text-lg font-medium text-[#222]">
+                          PostgreSQL
+                        </span>
+                      </div>
                     </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/nodejs.png"
-                        alt="Node.js"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222]">
-                        Node.js
-                      </span>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/django.png"
-                        alt="Django"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222] whitespace-nowrap">
-                        Django
-                      </span>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/aws.png"
-                        alt="AWS"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222]">
-                        AWS
-                      </span>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/postgre.png"
-                        alt="PostgrSQL"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222]">
-                        PostgreSQL
-                      </span>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/react.png"
-                        alt="React"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222]">
-                        React
-                      </span>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/nodejs.png"
-                        alt="Node.js"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222]">
-                        Node.js
-                      </span>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/django.png"
-                        alt="Django"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222] whitespace-nowrap">
-                        Django
-                      </span>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/aws.png"
-                        alt="AWS"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222]">
-                        AWS
-                      </span>
-                    </div>
-                    <div className="flex flex-row items-center gap-2">
-                      <Image
-                        src="/images/what-we-do/software-dev/postgre.png"
-                        alt="PostgrSQL"
-                        width={80}
-                        height={80}
-                        className="object-contain"
-                      />
-                      <span className="text-lg font-medium text-[#222]">
-                        PostgreSQL
-                      </span>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                <style jsx>
+                  {`
+                    @keyframes platform-scroll {
+                      0% {
+                        transform: translateX(0);
+                      }
+                      100% {
+                        transform: translateX(-50%);
+                      }
+                    }
+                  `}
+                </style>
               </div>
-              <style jsx>
-                {`
-                  @keyframes platform-scroll {
-                    0% {
-                      transform: translateX(0);
-                    }
-                    100% {
-                      transform: translateX(-50%);
-                    }
-                  }
-                `}
-              </style>
             </div>
           </div>
         </section>

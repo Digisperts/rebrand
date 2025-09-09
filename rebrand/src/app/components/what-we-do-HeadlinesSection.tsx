@@ -38,7 +38,7 @@ export default function Headlines() {
                   companies trying to......{" "}
                 </p>
                 <Link
-                  href="/schedule-a-consultation"
+                  href="/work-in-progress"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
                 >
@@ -69,7 +69,7 @@ export default function Headlines() {
                   startup turn search into......{" "}
                 </p>
                 <Link
-                  href="/schedule-a-consultation"
+                  href="/work-in-progress"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
                 >
@@ -98,7 +98,7 @@ export default function Headlines() {
                   Today’s automation tools......
                 </p>
                 <Link
-                  href="/schedule-a-consultation"
+                  href="/work-in-progress"
                   className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
                 >
