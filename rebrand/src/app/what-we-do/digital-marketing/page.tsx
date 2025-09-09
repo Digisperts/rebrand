@@ -415,7 +415,7 @@ export default function DigitalMarketing() {
           
           {/* <p className="text-left font-semibold font-poppins text-gray-600 mb-10">Don&apos;t just take our word for it. Explore our case studies to see how we have helped businesses like yours transform their operations and achieve measurable success.</p> */}
 
-          <div className="grid md:grid-cols-3 gap-6">
+          {/* <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 title: 'RETAIL AND CONSUMER GOODS',
@@ -448,6 +448,105 @@ export default function DigitalMarketing() {
               </div>
             ))}
           </div>
+ */}
+
+          <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+                    <div className="px-6 pt-0 pl-0 pr-0 w-full">
+                      <Image
+                        src="/images/reuseable-SD-b.png"
+                        alt="retail and consumer"
+                        width={400}
+                        height={250}
+                        className="w-full h-[250px] object-cover"
+                      />
+                    </div>
+                    <div className="px-6 pt-6 pb-7 w-full">
+                      <h3 className="font-bold text-lg mb-2 text-[#001F5C]">
+                        RETAIL AND CONSUMER GOODS
+                      </h3>
+                      {/* <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">
+                        Modernize Patient Care with a Custom Mobile App
+                      </h5> */}
+                      <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">
+                        Driving E-commerce Growth and Brand Visibility with a Multi-Channel PPC and SEO Strategy.
+                      </p>
+                      <Link
+                        href="/images/case-studies/retailcard.pdf"
+                        // onClick={(e) => e.preventDefault()}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                        style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
+                      >
+                        Explore Case Study <span className="ml-1">→</span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+                    <div className="px-6 pt-0 pl-0 pr-0 w-full">
+                      <Image
+                        src="/images/reuseable-hospitality.jpg"
+                        alt="hospital"
+                        width={400}
+                        height={250}
+                        className="w-full h-[250px] object-cover"
+                      />
+                    </div>
+                    <div className="px-6 pt-6 pb-7 w-full">
+                      <h3 className="font-bold text-lg mb-2 text-[#001F5C]">
+                        HOSPITALITY
+                      </h3>
+                      {/* <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">
+                        Modernize Patient Care with a Custom Mobile App
+                      </h5> */}
+                      <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">
+                        Boosting Direct Bookings and Brand Reach for a Boutique Hotel Chain via a Strategic Social Media and Influencer Marketing Campaign.
+                      </p>
+                      <Link
+                        href="/resources/explore-our-work/healthcare"
+                        onClick={(e) => e.preventDefault()}
+                        className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                        style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
+                      >
+                        Explore Case Study <span className="ml-1">→</span>
+                      </Link>
+                    </div>
+                  </div>
+
+                  <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+                    <div className="px-6 pt-0 pl-0 pr-0 w-full">
+                      <Image
+                        src="/images/reuseable-SD-c.png"
+                        alt="healthcare"
+                        width={400}
+                        height={250}
+                        className="w-full h-[250px] object-cover"
+                      />
+                    </div>
+                    <div className="px-6 pt-6 pb-7 w-full">
+                      <h3 className="font-bold text-lg mb-2 text-[#001F5C]">
+                        HEALTHCARE
+                      </h3>
+                      {/* <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">
+                        Modernize Patient Care with a Custom Mobile App
+                      </h5> */}
+                      <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">
+                        Increasing Patient Appointments by 150% for a Specialized Clinic Through Targeted Content Marketing and Local SEO.
+                      </p>
+                      <Link
+                        href="/resources/explore-our-work/healthcare"
+                        onClick={(e) => e.preventDefault()}
+                        className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                        style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
+                      >
+                        Explore Case Study <span className="ml-1">→</span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
         </section>
 
         {/* Partner Statement Section*/}

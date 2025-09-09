@@ -190,7 +190,9 @@ export default function UseCasesResource() {
                 cancellations and a 40% boost in operational efficiency.
               </p>
               <Link
-                href="/resources/explore-our-work/retail-and-ecommerce"
+                href="/images/case-studies/retailcard.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
@@ -255,7 +257,9 @@ export default function UseCasesResource() {
                 individuals.
               </p>
               <Link
-                href="/resources/explore-our-work/saas-and-technology"
+                href="/images/case-studies/technology.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
@@ -287,7 +291,9 @@ export default function UseCasesResource() {
                 automating payments, and reducing administrative time by 80%.
               </p>
               <Link
-                href="/resources/explore-our-work/agriculture"
+                href="/images/case-studies/agriculturecard.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
@@ -418,8 +424,10 @@ export default function UseCasesResource() {
                 unbreakable integrity of blockchain technology..
               </p>
               <Link
-                href="/resources/explore-our-work/blockchain"
-                onClick={(e) => e.preventDefault()}
+                href="/images/case-studies/blockchaincard.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                // onClick={(e) => e.preventDefault()}
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
@@ -454,8 +462,10 @@ export default function UseCasesResource() {
                 accessible knowledge for all.
               </p>
               <Link
-                href="/resources/explore-our-work/education"
-                onClick={(e) => e.preventDefault()}
+                href="/images/case-studies/LMS-case-study.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                // onClick={(e) => e.preventDefault()}
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >

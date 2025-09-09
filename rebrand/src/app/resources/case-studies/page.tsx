@@ -144,8 +144,10 @@ export default function CasesStudiesResource() {
                 cancellations and a 40% boost in operational efficiency.
               </p>
               <Link
-                href="/resources/explore-our-work/retail-and-ecommerce"
-                onClick={(e) => e.preventDefault()}
+                href="/images/case-studies/retailcard.pdf"
+                // onClick={(e) => e.preventDefault()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
@@ -211,8 +213,10 @@ export default function CasesStudiesResource() {
                 individuals.
               </p>
               <Link
-                href="/resources/explore-our-work/saas-and-technology"
-                onClick={(e) => e.preventDefault()}
+                href="/images/case-studies/technology.pdf"
+                // onClick={(e) => e.preventDefault()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
