@@ -538,46 +538,140 @@ export default function SoftwareDevelopment() {
             operations and achieve measurable success.
           </p>
 
+          {/* <div className="grid md:grid-cols-3 gap-6">
+                  {[
+                    {
+                      title: 'FINANCE',
+                      desc: 'Engineering a Secure Token Ecosystem on Binance Smart Chain for a Financial Services Innovator.',
+                      img: '/images/reuseable-SD-a.png',
+                    },
+                    {
+                      title: 'EDUCATION',
+                      desc: 'Developing a Scalable Learning Management System (LMS) to Power a Global Online Academy.',
+                      img: '/images/reuseable-education.jpg',
+                    },
+                    {
+                      title: 'AGRICULTURE',
+                      desc: 'Building Custom Agri-Tech Software to Streamline Operations for a Leading Agricultural Processing Company.',
+                      img: '/images/reuseable-agriculture.jpg',
+                    },
+                  ].map(({ title, desc, img }, i) => (
+                    <div key={i}>
+                      <Image src={img} alt={title} width={400} height={250} className="w-full h-[250px] object-cover" />
+                      <h4 className="text-md text-[#000000] font-extrabold mt-2">{title}</h4>
+                      <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
+                      <Link
+                        href="#"
+                        onClick={(e) => e.preventDefault()}
+                        className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                        style={{ boxShadow: '4px 4px 4px 0px #00000040' }}
+                      >
+                        Explore Case Study <span className="ml-1">→</span>
+                      </Link>
+                    </div>
+                  ))}
+                </div> */}
+
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "FINANCE",
-                desc: "Engineering a Secure Token Ecosystem on Binance Smart Chain for a Financial Services Innovator.",
-                img: "/images/reuseable-SD-a.png",
-              },
-              {
-                title: "EDUCATION",
-                desc: "Developing a Scalable Learning Management System (LMS) to Power a Global Online Academy.",
-                img: "/images/reuseable-education.jpg",
-              },
-              {
-                title: "AGRICULTURE",
-                desc: "Building Custom Agri-Tech Software to Streamline Operations for a Leading Agricultural Processing Company.",
-                img: "/images/reuseable-agriculture.jpg",
-              },
-            ].map(({ title, desc, img }, i) => (
-              <div key={i}>
+            <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+              <div className="px-6 pt-0 pl-0 pr-0 w-full">
                 <Image
-                  src={img}
-                  alt={title}
+                  src="/images/reuseable-SD-a.png"
+                  alt="finance"
                   width={400}
                   height={250}
                   className="w-full h-[250px] object-cover"
                 />
-                <h4 className="text-md text-[#000000] font-extrabold mt-2">
-                  {title}
-                </h4>
-                <p className="text-base font-semibold text-[#001F5C]">{desc}</p>
+              </div>
+              <div className="px-6 pt-6 pb-7 w-full">
+                <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">
+                  FINANCE
+                </h3>
+                {/* <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">
+                        Modernize Patient Care with a Custom Mobile App
+                      </h5> */}
+                <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">
+                  Engineering a Secure Token Ecosystem on Binance Smart Chain
+                  for a Financial Services Innovator.
+                </p>
                 <Link
-                  href="#"
+                  href="/resources/explore-our-work/healthcare"
                   onClick={(e) => e.preventDefault()}
-                  className="border mt-4 bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                   style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
                 >
                   Explore Case Study <span className="ml-1">→</span>
                 </Link>
               </div>
-            ))}
+            </div>
+
+            <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+              <div className="px-6 pt-0 pl-0 pr-0 w-full">
+                <Image
+                  src="/images/reuseable-education.jpg"
+                  alt="education"
+                  width={400}
+                  height={250}
+                  className="w-full h-[250px] object-cover"
+                />
+              </div>
+              <div className="px-6 pt-6 pb-7 w-full">
+                <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">
+                  EDUCATION
+                </h3>
+                {/* <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">
+                        Modernize Patient Care with a Custom Mobile App
+                      </h5> */}
+                <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">
+                  Developing a Scalable Learning Management System (LMS) to
+                  Power a Global Online Academy.
+                </p>
+                <Link
+                  href="/images/case-studies/LMS-case-study.pdf"
+                  // onClick={(e) => e.preventDefault()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
+                >
+                  Explore Case Study <span className="ml-1">→</span>
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white shadow-lg flex flex-col items-start w-full max-w-[370px] min-w-[280px] mx-auto">
+              <div className="px-6 pt-0 pl-0 pr-0 w-full">
+                <Image
+                  src="/images/reuseable-agriculture.jpg"
+                  alt="agriculture"
+                  width={400}
+                  height={250}
+                  className="w-full h-[250px] object-cover"
+                />
+              </div>
+              <div className="px-6 pt-6 pb-7 w-full">
+                <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">
+                  AGRICULTURE
+                </h3>
+                {/* <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">
+                        Modernize Patient Care with a Custom Mobile App
+                      </h5> */}
+                <p className="text-[#3C3C3C] text-base font-semibold text-sm mb-4 leading-snug">
+                  Building Custom Agri-Tech Software to Streamline Operations
+                  for a Leading Agricultural Processing Company.
+                </p>
+                <Link
+                  href="/images/case-studies/agriculturecard.pdf"
+                  // onClick={(e) => e.preventDefault()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
+                  style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
+                >
+                  Explore Case Study <span className="ml-1">→</span>
+                </Link>
+              </div>
+            </div>
           </div>
         </section>
 
