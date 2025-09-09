@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { FaPhone, FaChevronDown } from "react-icons/fa";
+import GoogleTranslateSelector from "./components/GoogleTranslateSelector";
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -103,6 +104,8 @@ const NavBar = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center space-x-6 custom-nav-text">
+            <GoogleTranslateSelector />
+
             {/* What We Do button (index 1) */}
             <div
               className={`relative transition-opacity ${getOpacityClass(1)}`}
@@ -458,6 +461,9 @@ const NavBar = () => {
                 <FaPhone className="mr-2 transform -rotate-270" />
                 Schedule a Consultation
               </Link>
+              <div className="mt-4 w-11/12 flex justify-center">
+                <GoogleTranslateSelector />
+              </div>
             </div>
           )}
         </header>
