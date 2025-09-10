@@ -191,6 +191,7 @@ export default function UseCasesResource() {
               </p>
               <Link
                 href="/images/case-studies/retailcard.pdf"
+                onClick={(e) => e.preventDefault()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -258,6 +259,7 @@ export default function UseCasesResource() {
               </p>
               <Link
                 href="/images/case-studies/technology.pdf"
+                onClick={(e) => e.preventDefault()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -292,6 +294,7 @@ export default function UseCasesResource() {
               </p>
               <Link
                 href="/images/case-studies/agriculturecard.pdf"
+                onClick={(e) => e.preventDefault()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
@@ -349,7 +352,7 @@ export default function UseCasesResource() {
               <h3 className="font-bold text-2xl mb-2 text-[#001F5C]">
                 Financial Services
               </h3>
-              <h5 className="font-bold text-base mb-2 text-[#3C3C3C]">
+              <h5 className="font-bold text-base mb-2 text-[#3f2929]">
                 Increase Efficiency and Reduce Risk with Process Automation
               </h5>
               <p className="text-[#3C3C3C] text-base font-medium text-sm mb-4 leading-snug">
@@ -425,9 +428,9 @@ export default function UseCasesResource() {
               </p>
               <Link
                 href="/images/case-studies/blockchaincard.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                // onClick={(e) => e.preventDefault()}
+                // target="_blank"
+                // rel="noopener noreferrer"
+                onClick={(e) => e.preventDefault()}
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
@@ -463,9 +466,9 @@ export default function UseCasesResource() {
               </p>
               <Link
                 href="/images/case-studies/LMS-case-study.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                // onClick={(e) => e.preventDefault()}
+                // target="_blank"
+                // rel="noopener noreferrer"
+                onClick={(e) => e.preventDefault()}
                 className="border bg-[#003399] border-gray-800 px-4 py-2 text-white font-bold text-sm hover:bg-white hover:text-[#233876] transition-colors duration-200 inline-block shadow"
                 style={{ boxShadow: "4px 4px 4px 0px #00000040" }}
               >
