@@ -30,46 +30,46 @@ export default function BookACallPage() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const services = [
-    {
-      name: "Software Development",
-      activities: ["Custom Software", "API Development", "System Integration"],
-    },
-    {
-      name: "Website and App Development Services",
-      activities: [
-        "UI/UX Design",
-        "Frontend Development",
-        "Backend Development",
-      ],
-    },
-    {
-      name: "Business Automations",
-      activities: ["Workflow Automation", "CRM Integration", "ERP Systems"],
-    },
-    {
-      name: "Marketing and Advertising Services",
-      activities: ["SEO", "Social Media Marketing", "Email Campaigns"],
-    },
-    {
-      name: "Enterprise Solutions",
-      activities: [
-        "ERP Implementation",
-        "Enterprise Security",
-        "Data Management",
-      ],
-    },
-    {
-      name: "Block chain development Services",
-      activities: [
-        "Smart Contracts",
-        "DApp Development",
-        "Blockchain Integration",
-      ],
-    },
-    {
-      name: "Others",
-      activities: ["Consulting", "Training"],
-    },
+    // {
+    //   name: "Software Development",
+    //   activities: ["Custom Software", "API Development", "System Integration"],
+    // },
+    // {
+    //   name: "Website and App Development Services",
+    //   activities: [
+    //     "UI/UX Design",
+    //     "Frontend Development",
+    //     "Backend Development",
+    //   ],
+    // },
+    // {
+    //   name: "Business Automations",
+    //   activities: ["Workflow Automation", "CRM Integration", "ERP Systems"],
+    // },
+    // {
+    //   name: "Marketing and Advertising Services",
+    //   activities: ["SEO", "Social Media Marketing", "Email Campaigns"],
+    // },
+    // {
+    //   name: "Enterprise Solutions",
+    //   activities: [
+    //     "ERP Implementation",
+    //     "Enterprise Security",
+    //     "Data Management",
+    //   ],
+    // },
+    // {
+    //   name: "Block chain development Services",
+    //   activities: [
+    //     "Smart Contracts",
+    //     "DApp Development",
+    //     "Blockchain Integration",
+    //   ],
+    // },
+    // {
+    //   name: "Others",
+    //   activities: ["Consulting", "Training"],
+    // },
   ];
 
   return (
@@ -231,7 +231,7 @@ export default function BookACallPage() {
                               />
                             </div>
                             <span className="text-gray-900 font-medium">
-                              {service.name}
+                              {/* {service.name} */}
                             </span>
                           </div>
                         </div>
@@ -239,14 +239,14 @@ export default function BookACallPage() {
                         {/* Activities */}
                         {openService === index && (
                           <div className="bg-gray-50 pl-9 pr-3 py-2 space-y-1">
-                            {service.activities.map((activity, idx) => (
+                            {/* {service.activities.map((activity, idx) => (
                               <div
                                 key={idx}
                                 className="hover:bg-gray-200 px-2 py-1 rounded cursor-pointer text-gray-800 text-sm"
                               >
                                 {activity}
                               </div>
-                            ))}
+                            ))} */}
                           </div>
                         )}
                       </div>
