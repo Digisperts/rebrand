@@ -268,7 +268,7 @@ export default function Home() {
 
       {/* Hero Slider Section */}
       <section
-        className="relative w-full min-h-[580px] flex items-stretch overflow-hidden"
+        className="relative w-full h-screen flex items-stretch overflow-hidden"
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
