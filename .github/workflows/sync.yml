@@ -1,20 +1,26 @@
-name: Sync to Personal Repo
+name: Sync main branch to personal
 
 on:
   push:
     branches:
-      - main   # change this if your default branch is something else
+      - main   # change to your default branch name if different
+
+permissions:
+  contents: read
 
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repository (full history)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Push to personal repo
+      - name: Push main to personal repo
         run: |
-          git config user.name "github-actions"
+          git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
-          git remote add personal https://YOUR_USERNAME:${{ secrets.PERSONAL_TOKEN }}@github.com/YOUR_USERNAME/PERSONAL_REPO.git
+          # Add personal remote using PAT in secret
+          git remote add personal "https://x-access-token:${{ secrets.PERSONAL_TOKEN }}@github.com/Digisperts/rebrand.git"
           git push personal main --force
