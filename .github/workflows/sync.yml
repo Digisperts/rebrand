@@ -12,14 +12,20 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository (full history)
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Push main to personal repo
+        env:
+          PERSONAL_TOKEN: ${{ secrets.ORG_TO_PERSONAL_SYNC }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "actions@github.com"
-          git remote add personal "https://x-access-token:${{ secrets.ORG_TO_PERSONAL_SYNC }}@github.com/Digisperts/rebrand.git"
+          git config user.name "Digisperts"
+          git config user.email "digisperts@gmail.com"
+
+          # Add remote with PAT
+          git remote add personal "https://${PERSONAL_TOKEN}@github.com/Digisperts/rebrand.git"
+
+          # Push
           git push personal main --force
