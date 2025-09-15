@@ -122,7 +122,7 @@ export default function BookACallPage() {
 
       {/* Booking Form and Image */}
       <section
-        className="relative w-full flex flex-col items-center bg-white pb-0 mb-0 -mb-32 z-30 flex flex-row items-stretch w-full mb-8 md:mb-0"
+        className="relative w-full flex flex-col items-center bg-white pb-0 mb-0 -mb-32 z-30 flex flex-row w-full mb-8 md:mb-0"
         style={{ minHeight: "calc(100vh - 64px - 64px)" }}
       >
         <div className="flex-1 flex flex-col justify-center items-center px-4 md:px-12 py-10">
