@@ -19,7 +19,8 @@ jobs:
 
       - name: Push main to personal repo
         run: |
+          set -e
           git config user.name "github-actions[bot]"
           git config user.email "actions@github.com"
-          git remote add personal "https://x-access-token:${{ secrets.ORG_TO_PERSONAL_SYNC }}@github.com/Digisperts/rebrand.git"
+          git remote add personal https://x-access-token:${{ secrets.ORG_TO_PERSONAL_SYNC }}@github.com/Digisperts/rebrand.git
           git push personal main --force
