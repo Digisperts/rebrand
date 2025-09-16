@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-permissions:
-  contents: read
-
 jobs:
   sync:
     runs-on: ubuntu-latest
@@ -17,15 +14,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Setup SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.ORG_TO_PERSONAL_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       - name: Push main to personal repo
-        env:
-          PERSONAL_TOKEN: ${{ secrets.ORG_TO_PERSONAL_SYNC }}
         run: |
           git config user.name "Digisperts"
           git config user.email "digisperts@gmail.com"
-
-          # Add remote with PAT
-          git remote add personal "https://${PERSONAL_TOKEN}@github.com/Digisperts/rebrand.git"
-
-          # Push
+          git remote add personal git@github.com:Digisperts/rebrand.git
           git push personal main --force
